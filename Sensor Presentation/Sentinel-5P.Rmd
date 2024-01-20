@@ -166,7 +166,7 @@ Source: https://sentinels.copernicus.eu/web/sentinel/home
 
 - **Highly Advanced**: Best atmospheric monitoring tool so far.
 - **Wide Area Coverage**: 2600 km wide area.
-- **Rapid, Detailed Data**Quick, detailed data on pollutants.
+- **Rapid, Detailed Data**:Quick, detailed data on pollutants.
 - **Advances in Environmental Monitoring**: Opens new possibilities for space-based environmental monitoring.
 - **Improvement Over Previous Instruments**: Enhanced detail and clarity compared to older space tools.
 
