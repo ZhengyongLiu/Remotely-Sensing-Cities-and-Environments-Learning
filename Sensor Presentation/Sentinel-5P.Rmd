@@ -49,7 +49,7 @@ style_duo_accent(
 
 .pull-right[
 ```{r  echo=FALSE, out.width='110%', fig.align='center'}
-knitr::include_graphics('Figure/Week 2/intrument operations scenario.png')
+knitr::include_graphics('Figure/intrument operations scenario.png')
 ```
 Intrument Operations Scenario,
 Source: https://sentinels.copernicus.eu/web/sentinel/home
@@ -65,7 +65,7 @@ Source: https://sentinels.copernicus.eu/web/sentinel/home
 
 
 ```{r  echo=FALSE, out.width='65%', fig.align='center'}
-knitr::include_graphics('Figure/Week 2/Global_tropospheric_ozone_article.gif')
+knitr::include_graphics('Figure/Global_tropospheric_ozone_article.gif')
 ```
 GlobalTropospheric_Ozone_Article,
 Source: https://sentinels.copernicus.eu/web/sentinel/home
@@ -83,7 +83,7 @@ Source: https://sentinels.copernicus.eu/web/sentinel/home
 ]
 .pull-right[
 ```{r  echo=FALSE, out.width='100%', fig.align='center'}
-knitr::include_graphics('Figure/Week 2/mission_instrument.png')
+knitr::include_graphics('Figure/mission_instrument.png')
 ```
 Mission_Instrument of Sentinel-5P,
 Source: https://sentinels.copernicus.eu/web/sentinel/home
@@ -118,7 +118,7 @@ Full Name - **Tropospheric Monitoring Instrument**
 
 .pull-right[
 ```{r  echo=FALSE, out.width='90%', fig.align='center'}
-knitr::include_graphics('Figure/Week 2/S5, Spectral bands.png')
+knitr::include_graphics('Figure/S5, Spectral bands.png')
 ```
 Spectral bands,
 Source: https://sentinels.copernicus.eu/web/sentinel/home
@@ -148,7 +148,7 @@ Source: https://sentinels.copernicus.eu/web/sentinel/home
 ]
 .pull-right[
 ```{r  echo=FALSE, out.width='130%', fig.align='center'}
-knitr::include_graphics('Figure/Week 2/instrument architecture.png')
+knitr::include_graphics('Figure/instrument architecture.png')
 ```
 Instrument Architecture,
 Source: https://sentinels.copernicus.eu/web/sentinel/home
