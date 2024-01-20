@@ -1,9 +1,9 @@
 ---
-title: "Presentation Ninja"
-subtitle: "&#x2694;&#xFE0F; xaringan +<br/>&#x1F60E; xaringanthemer"  
+title: "Presentation of Sentinel-5p"
+#subtitle: "&#x2694;&#xFE0F; xaringan +<br/>&#x1F60E; xaringanthemer"  
 author: 
-  - "Yihui Xie"
-  - "Garrick Aden-Buie"
+  - "Zhengyong Liu"
+# - "Garrick Aden-Buie"
 date: '`r Sys.Date()`'
 output:
   xaringan::moon_reader:
@@ -37,7 +37,6 @@ style_duo_accent(
 )
 ```
 
----
 ### Introduction of Sentinel-5p
 .pull-left[
   The **Sentinel-5P satellite**, part of the European Space Agency's (ESA) Copernicus program, is characterized by the following features: 
@@ -179,7 +178,10 @@ Source: https://sentinels.copernicus.eu/web/sentinel/home
 
 ---
 ### Reference
+Introducing Sentinel-5P, 2017. [https://www.youtube.com/watch?v=doqsNc8vC00](https://www.youtube.com/watch?v=doqsNc8vC00).
 
+KNMI. ‘TROPOMI Observing Our Future - TROPOMI: TROPOspheric Monitoring Instrument’. Web page. Ministry of Infrastructure and Water Management, 17 April 2023. [https://www.tropomi.eu/](https://www.tropomi.eu/).
 
----
+Sentinel Online. ‘Sentinel-5P - Missions - Sentinel Online’. Accessed 19 January 2024. [https://copernicus.eu/missions/sentinel-5p](https://copernicus.eu/missions/sentinel-5p).
 
+‘Sentinel-5P’. Accessed 19 January 2024. [https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-5P](https://www.esa.int/Applications/Observing_the_Earth/Copernicus/Sentinel-5P).
