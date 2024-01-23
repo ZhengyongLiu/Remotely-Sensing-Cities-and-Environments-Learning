@@ -46,10 +46,10 @@ In literature, these concepts are applied to analyze environmental changes, urba
 :::
 
 ## Reflecting From the Practical
-### Using of SNAP
-Still try to figure out how fix the bug with snap while using MacOS
-=======
 
+### Using of SNAP
+
+Still try to figure out how fix the bug with snap while using MacOS.
 
 ## Reflecting From the Lecture
 
