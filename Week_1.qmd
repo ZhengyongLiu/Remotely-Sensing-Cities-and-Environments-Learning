@@ -44,9 +44,13 @@ On the technical side, we learned about various data formats used in remote sens
 
 In literature, these concepts are applied to analyze environmental changes, urban development, and geological features. Understanding remote sensing data and its interpretations is vital for researchers and policymakers in making informed decisions. As a student, this week's learning has highlighted the importance of remote sensing in addressing global challenges like climate change and resource management.
 :::
+
 ## Reflecting From the Practical
 ### Using of SNAP
 Still try to figure out how fix the bug with snap while using MacOS
+=======
+
+
 ## Reflecting From the Lecture
 
 ::: {style="text-align: justify;"}
