@@ -2,7 +2,7 @@ project:
   type: book
   output-dir: docs
 book:
-  title: "Dairy"
+  title: "Diary"
   author: "Zhengyong Liu"
   date: "1/20/2024"
   chapters:
