@@ -13,6 +13,10 @@ This week's learning journey into the realm of remote sensing, unveiling the int
 
 ::: {style="text-align: justify;"}
 One of the foundational concepts we explored was the difference between passive and active remote sensing. Passive remote sensing relies on natural energy, usually from the sun, whereas active remote sensing systems emit their own energy to illuminate objects. This distinction is crucial for understanding the varied applications of remote sensing technologies like LiDAR, radar, and satellite imagery in observing earth's landscapes, urban areas, and atmospheric conditions.
+
+```{r  echo=FALSE, out.width='110%', fig.align='center', fig.cap='Passive & Active Remote Sensing, Source: <a href="https://www.researchgate.net/publication/363487937_Remote_Sensing_Optical_Images_Applications_in_Vegetation_Monitoring_and_Mapping_Part_of_Baghdad_Supervised_by">Abeer Nazar Abdul-Hameed</a>'}
+knitr::include_graphics('Figure/Week_1/Passive_and_Active_RemoteSensing.png')
+```
 :::
 
 ### **Electromagnetic Waves: Core of Remote Sensing**
@@ -27,6 +31,8 @@ Much of our learning focused on electromagnetic waves, the heart of remote sensi
 We have looked at the complexities of how electromagnetic radiation (EMR) interacts with the Earth's surface. This interaction is not straightforward because EMR can be absorbed, transmitted or scattered by the surface and atmosphere. Scattering, in particular, explains phenomena such as the blue colour of the sky or the blackness of the lunar sky due to the absence of an atmosphere. This concept has far-reaching implications for environmental monitoring and the study of planetary bodies.
 :::
 
+**More pictures coming soon!**
+
 ### **Synthetic Aperture Radar (SAR) and its Applications**
 
 ::: {style="text-align: justify;"}
@@ -40,7 +46,7 @@ The study of SAR data also introduced us to the concept of polarization, a prope
 ::: {style="text-align: justify;"}
 On the technical side, we learned about the different data formats used in remote sensing, such as GeoTIFF, and the importance of resolutions - spatial, spectral, temporal and radiometric. These resolutions define the quality and type of data acquired, and influence how effectively we can interpret and use the data for various applications such as land cover mapping and environmental monitoring.
 
-In the literature, these concepts are used to analyse environmental change, urban development and geological features. Understanding remote sensing data and their interpretation is essential for researchers and policy makers to make informed decisions. 
+In the literature, these concepts are used to analyse environmental change, urban development and geological features. Understanding remote sensing data and their interpretation is essential for researchers and policy makers to make informed decisions.
 :::
 
 ## Reflecting From the Practical

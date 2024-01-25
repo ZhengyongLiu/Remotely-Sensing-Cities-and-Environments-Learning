@@ -1,17 +1,17 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Dairy",
-    "section": "",
-    "text": "Introduction\nThis is a Learning Diary\n\n\n*Add More in the Future"
-  },
-  {
     "objectID": "Week_1.html#knowledge-gain-from-the-lecture",
     "href": "Week_1.html#knowledge-gain-from-the-lecture",
     "title": "1  Week_1",
     "section": "1.1 Knowledge gain From the Lecture",
-    "text": "1.1 Knowledge gain From the Lecture\n\nThis week’s learning journey into the realm of remote sensing, unveiling the intricate world of electromagnetic waves and their interactions with Earth’s surface. Remote sensing, as I’ve learned, involves acquiring information about objects or areas from a distance, typically from aircraft or satellites, and is a vital tool in understanding our planet.\n\n\n1.1.1 Foundational Concepts of Remote Sensing\n\nOne of the foundational concepts we explored was the difference between passive and active remote sensing. Passive remote sensing relies on natural energy, usually from the sun, whereas active remote sensing systems emit their own energy to illuminate objects. This distinction is crucial for understanding the varied applications of remote sensing technologies like LiDAR, radar, and satellite imagery in observing earth’s landscapes, urban areas, and atmospheric conditions.\n\n\n\n1.1.2 Electromagnetic Waves: Core of Remote Sensing\n\nMuch of our learning focused on electromagnetic waves, the heart of remote sensing. These waves, a form of energy that propagates through electric and magnetic fields, are the backbone of how remote sensors collect data. Understanding the wavelength equation and the speed of light provides a basis for understanding how different sensors capture different aspects of the Earth’s surface.\n\n\n\n1.1.3 Interactions with Earth’s Surface\n\nWe have looked at the complexities of how electromagnetic radiation (EMR) interacts with the Earth’s surface. This interaction is not straightforward because EMR can be absorbed, transmitted or scattered by the surface and atmosphere. Scattering, in particular, explains phenomena such as the blue colour of the sky or the blackness of the lunar sky due to the absence of an atmosphere. This concept has far-reaching implications for environmental monitoring and the study of planetary bodies.\n\n\n\n1.1.4 Synthetic Aperture Radar (SAR) and its Applications\n\nThe Synthetic Aperture Radar (SAR) was another fascinating topic. SAR’s ability to ‘see through clouds’ using longer wavelengths is revolutionary, offering a consistent observation capability irrespective of weather conditions. This technology’s potential in areas like topography, vegetation analysis, and urban planning is immense, showcasing how advanced remote sensing techniques can overcome environmental challenges\nThe study of SAR data also introduced us to the concept of polarization, a property of electromagnetic waves that describes their oscillation direction. This property is crucial for understanding how radar signals interact with different surface properties and is instrumental in enhancing the efficiency and bandwidth of communications.\n\n\n\n1.1.5 Technical Insights and Data Formats in Remote Sensing\n\nOn the technical side, we learned about the different data formats used in remote sensing, such as GeoTIFF, and the importance of resolutions - spatial, spectral, temporal and radiometric. These resolutions define the quality and type of data acquired, and influence how effectively we can interpret and use the data for various applications such as land cover mapping and environmental monitoring.\nIn the literature, these concepts are used to analyse environmental change, urban development and geological features. Understanding remote sensing data and their interpretation is essential for researchers and policy makers to make informed decisions."
+    "text": "1.1 Knowledge gain From the Lecture\n\nThis week’s learning journey into the realm of remote sensing, unveiling the intricate world of electromagnetic waves and their interactions with Earth’s surface. Remote sensing, as I’ve learned, involves acquiring information about objects or areas from a distance, typically from aircraft or satellites, and is a vital tool in understanding our planet.\n\n\n1.1.1 Foundational Concepts of Remote Sensing\n\nOne of the foundational concepts we explored was the difference between passive and active remote sensing. Passive remote sensing relies on natural energy, usually from the sun, whereas active remote sensing systems emit their own energy to illuminate objects. This distinction is crucial for understanding the varied applications of remote sensing technologies like LiDAR, radar, and satellite imagery in observing earth’s landscapes, urban areas, and atmospheric conditions.\n\n\n\n\n\nPassive & Active Remote Sensing, Source: Abeer Nazar Abdul-Hameed\n\n\n\n\n\n\n\n1.1.2 Electromagnetic Waves: Core of Remote Sensing\n\nMuch of our learning focused on electromagnetic waves, the heart of remote sensing. These waves, a form of energy that propagates through electric and magnetic fields, are the backbone of how remote sensors collect data. Understanding the wavelength equation and the speed of light provides a basis for understanding how different sensors capture different aspects of the Earth’s surface.\n\n\n\n1.1.3 Interactions with Earth’s Surface\n\nWe have looked at the complexities of how electromagnetic radiation (EMR) interacts with the Earth’s surface. This interaction is not straightforward because EMR can be absorbed, transmitted or scattered by the surface and atmosphere. Scattering, in particular, explains phenomena such as the blue colour of the sky or the blackness of the lunar sky due to the absence of an atmosphere. This concept has far-reaching implications for environmental monitoring and the study of planetary bodies.\n\nMore pictures coming soon!\n\n\n1.1.4 Synthetic Aperture Radar (SAR) and its Applications\n\nThe Synthetic Aperture Radar (SAR) was another fascinating topic. SAR’s ability to ‘see through clouds’ using longer wavelengths is revolutionary, offering a consistent observation capability irrespective of weather conditions. This technology’s potential in areas like topography, vegetation analysis, and urban planning is immense, showcasing how advanced remote sensing techniques can overcome environmental challenges\nThe study of SAR data also introduced us to the concept of polarization, a property of electromagnetic waves that describes their oscillation direction. This property is crucial for understanding how radar signals interact with different surface properties and is instrumental in enhancing the efficiency and bandwidth of communications.\n\n\n\n1.1.5 Technical Insights and Data Formats in Remote Sensing\n\nOn the technical side, we learned about the different data formats used in remote sensing, such as GeoTIFF, and the importance of resolutions - spatial, spectral, temporal and radiometric. These resolutions define the quality and type of data acquired, and influence how effectively we can interpret and use the data for various applications such as land cover mapping and environmental monitoring.\nIn the literature, these concepts are used to analyse environmental change, urban development and geological features. Understanding remote sensing data and their interpretation is essential for researchers and policy makers to make informed decisions."
+  },
+  {
+    "objectID": "Week_1.html#reflecting-from-the-practical",
+    "href": "Week_1.html#reflecting-from-the-practical",
+    "title": "1  Week_1",
+    "section": "1.2 Reflecting From the Practical",
+    "text": "1.2 Reflecting From the Practical\n\n1.2.1 Using of SNAP\nI am still trying to figure out how to fix the bug with snap while using the MacOS."
   },
   {
     "objectID": "Week_1.html#reflecting-from-the-lecture",
@@ -26,40 +26,5 @@
     "title": "1  Week_1",
     "section": "1.4 Reference",
     "text": "1.4 Reference\n‘Remote Sensing - NASA’, n.d. https://www.nasa.gov/directorates/somd/space-communications-navigation-program/remote-sensing/.\n‘Types Of Remote Sensing: Devices And Their Applications’, 18 November 2020. https://eos.com/blog/types-of-remote-sensing/."
-  },
-  {
-    "objectID": "intro.html",
-    "href": "intro.html",
-    "title": "3  Introduction",
-    "section": "",
-    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
-  },
-  {
-    "objectID": "summary.html",
-    "href": "summary.html",
-    "title": "4  Summary",
-    "section": "",
-    "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2"
-  },
-  {
-    "objectID": "references.html",
-    "href": "references.html",
-    "title": "Bibliography",
-    "section": "",
-    "text": "‘Remote Sensing - NASA’, n.d. https://www.nasa.gov/directorates/somd/space-communications-navigation-program/remote-sensing/.\n‘Types Of Remote Sensing: Devices And Their Applications’, 18 November 2020. https://eos.com/blog/types-of-remote-sensing/."
-  },
-  {
-    "objectID": "Week_1.html",
-    "href": "Week_1.html",
-    "title": "1  Week_1",
-    "section": "",
-    "text": "2 Still try to figure out how fix the bug with snap while using MacOS"
-  },
-  {
-    "objectID": "Week_1.html#reflecting-from-the-practical",
-    "href": "Week_1.html#reflecting-from-the-practical",
-    "title": "1  Week_1",
-    "section": "1.2 Reflecting From the Practical",
-    "text": "1.2 Reflecting From the Practical\n\n1.2.1 Using of SNAP\nI am still trying to figure out how to fix the bug with snap while using the MacOS."
   }
 ]

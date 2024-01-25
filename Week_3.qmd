@@ -1,0 +1,51 @@
+---
+title: "Week_3"
+format: html
+editor: visual
+---
+
+## **Knowledge gain From the Lecture**
+本周的学习重点是遥感图像处理，主要关注领域包括几何校正、大气校正、正射校正、辐射校正以及各种图像增强技术。首先介绍了遥感图像处理的基础知识。它涵盖了遥感的基本概念及其在环境监测、城市规划、农业、灾害管理和气候研究等众多应用中的重要性。这一部分为理解后面更高级的主题奠定了基础，为遥感原理和实践奠定了基础。
+
+### 校正
+#### 几何校正
+几何校正是图像校正的基础，主要解决由于传感器和其它因素导致的图像变形。这种校正的目标是使得图像符合选定的地图投影系统，通过对图像上的控制点（已知地理坐标的点）和图像坐标之间的关系建模，来调整整个图像的几何形状。
+
+#### 大气校正
+大气校正对于解决地球大气、传感器角度和地形变化造成的遥感图像失真和不准确问题至关重要。在课上学习到了几种不同的校正方法：相对大气校，伪不变特征的校正，绝对大气校正，经验线校正。
+
+通过课上的学习我们可以知道
+1. 相对大气校正更多侧重于在多个图像和波段间实现一致性，而伪不变特征的校正侧重于找到图像中稳定的参考点，并利用这些点来校正图像中的其他像素，从而减少大气的影响。两者都是为了提高图像的质量和可比性，但采取了不同的假设和技术手段。
+2. 绝对大气校正是一种精确的校正方法，它使用复杂的模型来模拟和纠正大气对遥感数据的影响，从而获取更真实的地表反射率信息。这对于确保数据的精确性和可比性至关重要，尤其是在进行地表特征分析或变化检测时。
+3. 经验线校正是一种利用实地测量数据来校正卫星遥感图像的方法，以减少大气散射和吸收对卫星数据的影响，从而得到更接近地表真实情况的反射率数据。这种方法通常需要在卫星过境时同步进行地面和卫星的测量。
+
+#### 辐射校正
+同时还学习了辐射校正，强调其在调整卫星图像像素值以准确反映地球表面辐射方面的作用。本节解释了将原始卫星数据转换为有意义的辐射测量值的过程。它深入探讨了校准技术，包括使用地面参考数据和星载校准装置。日记强调了校准对于保持遥感数据在不同时间和不同传感器之间的一致性的重要性，并探讨了实现高质量辐射校准所面临的挑战和解决方案。
+
+
+### 数据集连接方法/图像增强技术
+### 数据集连接方法
+
+### 图像增强技术
+
+### 其他图像增强技术
+| Technique | Description | Application |
+| --- | --- | --- |
+| Low Pass Filter | Smoothes image by averaging pixels. | Reduces noise for better burn area detection. |
+| High Pass Filter | Enhances contrast by highlighting local changes. | Improves distinction between burned/unburned areas. |
+| Embossing | Modifies coefficients to create shadowy edge relief. | Highlights burn area edges for clearer boundaries. |
+| Principal Component Analysis (PCA) | Transforms multispectral data to smaller, uncorrelated datasets. | Simplifies data for easier burn area analysis in Landsat images. |
+| Multi-date PCA | Combines different time point bands for PCA. | Identifies temporal changes in burn areas across Landsat images. |
+| Texture Analysis | Analyzes spatial variation in grayscale. | Enhances burn area detection through texture metrics. |
+| Image Fusion | Merges data from multiple sources/sensors. | Integrates different resolutions for more detailed analysis. |
+
+
+## Application in Literature
+These methodologies have wide applications in geospatial science literature, particularly in environmental monitoring, land use mapping, and disaster assessment. Atmospheric correction techniques are essential in longitudinal studies using satellite data, ensuring consistency across different times and conditions. Image enhancements are particularly vital in extracting detailed information from remote sensing data, contributing to more accurate and reliable interpretations in various research areas.
+
+Geometric corrections are commonly applied in studies involving spatial accuracy, while orthorectification is used extensively in mapping applications. Radiometric calibration's role in ensuring data accuracy over different periods is crucial in change detection and environmental studies. Overall, these techniques are fundamental to the field of geospatial sciences, enabling the extraction of meaningful and accurate information from raw satellite data.
+
+## Personal Reflection
+The depth of knowledge gained from this course has been profound. Understanding the technical aspects of image correction and enhancement has provided a clear perspective on the importance and complexity of these processes in remote sensing. It's intriguing to see how various correction techniques can significantly improve the quality of satellite imagery, leading to more reliable data interpretation.
+
+The potential of these techniques in addressing global challenges, such as environmental monitoring and disaster management, is particularly inspiring. The course has deepened my appreciation for the field of geospatial sciences and its impact on our understanding of the Earth. 

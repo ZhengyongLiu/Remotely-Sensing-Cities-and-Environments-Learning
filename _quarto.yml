@@ -1,6 +1,7 @@
 project:
   type: book
   output-dir: docs
+
 book:
   title: "Diary"
   author: "Zhengyong Liu"
@@ -9,8 +10,6 @@ book:
     - index.qmd
     - Week_1.qmd
     - Week_2.qmd
-    - intro.qmd
-    - summary.qmd
     - references.qmd
 
 bibliography: references.bib
