@@ -1,5 +1,5 @@
-# Introduction {.unnumbered}
+# Preface {.unnumbered}
 
-This is a Learning Diary
+This is a Learning Diary of CASA0023 Remotely Sensing Cities and Environments.
 
-# **\*Add More in the Future**
+# **Add more in the future**

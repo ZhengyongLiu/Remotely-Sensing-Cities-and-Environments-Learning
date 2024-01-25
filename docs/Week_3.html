@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Zhengyong Liu">
-<meta name="dcterms.date" content="2024-01-25">
 
-<title>CASA0023 Remote sensing learning Diary</title>
+<title>CASA0023 Remote sensing learning - 3&nbsp; Week_3</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -32,7 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./Week_1.html" rel="next">
+<link href="./intro.html" rel="next">
+<link href="./Week_2.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -75,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Preface</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Week_3.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week_3</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -90,7 +89,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">CASA0023 Remote sensing learning Diary</a> 
+      <a href="./">CASA0023 Remote sensing learning</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -102,7 +101,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Preface</span></a>
   </div>
 </li>
@@ -120,14 +119,20 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./Week_3.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week_3</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Summary</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -146,8 +151,16 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a></li>
-  <li><a href="#add-more-in-the-future" id="toc-add-more-in-the-future" class="nav-link" data-scroll-target="#add-more-in-the-future"><strong>Add more in the future</strong></a></li>
+  <li><a href="#knowledge-gain-from-the-lecture" id="toc-knowledge-gain-from-the-lecture" class="nav-link active" data-scroll-target="#knowledge-gain-from-the-lecture"><span class="header-section-number">3.1</span> <strong>Knowledge gain From the Lecture</strong></a>
+  <ul class="collapse">
+  <li><a href="#校正" id="toc-校正" class="nav-link" data-scroll-target="#校正"><span class="header-section-number">3.1.1</span> 校正</a></li>
+  <li><a href="#数据集连接方法图像增强技术" id="toc-数据集连接方法图像增强技术" class="nav-link" data-scroll-target="#数据集连接方法图像增强技术"><span class="header-section-number">3.1.2</span> 数据集连接方法/图像增强技术</a></li>
+  <li><a href="#数据集连接方法" id="toc-数据集连接方法" class="nav-link" data-scroll-target="#数据集连接方法"><span class="header-section-number">3.1.3</span> 数据集连接方法</a></li>
+  <li><a href="#图像增强技术" id="toc-图像增强技术" class="nav-link" data-scroll-target="#图像增强技术"><span class="header-section-number">3.1.4</span> 图像增强技术</a></li>
+  <li><a href="#其他图像增强技术" id="toc-其他图像增强技术" class="nav-link" data-scroll-target="#其他图像增强技术"><span class="header-section-number">3.1.5</span> 其他图像增强技术</a></li>
+  </ul></li>
+  <li><a href="#application-in-literature" id="toc-application-in-literature" class="nav-link" data-scroll-target="#application-in-literature"><span class="header-section-number">3.2</span> Application in Literature</a></li>
+  <li><a href="#personal-reflection" id="toc-personal-reflection" class="nav-link" data-scroll-target="#personal-reflection"><span class="header-section-number">3.3</span> Personal Reflection</a></li>
   </ul>
 </nav>
     </div>
@@ -156,26 +169,14 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">CASA0023 Remote sensing learning Diary</h1>
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week_3</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Zhengyong Liu </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">January 25, 2024</p>
-    </div>
-  </div>
   
     
   </div>
@@ -183,12 +184,98 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<section id="preface" class="level1 unnumbered">
-<h1 class="unnumbered">Preface</h1>
-<p>This is a Learning Diary of CASA0023 Remotely Sensing Cities and Environments.</p>
+<section id="knowledge-gain-from-the-lecture" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="knowledge-gain-from-the-lecture"><span class="header-section-number">3.1</span> <strong>Knowledge gain From the Lecture</strong></h2>
+<p>本周的学习重点是遥感图像处理，主要关注领域包括几何校正、大气校正、正射校正、辐射校正以及各种图像增强技术。首先介绍了遥感图像处理的基础知识。它涵盖了遥感的基本概念及其在环境监测、城市规划、农业、灾害管理和气候研究等众多应用中的重要性。这一部分为理解后面更高级的主题奠定了基础，为遥感原理和实践奠定了基础。</p>
+<section id="校正" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="校正"><span class="header-section-number">3.1.1</span> 校正</h3>
+<section id="几何校正" class="level4" data-number="3.1.1.1">
+<h4 data-number="3.1.1.1" class="anchored" data-anchor-id="几何校正"><span class="header-section-number">3.1.1.1</span> 几何校正</h4>
+<p>几何校正是图像校正的基础，主要解决由于传感器和其它因素导致的图像变形。这种校正的目标是使得图像符合选定的地图投影系统，通过对图像上的控制点（已知地理坐标的点）和图像坐标之间的关系建模，来调整整个图像的几何形状。</p>
 </section>
-<section id="add-more-in-the-future" class="level1">
-<h1><strong>Add more in the future</strong></h1>
+<section id="大气校正" class="level4" data-number="3.1.1.2">
+<h4 data-number="3.1.1.2" class="anchored" data-anchor-id="大气校正"><span class="header-section-number">3.1.1.2</span> 大气校正</h4>
+<p>大气校正对于解决地球大气、传感器角度和地形变化造成的遥感图像失真和不准确问题至关重要。在课上学习到了几种不同的校正方法：相对大气校，伪不变特征的校正，绝对大气校正，经验线校正。</p>
+<p>通过课上的学习我们可以知道 1. 相对大气校正更多侧重于在多个图像和波段间实现一致性，而伪不变特征的校正侧重于找到图像中稳定的参考点，并利用这些点来校正图像中的其他像素，从而减少大气的影响。两者都是为了提高图像的质量和可比性，但采取了不同的假设和技术手段。 2. 绝对大气校正是一种精确的校正方法，它使用复杂的模型来模拟和纠正大气对遥感数据的影响，从而获取更真实的地表反射率信息。这对于确保数据的精确性和可比性至关重要，尤其是在进行地表特征分析或变化检测时。 3. 经验线校正是一种利用实地测量数据来校正卫星遥感图像的方法，以减少大气散射和吸收对卫星数据的影响，从而得到更接近地表真实情况的反射率数据。这种方法通常需要在卫星过境时同步进行地面和卫星的测量。</p>
+</section>
+<section id="辐射校正" class="level4" data-number="3.1.1.3">
+<h4 data-number="3.1.1.3" class="anchored" data-anchor-id="辐射校正"><span class="header-section-number">3.1.1.3</span> 辐射校正</h4>
+<p>同时还学习了辐射校正，强调其在调整卫星图像像素值以准确反映地球表面辐射方面的作用。本节解释了将原始卫星数据转换为有意义的辐射测量值的过程。它深入探讨了校准技术，包括使用地面参考数据和星载校准装置。日记强调了校准对于保持遥感数据在不同时间和不同传感器之间的一致性的重要性，并探讨了实现高质量辐射校准所面临的挑战和解决方案。</p>
+</section>
+</section>
+<section id="数据集连接方法图像增强技术" class="level3" data-number="3.1.2">
+<h3 data-number="3.1.2" class="anchored" data-anchor-id="数据集连接方法图像增强技术"><span class="header-section-number">3.1.2</span> 数据集连接方法/图像增强技术</h3>
+</section>
+<section id="数据集连接方法" class="level3" data-number="3.1.3">
+<h3 data-number="3.1.3" class="anchored" data-anchor-id="数据集连接方法"><span class="header-section-number">3.1.3</span> 数据集连接方法</h3>
+</section>
+<section id="图像增强技术" class="level3" data-number="3.1.4">
+<h3 data-number="3.1.4" class="anchored" data-anchor-id="图像增强技术"><span class="header-section-number">3.1.4</span> 图像增强技术</h3>
+</section>
+<section id="其他图像增强技术" class="level3" data-number="3.1.5">
+<h3 data-number="3.1.5" class="anchored" data-anchor-id="其他图像增强技术"><span class="header-section-number">3.1.5</span> 其他图像增强技术</h3>
+<table class="table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Technique</th>
+<th>Description</th>
+<th>Application</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Low Pass Filter</td>
+<td>Smoothes image by averaging pixels.</td>
+<td>Reduces noise for better burn area detection.</td>
+</tr>
+<tr class="even">
+<td>High Pass Filter</td>
+<td>Enhances contrast by highlighting local changes.</td>
+<td>Improves distinction between burned/unburned areas.</td>
+</tr>
+<tr class="odd">
+<td>Embossing</td>
+<td>Modifies coefficients to create shadowy edge relief.</td>
+<td>Highlights burn area edges for clearer boundaries.</td>
+</tr>
+<tr class="even">
+<td>Principal Component Analysis (PCA)</td>
+<td>Transforms multispectral data to smaller, uncorrelated datasets.</td>
+<td>Simplifies data for easier burn area analysis in Landsat images.</td>
+</tr>
+<tr class="odd">
+<td>Multi-date PCA</td>
+<td>Combines different time point bands for PCA.</td>
+<td>Identifies temporal changes in burn areas across Landsat images.</td>
+</tr>
+<tr class="even">
+<td>Texture Analysis</td>
+<td>Analyzes spatial variation in grayscale.</td>
+<td>Enhances burn area detection through texture metrics.</td>
+</tr>
+<tr class="odd">
+<td>Image Fusion</td>
+<td>Merges data from multiple sources/sensors.</td>
+<td>Integrates different resolutions for more detailed analysis.</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="application-in-literature" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="application-in-literature"><span class="header-section-number">3.2</span> Application in Literature</h2>
+<p>These methodologies have wide applications in geospatial science literature, particularly in environmental monitoring, land use mapping, and disaster assessment. Atmospheric correction techniques are essential in longitudinal studies using satellite data, ensuring consistency across different times and conditions. Image enhancements are particularly vital in extracting detailed information from remote sensing data, contributing to more accurate and reliable interpretations in various research areas.</p>
+<p>Geometric corrections are commonly applied in studies involving spatial accuracy, while orthorectification is used extensively in mapping applications. Radiometric calibration’s role in ensuring data accuracy over different periods is crucial in change detection and environmental studies. Overall, these techniques are fundamental to the field of geospatial sciences, enabling the extraction of meaningful and accurate information from raw satellite data.</p>
+</section>
+<section id="personal-reflection" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="personal-reflection"><span class="header-section-number">3.3</span> Personal Reflection</h2>
+<p>The depth of knowledge gained from this course has been profound. Understanding the technical aspects of image correction and enhancement has provided a clear perspective on the importance and complexity of these processes in remote sensing. It’s intriguing to see how various correction techniques can significantly improve the quality of satellite imagery, leading to more reliable data interpretation.</p>
+<p>The potential of these techniques in addressing global challenges, such as environmental monitoring and disaster management, is particularly inspiring. The course has deepened my appreciation for the field of geospatial sciences and its impact on our understanding of the Earth.</p>
 
 
 </section>
@@ -429,10 +516,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./Week_2.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week_2</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./Week_1.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Week_1</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./intro.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Introduction</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

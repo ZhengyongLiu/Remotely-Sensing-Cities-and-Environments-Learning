@@ -3,13 +3,15 @@ project:
   output-dir: docs
 
 book:
-  title: "Diary"
+  title: "CASA0023 Remote sensing learning Diary"
   author: "Zhengyong Liu"
-  date: "1/20/2024"
+  date: "1/25/2024"
   chapters:
     - index.qmd
     - Week_1.qmd
     - Week_2.qmd
+    - intro.qmd
+    - summary.qmd
     - references.qmd
 
 bibliography: references.bib

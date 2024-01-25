@@ -26,5 +26,54 @@
     "title": "1  Week_1",
     "section": "1.4 Reference",
     "text": "1.4 Reference\n‘Remote Sensing - NASA’, n.d. https://www.nasa.gov/directorates/somd/space-communications-navigation-program/remote-sensing/.\n‘Types Of Remote Sensing: Devices And Their Applications’, 18 November 2020. https://eos.com/blog/types-of-remote-sensing/."
+  },
+  {
+    "objectID": "Week_3.html#knowledge-gain-from-the-lecture",
+    "href": "Week_3.html#knowledge-gain-from-the-lecture",
+    "title": "3  Week_3",
+    "section": "3.1 Knowledge gain From the Lecture",
+    "text": "3.1 Knowledge gain From the Lecture\n本周的学习重点是遥感图像处理，主要关注领域包括几何校正、大气校正、正射校正、辐射校正以及各种图像增强技术。首先介绍了遥感图像处理的基础知识。它涵盖了遥感的基本概念及其在环境监测、城市规划、农业、灾害管理和气候研究等众多应用中的重要性。这一部分为理解后面更高级的主题奠定了基础，为遥感原理和实践奠定了基础。\n\n3.1.1 校正\n\n3.1.1.1 几何校正\n几何校正是图像校正的基础，主要解决由于传感器和其它因素导致的图像变形。这种校正的目标是使得图像符合选定的地图投影系统，通过对图像上的控制点（已知地理坐标的点）和图像坐标之间的关系建模，来调整整个图像的几何形状。\n\n\n3.1.1.2 大气校正\n大气校正对于解决地球大气、传感器角度和地形变化造成的遥感图像失真和不准确问题至关重要。在课上学习到了几种不同的校正方法：相对大气校，伪不变特征的校正，绝对大气校正，经验线校正。\n通过课上的学习我们可以知道 1. 相对大气校正更多侧重于在多个图像和波段间实现一致性，而伪不变特征的校正侧重于找到图像中稳定的参考点，并利用这些点来校正图像中的其他像素，从而减少大气的影响。两者都是为了提高图像的质量和可比性，但采取了不同的假设和技术手段。 2. 绝对大气校正是一种精确的校正方法，它使用复杂的模型来模拟和纠正大气对遥感数据的影响，从而获取更真实的地表反射率信息。这对于确保数据的精确性和可比性至关重要，尤其是在进行地表特征分析或变化检测时。 3. 经验线校正是一种利用实地测量数据来校正卫星遥感图像的方法，以减少大气散射和吸收对卫星数据的影响，从而得到更接近地表真实情况的反射率数据。这种方法通常需要在卫星过境时同步进行地面和卫星的测量。\n\n\n3.1.1.3 辐射校正\n同时还学习了辐射校正，强调其在调整卫星图像像素值以准确反映地球表面辐射方面的作用。本节解释了将原始卫星数据转换为有意义的辐射测量值的过程。它深入探讨了校准技术，包括使用地面参考数据和星载校准装置。日记强调了校准对于保持遥感数据在不同时间和不同传感器之间的一致性的重要性，并探讨了实现高质量辐射校准所面临的挑战和解决方案。\n\n\n\n3.1.2 数据集连接方法/图像增强技术\n\n\n3.1.3 数据集连接方法\n\n\n3.1.4 图像增强技术\n\n\n3.1.5 其他图像增强技术\n\n\n\n\n\n\n\n\nTechnique\nDescription\nApplication\n\n\n\n\nLow Pass Filter\nSmoothes image by averaging pixels.\nReduces noise for better burn area detection.\n\n\nHigh Pass Filter\nEnhances contrast by highlighting local changes.\nImproves distinction between burned/unburned areas.\n\n\nEmbossing\nModifies coefficients to create shadowy edge relief.\nHighlights burn area edges for clearer boundaries.\n\n\nPrincipal Component Analysis (PCA)\nTransforms multispectral data to smaller, uncorrelated datasets.\nSimplifies data for easier burn area analysis in Landsat images.\n\n\nMulti-date PCA\nCombines different time point bands for PCA.\nIdentifies temporal changes in burn areas across Landsat images.\n\n\nTexture Analysis\nAnalyzes spatial variation in grayscale.\nEnhances burn area detection through texture metrics.\n\n\nImage Fusion\nMerges data from multiple sources/sensors.\nIntegrates different resolutions for more detailed analysis."
+  },
+  {
+    "objectID": "Week_3.html#application-in-literature",
+    "href": "Week_3.html#application-in-literature",
+    "title": "3  Week_3",
+    "section": "3.2 Application in Literature",
+    "text": "3.2 Application in Literature\nThese methodologies have wide applications in geospatial science literature, particularly in environmental monitoring, land use mapping, and disaster assessment. Atmospheric correction techniques are essential in longitudinal studies using satellite data, ensuring consistency across different times and conditions. Image enhancements are particularly vital in extracting detailed information from remote sensing data, contributing to more accurate and reliable interpretations in various research areas.\nGeometric corrections are commonly applied in studies involving spatial accuracy, while orthorectification is used extensively in mapping applications. Radiometric calibration’s role in ensuring data accuracy over different periods is crucial in change detection and environmental studies. Overall, these techniques are fundamental to the field of geospatial sciences, enabling the extraction of meaningful and accurate information from raw satellite data."
+  },
+  {
+    "objectID": "Week_3.html#personal-reflection",
+    "href": "Week_3.html#personal-reflection",
+    "title": "3  Week_3",
+    "section": "3.3 Personal Reflection",
+    "text": "3.3 Personal Reflection\nThe depth of knowledge gained from this course has been profound. Understanding the technical aspects of image correction and enhancement has provided a clear perspective on the importance and complexity of these processes in remote sensing. It’s intriguing to see how various correction techniques can significantly improve the quality of satellite imagery, leading to more reliable data interpretation.\nThe potential of these techniques in addressing global challenges, such as environmental monitoring and disaster management, is particularly inspiring. The course has deepened my appreciation for the field of geospatial sciences and its impact on our understanding of the Earth."
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "3  Introduction",
+    "section": "",
+    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "4  Summary",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "Bibliography",
+    "section": "",
+    "text": "‘Remote Sensing - NASA’, n.d. https://www.nasa.gov/directorates/somd/space-communications-navigation-program/remote-sensing/.\n‘Types Of Remote Sensing: Devices And Their Applications’, 18 November 2020. https://eos.com/blog/types-of-remote-sensing/."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "CASA0023 Remote sensing learning Diary",
+    "section": "",
+    "text": "Preface\nThis is a Learning Diary of CASA0023 Remotely Sensing Cities and Environments.\n\n\nAdd more in the future"
   }
 ]
