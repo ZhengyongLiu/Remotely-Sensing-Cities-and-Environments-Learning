@@ -1,6 +1,5 @@
 ---
 title: "Week_1"
-bibliography: references.bib
 ---
 
 ## **Knowledge gain From the Lecture**
