@@ -2,50 +2,119 @@
 title: "Week_3"
 format: html
 editor: visual
+bibliography: references.bib
 ---
 
 ## **Knowledge gain From the Lecture**
-本周的学习重点是遥感图像处理，主要关注领域包括几何校正、大气校正、正射校正、辐射校正以及各种图像增强技术。首先介绍了遥感图像处理的基础知识。它涵盖了遥感的基本概念及其在环境监测、城市规划、农业、灾害管理和气候研究等众多应用中的重要性。这一部分为理解后面更高级的主题奠定了基础，为遥感原理和实践奠定了基础。
 
-### 校正
-#### 几何校正
-几何校正是图像校正的基础，主要解决由于传感器和其它因素导致的图像变形。这种校正的目标是使得图像符合选定的地图投影系统，通过对图像上的控制点（已知地理坐标的点）和图像坐标之间的关系建模，来调整整个图像的几何形状。
+::: {style="text-align: justify;"}
+This week's study focuses on remote sensing image processing, with the main areas of interest being geometric corrections, atmospheric corrections, orthometric corrections, radiometric corrections and various image enhancement techniques.
+:::
 
-#### 大气校正
-大气校正对于解决地球大气、传感器角度和地形变化造成的遥感图像失真和不准确问题至关重要。在课上学习到了几种不同的校正方法：相对大气校，伪不变特征的校正，绝对大气校正，经验线校正。
+### Correction
 
-通过课上的学习我们可以知道
-1. 相对大气校正更多侧重于在多个图像和波段间实现一致性，而伪不变特征的校正侧重于找到图像中稳定的参考点，并利用这些点来校正图像中的其他像素，从而减少大气的影响。两者都是为了提高图像的质量和可比性，但采取了不同的假设和技术手段。
-2. 绝对大气校正是一种精确的校正方法，它使用复杂的模型来模拟和纠正大气对遥感数据的影响，从而获取更真实的地表反射率信息。这对于确保数据的精确性和可比性至关重要，尤其是在进行地表特征分析或变化检测时。
-3. 经验线校正是一种利用实地测量数据来校正卫星遥感图像的方法，以减少大气散射和吸收对卫星数据的影响，从而得到更接近地表真实情况的反射率数据。这种方法通常需要在卫星过境时同步进行地面和卫星的测量。
+#### Geometric Correction
 
-#### 辐射校正
-同时还学习了辐射校正，强调其在调整卫星图像像素值以准确反映地球表面辐射方面的作用。本节解释了将原始卫星数据转换为有意义的辐射测量值的过程。它深入探讨了校准技术，包括使用地面参考数据和星载校准装置。日记强调了校准对于保持遥感数据在不同时间和不同传感器之间的一致性的重要性，并探讨了实现高质量辐射校准所面临的挑战和解决方案。
+::: {style="text-align: justify;"}
+Geometric correction is the basis of image correction and addresses image distortion due to sensor and other factors. The goal of this correction is to make the image conform to the selected map projection system, adjusting the geometry of the entire image by modelling the relationship between control points (points with known geographic coordinates) on the image and the image coordinates.
+:::
 
+```{r  echo=FALSE, out.width='110%', fig.align='center', fig.cap='How Geometric Correction Work, Source: <a href="https://www.semanticscholar.org/paper/A-Geometric-Correction-Method-of-Plane-Image-Based-Xiaopeng-Leilei/0d46695027b1a9bab5c88c1c0e822760f31d23e6">Xiaopeng</a>'}
+knitr::include_graphics('Figure/Week_3/Geometric correction.png')
+```
 
-### 数据集连接方法/图像增强技术
-### 数据集连接方法
+#### Atmospheric Correction
 
-### 图像增强技术
+::: {style="text-align: justify;"}
+Atmospheric corrections are essential to address distortions and inaccuracies in remotely sensed images caused by variations in the Earth's atmosphere, sensor angles, and terrain. Several different correction methods were learned in class: **Relative Atmospheric Correction**, **Pseudo-Invariant Correction**, **Absolute Atmospheric Correction**, and **Empirical Line Correction**.
+:::
 
-### 其他图像增强技术
-| Technique | Description | Application |
-| --- | --- | --- |
-| Low Pass Filter | Smoothes image by averaging pixels. | Reduces noise for better burn area detection. |
-| High Pass Filter | Enhances contrast by highlighting local changes. | Improves distinction between burned/unburned areas. |
-| Embossing | Modifies coefficients to create shadowy edge relief. | Highlights burn area edges for clearer boundaries. |
+The different methods and characteristics of atmospheric correction have been summarised in the table below:
+
+| Method               | Key Steps                                                     | Feature                                             |
+|-------------------|----------------------------|--------------------------|
+| **Relative**         | Spectrally stable landmarks, linear relations, band operation | Consistency between images                          |
+| **Absolute**         | Complex models for atmospheric effects, surface reflectance   | Precise, accurate surface information               |
+| **Pseudo-Invariant** | High-quality reference, PIF, linear regression                | Stable reference points, reduce atmospheric effects |
+| **Empirical Line**   | Ground reflectance, average DN values, linear regression      | Utilizes ground data for satellite correction       |
+
+#### Radiometric Correction
+
+::: {style="text-align: justify;"}
+The role of radiometric correction in adjusting the pixel values of satellite imagery to accurately reflect the radiation at the Earth's surface has been investigated. The main objective of radiometric correction is to convert the raw digital numbers (DN) acquired into physically meaningful units such as radiance or reflectance. This conversion is critical because DN values are arbitrary and can vary between sensors, acquisitions and platforms, making it difficult to consistently compare and analyse data. By converting DN values to radiance or reflectance, radiometric correction enables quantitative measurements and meaningful comparisons between different images and sensors.
+:::
+
+```{r  echo=FALSE, out.width='110%', fig.align='center', fig.cap='Process of Radiometric Calibration'}
+knitr::include_graphics('Figure/Week_3/Process of Radiometric Calibration.png')
+```
+
+#### Reflection of Collerallation
+
+::: {style="text-align: justify;"}
+In the course of study, certain questions arise as to when atmospheric corrections are needed and whether or not the images we buy or otherwise acquire have been atmospherically corrected. In layman's terms, if we need to use an image that truly reflects the Sun's radiation for quantitative inversion or to obtain information about the Earth, accurately identify features, etc., then we need to make an atmospheric correction. When we buy an image, the description document says that it is radiometrically corrected. In fact, this radiometric correction refers to the coarse radiometric correction, which is just a systematic atmospheric correction, which has the same meaning as the systematic geometric correction.
+
+At the moment there are many models and methods on the market, since there are how many methods, then there is the problem of method selection. Here is a summary for reference:
+
+1.  if it is a fine quantitative study, then choose the atmospheric correction method based on the radiative transfer model.
+2.  if you are doing dynamic monitoring, then you can choose relative atmospheric correction or simpler methods.
+3.  if the parameters are missing, there is no choice but to choose the simpler method.
+:::
+
+### Data Join Sets/Enhancement
+
+#### Data Join Sets
+::: {style="text-align: justify;"}
+An area may need more than one satellite image to be spliced, using mosaic in the R package for the two datasets to be spliced. When selecting images, try to select two images with similar time and date, due to the different date of the image, the image display is different, the reason may be (cloud cover, sunshine), need to use the image increase technique to operate.
+:::
+### Enhancement
+
+#### Ratio
+::: {style="text-align: justify;"}
+The ratio is the difference between two spectral bands with a specific spectral response, using CampTown's data for NDVI (The Normalised Difference Vegetation Index) The Normalised Difference Vegetation Index is based on the fact that healthy and green vegetation reflects more in the near infrared but absorbs in the red wavelengths. Therefore, the red wavelength band is used for the operation in the formula.
+
+The following figure shows the image after manipulation for NDVI (a. After NDVI Formula, b. Extraction only if NDVI is equal to or greater than 0.2)
+:::
+```{r  echo=FALSE, out.width='110%', fig.align='center', fig.cap='Process of Radiometric Calibration'}
+knitr::include_graphics('Figure/Week_3/NDVI.png')
+```
+
+#### Texture
+::: {style="text-align: justify;"}
+Due to the limitations of R, it takes a long time to run if the map is loaded too large, so only a small part of CampTown was selected for processing. Most of the area can be loaded in Google Earth Engine afterwards. Below is the texture processed study area.
+:::
+
+```{r  echo=FALSE, out.width='110%', fig.align='center', fig.cap='Process of Radiometric Calibration'}
+knitr::include_graphics('Figure/Week_3/Texture.png')
+```
+
+#### Principal Component Analysis
+```{r  echo=FALSE, out.width='110%', fig.align='center', fig.cap='Process of Radiometric Calibration'}
+knitr::include_graphics('Figure/Week_3/Principal Component Analysis.png')
+```
+
+```{r  echo=FALSE, out.width='110%', fig.align='center', fig.cap='Process of Radiometric Calibration'}
+knitr::include_graphics('Figure/Week_3/Principal Component Analysis result.png')
+```
+### Other Enhancement
+
+| Technique                          | Description                                                      | Application                                                      |
+|-------------------|---------------------------|---------------------------|
+| Low Pass Filter                    | Smoothes image by averaging pixels.                              | Reduces noise for better burn area detection.                    |
+| High Pass Filter                   | Enhances contrast by highlighting local changes.                 | Improves distinction between burned/unburned areas.              |
+| Embossing                          | Modifies coefficients to create shadowy edge relief.             | Highlights burn area edges for clearer boundaries.               |
 | Principal Component Analysis (PCA) | Transforms multispectral data to smaller, uncorrelated datasets. | Simplifies data for easier burn area analysis in Landsat images. |
-| Multi-date PCA | Combines different time point bands for PCA. | Identifies temporal changes in burn areas across Landsat images. |
-| Texture Analysis | Analyzes spatial variation in grayscale. | Enhances burn area detection through texture metrics. |
-| Image Fusion | Merges data from multiple sources/sensors. | Integrates different resolutions for more detailed analysis. |
-
+| Multi-date PCA                     | Combines different time point bands for PCA.                     | Identifies temporal changes in burn areas across Landsat images. |
+| Texture Analysis                   | Analyzes spatial variation in grayscale.                         | Enhances burn area detection through texture metrics.            |
+| Image Fusion                       | Merges data from multiple sources/sensors.                       | Integrates different resolutions for more detailed analysis.     |
 
 ## Application in Literature
+
 These methodologies have wide applications in geospatial science literature, particularly in environmental monitoring, land use mapping, and disaster assessment. Atmospheric correction techniques are essential in longitudinal studies using satellite data, ensuring consistency across different times and conditions. Image enhancements are particularly vital in extracting detailed information from remote sensing data, contributing to more accurate and reliable interpretations in various research areas.
 
 Geometric corrections are commonly applied in studies involving spatial accuracy, while orthorectification is used extensively in mapping applications. Radiometric calibration's role in ensuring data accuracy over different periods is crucial in change detection and environmental studies. Overall, these techniques are fundamental to the field of geospatial sciences, enabling the extraction of meaningful and accurate information from raw satellite data.
 
 ## Personal Reflection
+
 The depth of knowledge gained from this course has been profound. Understanding the technical aspects of image correction and enhancement has provided a clear perspective on the importance and complexity of these processes in remote sensing. It's intriguing to see how various correction techniques can significantly improve the quality of satellite imagery, leading to more reliable data interpretation.
 
-The potential of these techniques in addressing global challenges, such as environmental monitoring and disaster management, is particularly inspiring. The course has deepened my appreciation for the field of geospatial sciences and its impact on our understanding of the Earth. 
+The potential of these techniques in addressing global challenges, such as environmental monitoring and disaster management, is particularly inspiring. The course has deepened my appreciation for the field of geospatial sciences and its impact on our understanding of the Earth.

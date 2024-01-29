@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>CASA0023 Remote sensing learning - 3&nbsp; Week_3</title>
+<title>CASA0023 Remote sensing learning Diary - 3&nbsp; Week_3</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -89,7 +89,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">CASA0023 Remote sensing learning</a> 
+      <a href="./">CASA0023 Remote sensing learning Diary</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -153,11 +153,10 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#knowledge-gain-from-the-lecture" id="toc-knowledge-gain-from-the-lecture" class="nav-link active" data-scroll-target="#knowledge-gain-from-the-lecture"><span class="header-section-number">3.1</span> <strong>Knowledge gain From the Lecture</strong></a>
   <ul class="collapse">
-  <li><a href="#校正" id="toc-校正" class="nav-link" data-scroll-target="#校正"><span class="header-section-number">3.1.1</span> 校正</a></li>
-  <li><a href="#数据集连接方法图像增强技术" id="toc-数据集连接方法图像增强技术" class="nav-link" data-scroll-target="#数据集连接方法图像增强技术"><span class="header-section-number">3.1.2</span> 数据集连接方法/图像增强技术</a></li>
-  <li><a href="#数据集连接方法" id="toc-数据集连接方法" class="nav-link" data-scroll-target="#数据集连接方法"><span class="header-section-number">3.1.3</span> 数据集连接方法</a></li>
-  <li><a href="#图像增强技术" id="toc-图像增强技术" class="nav-link" data-scroll-target="#图像增强技术"><span class="header-section-number">3.1.4</span> 图像增强技术</a></li>
-  <li><a href="#其他图像增强技术" id="toc-其他图像增强技术" class="nav-link" data-scroll-target="#其他图像增强技术"><span class="header-section-number">3.1.5</span> 其他图像增强技术</a></li>
+  <li><a href="#correction" id="toc-correction" class="nav-link" data-scroll-target="#correction"><span class="header-section-number">3.1.1</span> Correction</a></li>
+  <li><a href="#data-join-setsenhancement" id="toc-data-join-setsenhancement" class="nav-link" data-scroll-target="#data-join-setsenhancement"><span class="header-section-number">3.1.2</span> Data Join Sets/Enhancement</a></li>
+  <li><a href="#enhancement" id="toc-enhancement" class="nav-link" data-scroll-target="#enhancement"><span class="header-section-number">3.1.3</span> Enhancement</a></li>
+  <li><a href="#other-enhancement" id="toc-other-enhancement" class="nav-link" data-scroll-target="#other-enhancement"><span class="header-section-number">3.1.4</span> Other Enhancement</a></li>
   </ul></li>
   <li><a href="#application-in-literature" id="toc-application-in-literature" class="nav-link" data-scroll-target="#application-in-literature"><span class="header-section-number">3.2</span> Application in Literature</a></li>
   <li><a href="#personal-reflection" id="toc-personal-reflection" class="nav-link" data-scroll-target="#personal-reflection"><span class="header-section-number">3.3</span> Personal Reflection</a></li>
@@ -186,39 +185,174 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="knowledge-gain-from-the-lecture" class="level2" data-number="3.1">
 <h2 data-number="3.1" class="anchored" data-anchor-id="knowledge-gain-from-the-lecture"><span class="header-section-number">3.1</span> <strong>Knowledge gain From the Lecture</strong></h2>
-<p>本周的学习重点是遥感图像处理，主要关注领域包括几何校正、大气校正、正射校正、辐射校正以及各种图像增强技术。首先介绍了遥感图像处理的基础知识。它涵盖了遥感的基本概念及其在环境监测、城市规划、农业、灾害管理和气候研究等众多应用中的重要性。这一部分为理解后面更高级的主题奠定了基础，为遥感原理和实践奠定了基础。</p>
-<section id="校正" class="level3" data-number="3.1.1">
-<h3 data-number="3.1.1" class="anchored" data-anchor-id="校正"><span class="header-section-number">3.1.1</span> 校正</h3>
-<section id="几何校正" class="level4" data-number="3.1.1.1">
-<h4 data-number="3.1.1.1" class="anchored" data-anchor-id="几何校正"><span class="header-section-number">3.1.1.1</span> 几何校正</h4>
-<p>几何校正是图像校正的基础，主要解决由于传感器和其它因素导致的图像变形。这种校正的目标是使得图像符合选定的地图投影系统，通过对图像上的控制点（已知地理坐标的点）和图像坐标之间的关系建模，来调整整个图像的几何形状。</p>
+<div style="text-align: justify;">
+<p>This week’s study focuses on remote sensing image processing, with the main areas of interest being geometric corrections, atmospheric corrections, orthometric corrections, radiometric corrections and various image enhancement techniques.</p>
+</div>
+<section id="correction" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="correction"><span class="header-section-number">3.1.1</span> Correction</h3>
+<section id="geometric-correction" class="level4" data-number="3.1.1.1">
+<h4 data-number="3.1.1.1" class="anchored" data-anchor-id="geometric-correction"><span class="header-section-number">3.1.1.1</span> Geometric Correction</h4>
+<div style="text-align: justify;">
+<p>Geometric correction is the basis of image correction and addresses image distortion due to sensor and other factors. The goal of this correction is to make the image conform to the selected map projection system, adjusting the geometry of the entire image by modelling the relationship between control points (points with known geographic coordinates) on the image and the image coordinates.</p>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Figure/Week_3/Geometric correction.png" class="img-fluid figure-img" style="width:110.0%"></p>
+<figcaption class="figure-caption">How Geometric Correction Work, Source: <a href="https://www.semanticscholar.org/paper/A-Geometric-Correction-Method-of-Plane-Image-Based-Xiaopeng-Leilei/0d46695027b1a9bab5c88c1c0e822760f31d23e6">Xiaopeng</a></figcaption>
+</figure>
+</div>
+</div>
+</div>
 </section>
-<section id="大气校正" class="level4" data-number="3.1.1.2">
-<h4 data-number="3.1.1.2" class="anchored" data-anchor-id="大气校正"><span class="header-section-number">3.1.1.2</span> 大气校正</h4>
-<p>大气校正对于解决地球大气、传感器角度和地形变化造成的遥感图像失真和不准确问题至关重要。在课上学习到了几种不同的校正方法：相对大气校，伪不变特征的校正，绝对大气校正，经验线校正。</p>
-<p>通过课上的学习我们可以知道 1. 相对大气校正更多侧重于在多个图像和波段间实现一致性，而伪不变特征的校正侧重于找到图像中稳定的参考点，并利用这些点来校正图像中的其他像素，从而减少大气的影响。两者都是为了提高图像的质量和可比性，但采取了不同的假设和技术手段。 2. 绝对大气校正是一种精确的校正方法，它使用复杂的模型来模拟和纠正大气对遥感数据的影响，从而获取更真实的地表反射率信息。这对于确保数据的精确性和可比性至关重要，尤其是在进行地表特征分析或变化检测时。 3. 经验线校正是一种利用实地测量数据来校正卫星遥感图像的方法，以减少大气散射和吸收对卫星数据的影响，从而得到更接近地表真实情况的反射率数据。这种方法通常需要在卫星过境时同步进行地面和卫星的测量。</p>
-</section>
-<section id="辐射校正" class="level4" data-number="3.1.1.3">
-<h4 data-number="3.1.1.3" class="anchored" data-anchor-id="辐射校正"><span class="header-section-number">3.1.1.3</span> 辐射校正</h4>
-<p>同时还学习了辐射校正，强调其在调整卫星图像像素值以准确反映地球表面辐射方面的作用。本节解释了将原始卫星数据转换为有意义的辐射测量值的过程。它深入探讨了校准技术，包括使用地面参考数据和星载校准装置。日记强调了校准对于保持遥感数据在不同时间和不同传感器之间的一致性的重要性，并探讨了实现高质量辐射校准所面临的挑战和解决方案。</p>
-</section>
-</section>
-<section id="数据集连接方法图像增强技术" class="level3" data-number="3.1.2">
-<h3 data-number="3.1.2" class="anchored" data-anchor-id="数据集连接方法图像增强技术"><span class="header-section-number">3.1.2</span> 数据集连接方法/图像增强技术</h3>
-</section>
-<section id="数据集连接方法" class="level3" data-number="3.1.3">
-<h3 data-number="3.1.3" class="anchored" data-anchor-id="数据集连接方法"><span class="header-section-number">3.1.3</span> 数据集连接方法</h3>
-</section>
-<section id="图像增强技术" class="level3" data-number="3.1.4">
-<h3 data-number="3.1.4" class="anchored" data-anchor-id="图像增强技术"><span class="header-section-number">3.1.4</span> 图像增强技术</h3>
-</section>
-<section id="其他图像增强技术" class="level3" data-number="3.1.5">
-<h3 data-number="3.1.5" class="anchored" data-anchor-id="其他图像增强技术"><span class="header-section-number">3.1.5</span> 其他图像增强技术</h3>
+<section id="atmospheric-correction" class="level4" data-number="3.1.1.2">
+<h4 data-number="3.1.1.2" class="anchored" data-anchor-id="atmospheric-correction"><span class="header-section-number">3.1.1.2</span> Atmospheric Correction</h4>
+<div style="text-align: justify;">
+<p>Atmospheric corrections are essential to address distortions and inaccuracies in remotely sensed images caused by variations in the Earth’s atmosphere, sensor angles, and terrain. Several different correction methods were learned in class: <strong>Relative Atmospheric Correction</strong>, <strong>Pseudo-Invariant Correction</strong>, <strong>Absolute Atmospheric Correction</strong>, and <strong>Empirical Line Correction</strong>.</p>
+</div>
+<p>The different methods and characteristics of atmospheric correction have been summarised in the table below:</p>
 <table class="table">
 <colgroup>
-<col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
+<col style="width: 26%">
+<col style="width: 38%">
+<col style="width: 35%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Method</th>
+<th>Key Steps</th>
+<th>Feature</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Relative</strong></td>
+<td>Spectrally stable landmarks, linear relations, band operation</td>
+<td>Consistency between images</td>
+</tr>
+<tr class="even">
+<td><strong>Absolute</strong></td>
+<td>Complex models for atmospheric effects, surface reflectance</td>
+<td>Precise, accurate surface information</td>
+</tr>
+<tr class="odd">
+<td><strong>Pseudo-Invariant</strong></td>
+<td>High-quality reference, PIF, linear regression</td>
+<td>Stable reference points, reduce atmospheric effects</td>
+</tr>
+<tr class="even">
+<td><strong>Empirical Line</strong></td>
+<td>Ground reflectance, average DN values, linear regression</td>
+<td>Utilizes ground data for satellite correction</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="radiometric-correction" class="level4" data-number="3.1.1.3">
+<h4 data-number="3.1.1.3" class="anchored" data-anchor-id="radiometric-correction"><span class="header-section-number">3.1.1.3</span> Radiometric Correction</h4>
+<div style="text-align: justify;">
+<p>The role of radiometric correction in adjusting the pixel values of satellite imagery to accurately reflect the radiation at the Earth’s surface has been investigated. The main objective of radiometric correction is to convert the raw digital numbers (DN) acquired into physically meaningful units such as radiance or reflectance. This conversion is critical because DN values are arbitrary and can vary between sensors, acquisitions and platforms, making it difficult to consistently compare and analyse data. By converting DN values to radiance or reflectance, radiometric correction enables quantitative measurements and meaningful comparisons between different images and sensors.</p>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Figure/Week_3/Process of Radiometric Calibration.png" class="img-fluid figure-img" style="width:110.0%"></p>
+<figcaption class="figure-caption">Process of Radiometric Calibration</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="reflection-of-collerallation" class="level4" data-number="3.1.1.4">
+<h4 data-number="3.1.1.4" class="anchored" data-anchor-id="reflection-of-collerallation"><span class="header-section-number">3.1.1.4</span> Reflection of Collerallation</h4>
+<div style="text-align: justify;">
+<p>In the course of study, certain questions arise as to when atmospheric corrections are needed and whether or not the images we buy or otherwise acquire have been atmospherically corrected. In layman’s terms, if we need to use an image that truly reflects the Sun’s radiation for quantitative inversion or to obtain information about the Earth, accurately identify features, etc., then we need to make an atmospheric correction. When we buy an image, the description document says that it is radiometrically corrected. In fact, this radiometric correction refers to the coarse radiometric correction, which is just a systematic atmospheric correction, which has the same meaning as the systematic geometric correction.</p>
+<p>At the moment there are many models and methods on the market, since there are how many methods, then there is the problem of method selection. Here is a summary for reference:</p>
+<ol type="1">
+<li>if it is a fine quantitative study, then choose the atmospheric correction method based on the radiative transfer model.</li>
+<li>if you are doing dynamic monitoring, then you can choose relative atmospheric correction or simpler methods.</li>
+<li>if the parameters are missing, there is no choice but to choose the simpler method.</li>
+</ol>
+</div>
+</section>
+</section>
+<section id="data-join-setsenhancement" class="level3" data-number="3.1.2">
+<h3 data-number="3.1.2" class="anchored" data-anchor-id="data-join-setsenhancement"><span class="header-section-number">3.1.2</span> Data Join Sets/Enhancement</h3>
+<section id="data-join-sets" class="level4" data-number="3.1.2.1">
+<h4 data-number="3.1.2.1" class="anchored" data-anchor-id="data-join-sets"><span class="header-section-number">3.1.2.1</span> Data Join Sets</h4>
+<div style="text-align: justify;">
+<p>An area may need more than one satellite image to be spliced, using mosaic in the R package for the two datasets to be spliced. When selecting images, try to select two images with similar time and date, due to the different date of the image, the image display is different, the reason may be (cloud cover, sunshine), need to use the image increase technique to operate.</p>
+</div>
+</section>
+</section>
+<section id="enhancement" class="level3" data-number="3.1.3">
+<h3 data-number="3.1.3" class="anchored" data-anchor-id="enhancement"><span class="header-section-number">3.1.3</span> Enhancement</h3>
+<section id="ratio" class="level4" data-number="3.1.3.1">
+<h4 data-number="3.1.3.1" class="anchored" data-anchor-id="ratio"><span class="header-section-number">3.1.3.1</span> Ratio</h4>
+<div style="text-align: justify;">
+<p>The ratio is the difference between two spectral bands with a specific spectral response, using CampTown’s data for NDVI (The Normalised Difference Vegetation Index) The Normalised Difference Vegetation Index is based on the fact that healthy and green vegetation reflects more in the near infrared but absorbs in the red wavelengths. Therefore, the red wavelength band is used for the operation in the formula.</p>
+<p>The following figure shows the image after manipulation for NDVI (a. After NDVI Formula, b. Extraction only if NDVI is equal to or greater than 0.2)</p>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Figure/Week_3/NDVI.png" class="img-fluid figure-img" style="width:110.0%"></p>
+<figcaption class="figure-caption">Process of Radiometric Calibration</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="texture" class="level4" data-number="3.1.3.2">
+<h4 data-number="3.1.3.2" class="anchored" data-anchor-id="texture"><span class="header-section-number">3.1.3.2</span> Texture</h4>
+<div style="text-align: justify;">
+<p>Due to the limitations of R, it takes a long time to run if the map is loaded too large, so only a small part of CampTown was selected for processing. Most of the area can be loaded in Google Earth Engine afterwards. Below is the texture processed study area.</p>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Figure/Week_3/Texture.png" class="img-fluid figure-img" style="width:110.0%"></p>
+<figcaption class="figure-caption">Process of Radiometric Calibration</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="principal-component-analysis" class="level4" data-number="3.1.3.3">
+<h4 data-number="3.1.3.3" class="anchored" data-anchor-id="principal-component-analysis"><span class="header-section-number">3.1.3.3</span> Principal Component Analysis</h4>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Figure/Week_3/Principal Component Analysis.png" class="img-fluid figure-img" style="width:110.0%"></p>
+<figcaption class="figure-caption">Process of Radiometric Calibration</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Figure/Week_3/Principal Component Analysis result.png" class="img-fluid figure-img" style="width:110.0%"></p>
+<figcaption class="figure-caption">Process of Radiometric Calibration</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="other-enhancement" class="level3" data-number="3.1.4">
+<h3 data-number="3.1.4" class="anchored" data-anchor-id="other-enhancement"><span class="header-section-number">3.1.4</span> Other Enhancement</h3>
+<table class="table">
+<colgroup>
+<col style="width: 26%">
+<col style="width: 36%">
+<col style="width: 36%">
 </colgroup>
 <thead>
 <tr class="header">
