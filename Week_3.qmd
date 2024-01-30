@@ -19,6 +19,19 @@ Geometric correction is the basis of image correction and addresses image distor
 ```{r  echo=FALSE, out.width='110%', fig.align='center', fig.cap='How Geometric Correction Work, Source: <a href="https://www.semanticscholar.org/paper/A-Geometric-Correction-Method-of-Plane-Image-Based-Xiaopeng-Leilei/0d46695027b1a9bab5c88c1c0e822760f31d23e6">Xiaopeng</a>'}
 knitr::include_graphics('Figure/Week_3/Geometric correction.png')
 ```
+::: {style="text-align: justify;"}
+Based on the above calibration process, it can be done by the following equation
+For a point \((x, y)\) in the distorted image, the corresponding point \((x', y')\) in the geometrically corrected image can be calculated using:
+
+$$
+x' = a_0 + a_1 x + a_2 y + a_3 x^2 + a_4 xy + a_5 y^2 + \ldots
+$$
+$$
+y' = b_0 + b_1 x + b_2 y + b_3 x^2 + b_4 xy + b_5 y^2 + \ldots
+$$
+
+Here, \(a_0, a_1, \ldots, a_n\) and \(b_0, b_1, \ldots, b_n\) are coefficients determined through a calibration process using ground control points (GCPs), which are points whose true position is known. The number of terms in the polynomial (and thus the number of coefficients) depends on the degree of the polynomial required to model the distortion adequately. A first-degree polynomial correction (affine transformation) would not include the squared terms, for example.
+:::
 
 #### Atmospheric Correction
 
@@ -67,7 +80,11 @@ An area may need more than one satellite image to be spliced, using mosaic in th
 
 #### Ratio
 ::: {style="text-align: justify;"}
-The ratio is the difference between two spectral bands with a specific spectral response, using CampTown's data for NDVI (The Normalised Difference Vegetation Index) The Normalised Difference Vegetation Index is based on the fact that healthy and green vegetation reflects more in the near infrared but absorbs in the red wavelengths. Therefore, the red wavelength band is used for the operation in the formula.
+The ratio is the difference between two spectral bands with a specific spectral response, using CampTown's data for NDVI (The Normalised Difference Vegetation Index) The Normalised Difference Vegetation Index is based on the fact that healthy and green vegetation reflects more in the near infrared but absorbs in the red wavelengths. Therefore, the red wavelength band is used for the operation in the formula below.
+$$
+NDVI = \frac{NIR - Red}{NIR + Red}
+$$
+
 
 The following figure shows the image after manipulation for NDVI (a. After NDVI Formula, b. Extraction only if NDVI is equal to or greater than 0.2)
 :::
@@ -75,7 +92,7 @@ The following figure shows the image after manipulation for NDVI (a. After NDVI 
 knitr::include_graphics('Figure/Week_3/NDVI.png')
 ```
 
-#### Texture
+#### Texture (Unfinished)
 ::: {style="text-align: justify;"}
 Due to the limitations of R, it takes a long time to run if the map is loaded too large, so only a small part of CampTown was selected for processing. Most of the area can be loaded in Google Earth Engine afterwards. Below is the texture processed study area.
 :::
@@ -84,7 +101,7 @@ Due to the limitations of R, it takes a long time to run if the map is loaded to
 knitr::include_graphics('Figure/Week_3/Texture.png')
 ```
 
-#### Principal Component Analysis
+#### Principal Component Analysis (Unfinished)
 ```{r  echo=FALSE, out.width='110%', fig.align='center', fig.cap='Process of Radiometric Calibration'}
 knitr::include_graphics('Figure/Week_3/Principal Component Analysis.png')
 ```
@@ -104,13 +121,13 @@ knitr::include_graphics('Figure/Week_3/Principal Component Analysis result.png')
 | Texture Analysis                   | Analyzes spatial variation in grayscale.                         | Enhances burn area detection through texture metrics.            |
 | Image Fusion                       | Merges data from multiple sources/sensors.                       | Integrates different resolutions for more detailed analysis.     |
 
-## Application in Literature
+## Application in Literature (Unfinished)
 
 These methodologies have wide applications in geospatial science literature, particularly in environmental monitoring, land use mapping, and disaster assessment. Atmospheric correction techniques are essential in longitudinal studies using satellite data, ensuring consistency across different times and conditions. Image enhancements are particularly vital in extracting detailed information from remote sensing data, contributing to more accurate and reliable interpretations in various research areas.
 
 Geometric corrections are commonly applied in studies involving spatial accuracy, while orthorectification is used extensively in mapping applications. Radiometric calibration's role in ensuring data accuracy over different periods is crucial in change detection and environmental studies. Overall, these techniques are fundamental to the field of geospatial sciences, enabling the extraction of meaningful and accurate information from raw satellite data.
 
-## Personal Reflection
+## Personal Reflection (Unfinished)
 
 The depth of knowledge gained from this course has been profound. Understanding the technical aspects of image correction and enhancement has provided a clear perspective on the importance and complexity of these processes in remote sensing. It's intriguing to see how various correction techniques can significantly improve the quality of satellite imagery, leading to more reliable data interpretation.
 

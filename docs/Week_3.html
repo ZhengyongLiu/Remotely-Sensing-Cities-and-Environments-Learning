@@ -62,6 +62,8 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -152,8 +154,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#enhancement" id="toc-enhancement" class="nav-link" data-scroll-target="#enhancement"><span class="header-section-number">3.1.3</span> Enhancement</a></li>
   <li><a href="#other-enhancement" id="toc-other-enhancement" class="nav-link" data-scroll-target="#other-enhancement"><span class="header-section-number">3.1.4</span> Other Enhancement</a></li>
   </ul></li>
-  <li><a href="#application-in-literature" id="toc-application-in-literature" class="nav-link" data-scroll-target="#application-in-literature"><span class="header-section-number">3.2</span> Application in Literature</a></li>
-  <li><a href="#personal-reflection" id="toc-personal-reflection" class="nav-link" data-scroll-target="#personal-reflection"><span class="header-section-number">3.3</span> Personal Reflection</a></li>
+  <li><a href="#application-in-literature-unfinished" id="toc-application-in-literature-unfinished" class="nav-link" data-scroll-target="#application-in-literature-unfinished"><span class="header-section-number">3.2</span> Application in Literature (Unfinished)</a></li>
+  <li><a href="#personal-reflection-unfinished" id="toc-personal-reflection-unfinished" class="nav-link" data-scroll-target="#personal-reflection-unfinished"><span class="header-section-number">3.3</span> Personal Reflection (Unfinished)</a></li>
   </ul>
 </nav>
     </div>
@@ -198,6 +200,15 @@ ul.task-list li input[type="checkbox"] {
 </figure>
 </div>
 </div>
+</div>
+<div style="text-align: justify;">
+<p>Based on the above calibration process, it can be done by the following equation For a point ((x, y)) in the distorted image, the corresponding point ((x’, y’)) in the geometrically corrected image can be calculated using:</p>
+<p><span class="math display">\[
+x' = a_0 + a_1 x + a_2 y + a_3 x^2 + a_4 xy + a_5 y^2 + \ldots
+\]</span> <span class="math display">\[
+y' = b_0 + b_1 x + b_2 y + b_3 x^2 + b_4 xy + b_5 y^2 + \ldots
+\]</span></p>
+<p>Here, (a_0, a_1, , a_n) and (b_0, b_1, , b_n) are coefficients determined through a calibration process using ground control points (GCPs), which are points whose true position is known. The number of terms in the polynomial (and thus the number of coefficients) depends on the degree of the polynomial required to model the distortion adequately. A first-degree polynomial correction (affine transformation) would not include the squared terms, for example.</p>
 </div>
 </section>
 <section id="atmospheric-correction" class="level4" data-number="3.1.1.2">
@@ -286,7 +297,9 @@ ul.task-list li input[type="checkbox"] {
 <section id="ratio" class="level4" data-number="3.1.3.1">
 <h4 data-number="3.1.3.1" class="anchored" data-anchor-id="ratio"><span class="header-section-number">3.1.3.1</span> Ratio</h4>
 <div style="text-align: justify;">
-<p>The ratio is the difference between two spectral bands with a specific spectral response, using CampTown’s data for NDVI (The Normalised Difference Vegetation Index) The Normalised Difference Vegetation Index is based on the fact that healthy and green vegetation reflects more in the near infrared but absorbs in the red wavelengths. Therefore, the red wavelength band is used for the operation in the formula.</p>
+<p>The ratio is the difference between two spectral bands with a specific spectral response, using CampTown’s data for NDVI (The Normalised Difference Vegetation Index) The Normalised Difference Vegetation Index is based on the fact that healthy and green vegetation reflects more in the near infrared but absorbs in the red wavelengths. Therefore, the red wavelength band is used for the operation in the formula below. <span class="math display">\[
+NDVI = \frac{NIR - Red}{NIR + Red}
+\]</span></p>
 <p>The following figure shows the image after manipulation for NDVI (a. After NDVI Formula, b. Extraction only if NDVI is equal to or greater than 0.2)</p>
 </div>
 <div class="cell" data-layout-align="center">
@@ -300,8 +313,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </section>
-<section id="texture" class="level4" data-number="3.1.3.2">
-<h4 data-number="3.1.3.2" class="anchored" data-anchor-id="texture"><span class="header-section-number">3.1.3.2</span> Texture</h4>
+<section id="texture-unfinished" class="level4" data-number="3.1.3.2">
+<h4 data-number="3.1.3.2" class="anchored" data-anchor-id="texture-unfinished"><span class="header-section-number">3.1.3.2</span> Texture (Unfinished)</h4>
 <div style="text-align: justify;">
 <p>Due to the limitations of R, it takes a long time to run if the map is loaded too large, so only a small part of CampTown was selected for processing. Most of the area can be loaded in Google Earth Engine afterwards. Below is the texture processed study area.</p>
 </div>
@@ -316,8 +329,8 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </section>
-<section id="principal-component-analysis" class="level4" data-number="3.1.3.3">
-<h4 data-number="3.1.3.3" class="anchored" data-anchor-id="principal-component-analysis"><span class="header-section-number">3.1.3.3</span> Principal Component Analysis</h4>
+<section id="principal-component-analysis-unfinished" class="level4" data-number="3.1.3.3">
+<h4 data-number="3.1.3.3" class="anchored" data-anchor-id="principal-component-analysis-unfinished"><span class="header-section-number">3.1.3.3</span> Principal Component Analysis (Unfinished)</h4>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -395,13 +408,13 @@ ul.task-list li input[type="checkbox"] {
 </table>
 </section>
 </section>
-<section id="application-in-literature" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="application-in-literature"><span class="header-section-number">3.2</span> Application in Literature</h2>
+<section id="application-in-literature-unfinished" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="application-in-literature-unfinished"><span class="header-section-number">3.2</span> Application in Literature (Unfinished)</h2>
 <p>These methodologies have wide applications in geospatial science literature, particularly in environmental monitoring, land use mapping, and disaster assessment. Atmospheric correction techniques are essential in longitudinal studies using satellite data, ensuring consistency across different times and conditions. Image enhancements are particularly vital in extracting detailed information from remote sensing data, contributing to more accurate and reliable interpretations in various research areas.</p>
 <p>Geometric corrections are commonly applied in studies involving spatial accuracy, while orthorectification is used extensively in mapping applications. Radiometric calibration’s role in ensuring data accuracy over different periods is crucial in change detection and environmental studies. Overall, these techniques are fundamental to the field of geospatial sciences, enabling the extraction of meaningful and accurate information from raw satellite data.</p>
 </section>
-<section id="personal-reflection" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="personal-reflection"><span class="header-section-number">3.3</span> Personal Reflection</h2>
+<section id="personal-reflection-unfinished" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="personal-reflection-unfinished"><span class="header-section-number">3.3</span> Personal Reflection (Unfinished)</h2>
 <p>The depth of knowledge gained from this course has been profound. Understanding the technical aspects of image correction and enhancement has provided a clear perspective on the importance and complexity of these processes in remote sensing. It’s intriguing to see how various correction techniques can significantly improve the quality of satellite imagery, leading to more reliable data interpretation.</p>
 <p>The potential of these techniques in addressing global challenges, such as environmental monitoring and disaster management, is particularly inspiring. The course has deepened my appreciation for the field of geospatial sciences and its impact on our understanding of the Earth.</p>
 
