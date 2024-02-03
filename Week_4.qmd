@@ -25,7 +25,7 @@ Also sea level rise in Dublin is an important consideration. As a result of clim
 ::: {style="text-align: justify;"}
 The Dublin City Development Plan (DCDP) 2016-2022 includes a key component, the Strategic Flood Risk Assessment (SFRA). This plan is intended to guide the direction and location of development in Dublin City over the life of the plan[@dublincitycouncil2020c]. It provides an integrated and coherent spatial framework to ensure that the city develops in an inclusive manner, whilst enhancing the quality of life for its citizens and making Dublin a more attractive place to live and work. This plan was adopted by Dublin City Council at a special meeting on 23rd September 2016 and came into force on 21st October 2016
 
-The Strategic Flood Risk Assessment (SFRA) is Volume 7 of the Dublin City Development Plan (DCDP) and is specifically designed to assess and manage flood risk. The purpose of the assessment is to comply with the requirements of the Floods Directive and flood risk/hazard maps are being produced to enable the development of a comprehensive Flood Risk Management Scheme (FRAMS)[@dublincitycouncil2020d]. The plan also addresses project-specific flood defence infrastructure to protect the more vulnerable parts of the city.
+The Strategic Flood Risk Assessment (SFRA) is Volume 7 of the Dublin City Development Plan (DCDP) and is specifically designed to assess and manage flood risk. The purpose of the assessment is to comply with the requirements of the Floods Directive and flood risk/hazard maps are being produced to enable the development of a comprehensive Flood Risk Management Scheme (FRAMS)[@dublincitycouncil2020d]. The plan also addresses project-specific flood defense infrastructure to protect the more vulnerable parts of the city.
 
 ```{r  echo=FALSE, out.width='110%', fig.align='center', fig.cap='Example of Flood Risk Assessment Map( Liffey: Sean Heuston Br. – Sarah Bridge, South Circular Road), Source: <a href="https://www.dublincity.ie/sites/default/files/2020-08/dcco_developmentplan_vol7.pdf.pdf">Dublin City Council</a>'}
 knitr::include_graphics('Figure/Week_4/Flood risk map ex.png')
@@ -38,17 +38,22 @@ knitr::include_graphics('Figure/Week_4/Improvement.png')
 Dublin City Council is also working on various projects to address areas of the city that are susceptible to coastal flooding during extreme events and therefore require new protection works. These projects include the South Bank Flood Defence Project, Sandymount Promenade and Flood Defence Project[@oconnell], and Clontarf Promenade Development and Flood Defence Project[@cooke2005]. As part of the Sutton to Sandycove promenade and cycle path project[@lyne2021], the part of the scheme nearer to Bull Island has commenced and includes flood defence work.
 :::
 
-### Policy Objective (Unfinished)
+### Policy & Objectives
 
-1.  提高洪水风险意识：通过洪水风险和危害地图的制作，提高公众、地方当局和其他组织对洪水可能性的认识。
-2.  制定全面的洪水风险管理计划：这些计划旨在应对洪水风险，并根据洪水指令的要求，对可能受洪水影响的区域进行综合评估和管理。
-3.  保护城市脆弱部分：评估中特别列出了一系列洪水防御基础设施，以保护城市中较为脆弱的部分，特别是那些容易受到沿海洪水影响的区域。
-4.  实施防洪工程和改善措施：通过进行各种项目，比如沿海长廊和防洪工程，来应对已知的容易受洪水影响的城市区域。
-5.  对新计划进行洪水风险评估：根据法定的洪水风险管理指南，对新的开发或重建计划进行评估，以确定这些区域的洪水可能性。
+::: {style="text-align: justify;"}
+-   **Climate Change Mitigation and Adaptation**: Implementing strategies to address climate change impacts on flooding.
+-   **Strategic Flood Risk Assessment**: Conducting assessments to inform and improve the city's flood defenses.
+-   **Sustainable Environmental Infrastructure**: Mitigating flood and drought effects through environmental assessments and planning.
+-   **Development Compliance**: Ensuring new developments respect and enhance existing flood defense mechanisms.
+-   **Sustainable Urban Drainage Systems (SUDS)**: Mandating SUDS in new developments for better water management.
+-   **Site-Specific Flood Risk Assessments**: Requiring detailed flood risk analyses for all new development proposals.
+-   **Collaborative Flood Management**: Working with neighboring authorities and incorporating catchment-based flood risk management plans.
+-   **Green Infrastructure Integration**: Utilizing green spaces for flood management, biodiversity, and recreation, in line with SUDS principles.
+:::
 
 ## Applications
 
-### How should the remotely sense data address the policy objectives
+### How Remote Sensing Data Should Address Policy Objectives
 
 ::: {style="text-align: justify;"}
 1.  **Flood Risk Mapping**: The use of remote sensing technology in flood prevention can mention its monitoring, provide real-time data, and can provide a guarantee of the timeliness of flood monitoring[@diao2022].Radar data can be used to focus on the extraction of past flood inundation areas, and to analyse the characteristics of spatial and temporal changes in flooding. At the same time, it can be used to draw high-resolution maps of the impact of river flooding, and use Google Earth Engine to process geospatial data, so as to carry out flood risk management and monitoring of flood disasters[@colacicco2022].
@@ -58,7 +63,7 @@ Dublin City Council is also working on various projects to address areas of the 
 3.  **Watershed management**:The use of remote sensing data can improve post-flood impact watershed management. Remote sensing technologies such as satellite imagery can be used to monitor and assess damage caused by floods, including the extent of flooding, infrastructure damage, and changes in land cover and land use [@sridharan2022]. This information helps to assess the effectiveness of watershed development interventions and identify areas for improvement. Geographic Information Systems (GIS) can be integrated with remote sensing data to enhance stakeholder and public participation in the watershed planning process[@quinn2022]. By utilising GIS and remotely sensed datasets, stakeholders can gain valuable information for decision-making and planning[@quinn2022].
 :::
 
-### Connect With bigger picture
+### Connecting to the Big Picture
 
 #### With Local Development
 
@@ -74,7 +79,7 @@ knitr::include_graphics('Figure/Week_4/location.jpg')
 ```
 :::
 
-#### With Global agenda
+#### With Global Agenda
 
 ::: {style="text-align: justify;"}
 In order to address the identified flood risks, the Plan outlines several strategies and measures. These include the Dublin Coastal Flood Protection Project and participation in the EU Interreg Programme IIIB SAFER project which focuses on coastal flood risk. Dublin City Council works closely with the Office of Public Works (OPW), Ireland's lead agency for flood risk management, under the Catchment Flood Risk Assessment and Management (CFRAM) programme. The programme is at the heart of Ireland's medium to long term strategy for flood risk reduction and management and involves the production of detailed flood risk maps and management plans for Dublin's main rivers and coastal areas.[@dublincitycouncil2020]。
@@ -84,15 +89,15 @@ More broadly the Plan can explicitly link its objectives and strategies to the r
 Schemes should ensure compliance with EU Directives relevant to flood risk management, such as the EU Floods Directive, which requires Member States to assess and manage flood risk in order to reduce the impact of flooding on human health, the environment, cultural heritage and economic activities. By aligning the SFRA with these directives, Dublin City Council can integrate European standards into local practice, facilitate cross-border co-operation and share best practice[@herve2021]。
 :::
 
-### Types of Remotely Sense Data can be use for the Flooding analysis
+### Types of Remotely Sense Data Can be use for the Urban Flooding Analysis
 
 #### General Data
 
 ::: {style="text-align: justify;"}
-General Data has been list by following table
+The following table presents general data
 
 | Satellites         | Sensors         | Spectral Measurements            | Parameter                      |
-|----------------|-----------------|------------------|-------------------|
+|------------------|------------------|------------------|-------------------|
 | Landsat 5, 7, 8    | ETM+, OLI       | Visible, Near IR, Middle IR,     | Reflectance/True Color Image,  |
 |                    |                 | Thermal IR                       | Land Cover, Surface Inundation |
 | TRMM & GPM         | Microwave       | TMI: 10-85 Ghz; GMI: 10-183 GHZ; | Precipitation                  |
@@ -116,7 +121,11 @@ The Global Precipitation Measurement (GPM) mission plays a crucial role in analy
 GPM represents an international collaboration, involving a network of satellites dedicated to providing advanced observations of rain and snow across the globe. It builds on the achievements of the Tropical Rainfall Measuring Mission (TRMM) and introduces the concept of a Core Observatory. This central satellite is equipped with sophisticated radar and radiometer systems designed to accurately measure precipitation from space. This Core Observatory also plays a pivotal role in standardizing precipitation measurements collected from a constellation of both research and operational satellites, ensuring consistent and reliable data worldwide[@hou2012].
 :::
 
-#### Data Source Link
+```{r  echo=FALSE, out.width='110%', fig.align='center', fig.cap='Global Precipitation Measurement (GPM) Mission, Source: <a href="https://gpm.nasa.gov/science/precipitation-algorithms">NASA</a>'}
+knitr::include_graphics('Figure/Week_4/GPM.png')
+```
+
+#### Relative Data Source Link
 
 -   GPM IMERG Data Access: <https://gpm.nasa.gov/data>
 -   Precipitation Data Access and Analysis: <https://giovanni.gsfc.nasa.gov/giovanni/>
