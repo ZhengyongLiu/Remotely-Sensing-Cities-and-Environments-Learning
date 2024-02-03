@@ -20,7 +20,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -141,7 +160,25 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#summary-of-the-policy-and-city" id="toc-summary-of-the-policy-and-city" class="nav-link active" data-scroll-target="#summary-of-the-policy-and-city"><span class="header-section-number">4.1</span> Summary of the Policy and City</a>
+  <ul class="collapse">
+  <li><a href="#dublin-city" id="toc-dublin-city" class="nav-link" data-scroll-target="#dublin-city"><span class="header-section-number">4.1.1</span> Dublin City</a></li>
+  <li><a href="#policy-background" id="toc-policy-background" class="nav-link" data-scroll-target="#policy-background"><span class="header-section-number">4.1.2</span> Policy Background</a></li>
+  <li><a href="#policy-objective-unfinished" id="toc-policy-objective-unfinished" class="nav-link" data-scroll-target="#policy-objective-unfinished"><span class="header-section-number">4.1.3</span> Policy Objective (Unfinished)</a></li>
+  </ul></li>
+  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">4.2</span> Applications</a>
+  <ul class="collapse">
+  <li><a href="#how-should-the-remotely-sense-data-address-the-policy-objectives" id="toc-how-should-the-remotely-sense-data-address-the-policy-objectives" class="nav-link" data-scroll-target="#how-should-the-remotely-sense-data-address-the-policy-objectives"><span class="header-section-number">4.2.1</span> How should the remotely sense data address the policy objectives</a></li>
+  <li><a href="#connect-with-bigger-picture" id="toc-connect-with-bigger-picture" class="nav-link" data-scroll-target="#connect-with-bigger-picture"><span class="header-section-number">4.2.2</span> Connect With bigger picture</a></li>
+  <li><a href="#types-of-remotely-sense-data-can-be-use-for-the-flooding-analysis" id="toc-types-of-remotely-sense-data-can-be-use-for-the-flooding-analysis" class="nav-link" data-scroll-target="#types-of-remotely-sense-data-can-be-use-for-the-flooding-analysis"><span class="header-section-number">4.2.3</span> Types of Remotely Sense Data can be use for the Flooding analysis</a></li>
+  <li><a href="#reflect-unfinished" id="toc-reflect-unfinished" class="nav-link" data-scroll-target="#reflect-unfinished"><span class="header-section-number">4.2.4</span> Reflect (Unfinished)</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -163,8 +200,173 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+<div style="text-align: justify;">
+<p>This week’s task was to pick a city policy to analyse and how remote sensing could be applied in the context of that policy. The country choice was Ireland and the policy choice was Dublin City Development Plan 2016-2022, Strategic Flood Risk Assessment (SFRA) in the Dublin Development Plan</p>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Figure/Week_4/Policy.png" class="img-fluid figure-img" style="width:110.0%"></p>
+<figcaption class="figure-caption">Dublin City Development Plan 2016-2022, Strategic Flood Risk Assessment (SFRA), Source: <a href="https://www.dublincity.ie/sites/default/files/2020-08/dcco_developmentplan_vol7.pdf.pdf">Dublin City Council</a></figcaption>
+</figure>
+</div>
+</div>
+</div>
+<section id="summary-of-the-policy-and-city" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="summary-of-the-policy-and-city"><span class="header-section-number">4.1</span> Summary of the Policy and City</h2>
+<section id="dublin-city" class="level3" data-number="4.1.1">
+<h3 data-number="4.1.1" class="anchored" data-anchor-id="dublin-city"><span class="header-section-number">4.1.1</span> Dublin City</h3>
+<div style="text-align: justify;">
+<p>Dublin’s exposure to flood risk is influenced by a number of factors, including urbanisation and climate change<span class="citation" data-cites="paranunzio2022">(<a href="#ref-paranunzio2022" role="doc-biblioref">Paranunzio et al. 2022a</a>)</span>. This city on the coast has a complex system of rivers, canals, surface water sewers, sewers and urban watercourses, making it particularly sensitive to flooding. Causes of flooding include sea level rise, runoff water, heavy rainfall, extreme events, storms and tidal fluctuations. Flooding events caused by extreme weather have increased significantly over the last decade and this is expected to continue. It is also expected that the number of days of heavy rainfall per year will increase, leading to an increased risk of fluvial (fluvial) and pluvial (pluvial) flooding<span class="citation" data-cites="paranunzio2022a">(<a href="#ref-paranunzio2022a" role="doc-biblioref">Paranunzio et al. 2022b</a>)</span>.</p>
+<p>Also sea level rise in Dublin is an important consideration. As a result of climate change, Dublin City Council has undertaken a review of existing coastal flood defences to ensure they provide protection for the city region. Records show that average sea levels in Dublin Bay have risen faster than the global average between 2000 and 2016<span class="citation" data-cites="shoarinejad2022">(<a href="#ref-shoarinejad2022" role="doc-biblioref">Shoari Nejad et al. 2022</a>)</span>.</p>
+</div>
+</section>
+<section id="policy-background" class="level3" data-number="4.1.2">
+<h3 data-number="4.1.2" class="anchored" data-anchor-id="policy-background"><span class="header-section-number">4.1.2</span> Policy Background</h3>
+<div style="text-align: justify;">
+<p>The Dublin City Development Plan (DCDP) 2016-2022 includes a key component, the Strategic Flood Risk Assessment (SFRA). This plan is intended to guide the direction and location of development in Dublin City over the life of the plan<span class="citation" data-cites="dublincitycouncil2020c">(<a href="#ref-dublincitycouncil2020c" role="doc-biblioref">Dublin City Council 2020a</a>)</span>. It provides an integrated and coherent spatial framework to ensure that the city develops in an inclusive manner, whilst enhancing the quality of life for its citizens and making Dublin a more attractive place to live and work. This plan was adopted by Dublin City Council at a special meeting on 23rd September 2016 and came into force on 21st October 2016</p>
+<p>The Strategic Flood Risk Assessment (SFRA) is Volume 7 of the Dublin City Development Plan (DCDP) and is specifically designed to assess and manage flood risk. The purpose of the assessment is to comply with the requirements of the Floods Directive and flood risk/hazard maps are being produced to enable the development of a comprehensive Flood Risk Management Scheme (FRAMS)<span class="citation" data-cites="dublincitycouncil2020d">(<a href="#ref-dublincitycouncil2020d" role="doc-biblioref">Dublin City Council 2020b</a>)</span>. The plan also addresses project-specific flood defence infrastructure to protect the more vulnerable parts of the city.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Figure/Week_4/Flood risk map ex.png" class="img-fluid figure-img" style="width:110.0%"></p>
+<figcaption class="figure-caption">Example of Flood Risk Assessment Map( Liffey: Sean Heuston Br. – Sarah Bridge, South Circular Road), Source: <a href="https://www.dublincity.ie/sites/default/files/2020-08/dcco_developmentplan_vol7.pdf.pdf">Dublin City Council</a></figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Figure/Week_4/Improvement.png" class="img-fluid figure-img" style="width:110.0%"></p>
+<figcaption class="figure-caption">Example of Flood Alleviation Programme ( Liffey: Sean Heuston Br. – Sarah Bridge, South Circular Road), Source: <a href="https://www.dublincity.ie/sites/default/files/2020-08/dcco_developmentplan_vol7.pdf.pdf">Dublin City Council</a></figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Run All Chunks AboveRun Current Chunk Dublin City Council is also working on various projects to address areas of the city that are susceptible to coastal flooding during extreme events and therefore require new protection works. These projects include the South Bank Flood Defence Project, Sandymount Promenade and Flood Defence Project<span class="citation" data-cites="oconnell">(<a href="#ref-oconnell" role="doc-biblioref">O’Connell, n.d.</a>)</span>, and Clontarf Promenade Development and Flood Defence Project<span class="citation" data-cites="cooke2005">(<a href="#ref-cooke2005" role="doc-biblioref">Cooke et al. 2005</a>)</span>. As part of the Sutton to Sandycove promenade and cycle path project<span class="citation" data-cites="lyne2021">(<a href="#ref-lyne2021" role="doc-biblioref">Lyne 2021</a>)</span>, the part of the scheme nearer to Bull Island has commenced and includes flood defence work.</p>
+</div>
+</section>
+<section id="policy-objective-unfinished" class="level3" data-number="4.1.3">
+<h3 data-number="4.1.3" class="anchored" data-anchor-id="policy-objective-unfinished"><span class="header-section-number">4.1.3</span> Policy Objective (Unfinished)</h3>
+<ol type="1">
+<li>提高洪水风险意识：通过洪水风险和危害地图的制作，提高公众、地方当局和其他组织对洪水可能性的认识。</li>
+<li>制定全面的洪水风险管理计划：这些计划旨在应对洪水风险，并根据洪水指令的要求，对可能受洪水影响的区域进行综合评估和管理。</li>
+<li>保护城市脆弱部分：评估中特别列出了一系列洪水防御基础设施，以保护城市中较为脆弱的部分，特别是那些容易受到沿海洪水影响的区域。</li>
+<li>实施防洪工程和改善措施：通过进行各种项目，比如沿海长廊和防洪工程，来应对已知的容易受洪水影响的城市区域。</li>
+<li>对新计划进行洪水风险评估：根据法定的洪水风险管理指南，对新的开发或重建计划进行评估，以确定这些区域的洪水可能性。</li>
+</ol>
+</section>
+</section>
+<section id="applications" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="applications"><span class="header-section-number">4.2</span> Applications</h2>
+<section id="how-should-the-remotely-sense-data-address-the-policy-objectives" class="level3" data-number="4.2.1">
+<h3 data-number="4.2.1" class="anchored" data-anchor-id="how-should-the-remotely-sense-data-address-the-policy-objectives"><span class="header-section-number">4.2.1</span> How should the remotely sense data address the policy objectives</h3>
+<div style="text-align: justify;">
+<ol type="1">
+<li><p><strong>Flood Risk Mapping</strong>: The use of remote sensing technology in flood prevention can mention its monitoring, provide real-time data, and can provide a guarantee of the timeliness of flood monitoring<span class="citation" data-cites="diao2022">(<a href="#ref-diao2022" role="doc-biblioref">Diao, Sang, and Wang 2022</a>)</span>.Radar data can be used to focus on the extraction of past flood inundation areas, and to analyse the characteristics of spatial and temporal changes in flooding. At the same time, it can be used to draw high-resolution maps of the impact of river flooding, and use Google Earth Engine to process geospatial data, so as to carry out flood risk management and monitoring of flood disasters<span class="citation" data-cites="colacicco2022">(<a href="#ref-colacicco2022" role="doc-biblioref">Colacicco et al. 2022</a>)</span>.</p></li>
+<li><p><strong>Impact Assessment and Recovery Planning</strong>: The use of remote sensing data can facilitate post-flood impact assessment and recovery planning. Remote sensing provides clear spatial information for flood inundation mapping, which is critical for timely damage assessment and planning of recovery efforts. By using near real-time (NRT) remote sensing data after a flood event in combination with real-time (RT) volunteer geographic information (VGI), probabilistic flood maps can be generated to identify areas requiring urgent attention<span class="citation" data-cites="luo2023">(<a href="#ref-luo2023" role="doc-biblioref">Luo, Liao, and Shen 2023</a>)</span>。In addition, aerial imagery captured by drones can be used to reconstruct 3D models and digital elevation models for flood modelling and damage assessment<span class="citation" data-cites="whitehurst2022">(<a href="#ref-whitehurst2022" role="doc-biblioref">Whitehurst et al. 2022</a>)</span>. Simulations based on pre- and post-flood digital elevation models can help predict the impact of future rainfall events and guide recovery efforts <span class="citation" data-cites="sajjad2023">(<a href="#ref-sajjad2023" role="doc-biblioref">Sajjad et al. 2023</a>)</span>.</p></li>
+<li><p><strong>Watershed management</strong>:The use of remote sensing data can improve post-flood impact watershed management. Remote sensing technologies such as satellite imagery can be used to monitor and assess damage caused by floods, including the extent of flooding, infrastructure damage, and changes in land cover and land use <span class="citation" data-cites="sridharan2022">(<a href="#ref-sridharan2022" role="doc-biblioref">Sridharan, Kumar, and Madhur Kumar 2022</a>)</span>. This information helps to assess the effectiveness of watershed development interventions and identify areas for improvement. Geographic Information Systems (GIS) can be integrated with remote sensing data to enhance stakeholder and public participation in the watershed planning process<span class="citation" data-cites="quinn2022">(<a href="#ref-quinn2022" role="doc-biblioref">Quinn et al. 2022</a>)</span>. By utilising GIS and remotely sensed datasets, stakeholders can gain valuable information for decision-making and planning<span class="citation" data-cites="quinn2022">(<a href="#ref-quinn2022" role="doc-biblioref">Quinn et al. 2022</a>)</span>.</p></li>
+</ol>
+</div>
+</section>
+<section id="connect-with-bigger-picture" class="level3" data-number="4.2.2">
+<h3 data-number="4.2.2" class="anchored" data-anchor-id="connect-with-bigger-picture"><span class="header-section-number">4.2.2</span> Connect With bigger picture</h3>
+<section id="with-local-development" class="level4" data-number="4.2.2.1">
+<h4 data-number="4.2.2.1" class="anchored" data-anchor-id="with-local-development"><span class="header-section-number">4.2.2.1</span> With Local Development</h4>
+<div style="text-align: justify;">
+<p>This policy and its associated Strategic Flood Risk Assessment (SFRA) has had a significant impact on the Local Development Strategy, focussing on sustainable infrastructure and flood risk management. The Plan emphasises the importance of managing surface water drainage and the potential impact of local development on downstream watercourses such as the River Carmichael and the River Liffey. It emphasises the need for additional infrastructure to support development sites, Sustainable Urban Drainage Systems (SuDS) to effectively manage surface water run-off and improve water quality<span class="citation" data-cites="dublincitycouncil2020">(<a href="#ref-dublincitycouncil2020" role="doc-biblioref">Dublin City Council 2020c</a>)</span>.</p>
+<p>SuDS infrastructure has been highlighted as a core strategy in the Local Plan, designed to manage surface water sustainably, whilst ensuring that there is no increased risk of flooding either upstream or downstream. The approach includes a variety of SuDS features such as detention ponds, infiltration trenches and depressions designed to reduce runoff and improve water quality. This holistic water management strategy supports the vision of creating a vibrant and sustainable urban area in Dublin<span class="citation" data-cites="southdublincitycouncil">(<a href="#ref-southdublincitycouncil" role="doc-biblioref">South Dublin City Council, n.d.</a>)</span>.</p>
+<p>In addition, the Plan sets out the need for a comprehensive review of existing and future infrastructure (including sewerage and water supply networks) to accommodate development while managing environmental impacts. This includes considerations for upgrading existing infrastructure (e.g.&nbsp;water mains and sewerage systems) to meet the needs of new development<span class="citation" data-cites="southdublincitycouncil">(<a href="#ref-southdublincitycouncil" role="doc-biblioref">South Dublin City Council, n.d.</a>)</span>.</p>
+</div>
+</section>
+<section id="with-global-agenda" class="level4" data-number="4.2.2.2">
+<h4 data-number="4.2.2.2" class="anchored" data-anchor-id="with-global-agenda"><span class="header-section-number">4.2.2.2</span> With Global agenda</h4>
+<div style="text-align: justify;">
+<p>In order to address the identified flood risks, the Plan outlines several strategies and measures. These include the Dublin Coastal Flood Protection Project and participation in the EU Interreg Programme IIIB SAFER project which focuses on coastal flood risk. Dublin City Council works closely with the Office of Public Works (OPW), Ireland’s lead agency for flood risk management, under the Catchment Flood Risk Assessment and Management (CFRAM) programme. The programme is at the heart of Ireland’s medium to long term strategy for flood risk reduction and management and involves the production of detailed flood risk maps and management plans for Dublin’s main rivers and coastal areas.<span class="citation" data-cites="dublincitycouncil2020">(<a href="#ref-dublincitycouncil2020" role="doc-biblioref">Dublin City Council 2020c</a>)</span>。</p>
+<p>More broadly the Plan can explicitly link its objectives and strategies to the relevant SDGs, particularly those relating to Sustainable Cities and Communities (SDG 11), Climate Action (SDG 13) and Water Resources Management (SDG 6). By integrating the flood risk management strategy with these objectives, Dublin can demonstrate its commitment to the global sustainable development agenda while addressing local challenges<span class="citation" data-cites="anthonyf">(<a href="#ref-anthonyf" role="doc-biblioref">Anthony F and Max, n.d.</a>)</span>。</p>
+<p>Schemes should ensure compliance with EU Directives relevant to flood risk management, such as the EU Floods Directive, which requires Member States to assess and manage flood risk in order to reduce the impact of flooding on human health, the environment, cultural heritage and economic activities. By aligning the SFRA with these directives, Dublin City Council can integrate European standards into local practice, facilitate cross-border co-operation and share best practice<span class="citation" data-cites="herve2021">(<a href="#ref-herve2021" role="doc-biblioref">herve 2021</a>)</span>。</p>
+</div>
+</section>
+</section>
+<section id="types-of-remotely-sense-data-can-be-use-for-the-flooding-analysis" class="level3" data-number="4.2.3">
+<h3 data-number="4.2.3" class="anchored" data-anchor-id="types-of-remotely-sense-data-can-be-use-for-the-flooding-analysis"><span class="header-section-number">4.2.3</span> Types of Remotely Sense Data can be use for the Flooding analysis</h3>
+<p>爱尔兰公共工程办公室（Office of Public Works, OPW）提供了全国指示性河流地图（National Indicative Fluvial Mapping），这是洪水风险管理的关键工具。这些地图提供了关于洪水范围、危险和风险的详细信息，包括频繁、轻微的洪水事件到非常罕见、极端事件的评估和映射。</p>
+</section>
+<section id="reflect-unfinished" class="level3" data-number="4.2.4">
+<h3 data-number="4.2.4" class="anchored" data-anchor-id="reflect-unfinished"><span class="header-section-number">4.2.4</span> Reflect (Unfinished)</h3>
+<p>::: {style=“text-align: justify;”} Incorporating the application of remote sensing technologies into the context of the Dublin City Development Plan 2016-2022 and its Strategic Flood Risk Assessment (SFRA) not only broadens the scope of my reflection but also enhances the depth of analysis on how technological advancements can be synergized with urban planning and environmental management practices. This expanded consideration allows for a multifaceted approach towards sustainable urban development, emphasizing the critical role of innovative technologies in addressing complex urban challenges.</p>
+<p>Remote sensing, with its capacity to collect detailed environmental data from a distance, presents an invaluable tool for urban planners and policymakers. By facilitating a comprehensive analysis of land use changes, vegetation cover, water bodies, and urban infrastructure, remote sensing data can significantly contribute to informed decision-making processes. For Dublin, leveraging such technologies means the ability to dynamically monitor urban expansion and its impacts on flood risks, assess vulnerabilities across the urban landscape, and develop targeted strategies for flood mitigation and urban resilience.</p>
+<p>This integration goes beyond traditional planning methods by enabling a proactive rather than reactive approach to urban development and environmental stewardship. The precision and timeliness of data provided by remote sensing can lead to the early identification of potential flood-prone areas, changes in land cover that may affect hydrological cycles, and the effectiveness of existing flood defense structures. Consequently, this facilitates the optimization of land use planning, infrastructure development, and environmental conservation efforts to mitigate flood risks effectively.</p>
+<p>Furthermore, the application of remote sensing technologies underscores the importance of interdisciplinary collaboration and capacity building among urban planners, environmental scientists, and the broader community. Engaging with a diverse range of stakeholders in the interpretation and application of remote sensing data can foster a more inclusive and participatory approach to urban planning. This collaborative framework not only enhances the understanding and management of flood risks but also promotes a shared sense of responsibility and collective action towards sustainable urban development.</p>
+<p>Moreover, the ongoing advancement in remote sensing technologies, including higher resolution imagery, real-time data acquisition, and improved analytical tools, offers new opportunities for innovation in urban planning and environmental management. As cities like Dublin strive to align their development strategies with global sustainability goals, the integration of such technologies becomes increasingly crucial. It allows for a more nuanced understanding of urban ecosystems, the interconnections between human activities and natural processes, and the pathways towards achieving a harmonious balance between urban development and environmental preservation.</p>
+<p>In summary, the reflection on integrating remote sensing technologies into Dublin’s urban planning and flood risk management efforts highlights the transformative potential of such tools in advancing sustainable urban development. It points towards a future where technology and data-driven insights become central to crafting resilient, inclusive, and sustainable urban landscapes. This expanded perspective not only enriches my understanding of the complexities involved in urban planning but also inspires a forward-looking approach to leveraging technology for the betterment of our urban environments.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-anthonyf" class="csl-entry" role="listitem">
+Anthony F, Pipa, and Bouchet Max. n.d. <span>“Local Leadership Driving Progress on the Sustainable Development Goals.”</span> <a href="https://www.brookings.edu/articles/local-leadership-driving-progress-on-the-sustainable-development-goals/">https://www.brookings.edu/articles/local-leadership-driving-progress-on-the-sustainable-development-goals/</a>.
+</div>
+<div id="ref-colacicco2022" class="csl-entry" role="listitem">
+Colacicco, Rosa, Alberto Refice, Raffaele Nutricato, Annarita D’Addabbo, Davide Oscar Nitti, and Domenico Capolongo. 2022. <span>“High Spatial and Temporal Resolution Flood Monitoring Through Integration of Multisensor Remotely Sensed Data and Google Earth Engine Processing.”</span> <a href="https://doi.org/10.5194/egusphere-egu22-4403">https://doi.org/10.5194/egusphere-egu22-4403</a>.
+</div>
+<div id="ref-cooke2005" class="csl-entry" role="listitem">
+Cooke, I, A D Maguire, O McManus, and B Bliek. 2005. <span>“The Dublin Coastal Protection Project.”</span> <em>WIT Transactions on The Built Environment</em> 78.
+</div>
+<div id="ref-diao2022" class="csl-entry" role="listitem">
+Diao, Chao, Guoqing Sang, and JunNuo Wang. 2022. <span>“Research on the Application of Remote Sensing Monitoring to Flood Monitoring Based on Sentinel-1A in Linyi City.”</span> <em>2022 3rd International Conference on Geology, Mapping and Remote Sensing (ICGMRS)</em>, April. <a href="https://doi.org/10.1109/icgmrs55602.2022.9849305">https://doi.org/10.1109/icgmrs55602.2022.9849305</a>.
+</div>
+<div id="ref-dublincitycouncil2020" class="csl-entry" role="listitem">
+Dublin City Council. 2020c. <span>“3.5.3 Climate Change and Flood Risk | Dublin City Council.”</span> <a href="https://www.dublincity.ie/dublin-city-development-plan-2016-2022/3-addressing-climate-change/35-policies-and-objectives/353-climate-change-and-flood-risk">https://www.dublincity.ie/dublin-city-development-plan-2016-2022/3-addressing-climate-change/35-policies-and-objectives/353-climate-change-and-flood-risk</a>.
+</div>
+<div id="ref-dublincitycouncil2020c" class="csl-entry" role="listitem">
+———. 2020a. <span>“3.5.3 Climate Change and Flood Risk | Dublin City Council.”</span> <a href="https://www.dublincity.ie/dublin-city-development-plan-2016-2022/3-addressing-climate-change/35-policies-and-objectives/353-climate-change-and-flood-risk">https://www.dublincity.ie/dublin-city-development-plan-2016-2022/3-addressing-climate-change/35-policies-and-objectives/353-climate-change-and-flood-risk</a>.
+</div>
+<div id="ref-dublincitycouncil2020d" class="csl-entry" role="listitem">
+———. 2020b. <span>“3.5.3 Climate Change and Flood Risk | Dublin City Council.”</span> <a href="https://www.dublincity.ie/dublin-city-development-plan-2016-2022/3-addressing-climate-change/35-policies-and-objectives/353-climate-change-and-flood-risk">https://www.dublincity.ie/dublin-city-development-plan-2016-2022/3-addressing-climate-change/35-policies-and-objectives/353-climate-change-and-flood-risk</a>.
+</div>
+<div id="ref-herve2021" class="csl-entry" role="listitem">
+herve. 2021. <span>“Global Policies in Local Context: Local Transformation Through International Engagement - Platforma.”</span> <a href="https://platforma-dev.eu/global-policies-in-local-context-local-transformation-through-international-engagement/, https://platforma-dev.eu/global-policies-in-local-context-local-transformation-through-international-engagement/">https://platforma-dev.eu/global-policies-in-local-context-local-transformation-through-international-engagement/, https://platforma-dev.eu/global-policies-in-local-context-local-transformation-through-international-engagement/</a>.
+</div>
+<div id="ref-luo2023" class="csl-entry" role="listitem">
+Luo, Huanzhang, Jingjuan Liao, and Guozhuang Shen. 2023. <span>“Combining Remote Sensing and Social Media Data for Flood Mapping: A Case Study in Linhai, Zhejiang Province, China.”</span> <em>Journal of Applied Remote Sensing</em> 17 (2): 024507. <a href="https://doi.org/10.1117/1.JRS.17.024507">https://doi.org/10.1117/1.JRS.17.024507</a>.
+</div>
+<div id="ref-lyne2021" class="csl-entry" role="listitem">
+Lyne, Laura. 2021. <span>“Dublin Residents Fearing Worst as Dream Cycleway at Risk Due to Plan Changes.”</span> <a href="https://www.dublinlive.ie/news/dublin-news/residents-fear-dream-sutton-sandycove-20368777">https://www.dublinlive.ie/news/dublin-news/residents-fear-dream-sutton-sandycove-20368777</a>.
+</div>
+<div id="ref-oconnell" class="csl-entry" role="listitem">
+O’Connell, Gerard. n.d. <span>“Sandymount Coastal Flood Defence Scheme<span></span>Phase 1&amp;2.”</span>
+</div>
+<div id="ref-paranunzio2022" class="csl-entry" role="listitem">
+Paranunzio, Roberta, Marco Guerrini, Edward Dwyer, Paul J. Alexander, and Barry O’Dwyer. 2022a. <span>“Assessing Coastal Flood Risk in a Changing Climate for Dublin, Ireland.”</span> <em>Journal of Marine Science and Engineering</em> 10 (11): 1715. <a href="https://doi.org/10.3390/jmse10111715">https://doi.org/10.3390/jmse10111715</a>.
+</div>
+<div id="ref-paranunzio2022a" class="csl-entry" role="listitem">
+———. 2022b. <span>“Assessing Coastal Flood Risk in a Changing Climate for Dublin, Ireland.”</span> <em>Journal of Marine Science and Engineering</em> 10 (11): 1715. <a href="https://doi.org/10.3390/jmse10111715">https://doi.org/10.3390/jmse10111715</a>.
+</div>
+<div id="ref-quinn2022" class="csl-entry" role="listitem">
+Quinn, Nigel W. T., Vamsi Sridharan, John Ramirez-Avila, Sanaz Imen, Huilin Gao, Rocky Talchabhadel, Saurav Kumar, and Walter McDonald. 2022. <span>“Applications of GIS and Remote Sensing in Public Participation and Stakeholder Engagement for Watershed Management.”</span> <em>Socio-Environmental Systems Modelling</em> 4 (October): 18149–49. <a href="https://doi.org/10.18174/sesmo.18149">https://doi.org/10.18174/sesmo.18149</a>.
+</div>
+<div id="ref-sajjad2023" class="csl-entry" role="listitem">
+Sajjad, Asif, Jianzhong Lu, Xiaoling Chen, Chikondi Chisenga, and Nausheen Mazhar. 2023. <span>“Rapid Assessment of Riverine Flood Inundation in Chenab Floodplain Using Remote Sensing Techniques.”</span> <em>Geoenvironmental Disasters</em> 10 (1): 9. <a href="https://doi.org/10.1186/s40677-023-00236-7">https://doi.org/10.1186/s40677-023-00236-7</a>.
+</div>
+<div id="ref-shoarinejad2022" class="csl-entry" role="listitem">
+Shoari Nejad, Amin, Andrew C. Parnell, Alice Greene, Peter Thorne, Brian P. Kelleher, Robert J. N. Devoy, and Gerard McCarthy. 2022. <span>“A Newly Reconciled Dataset for Identifying Sea Level Rise and Variability in Dublin Bay.”</span> <em>Ocean Science</em> 18 (2): 511–22. <a href="https://doi.org/10.5194/os-18-511-2022">https://doi.org/10.5194/os-18-511-2022</a>.
+</div>
+<div id="ref-southdublincitycouncil" class="csl-entry" role="listitem">
+South Dublin City Council. n.d. <span>“Sustainable Drainage Systems (SuDS).”</span> <a href="https://www.sdcc.ie/en/services/environment/environmental-health/water-services/sustainable-drainage-systems/https:/www.sdcc.ie/en/services/environment/environmental-health/water-services/sustainable-drainage-systems/sustainable-drainage-systems-suds.html">https://www.sdcc.ie/en/services/environment/environmental-health/water-services/sustainable-drainage-systems/https:/www.sdcc.ie/en/services/environment/environmental-health/water-services/sustainable-drainage-systems/sustainable-drainage-systems-suds.html</a>.
+</div>
+<div id="ref-sridharan2022" class="csl-entry" role="listitem">
+Sridharan, Vamsi Krishna, Saurav Kumar, and Swetha Madhur Kumar. 2022. <span>“Can Remote Sensing Fill the United States<span>’</span> Monitoring Gap for Watershed Management?”</span> <em>Water</em> 14 (13): 1985. <a href="https://doi.org/10.3390/w14131985">https://doi.org/10.3390/w14131985</a>.
+</div>
+<div id="ref-whitehurst2022" class="csl-entry" role="listitem">
+Whitehurst, Daniel, Kunal Joshi, Kevin Kochersberger, and James Weeks. 2022. <span>“Post-Flood Analysis for Damage and Restoration Assessment Using Drone Imagery.”</span> <em>Remote Sensing</em> 14 (19): 4952. <a href="https://doi.org/10.3390/rs14194952">https://doi.org/10.3390/rs14194952</a>.
+</div>
+</div>
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
