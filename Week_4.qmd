@@ -21,6 +21,7 @@ Also sea level rise in Dublin is an important consideration. As a result of clim
 :::
 
 ### Policy Background
+
 ::: {style="text-align: justify;"}
 The Dublin City Development Plan (DCDP) 2016-2022 includes a key component, the Strategic Flood Risk Assessment (SFRA). This plan is intended to guide the direction and location of development in Dublin City over the life of the plan[@dublincitycouncil2020c]. It provides an integrated and coherent spatial framework to ensure that the city develops in an inclusive manner, whilst enhancing the quality of life for its citizens and making Dublin a more attractive place to live and work. This plan was adopted by Dublin City Council at a special meeting on 23rd September 2016 and came into force on 21st October 2016
 
@@ -34,7 +35,7 @@ knitr::include_graphics('Figure/Week_4/Flood risk map ex.png')
 knitr::include_graphics('Figure/Week_4/Improvement.png')
 ```
 
-Run All Chunks AboveRun Current Chunk Dublin City Council is also working on various projects to address areas of the city that are susceptible to coastal flooding during extreme events and therefore require new protection works. These projects include the South Bank Flood Defence Project, Sandymount Promenade and Flood Defence Project[@oconnell], and Clontarf Promenade Development and Flood Defence Project[@cooke2005]. As part of the Sutton to Sandycove promenade and cycle path project[@lyne2021], the part of the scheme nearer to Bull Island has commenced and includes flood defence work.
+Dublin City Council is also working on various projects to address areas of the city that are susceptible to coastal flooding during extreme events and therefore require new protection works. These projects include the South Bank Flood Defence Project, Sandymount Promenade and Flood Defence Project[@oconnell], and Clontarf Promenade Development and Flood Defence Project[@cooke2005]. As part of the Sutton to Sandycove promenade and cycle path project[@lyne2021], the part of the scheme nearer to Bull Island has commenced and includes flood defence work.
 :::
 
 ### Policy Objective (Unfinished)
@@ -48,25 +49,33 @@ Run All Chunks AboveRun Current Chunk Dublin City Council is also working on var
 ## Applications
 
 ### How should the remotely sense data address the policy objectives
+
 ::: {style="text-align: justify;"}
-1. **Flood Risk Mapping**: The use of remote sensing technology in flood prevention can mention its monitoring, provide real-time data, and can provide a guarantee of the timeliness of flood monitoring[@diao2022].Radar data can be used to focus on the extraction of past flood inundation areas, and to analyse the characteristics of spatial and temporal changes in flooding. At the same time, it can be used to draw high-resolution maps of the impact of river flooding, and use Google Earth Engine to process geospatial data, so as to carry out flood risk management and monitoring of flood disasters[@colacicco2022].
+1.  **Flood Risk Mapping**: The use of remote sensing technology in flood prevention can mention its monitoring, provide real-time data, and can provide a guarantee of the timeliness of flood monitoring[@diao2022].Radar data can be used to focus on the extraction of past flood inundation areas, and to analyse the characteristics of spatial and temporal changes in flooding. At the same time, it can be used to draw high-resolution maps of the impact of river flooding, and use Google Earth Engine to process geospatial data, so as to carry out flood risk management and monitoring of flood disasters[@colacicco2022].
 
-2. **Impact Assessment and Recovery Planning**: The use of remote sensing data can facilitate post-flood impact assessment and recovery planning. Remote sensing provides clear spatial information for flood inundation mapping, which is critical for timely damage assessment and planning of recovery efforts. By using near real-time (NRT) remote sensing data after a flood event in combination with real-time (RT) volunteer geographic information (VGI), probabilistic flood maps can be generated to identify areas requiring urgent attention[@luo2023]。In addition, aerial imagery captured by drones can be used to reconstruct 3D models and digital elevation models for flood modelling and damage assessment[@whitehurst2022]. Simulations based on pre- and post-flood digital elevation models can help predict the impact of future rainfall events and guide recovery efforts [@sajjad2023].
+2.  **Impact Assessment and Recovery Planning**: The use of remote sensing data can facilitate post-flood impact assessment and recovery planning. Remote sensing provides clear spatial information for flood inundation mapping, which is critical for timely damage assessment and planning of recovery efforts. By using near real-time (NRT) remote sensing data after a flood event in combination with real-time (RT) volunteer geographic information (VGI), probabilistic flood maps can be generated to identify areas requiring urgent attention[@luo2023]。In addition, aerial imagery captured by drones can be used to reconstruct 3D models and digital elevation models for flood modelling and damage assessment[@whitehurst2022]. Simulations based on pre- and post-flood digital elevation models can help predict the impact of future rainfall events and guide recovery efforts [@sajjad2023].
 
-3. **Watershed management**:The use of remote sensing data can improve post-flood impact watershed management. Remote sensing technologies such as satellite imagery can be used to monitor and assess damage caused by floods, including the extent of flooding, infrastructure damage, and changes in land cover and land use [@sridharan2022]. This information helps to assess the effectiveness of watershed development interventions and identify areas for improvement. Geographic Information Systems (GIS) can be integrated with remote sensing data to enhance stakeholder and public participation in the watershed planning process[@quinn2022]. By utilising GIS and remotely sensed datasets, stakeholders can gain valuable information for decision-making and planning[@quinn2022].
+3.  **Watershed management**:The use of remote sensing data can improve post-flood impact watershed management. Remote sensing technologies such as satellite imagery can be used to monitor and assess damage caused by floods, including the extent of flooding, infrastructure damage, and changes in land cover and land use [@sridharan2022]. This information helps to assess the effectiveness of watershed development interventions and identify areas for improvement. Geographic Information Systems (GIS) can be integrated with remote sensing data to enhance stakeholder and public participation in the watershed planning process[@quinn2022]. By utilising GIS and remotely sensed datasets, stakeholders can gain valuable information for decision-making and planning[@quinn2022].
 :::
 
 ### Connect With bigger picture
 
 #### With Local Development
+
 ::: {style="text-align: justify;"}
 This policy and its associated Strategic Flood Risk Assessment (SFRA) has had a significant impact on the Local Development Strategy, focussing on sustainable infrastructure and flood risk management. The Plan emphasises the importance of managing surface water drainage and the potential impact of local development on downstream watercourses such as the River Carmichael and the River Liffey. It emphasises the need for additional infrastructure to support development sites, Sustainable Urban Drainage Systems (SuDS) to effectively manage surface water run-off and improve water quality[@dublincitycouncil2020].
 
 SuDS infrastructure has been highlighted as a core strategy in the Local Plan, designed to manage surface water sustainably, whilst ensuring that there is no increased risk of flooding either upstream or downstream. The approach includes a variety of SuDS features such as detention ponds, infiltration trenches and depressions designed to reduce runoff and improve water quality. This holistic water management strategy supports the vision of creating a vibrant and sustainable urban area in Dublin[@southdublincitycouncil].
 
 In addition, the Plan sets out the need for a comprehensive review of existing and future infrastructure (including sewerage and water supply networks) to accommodate development while managing environmental impacts. This includes considerations for upgrading existing infrastructure (e.g. water mains and sewerage systems) to meet the needs of new development[@southdublincitycouncil].
+
+```{r  echo=FALSE, out.width='110%', fig.align='center', fig.cap='Dublin Flooding Protection Location, Author: <a href="https://www.witpress.com/Secure/elibrary/papers/CE05/CE05022FU.pdf">I.Cooke</a>'}
+knitr::include_graphics('Figure/Week_4/location.jpg')
+```
 :::
+
 #### With Global agenda
+
 ::: {style="text-align: justify;"}
 In order to address the identified flood risks, the Plan outlines several strategies and measures. These include the Dublin Coastal Flood Protection Project and participation in the EU Interreg Programme IIIB SAFER project which focuses on coastal flood risk. Dublin City Council works closely with the Office of Public Works (OPW), Ireland's lead agency for flood risk management, under the Catchment Flood Risk Assessment and Management (CFRAM) programme. The programme is at the heart of Ireland's medium to long term strategy for flood risk reduction and management and involves the production of detailed flood risk maps and management plans for Dublin's main rivers and coastal areas.[@dublincitycouncil2020]。
 
@@ -74,11 +83,50 @@ More broadly the Plan can explicitly link its objectives and strategies to the r
 
 Schemes should ensure compliance with EU Directives relevant to flood risk management, such as the EU Floods Directive, which requires Member States to assess and manage flood risk in order to reduce the impact of flooding on human health, the environment, cultural heritage and economic activities. By aligning the SFRA with these directives, Dublin City Council can integrate European standards into local practice, facilitate cross-border co-operation and share best practice[@herve2021]。
 :::
+
 ### Types of Remotely Sense Data can be use for the Flooding analysis
 
-爱尔兰公共工程办公室（Office of Public Works, OPW）提供了全国指示性河流地图（National Indicative Fluvial Mapping），这是洪水风险管理的关键工具。这些地图提供了关于洪水范围、危险和风险的详细信息，包括频繁、轻微的洪水事件到非常罕见、极端事件的评估和映射。
+#### General Data
+
+::: {style="text-align: justify;"}
+General Data has been list by following table
+
+| Satellites         | Sensors         | Spectral Measurements            | Parameter                      |
+|----------------|-----------------|------------------|-------------------|
+| Landsat 5, 7, 8    | ETM+, OLI       | Visible, Near IR, Middle IR,     | Reflectance/True Color Image,  |
+|                    |                 | Thermal IR                       | Land Cover, Surface Inundation |
+| TRMM & GPM         | Microwave       | TMI: 10-85 Ghz; GMI: 10-183 GHZ; | Precipitation                  |
+|                    | Radiometer and  | PR and DPR (Ku and Ka)           |                                |
+|                    | RADAR (TMI, PR, |                                  |                                |
+|                    | GMI, DPR)       |                                  |                                |
+| Terra & Aqua       | MODIS           | Visible, Near IR, Middle IR      | Reflectance/True Color Image,  |
+|                    |                 |                                  | Surface Inundation, Land Cover |
+| SNPP               | VIIRS           | Visible, Near IR, Middle IR      | Day/Night Imagery              |
+| SMAP               | Microwave       | 1.41 GHz                         | Soil Moisture                  |
+|                    | Radiometer      |                                  |                                |
+| Sentinel 1A and 1B | Synthetic       | C-Band                           | Backscatter/Surface Inundation |
+|                    | Aperture RADAR  |                                  |                                |
+|                    | (SAR)           |                                  |                                |
+| Space Shuttle      | SRTM            | C-Band                           | Terrain                        |
+
+#### Global Precipitation Measurement (GPM) Mission
+
+The Global Precipitation Measurement (GPM) mission plays a crucial role in analyzing global rainfall patterns. It stands at the forefront of flooding trend analysis, thanks to its comprehensive and derived algorithms. Recognized for its unparalleled popularity and reliability, GPM serves as the primary source of data and analysis method for studying precipitation[@skofronick-jackson2018].
+
+GPM represents an international collaboration, involving a network of satellites dedicated to providing advanced observations of rain and snow across the globe. It builds on the achievements of the Tropical Rainfall Measuring Mission (TRMM) and introduces the concept of a Core Observatory. This central satellite is equipped with sophisticated radar and radiometer systems designed to accurately measure precipitation from space. This Core Observatory also plays a pivotal role in standardizing precipitation measurements collected from a constellation of both research and operational satellites, ensuring consistent and reliable data worldwide[@hou2012].
+:::
+
+#### Data Source Link
+
+-   GPM IMERG Data Access: <https://gpm.nasa.gov/data>
+-   Precipitation Data Access and Analysis: <https://giovanni.gsfc.nasa.gov/giovanni/>
+-   MODerate Resolution Imaging Spectroradiometer (MODIS): <https://lpdaac.usgs.gov/> or <https://search.earthdata.nasa.gov/>
+-   Visible Infrared Imaging Radiometer Suite (VIIRS): <https://worldview.earthdata.nasa.gov/>
+-   Soil Moisture Active Passive (SMAP): <https://nsidc.org/data/search#keywords=soil+moisture/>
+-   ETC......
 
 ### Reflect (Unfinished)
+
 ::: {style="text-align: justify;"}
 Incorporating the application of remote sensing technologies into the context of the Dublin City Development Plan 2016-2022 and its Strategic Flood Risk Assessment (SFRA) not only broadens the scope of my reflection but also enhances the depth of analysis on how technological advancements can be synergized with urban planning and environmental management practices. This expanded consideration allows for a multifaceted approach towards sustainable urban development, emphasizing the critical role of innovative technologies in addressing complex urban challenges.
 
@@ -91,4 +139,4 @@ Furthermore, the application of remote sensing technologies underscores the impo
 Moreover, the ongoing advancement in remote sensing technologies, including higher resolution imagery, real-time data acquisition, and improved analytical tools, offers new opportunities for innovation in urban planning and environmental management. As cities like Dublin strive to align their development strategies with global sustainability goals, the integration of such technologies becomes increasingly crucial. It allows for a more nuanced understanding of urban ecosystems, the interconnections between human activities and natural processes, and the pathways towards achieving a harmonious balance between urban development and environmental preservation.
 
 In summary, the reflection on integrating remote sensing technologies into Dublin's urban planning and flood risk management efforts highlights the transformative potential of such tools in advancing sustainable urban development. It points towards a future where technology and data-driven insights become central to crafting resilient, inclusive, and sustainable urban landscapes. This expanded perspective not only enriches my understanding of the complexities involved in urban planning but also inspires a forward-looking approach to leveraging technology for the betterment of our urban environments.
-::: 
+:::

@@ -247,7 +247,7 @@ div.csl-indent {
 </div>
 </div>
 </div>
-<p>Run All Chunks AboveRun Current Chunk Dublin City Council is also working on various projects to address areas of the city that are susceptible to coastal flooding during extreme events and therefore require new protection works. These projects include the South Bank Flood Defence Project, Sandymount Promenade and Flood Defence Project<span class="citation" data-cites="oconnell">(<a href="#ref-oconnell" role="doc-biblioref">O’Connell, n.d.</a>)</span>, and Clontarf Promenade Development and Flood Defence Project<span class="citation" data-cites="cooke2005">(<a href="#ref-cooke2005" role="doc-biblioref">Cooke et al. 2005</a>)</span>. As part of the Sutton to Sandycove promenade and cycle path project<span class="citation" data-cites="lyne2021">(<a href="#ref-lyne2021" role="doc-biblioref">Lyne 2021</a>)</span>, the part of the scheme nearer to Bull Island has commenced and includes flood defence work.</p>
+<p>Dublin City Council is also working on various projects to address areas of the city that are susceptible to coastal flooding during extreme events and therefore require new protection works. These projects include the South Bank Flood Defence Project, Sandymount Promenade and Flood Defence Project<span class="citation" data-cites="oconnell">(<a href="#ref-oconnell" role="doc-biblioref">O’Connell, n.d.</a>)</span>, and Clontarf Promenade Development and Flood Defence Project<span class="citation" data-cites="cooke2005">(<a href="#ref-cooke2005" role="doc-biblioref">Cooke et al. 2005</a>)</span>. As part of the Sutton to Sandycove promenade and cycle path project<span class="citation" data-cites="lyne2021">(<a href="#ref-lyne2021" role="doc-biblioref">Lyne 2021</a>)</span>, the part of the scheme nearer to Bull Island has commenced and includes flood defence work.</p>
 </div>
 </section>
 <section id="policy-objective-unfinished" class="level3" data-number="4.1.3">
@@ -281,6 +281,16 @@ div.csl-indent {
 <p>This policy and its associated Strategic Flood Risk Assessment (SFRA) has had a significant impact on the Local Development Strategy, focussing on sustainable infrastructure and flood risk management. The Plan emphasises the importance of managing surface water drainage and the potential impact of local development on downstream watercourses such as the River Carmichael and the River Liffey. It emphasises the need for additional infrastructure to support development sites, Sustainable Urban Drainage Systems (SuDS) to effectively manage surface water run-off and improve water quality<span class="citation" data-cites="dublincitycouncil2020">(<a href="#ref-dublincitycouncil2020" role="doc-biblioref">Dublin City Council 2020c</a>)</span>.</p>
 <p>SuDS infrastructure has been highlighted as a core strategy in the Local Plan, designed to manage surface water sustainably, whilst ensuring that there is no increased risk of flooding either upstream or downstream. The approach includes a variety of SuDS features such as detention ponds, infiltration trenches and depressions designed to reduce runoff and improve water quality. This holistic water management strategy supports the vision of creating a vibrant and sustainable urban area in Dublin<span class="citation" data-cites="southdublincitycouncil">(<a href="#ref-southdublincitycouncil" role="doc-biblioref">South Dublin City Council, n.d.</a>)</span>.</p>
 <p>In addition, the Plan sets out the need for a comprehensive review of existing and future infrastructure (including sewerage and water supply networks) to accommodate development while managing environmental impacts. This includes considerations for upgrading existing infrastructure (e.g.&nbsp;water mains and sewerage systems) to meet the needs of new development<span class="citation" data-cites="southdublincitycouncil">(<a href="#ref-southdublincitycouncil" role="doc-biblioref">South Dublin City Council, n.d.</a>)</span>.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Figure/Week_4/location.jpg" class="img-fluid figure-img" style="width:110.0%"></p>
+<figcaption class="figure-caption">Dublin Flooding Protection Location, Author: <a href="https://www.witpress.com/Secure/elibrary/papers/CE05/CE05022FU.pdf">I.Cooke</a></figcaption>
+</figure>
+</div>
+</div>
+</div>
 </div>
 </section>
 <section id="with-global-agenda" class="level4" data-number="4.2.2.2">
@@ -294,16 +304,147 @@ div.csl-indent {
 </section>
 <section id="types-of-remotely-sense-data-can-be-use-for-the-flooding-analysis" class="level3" data-number="4.2.3">
 <h3 data-number="4.2.3" class="anchored" data-anchor-id="types-of-remotely-sense-data-can-be-use-for-the-flooding-analysis"><span class="header-section-number">4.2.3</span> Types of Remotely Sense Data can be use for the Flooding analysis</h3>
-<p>爱尔兰公共工程办公室（Office of Public Works, OPW）提供了全国指示性河流地图（National Indicative Fluvial Mapping），这是洪水风险管理的关键工具。这些地图提供了关于洪水范围、危险和风险的详细信息，包括频繁、轻微的洪水事件到非常罕见、极端事件的评估和映射。</p>
+<section id="general-data" class="level4" data-number="4.2.3.1">
+<h4 data-number="4.2.3.1" class="anchored" data-anchor-id="general-data"><span class="header-section-number">4.2.3.1</span> General Data</h4>
+<div style="text-align: justify;">
+<p>General Data has been list by following table</p>
+<table class="table">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 24%">
+<col style="width: 25%">
+<col style="width: 27%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Satellites</th>
+<th>Sensors</th>
+<th>Spectral Measurements</th>
+<th>Parameter</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Landsat 5, 7, 8</td>
+<td>ETM+, OLI</td>
+<td>Visible, Near IR, Middle IR,</td>
+<td>Reflectance/True Color Image,</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td>Thermal IR</td>
+<td>Land Cover, Surface Inundation</td>
+</tr>
+<tr class="odd">
+<td>TRMM &amp; GPM</td>
+<td>Microwave</td>
+<td>TMI: 10-85 Ghz; GMI: 10-183 GHZ;</td>
+<td>Precipitation</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Radiometer and</td>
+<td>PR and DPR (Ku and Ka)</td>
+<td></td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>RADAR (TMI, PR,</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>GMI, DPR)</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Terra &amp; Aqua</td>
+<td>MODIS</td>
+<td>Visible, Near IR, Middle IR</td>
+<td>Reflectance/True Color Image,</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td>Surface Inundation, Land Cover</td>
+</tr>
+<tr class="odd">
+<td>SNPP</td>
+<td>VIIRS</td>
+<td>Visible, Near IR, Middle IR</td>
+<td>Day/Night Imagery</td>
+</tr>
+<tr class="even">
+<td>SMAP</td>
+<td>Microwave</td>
+<td>1.41 GHz</td>
+<td>Soil Moisture</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Radiometer</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Sentinel 1A and 1B</td>
+<td>Synthetic</td>
+<td>C-Band</td>
+<td>Backscatter/Surface Inundation</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Aperture RADAR</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td></td>
+<td>(SAR)</td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Space Shuttle</td>
+<td>SRTM</td>
+<td>C-Band</td>
+<td>Terrain</td>
+</tr>
+</tbody>
+</table>
+<section id="global-precipitation-measurement-gpm-mission" class="level4" data-number="4.2.3.2">
+<h4 data-number="4.2.3.2" class="anchored" data-anchor-id="global-precipitation-measurement-gpm-mission"><span class="header-section-number">4.2.3.2</span> Global Precipitation Measurement (GPM) Mission</h4>
+<p>The Global Precipitation Measurement (GPM) mission plays a crucial role in analyzing global rainfall patterns. It stands at the forefront of flooding trend analysis, thanks to its comprehensive and derived algorithms. Recognized for its unparalleled popularity and reliability, GPM serves as the primary source of data and analysis method for studying precipitation<span class="citation" data-cites="skofronick-jackson2018">(<a href="#ref-skofronick-jackson2018" role="doc-biblioref">Skofronick-Jackson et al. 2018</a>)</span>.</p>
+<p>GPM represents an international collaboration, involving a network of satellites dedicated to providing advanced observations of rain and snow across the globe. It builds on the achievements of the Tropical Rainfall Measuring Mission (TRMM) and introduces the concept of a Core Observatory. This central satellite is equipped with sophisticated radar and radiometer systems designed to accurately measure precipitation from space. This Core Observatory also plays a pivotal role in standardizing precipitation measurements collected from a constellation of both research and operational satellites, ensuring consistent and reliable data worldwide<span class="citation" data-cites="hou2012">(<a href="#ref-hou2012" role="doc-biblioref">Hou 2012</a>)</span>.</p>
+</section>
+</div>
+</section>
+<section id="data-source-link" class="level4" data-number="4.2.3.3">
+<h4 data-number="4.2.3.3" class="anchored" data-anchor-id="data-source-link"><span class="header-section-number">4.2.3.3</span> Data Source Link</h4>
+<ul>
+<li>GPM IMERG Data Access: <a href="https://gpm.nasa.gov/data" class="uri">https://gpm.nasa.gov/data</a></li>
+<li>Precipitation Data Access and Analysis: <a href="https://giovanni.gsfc.nasa.gov/giovanni/" class="uri">https://giovanni.gsfc.nasa.gov/giovanni/</a></li>
+<li>MODerate Resolution Imaging Spectroradiometer (MODIS): <a href="https://lpdaac.usgs.gov/" class="uri">https://lpdaac.usgs.gov/</a> or <a href="https://search.earthdata.nasa.gov/" class="uri">https://search.earthdata.nasa.gov/</a></li>
+<li>Visible Infrared Imaging Radiometer Suite (VIIRS): <a href="https://worldview.earthdata.nasa.gov/" class="uri">https://worldview.earthdata.nasa.gov/</a></li>
+<li>Soil Moisture Active Passive (SMAP): <a href="https://nsidc.org/data/search#keywords=soil+moisture/" class="uri">https://nsidc.org/data/search#keywords=soil+moisture/</a></li>
+<li>ETC……</li>
+</ul>
+</section>
 </section>
 <section id="reflect-unfinished" class="level3" data-number="4.2.4">
 <h3 data-number="4.2.4" class="anchored" data-anchor-id="reflect-unfinished"><span class="header-section-number">4.2.4</span> Reflect (Unfinished)</h3>
-<p>::: {style=“text-align: justify;”} Incorporating the application of remote sensing technologies into the context of the Dublin City Development Plan 2016-2022 and its Strategic Flood Risk Assessment (SFRA) not only broadens the scope of my reflection but also enhances the depth of analysis on how technological advancements can be synergized with urban planning and environmental management practices. This expanded consideration allows for a multifaceted approach towards sustainable urban development, emphasizing the critical role of innovative technologies in addressing complex urban challenges.</p>
+<div style="text-align: justify;">
+<p>Incorporating the application of remote sensing technologies into the context of the Dublin City Development Plan 2016-2022 and its Strategic Flood Risk Assessment (SFRA) not only broadens the scope of my reflection but also enhances the depth of analysis on how technological advancements can be synergized with urban planning and environmental management practices. This expanded consideration allows for a multifaceted approach towards sustainable urban development, emphasizing the critical role of innovative technologies in addressing complex urban challenges.</p>
 <p>Remote sensing, with its capacity to collect detailed environmental data from a distance, presents an invaluable tool for urban planners and policymakers. By facilitating a comprehensive analysis of land use changes, vegetation cover, water bodies, and urban infrastructure, remote sensing data can significantly contribute to informed decision-making processes. For Dublin, leveraging such technologies means the ability to dynamically monitor urban expansion and its impacts on flood risks, assess vulnerabilities across the urban landscape, and develop targeted strategies for flood mitigation and urban resilience.</p>
 <p>This integration goes beyond traditional planning methods by enabling a proactive rather than reactive approach to urban development and environmental stewardship. The precision and timeliness of data provided by remote sensing can lead to the early identification of potential flood-prone areas, changes in land cover that may affect hydrological cycles, and the effectiveness of existing flood defense structures. Consequently, this facilitates the optimization of land use planning, infrastructure development, and environmental conservation efforts to mitigate flood risks effectively.</p>
 <p>Furthermore, the application of remote sensing technologies underscores the importance of interdisciplinary collaboration and capacity building among urban planners, environmental scientists, and the broader community. Engaging with a diverse range of stakeholders in the interpretation and application of remote sensing data can foster a more inclusive and participatory approach to urban planning. This collaborative framework not only enhances the understanding and management of flood risks but also promotes a shared sense of responsibility and collective action towards sustainable urban development.</p>
 <p>Moreover, the ongoing advancement in remote sensing technologies, including higher resolution imagery, real-time data acquisition, and improved analytical tools, offers new opportunities for innovation in urban planning and environmental management. As cities like Dublin strive to align their development strategies with global sustainability goals, the integration of such technologies becomes increasingly crucial. It allows for a more nuanced understanding of urban ecosystems, the interconnections between human activities and natural processes, and the pathways towards achieving a harmonious balance between urban development and environmental preservation.</p>
 <p>In summary, the reflection on integrating remote sensing technologies into Dublin’s urban planning and flood risk management efforts highlights the transformative potential of such tools in advancing sustainable urban development. It points towards a future where technology and data-driven insights become central to crafting resilient, inclusive, and sustainable urban landscapes. This expanded perspective not only enriches my understanding of the complexities involved in urban planning but also inspires a forward-looking approach to leveraging technology for the betterment of our urban environments.</p>
+</div>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="list">
@@ -331,6 +472,9 @@ Dublin City Council. 2020c. <span>“3.5.3 Climate Change and Flood Risk | Dubli
 <div id="ref-herve2021" class="csl-entry" role="listitem">
 herve. 2021. <span>“Global Policies in Local Context: Local Transformation Through International Engagement - Platforma.”</span> <a href="https://platforma-dev.eu/global-policies-in-local-context-local-transformation-through-international-engagement/, https://platforma-dev.eu/global-policies-in-local-context-local-transformation-through-international-engagement/">https://platforma-dev.eu/global-policies-in-local-context-local-transformation-through-international-engagement/, https://platforma-dev.eu/global-policies-in-local-context-local-transformation-through-international-engagement/</a>.
 </div>
+<div id="ref-hou2012" class="csl-entry" role="listitem">
+Hou, Arthur Y. 2012. <span>“Global Precipitation Measurement (GPM) Mission: Overview and Status,”</span> October. <a href="https://ntrs.nasa.gov/citations/20120015575">https://ntrs.nasa.gov/citations/20120015575</a>.
+</div>
 <div id="ref-luo2023" class="csl-entry" role="listitem">
 Luo, Huanzhang, Jingjuan Liao, and Guozhuang Shen. 2023. <span>“Combining Remote Sensing and Social Media Data for Flood Mapping: A Case Study in Linhai, Zhejiang Province, China.”</span> <em>Journal of Applied Remote Sensing</em> 17 (2): 024507. <a href="https://doi.org/10.1117/1.JRS.17.024507">https://doi.org/10.1117/1.JRS.17.024507</a>.
 </div>
@@ -354,6 +498,9 @@ Sajjad, Asif, Jianzhong Lu, Xiaoling Chen, Chikondi Chisenga, and Nausheen Mazha
 </div>
 <div id="ref-shoarinejad2022" class="csl-entry" role="listitem">
 Shoari Nejad, Amin, Andrew C. Parnell, Alice Greene, Peter Thorne, Brian P. Kelleher, Robert J. N. Devoy, and Gerard McCarthy. 2022. <span>“A Newly Reconciled Dataset for Identifying Sea Level Rise and Variability in Dublin Bay.”</span> <em>Ocean Science</em> 18 (2): 511–22. <a href="https://doi.org/10.5194/os-18-511-2022">https://doi.org/10.5194/os-18-511-2022</a>.
+</div>
+<div id="ref-skofronick-jackson2018" class="csl-entry" role="listitem">
+Skofronick-Jackson, Gail, Wesley Berg, Chris Kidd, Dalia B. Kirschbaum, Walter A. Petersen, George J. Huffman, and Yukari N. Takayabu. 2018. <span>“Global Precipitation Measurement (GPM): Unified Precipitation Estimation from Space.”</span> In, edited by Constantin Andronache, 175–93. Springer Remote Sensing/Photogrammetry. Cham: Springer International Publishing. <a href="https://doi.org/10.1007/978-3-319-72583-3_7">https://doi.org/10.1007/978-3-319-72583-3_7</a>.
 </div>
 <div id="ref-southdublincitycouncil" class="csl-entry" role="listitem">
 South Dublin City Council. n.d. <span>“Sustainable Drainage Systems (SuDS).”</span> <a href="https://www.sdcc.ie/en/services/environment/environmental-health/water-services/sustainable-drainage-systems/https:/www.sdcc.ie/en/services/environment/environmental-health/water-services/sustainable-drainage-systems/sustainable-drainage-systems-suds.html">https://www.sdcc.ie/en/services/environment/environmental-health/water-services/sustainable-drainage-systems/https:/www.sdcc.ie/en/services/environment/environmental-health/water-services/sustainable-drainage-systems/sustainable-drainage-systems-suds.html</a>.
