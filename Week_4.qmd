@@ -134,7 +134,7 @@ knitr::include_graphics('Figure/Week_4/GPM.png')
 -   Soil Moisture Active Passive (SMAP): <https://nsidc.org/data/search#keywords=soil+moisture/>
 -   ETC......
 
-### Reflect (Unfinished)
+## Reflect (Unfinished)
 
 ::: {style="text-align: justify;"}
 Incorporating the application of remote sensing technologies into the context of the Dublin City Development Plan 2016-2022 and its Strategic Flood Risk Assessment (SFRA) not only broadens the scope of my reflection but also enhances the depth of analysis on how technological advancements can be synergized with urban planning and environmental management practices. This expanded consideration allows for a multifaceted approach towards sustainable urban development, emphasizing the critical role of innovative technologies in addressing complex urban challenges.
