@@ -149,3 +149,6 @@ Moreover, the ongoing advancement in remote sensing technologies, including high
 
 In summary, the reflection on integrating remote sensing technologies into Dublin's urban planning and flood risk management efforts highlights the transformative potential of such tools in advancing sustainable urban development. It points towards a future where technology and data-driven insights become central to crafting resilient, inclusive, and sustainable urban landscapes. This expanded perspective not only enriches my understanding of the complexities involved in urban planning but also inspires a forward-looking approach to leveraging technology for the betterment of our urban environments.
 :::
+
+## Reference
+
