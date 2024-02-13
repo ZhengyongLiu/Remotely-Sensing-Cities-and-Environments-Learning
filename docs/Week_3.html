@@ -20,7 +20,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -152,10 +171,10 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#correction" id="toc-correction" class="nav-link" data-scroll-target="#correction"><span class="header-section-number">3.1.1</span> Correction</a></li>
   <li><a href="#data-join-setsenhancement" id="toc-data-join-setsenhancement" class="nav-link" data-scroll-target="#data-join-setsenhancement"><span class="header-section-number">3.1.2</span> Data Join Sets/Enhancement</a></li>
   <li><a href="#enhancement" id="toc-enhancement" class="nav-link" data-scroll-target="#enhancement"><span class="header-section-number">3.1.3</span> Enhancement</a></li>
-  <li><a href="#other-enhancement" id="toc-other-enhancement" class="nav-link" data-scroll-target="#other-enhancement"><span class="header-section-number">3.1.4</span> Other Enhancement</a></li>
   </ul></li>
-  <li><a href="#application-in-literature-unfinished" id="toc-application-in-literature-unfinished" class="nav-link" data-scroll-target="#application-in-literature-unfinished"><span class="header-section-number">3.2</span> Application in Literature (Unfinished)</a></li>
-  <li><a href="#personal-reflection-unfinished" id="toc-personal-reflection-unfinished" class="nav-link" data-scroll-target="#personal-reflection-unfinished"><span class="header-section-number">3.3</span> Personal Reflection (Unfinished)</a></li>
+  <li><a href="#application-in-literature" id="toc-application-in-literature" class="nav-link" data-scroll-target="#application-in-literature"><span class="header-section-number">3.2</span> Application in Literature</a></li>
+  <li><a href="#personal-reflection" id="toc-personal-reflection" class="nav-link" data-scroll-target="#personal-reflection"><span class="header-section-number">3.3</span> Personal Reflection</a></li>
+  <li><a href="#reference" id="toc-reference" class="nav-link" data-scroll-target="#reference"><span class="header-section-number">3.4</span> Reference</a></li>
   </ul>
 </nav>
     </div>
@@ -201,15 +220,6 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
-<div style="text-align: justify;">
-<p>Based on the above calibration process, it can be done by the following equation For a point ((x, y)) in the distorted image, the corresponding point ((x’, y’)) in the geometrically corrected image can be calculated using:</p>
-<p><span class="math display">\[
-x' = a_0 + a_1 x + a_2 y + a_3 x^2 + a_4 xy + a_5 y^2 + \ldots
-\]</span> <span class="math display">\[
-y' = b_0 + b_1 x + b_2 y + b_3 x^2 + b_4 xy + b_5 y^2 + \ldots
-\]</span></p>
-<p>Here, (a_0, a_1, , a_n) and (b_0, b_1, , b_n) are coefficients determined through a calibration process using ground control points (GCPs), which are points whose true position is known. The number of terms in the polynomial (and thus the number of coefficients) depends on the degree of the polynomial required to model the distortion adequately. A first-degree polynomial correction (affine transformation) would not include the squared terms, for example.</p>
-</div>
 </section>
 <section id="atmospheric-correction" class="level4" data-number="3.1.1.2">
 <h4 data-number="3.1.1.2" class="anchored" data-anchor-id="atmospheric-correction"><span class="header-section-number">3.1.1.2</span> Atmospheric Correction</h4>
@@ -220,8 +230,8 @@ y' = b_0 + b_1 x + b_2 y + b_3 x^2 + b_4 xy + b_5 y^2 + \ldots
 <table class="table">
 <colgroup>
 <col style="width: 26%">
-<col style="width: 38%">
-<col style="width: 35%">
+<col style="width: 39%">
+<col style="width: 34%">
 </colgroup>
 <thead>
 <tr class="header">
@@ -297,7 +307,8 @@ y' = b_0 + b_1 x + b_2 y + b_3 x^2 + b_4 xy + b_5 y^2 + \ldots
 <section id="ratio" class="level4" data-number="3.1.3.1">
 <h4 data-number="3.1.3.1" class="anchored" data-anchor-id="ratio"><span class="header-section-number">3.1.3.1</span> Ratio</h4>
 <div style="text-align: justify;">
-<p>The ratio is the difference between two spectral bands with a specific spectral response, using CampTown’s data for NDVI (The Normalised Difference Vegetation Index) The Normalised Difference Vegetation Index is based on the fact that healthy and green vegetation reflects more in the near infrared but absorbs in the red wavelengths. Therefore, the red wavelength band is used for the operation in the formula below. <span class="math display">\[
+<p>The ratio is the difference between two spectral bands with a specific spectral response, using CampTown’s data for NDVI (The Normalised Difference Vegetation Index) The Normalised Difference Vegetation Index is based on the fact that healthy and green vegetation reflects more in the near infrared but absorbs in the red wavelengths. Therefore, the red wavelength band is used for the operation in the formula below.</p>
+<p><span class="math display">\[
 NDVI = \frac{NIR - Red}{NIR + Red}
 \]</span></p>
 <p>The following figure shows the image after manipulation for NDVI (a. After NDVI Formula, b. Extraction only if NDVI is equal to or greater than 0.2)</p>
@@ -312,113 +323,78 @@ NDVI = \frac{NIR - Red}{NIR + Red}
 </div>
 </div>
 </div>
+<p>This case above can be applied to other index calculations such as NDWI (Normalised Difference Water Index) and NDDI (Normalised Difference Drought Index). These are calculated using the reflectance of different objects in different light waves.</p>
 </section>
-<section id="texture-unfinished" class="level4" data-number="3.1.3.2">
-<h4 data-number="3.1.3.2" class="anchored" data-anchor-id="texture-unfinished"><span class="header-section-number">3.1.3.2</span> Texture (Unfinished)</h4>
+<section id="texture" class="level4" data-number="3.1.3.2">
+<h4 data-number="3.1.3.2" class="anchored" data-anchor-id="texture"><span class="header-section-number">3.1.3.2</span> Texture</h4>
 <div style="text-align: justify;">
-<p>Due to the limitations of R, it takes a long time to run if the map is loaded too large, so only a small part of CampTown was selected for processing. Most of the area can be loaded in Google Earth Engine afterwards. Below is the texture processed study area.</p>
+<p>The extraction method of texture features is relatively simple, it is to use an active window to slide continuously on the image, calculate the variance, mean, maximum, minimum and the difference between the two and the information entropy in the window, etc., respectively, to form the corresponding texture image, when the spectral characteristics of the target are relatively close to each other, the texture features can play a positive role in distinguishing the target. When the spectral characteristics of the target are close, the texture features can play a positive role in distinguishing the target. After selecting the appropriate dynamic range of the data and extracting the texture features, the texture features of the image can be highlighted, which is conducive to the extraction of constructive information. Below is an example of a texture treatment for the Cape Town area.</p>
 </div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="Figure/Week_3/Texture.png" class="img-fluid figure-img" style="width:110.0%"></p>
-<figcaption class="figure-caption">Process of Radiometric Calibration</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="principal-component-analysis-unfinished" class="level4" data-number="3.1.3.3">
-<h4 data-number="3.1.3.3" class="anchored" data-anchor-id="principal-component-analysis-unfinished"><span class="header-section-number">3.1.3.3</span> Principal Component Analysis (Unfinished)</h4>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="Figure/Week_3/Principal Component Analysis.png" class="img-fluid figure-img" style="width:110.0%"></p>
-<figcaption class="figure-caption">Process of Radiometric Calibration</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="Figure/Week_3/Principal Component Analysis result.png" class="img-fluid figure-img" style="width:110.0%"></p>
-<figcaption class="figure-caption">Process of Radiometric Calibration</figcaption>
+<figcaption class="figure-caption">After of Texture Process</figcaption>
 </figure>
 </div>
 </div>
 </div>
 </section>
 </section>
-<section id="other-enhancement" class="level3" data-number="3.1.4">
-<h3 data-number="3.1.4" class="anchored" data-anchor-id="other-enhancement"><span class="header-section-number">3.1.4</span> Other Enhancement</h3>
-<table class="table">
-<colgroup>
-<col style="width: 26%">
-<col style="width: 36%">
-<col style="width: 36%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Technique</th>
-<th>Description</th>
-<th>Application</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Low Pass Filter</td>
-<td>Smoothes image by averaging pixels.</td>
-<td>Reduces noise for better burn area detection.</td>
-</tr>
-<tr class="even">
-<td>High Pass Filter</td>
-<td>Enhances contrast by highlighting local changes.</td>
-<td>Improves distinction between burned/unburned areas.</td>
-</tr>
-<tr class="odd">
-<td>Embossing</td>
-<td>Modifies coefficients to create shadowy edge relief.</td>
-<td>Highlights burn area edges for clearer boundaries.</td>
-</tr>
-<tr class="even">
-<td>Principal Component Analysis (PCA)</td>
-<td>Transforms multispectral data to smaller, uncorrelated datasets.</td>
-<td>Simplifies data for easier burn area analysis in Landsat images.</td>
-</tr>
-<tr class="odd">
-<td>Multi-date PCA</td>
-<td>Combines different time point bands for PCA.</td>
-<td>Identifies temporal changes in burn areas across Landsat images.</td>
-</tr>
-<tr class="even">
-<td>Texture Analysis</td>
-<td>Analyzes spatial variation in grayscale.</td>
-<td>Enhances burn area detection through texture metrics.</td>
-</tr>
-<tr class="odd">
-<td>Image Fusion</td>
-<td>Merges data from multiple sources/sensors.</td>
-<td>Integrates different resolutions for more detailed analysis.</td>
-</tr>
-</tbody>
-</table>
 </section>
+<section id="application-in-literature" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="application-in-literature"><span class="header-section-number">3.2</span> Application in Literature</h2>
+<div style="text-align: justify;">
+<p>Image correction is a critical step in remote sensing to ensure the accuracy and usability of data obtained from satellite or aerial imagery. Radiometric correction involves adjusting digital image data to correct for sensor noise, sensor response variations and atmospheric conditions. Various methods have been proposed for radiometric correction of remote sensing images. Duan<span class="citation" data-cites="duan2014">(<a href="#ref-duan2014" role="doc-biblioref">2014</a>)</span> proposed a radiation correction method that replaces artificial targets with standard ground objects, resulting in accurate and precise correction. Tarasenkov<span class="citation" data-cites="tarasenkov2019">(<a href="#ref-tarasenkov2019" role="doc-biblioref">2019</a>)</span> developed a program complex for atmospheric correction of satellite images that considers radiation polarization.</p>
+<p>Geometric correction corrects the image so that the proportions are uniform throughout the image. This correction is essential for accurate mapping and measurement tasks. Geometric correction is useful for removing spatial distortion, aligning images of the same sample, and stitching overlapping images together.<span class="citation" data-cites="yan2023">(<a href="#ref-yan2023" role="doc-biblioref">Yan et al. 2023</a>)</span>. Various methods and devices have been developed for geometric correction, including those based on orthographic images and homonymous point matching. These techniques improve the accuracy and stability of the geometric information in the corrected image<span class="citation" data-cites="özcihan2023b">(<a href="#ref-özcihan2023b" role="doc-biblioref">Özciḣan et al. 2023</a>)</span>.</p>
+<p>Atmospheric correction is necessary for various remote sensing applications to improve the accuracy and reliability of derived information. Different algorithms, such as 6S, FLAASH, DOS, LaSRC, and Sen2Cor, have been evaluated for their performance in atmospheric correction<span class="citation" data-cites="muchsin2023">(<a href="#ref-muchsin2023" role="doc-biblioref">Muchsin et al. 2023</a>)</span>. Atmospheric corrections are essential for a variety of applications such as aircraft navigation, astronomical observations and accurate estimation of cloud heights<span class="citation" data-cites="shah2022">(<a href="#ref-shah2022" role="doc-biblioref">Shah, Raval, and Divakaran 2022</a>)</span>. It ensures that satellite images provide reliable and accurate results by taking into account atmospheric disturbance<span class="citation" data-cites="jonah">(<a href="#ref-jonah" role="doc-biblioref">Jonah and Aketi, n.d.</a>)</span>.</p>
+<p>Image enhancement technology aims to improve the quality and visual effect of remote sensing images. Various methods have been proposed to enhance these images, including histogram modification, transform domain methods, and hybrid approaches. Histogram modification methods focus on modifying the histogram of the input image to achieve a more uniform distribution, resulting in better contrast improvement. Transform domain methods apply specific transforms to enhance the image in the transform domain, leading to better edge enhancement and color preservation<span class="citation" data-cites="wang2023">(<a href="#ref-wang2023" role="doc-biblioref">Wang et al. 2023</a>)</span>. Hybrid methods, which combine histogram modification and transform domain methods, have shown higher potential in enhancing remote sensing images<span class="citation" data-cites="deng2023">(<a href="#ref-deng2023" role="doc-biblioref">Deng et al. 2023</a>)</span>. These enhancement techniques are crucial for image interpretation, improving image segmentation accuracy, and facilitating downstream tasks.</p>
+</div>
 </section>
-<section id="application-in-literature-unfinished" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="application-in-literature-unfinished"><span class="header-section-number">3.2</span> Application in Literature (Unfinished)</h2>
-<p>These methodologies have wide applications in geospatial science literature, particularly in environmental monitoring, land use mapping, and disaster assessment. Atmospheric correction techniques are essential in longitudinal studies using satellite data, ensuring consistency across different times and conditions. Image enhancements are particularly vital in extracting detailed information from remote sensing data, contributing to more accurate and reliable interpretations in various research areas.</p>
-<p>Geometric corrections are commonly applied in studies involving spatial accuracy, while orthorectification is used extensively in mapping applications. Radiometric calibration’s role in ensuring data accuracy over different periods is crucial in change detection and environmental studies. Overall, these techniques are fundamental to the field of geospatial sciences, enabling the extraction of meaningful and accurate information from raw satellite data.</p>
+<section id="personal-reflection" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="personal-reflection"><span class="header-section-number">3.3</span> Personal Reflection</h2>
+<div style="text-align: justify;">
+<p>As a student diving deep into remote sensing image correction technologies, it truly broadened my knowledge and also deepened my understanding of its complexities and challenges. I realized that although these technologies are crucial for enhancing the quality of image data, implementing them is not as straightforward as it might seem. For instance, radiometric correction sounds advanced, but if we lack precise ground objects for reference, the accuracy of the whole process becomes questionable. This got me thinking about whether we need to develop more adaptive correction methods that can adjust to varying conditions.</p>
+<p>Then there’s geometric correction, which indeed seems capable of solving issues with inconsistent image proportions, but if our initial data is not of good quality, or the processing is too complex, how do we balance precision with practical feasibility? It made me realize that sometimes we might need to find a balance between ideal accuracy and operational simplicity.</p>
+<p>When it comes to atmospheric correction, I was intrigued by the performance differences of various algorithms under specific conditions. This highlights the importance of selecting the right correction algorithm for reliable data, and also hints at the necessity for more detailed comparisons of algorithms in future research.</p>
+<p>Regarding image enhancement technologies, while they can make images appear clearer, I also began to worry about whether these techniques might inadvertently alter some crucial features in the images. This made me recognize the need to carefully maintain the authenticity of images while pursuing visual improvements.</p>
+<p>Overall, delving into remote sensing image correction technologies not only taught me about the importance of these techniques but also exposed the various challenges that need to be overcome in practical applications. It made me more aware that alongside technological innovation, a careful evaluation and improvement of existing methods are necessary to ensure we can enhance data quality while maintaining operational feasibility and data authenticity.</p>
+</div>
 </section>
-<section id="personal-reflection-unfinished" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="personal-reflection-unfinished"><span class="header-section-number">3.3</span> Personal Reflection (Unfinished)</h2>
-<p>The depth of knowledge gained from this course has been profound. Understanding the technical aspects of image correction and enhancement has provided a clear perspective on the importance and complexity of these processes in remote sensing. It’s intriguing to see how various correction techniques can significantly improve the quality of satellite imagery, leading to more reliable data interpretation.</p>
-<p>The potential of these techniques in addressing global challenges, such as environmental monitoring and disaster management, is particularly inspiring. The course has deepened my appreciation for the field of geospatial sciences and its impact on our understanding of the Earth.</p>
+<section id="reference" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="reference"><span class="header-section-number">3.4</span> Reference</h2>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-deng2023" class="csl-entry" role="listitem">
+Deng, Jiqiu, Wuzhou Dong, Yiwei Guo, Xiaoyan Chen, Renhao Zhou, and Wenyi Liu. 2023. <span>“A Novel Remote Sensing Image Enhancement Method, the Pseudo-Tasseled Cap Transformation: Taking Buildings and Roads in GF-2 as an Example.”</span> <em>Applied Sciences</em> 13 (11): 6585. <a href="https://doi.org/10.3390/app13116585">https://doi.org/10.3390/app13116585</a>.
+</div>
+<div id="ref-duan2014" class="csl-entry" role="listitem">
+Duan, YL, L. Zhang, L. Yan, Taixia Wu, Yan Liu, and Qiuping Tong. 2014. <span>“Relative Radiometric Correction Methods for Remote Sensing Images and Their Applicability Analysis.”</span> <em>Journal of Remote Sensing</em> 18 (January): 597–617. <a href="https://doi.org/10.11834/jrs.20143204">https://doi.org/10.11834/jrs.20143204</a>.
+</div>
+<div id="ref-jonah" class="csl-entry" role="listitem">
+Jonah, Iyowuna Benjamin, and Taripredo Moses Aketi. n.d. <span>“Atmospheric Correction of Landsat Image | Journal of Environmental and Geographical Studies.”</span> <a href="https://gprjournals.org/journals/index.php/JEGS/article/view/120">https://gprjournals.org/journals/index.php/JEGS/article/view/120</a>.
+</div>
+<div id="ref-muchsin2023" class="csl-entry" role="listitem">
+Muchsin, Fadila, Kuncoro Adi Pradono, Indah Prasasti, Dianovita Dianovita, Kurnia Ulfa, Kiki Winda Veronica, Dandy Aditya Novresiandi, and Andi Ibrahim. 2023. <span>“EFFECT OF ATMOSPHERIC CORRECTION ALGORITHM ON LANDSAT-8 AND SENTINEL-2 CLASSIFICATION ACCURACY IN PADDY FIELD AREA.”</span> <em>International Journal of Remote Sensing and Earth Sciences (IJReSES)</em> 20 (1): 57–65. <a href="https://doi.org/10.30536/j.ijreses.2023.v20.a3845">https://doi.org/10.30536/j.ijreses.2023.v20.a3845</a>.
+</div>
+<div id="ref-özcihan2023b" class="csl-entry" role="listitem">
+Özciḣan, Buğrahan, Levent Doğukan Özlü, Mümin İlker Karakap, Halime Sürmeli̇, Ugur Alganci, and Elif Sertel. 2023. <span>“A Comprehensive Analysis of Different Geometric Correction Methods for the Pleiades -1A and Spot-6 Satellite Images.”</span> <em>International Journal of Engineering and Geosciences</em> 8 (2): 146–53. <a href="https://doi.org/10.26833/ijeg.1086861">https://doi.org/10.26833/ijeg.1086861</a>.
+</div>
+<div id="ref-shah2022" class="csl-entry" role="listitem">
+Shah, Maitrik, Mehul S Raval, and Srikrishnan Divakaran. 2022. <span>“IGARSS 2022 - 2022 IEEE International Geoscience and Remote Sensing Symposium.”</span> In, 346–49. <a href="https://doi.org/10.1109/IGARSS46834.2022.9884900">https://doi.org/10.1109/IGARSS46834.2022.9884900</a>.
+</div>
+<div id="ref-tarasenkov2019" class="csl-entry" role="listitem">
+Tarasenkov, M. V., A. V. Zimovaya, V. V. Belov, and M. V. Engel. 2019. <span>“25th International Symposium on Atmospheric and Ocean Optics: Atmospheric Physics.”</span> In, 11208:197–202. SPIE. <a href="https://doi.org/10.1117/12.2539123">https://doi.org/10.1117/12.2539123</a>.
+</div>
+<div id="ref-wang2023" class="csl-entry" role="listitem">
+Wang, Yu, Zhenfeng Shao, Tao Lu, Changzhi Wu, and Jiaming Wang. 2023. <span>“Remote Sensing Image Super-Resolution via Multiscale Enhancement Network.”</span> <em>IEEE Geoscience and Remote Sensing Letters</em> 20: 1–5. <a href="https://doi.org/10.1109/LGRS.2023.3248069">https://doi.org/10.1109/LGRS.2023.3248069</a>.
+</div>
+<div id="ref-yan2023" class="csl-entry" role="listitem">
+Yan, Shi, Liuwei Sheng, Gu Chao, Liu Hui, Zhang Yang, and Huangchun Hao. 2023. <span>“Multi-Source Satellite Remote Sensing Image Processing and Processing Method Based on Geometric Correction Model.”</span> In, edited by Roumen Kountchev, Kazumi Nakamatsu, Wenfeng Wang, and Roumiana Kountcheva, 293–303. Smart Innovation, Systems and Technologies. Singapore: Springer Nature. <a href="https://doi.org/10.1007/978-981-19-7184-6_26">https://doi.org/10.1007/978-981-19-7184-6_26</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

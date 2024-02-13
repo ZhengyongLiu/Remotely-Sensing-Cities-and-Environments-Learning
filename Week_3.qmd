@@ -1,5 +1,6 @@
 ---
 title: "Week_3"
+bibliography: references.bib
 ---
 
 ## **Knowledge gain From the Lecture**
@@ -19,19 +20,6 @@ Geometric correction is the basis of image correction and addresses image distor
 ```{r  echo=FALSE, out.width='110%', fig.align='center', fig.cap='How Geometric Correction Work, Source: <a href="https://www.semanticscholar.org/paper/A-Geometric-Correction-Method-of-Plane-Image-Based-Xiaopeng-Leilei/0d46695027b1a9bab5c88c1c0e822760f31d23e6">Xiaopeng</a>'}
 knitr::include_graphics('Figure/Week_3/Geometric correction.png')
 ```
-::: {style="text-align: justify;"}
-Based on the above calibration process, it can be done by the following equation
-For a point \((x, y)\) in the distorted image, the corresponding point \((x', y')\) in the geometrically corrected image can be calculated using:
-
-$$
-x' = a_0 + a_1 x + a_2 y + a_3 x^2 + a_4 xy + a_5 y^2 + \ldots
-$$
-$$
-y' = b_0 + b_1 x + b_2 y + b_3 x^2 + b_4 xy + b_5 y^2 + \ldots
-$$
-
-Here, \(a_0, a_1, \ldots, a_n\) and \(b_0, b_1, \ldots, b_n\) are coefficients determined through a calibration process using ground control points (GCPs), which are points whose true position is known. The number of terms in the polynomial (and thus the number of coefficients) depends on the degree of the polynomial required to model the distortion adequately. A first-degree polynomial correction (affine transformation) would not include the squared terms, for example.
-:::
 
 #### Atmospheric Correction
 
@@ -42,7 +30,7 @@ Atmospheric corrections are essential to address distortions and inaccuracies in
 The different methods and characteristics of atmospheric correction have been summarised in the table below:
 
 | Method               | Key Steps                                                     | Feature                                             |
-|-------------------|----------------------------|--------------------------|
+|-------------------|-----------------------------|-------------------------|
 | **Relative**         | Spectrally stable landmarks, linear relations, band operation | Consistency between images                          |
 | **Absolute**         | Complex models for atmospheric effects, surface reflectance   | Precise, accurate surface information               |
 | **Pseudo-Invariant** | High-quality reference, PIF, linear regression                | Stable reference points, reduce atmospheric effects |
@@ -73,62 +61,64 @@ At the moment there are many models and methods on the market, since there are h
 ### Data Join Sets/Enhancement
 
 #### Data Join Sets
+
 ::: {style="text-align: justify;"}
 An area may need more than one satellite image to be spliced, using mosaic in the R package for the two datasets to be spliced. When selecting images, try to select two images with similar time and date, due to the different date of the image, the image display is different, the reason may be (cloud cover, sunshine), need to use the image increase technique to operate.
 :::
+
 ### Enhancement
 
 #### Ratio
+
 ::: {style="text-align: justify;"}
 The ratio is the difference between two spectral bands with a specific spectral response, using CampTown's data for NDVI (The Normalised Difference Vegetation Index) The Normalised Difference Vegetation Index is based on the fact that healthy and green vegetation reflects more in the near infrared but absorbs in the red wavelengths. Therefore, the red wavelength band is used for the operation in the formula below.
+
 $$
 NDVI = \frac{NIR - Red}{NIR + Red}
 $$
 
-
 The following figure shows the image after manipulation for NDVI (a. After NDVI Formula, b. Extraction only if NDVI is equal to or greater than 0.2)
 :::
+
 ```{r  echo=FALSE, out.width='110%', fig.align='center', fig.cap='Process of Radiometric Calibration'}
 knitr::include_graphics('Figure/Week_3/NDVI.png')
 ```
+This case above can be applied to other index calculations such as NDWI (Normalised Difference Water Index) and NDDI (Normalised Difference Drought Index). These are calculated using the reflectance of different objects in different light waves.
 
-#### Texture (Unfinished)
+#### Texture
+
 ::: {style="text-align: justify;"}
-Due to the limitations of R, it takes a long time to run if the map is loaded too large, so only a small part of CampTown was selected for processing. Most of the area can be loaded in Google Earth Engine afterwards. Below is the texture processed study area.
+The extraction method of texture features is relatively simple, it is to use an active window to slide continuously on the image, calculate the variance, mean, maximum, minimum and the difference between the two and the information entropy in the window, etc., respectively, to form the corresponding texture image, when the spectral characteristics of the target are relatively close to each other, the texture features can play a positive role in distinguishing the target. When the spectral characteristics of the target are close, the texture features can play a positive role in distinguishing the target. After selecting the appropriate dynamic range of the data and extracting the texture features, the texture features of the image can be highlighted, which is conducive to the extraction of constructive information.
+Below is an example of a texture treatment for the Cape Town area.
 :::
 
-```{r  echo=FALSE, out.width='110%', fig.align='center', fig.cap='Process of Radiometric Calibration'}
+```{r  echo=FALSE, out.width='110%', fig.align='center', fig.cap='After of Texture Process'}
 knitr::include_graphics('Figure/Week_3/Texture.png')
 ```
+## Application in Literature
 
-#### Principal Component Analysis (Unfinished)
-```{r  echo=FALSE, out.width='110%', fig.align='center', fig.cap='Process of Radiometric Calibration'}
-knitr::include_graphics('Figure/Week_3/Principal Component Analysis.png')
-```
+::: {style="text-align: justify;"}
+Image correction is a critical step in remote sensing to ensure the accuracy and usability of data obtained from satellite or aerial imagery. Radiometric correction involves adjusting digital image data to correct for sensor noise, sensor response variations and atmospheric conditions. Various methods have been proposed for radiometric correction of remote sensing images. Duan[-@duan2014] proposed a radiation correction method that replaces artificial targets with standard ground objects, resulting in accurate and precise correction. Tarasenkov[-@tarasenkov2019] developed a program complex for atmospheric correction of satellite images that considers radiation polarization.
 
-```{r  echo=FALSE, out.width='110%', fig.align='center', fig.cap='Process of Radiometric Calibration'}
-knitr::include_graphics('Figure/Week_3/Principal Component Analysis result.png')
-```
-### Other Enhancement
+Geometric correction corrects the image so that the proportions are uniform throughout the image. This correction is essential for accurate mapping and measurement tasks. Geometric correction is useful for removing spatial distortion, aligning images of the same sample, and stitching overlapping images together.[@yan2023]. Various methods and devices have been developed for geometric correction, including those based on orthographic images and homonymous point matching. These techniques improve the accuracy and stability of the geometric information in the corrected image[@özcihan2023b].
 
-| Technique                          | Description                                                      | Application                                                      |
-|-------------------|---------------------------|---------------------------|
-| Low Pass Filter                    | Smoothes image by averaging pixels.                              | Reduces noise for better burn area detection.                    |
-| High Pass Filter                   | Enhances contrast by highlighting local changes.                 | Improves distinction between burned/unburned areas.              |
-| Embossing                          | Modifies coefficients to create shadowy edge relief.             | Highlights burn area edges for clearer boundaries.               |
-| Principal Component Analysis (PCA) | Transforms multispectral data to smaller, uncorrelated datasets. | Simplifies data for easier burn area analysis in Landsat images. |
-| Multi-date PCA                     | Combines different time point bands for PCA.                     | Identifies temporal changes in burn areas across Landsat images. |
-| Texture Analysis                   | Analyzes spatial variation in grayscale.                         | Enhances burn area detection through texture metrics.            |
-| Image Fusion                       | Merges data from multiple sources/sensors.                       | Integrates different resolutions for more detailed analysis.     |
+Atmospheric correction is necessary for various remote sensing applications to improve the accuracy and reliability of derived information. Different algorithms, such as 6S, FLAASH, DOS, LaSRC, and Sen2Cor, have been evaluated for their performance in atmospheric correction[@muchsin2023]. Atmospheric corrections are essential for a variety of applications such as aircraft navigation, astronomical observations and accurate estimation of cloud heights[@shah2022]. It ensures that satellite images provide reliable and accurate results by taking into account atmospheric disturbance[@jonah].
 
-## Application in Literature (Unfinished)
+Image enhancement technology aims to improve the quality and visual effect of remote sensing images. Various methods have been proposed to enhance these images, including histogram modification, transform domain methods, and hybrid approaches. Histogram modification methods focus on modifying the histogram of the input image to achieve a more uniform distribution, resulting in better contrast improvement. Transform domain methods apply specific transforms to enhance the image in the transform domain, leading to better edge enhancement and color preservation[@wang2023]. Hybrid methods, which combine histogram modification and transform domain methods, have shown higher potential in enhancing remote sensing images[@deng2023]. These enhancement techniques are crucial for image interpretation, improving image segmentation accuracy, and facilitating downstream tasks.
+:::
 
-These methodologies have wide applications in geospatial science literature, particularly in environmental monitoring, land use mapping, and disaster assessment. Atmospheric correction techniques are essential in longitudinal studies using satellite data, ensuring consistency across different times and conditions. Image enhancements are particularly vital in extracting detailed information from remote sensing data, contributing to more accurate and reliable interpretations in various research areas.
+## Personal Reflection
 
-Geometric corrections are commonly applied in studies involving spatial accuracy, while orthorectification is used extensively in mapping applications. Radiometric calibration's role in ensuring data accuracy over different periods is crucial in change detection and environmental studies. Overall, these techniques are fundamental to the field of geospatial sciences, enabling the extraction of meaningful and accurate information from raw satellite data.
+::: {style="text-align: justify;"}
+As a student diving deep into remote sensing image correction technologies, it truly broadened my knowledge and also deepened my understanding of its complexities and challenges. I realized that although these technologies are crucial for enhancing the quality of image data, implementing them is not as straightforward as it might seem. For instance, radiometric correction sounds advanced, but if we lack precise ground objects for reference, the accuracy of the whole process becomes questionable. This got me thinking about whether we need to develop more adaptive correction methods that can adjust to varying conditions.
 
-## Personal Reflection (Unfinished)
+Then there's geometric correction, which indeed seems capable of solving issues with inconsistent image proportions, but if our initial data is not of good quality, or the processing is too complex, how do we balance precision with practical feasibility? It made me realize that sometimes we might need to find a balance between ideal accuracy and operational simplicity.
 
-The depth of knowledge gained from this course has been profound. Understanding the technical aspects of image correction and enhancement has provided a clear perspective on the importance and complexity of these processes in remote sensing. It's intriguing to see how various correction techniques can significantly improve the quality of satellite imagery, leading to more reliable data interpretation.
+When it comes to atmospheric correction, I was intrigued by the performance differences of various algorithms under specific conditions. This highlights the importance of selecting the right correction algorithm for reliable data, and also hints at the necessity for more detailed comparisons of algorithms in future research.
 
-The potential of these techniques in addressing global challenges, such as environmental monitoring and disaster management, is particularly inspiring. The course has deepened my appreciation for the field of geospatial sciences and its impact on our understanding of the Earth.
+Regarding image enhancement technologies, while they can make images appear clearer, I also began to worry about whether these techniques might inadvertently alter some crucial features in the images. This made me recognize the need to carefully maintain the authenticity of images while pursuing visual improvements.
+
+Overall, delving into remote sensing image correction technologies not only taught me about the importance of these techniques but also exposed the various challenges that need to be overcome in practical applications. It made me more aware that alongside technological innovation, a careful evaluation and improvement of existing methods are necessary to ensure we can enhance data quality while maintaining operational feasibility and data authenticity.
+:::
+
+## Reference

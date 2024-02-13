@@ -20,7 +20,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -153,11 +172,8 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#synthetic-aperture-radar-sar-and-its-applications" id="toc-synthetic-aperture-radar-sar-and-its-applications" class="nav-link" data-scroll-target="#synthetic-aperture-radar-sar-and-its-applications"><span class="header-section-number">1.1.4</span> <strong>Synthetic Aperture Radar (SAR) and its Applications</strong></a></li>
   <li><a href="#technical-insights-and-data-formats-in-remote-sensing" id="toc-technical-insights-and-data-formats-in-remote-sensing" class="nav-link" data-scroll-target="#technical-insights-and-data-formats-in-remote-sensing"><span class="header-section-number">1.1.5</span> <strong>Technical Insights and Data Formats in Remote Sensing</strong></a></li>
   </ul></li>
-  <li><a href="#reflecting-from-the-practical" id="toc-reflecting-from-the-practical" class="nav-link" data-scroll-target="#reflecting-from-the-practical"><span class="header-section-number">1.2</span> Reflecting From the Practical</a>
-  <ul class="collapse">
-  <li><a href="#using-of-snap" id="toc-using-of-snap" class="nav-link" data-scroll-target="#using-of-snap"><span class="header-section-number">1.2.1</span> Using of SNAP</a></li>
-  </ul></li>
-  <li><a href="#reflecting-from-the-lecture" id="toc-reflecting-from-the-lecture" class="nav-link" data-scroll-target="#reflecting-from-the-lecture"><span class="header-section-number">1.3</span> Reflecting From the Lecture</a></li>
+  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="header-section-number">1.2</span> Application</a></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">1.3</span> Reflection</a></li>
   <li><a href="#reference" id="toc-reference" class="nav-link" data-scroll-target="#reference"><span class="header-section-number">1.4</span> Reference</a></li>
   </ul>
 </nav>
@@ -250,27 +266,49 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </section>
 </section>
-<section id="reflecting-from-the-practical" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="reflecting-from-the-practical"><span class="header-section-number">1.2</span> Reflecting From the Practical</h2>
-<section id="using-of-snap" class="level3" data-number="1.2.1">
-<h3 data-number="1.2.1" class="anchored" data-anchor-id="using-of-snap"><span class="header-section-number">1.2.1</span> Using of SNAP</h3>
-<p>I am still trying to figure out how to fix the bug with snap while using the MacOS.</p>
-</section>
-</section>
-<section id="reflecting-from-the-lecture" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="reflecting-from-the-lecture"><span class="header-section-number">1.3</span> Reflecting From the Lecture</h2>
+<section id="application" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="application"><span class="header-section-number">1.2</span> Application</h2>
 <div style="text-align: justify;">
-<p>Reflecting on the week’s learning, I am struck by the profound impact that remote sensing has on our understanding of the world. The ability to observe and analyse our planet from a distance provides a unique perspective that is not possible through ground-based observations alone. It literally allows us to see the bigger picture, providing a comprehensive understanding of large-scale environmental patterns, urban development and even climate change.</p>
-<p>Remote sensing is interdisciplinary in nature. It’s not just a tool for geographers or environmental scientists; it integrates physics, engineering, environmental science and even policy-making. This integration demonstrates the collaborative effort required to address complex global issues. For example, remote sensing data can inform policies on urban planning, agricultural practices and disaster management, making it a critical tool for sustainable development.</p>
-<p>Another aspect is the rapid evolution of remote sensing technology. With innovations such as high-resolution imagery and real-time data analysis, the potential applications of this technology are expanding at an incredible rate.</p>
+<p>Throughout the week, remote sensing technology is a method of observing and analysing the Earth and its atmosphere from a distance using radio waves or other forms of electromagnetic waves. This technology enables imaging and analysis of distant targets in a non-contact manner by collecting and processing electromagnetic wave information from the Earth’s surface and atmosphere. With the development of technology, remote sensing has become an important tool in the field of geographic information science and is widely used in a number of research and practical applications<span class="citation" data-cites="zhou2023">(<a href="#ref-zhou2023" role="doc-biblioref">Q. Zhou 2023</a>)</span>. In the field of urban environmental monitoring, remote sensing technology provides an efficient means of monitoring air quality, water quality and land use. Urban sprawl, traffic flow and pollution from industrial activities can be observed and analysed from the air through remote sensing technology, which helps in decision-making for urban planning and environmental protection<span class="citation" data-cites="zhou2023a">(<a href="#ref-zhou2023a" role="doc-biblioref">J. Zhou 2023</a>)</span>.In the area of vegetation monitoring, remote sensing can be used to analyse the health, growth dynamics and coverage of plants, and by analysing reflected and absorbed electromagnetic waves of specific wavelengths, scientists are able to assess important parameters such as the biomass, water content and chlorophyll concentration of vegetation. This information is important for the optimisation of agricultural production, forestry management and ecological conservation<span class="citation" data-cites="adhikary2022a">(<a href="#ref-adhikary2022a" role="doc-biblioref">Adhikary et al. 2022a</a>)</span>.Geological research has also benefited from the application of remote sensing technology, and by analysing the electromagnetic wave reflection characteristics of the earth’s surface, scientists have been able to identify different rock types, the distribution of mineral deposits and changes in topography and geomorphology. This is of great value for the exploration of mineral resources, the early warning of geological disasters and the monitoring of environmental changes<span class="citation" data-cites="torresgil2023c">(<a href="#ref-torresgil2023c" role="doc-biblioref">Torres Gil, Valdelamar Martínez, and Saba 2023</a>)</span>.Agriculture is one of the areas in which remote sensing technology is most widely used. In addition to being used for assessing plant health and yield estimation, remote sensing is used to monitor irrigation needs, detect weeds and pests and make weather forecasts. This makes agricultural production more precise and efficient, helping to increase crop yields and reduce resource wastage<span class="citation" data-cites="adhikary2022b">(<a href="#ref-adhikary2022b" role="doc-biblioref">Adhikary et al. 2022b</a>)</span>.</p>
+<p>In addition, synthetic aperture radar (SAR) technology, as an advanced remote sensing technology, has a wide range of applications. By using radar waves to penetrate the limitations of cloud cover and lighting conditions, it provides a unique perspective for surface observation. This technology is capable of acquiring high-quality image data under any weather conditions, including dense fog, cloud cover, rain and snow, as well as at night. As a result, SAR has become an important tool for geological exploration, topographic mapping, disaster monitoring and prevention, traffic surveillance, and agricultural and forest monitoring, among other fields.<span class="citation" data-cites="hu2022">(<a href="#ref-hu2022" role="doc-biblioref">Hu et al. 2022</a>)</span>。</p>
+<p>SAR systems work by transmitting and receiving microwave signals, using the returned signals to calculate the position, shape and other characteristics of objects on the ground. A key advantage of this active sensing technology is its sensitivity to the type of ground material and moisture content, allowing it to play an important role in monitoring vegetation-covered areas, urban environments and bodies of water, where SAR imagery is unique in analysing surface changes, assessing the impacts of disasters and carrying out environmental monitoring, owing to its unique imaging properties<span class="citation" data-cites="navalgund2007">(<a href="#ref-navalgund2007" role="doc-biblioref">Navalgund, Jayaraman, and Roy 2007</a>)</span>.</p>
+</div>
+</section>
+<section id="reflection" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="reflection"><span class="header-section-number">1.3</span> Reflection</h2>
+<div style="text-align: justify;">
+<p>Reflecting on the week’s learning, the profound impact of remote sensing on our understanding of the world is truly remarkable. This technology, with its ability to observe and analyse our planet from afar, offers a unique perspective that ground-based observations simply cannot match. It’s like having a bird’s-eye view of the world, which opens up a whole new dimension in comprehending large-scale environmental patterns, urban sprawl, and the intricate dynamics of climate change.</p>
+<p>What strikes me the most is how remote sensing serves as a bridge across various disciplines. It’s not confined to the realm of geography or environmental science; rather, it embodies a synergy of physics, engineering, environmental science, and even policy-making. This multidisciplinary approach highlights the collective effort needed to tackle the complex challenges our world faces today. For instance, the data derived from remote sensing technologies play a pivotal role in shaping policies related to urban planning, optimizing agricultural practices, and enhancing disaster management strategies. It underscores the technology’s indispensability in driving sustainable development forward.</p>
+<p>The rapid advancement in remote sensing technologies is nothing short of astonishing. Innovations such as high-resolution imagery and the capability for real-time data analysis are broadening the horizons of its applications at an unprecedented pace. These advancements are not only improving our current capabilities but are also paving the way for new possibilities in monitoring and managing the Earth’s resources more effectively. This week’s exploration into the world of remote sensing has deepened my appreciation for this powerful tool and its potential to contribute to a more sustainable and informed future.</p>
 </div>
 </section>
 <section id="reference" class="level2" data-number="1.4">
 <h2 data-number="1.4" class="anchored" data-anchor-id="reference"><span class="header-section-number">1.4</span> Reference</h2>
-<p>‘Remote Sensing - NASA’, n.d. <a href="https://www.nasa.gov/directorates/somd/space-communications-navigation-program/remote-sensing/" class="uri">https://www.nasa.gov/directorates/somd/space-communications-navigation-program/remote-sensing/</a>.</p>
-<p>‘Types Of Remote Sensing: Devices And Their Applications’, 18 November 2020. <a href="https://eos.com/blog/types-of-remote-sensing/" class="uri">https://eos.com/blog/types-of-remote-sensing/</a>.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-adhikary2022a" class="csl-entry" role="listitem">
+Adhikary, Saju, Benukar Biswas, Manish Kumar Naskar, Bishal Mukherjee, Aditya Pratap Singh, Kousik Atta, Saju Adhikary, et al. 2022a. <span>“Remote Sensing for Agricultural Applications.”</span> In. IntechOpen. <a href="https://doi.org/10.5772/intechopen.106876">https://doi.org/10.5772/intechopen.106876</a>.
+</div>
+<div id="ref-adhikary2022b" class="csl-entry" role="listitem">
+———, et al. 2022b. <span>“Remote Sensing for Agricultural Applications.”</span> In. IntechOpen. <a href="https://doi.org/10.5772/intechopen.106876">https://doi.org/10.5772/intechopen.106876</a>.
+</div>
+<div id="ref-hu2022" class="csl-entry" role="listitem">
+Hu, Jun, Lei Zhang, Changwook Lee, and Rong Gui. 2022. <span>“Editorial: Advanced Big SAR Data Analytics and Applications.”</span> <em>Frontiers in Environmental Science</em> 10. <a href="https://www.frontiersin.org/articles/10.3389/fenvs.2022.1063376">https://www.frontiersin.org/articles/10.3389/fenvs.2022.1063376</a>.
+</div>
+<div id="ref-navalgund2007" class="csl-entry" role="listitem">
+Navalgund, Ranganath R., V. Jayaraman, and P. S. Roy. 2007. <span>“Remote Sensing Applications: An Overview.”</span> <em>Current Science</em> 93 (12): 1747–66. <a href="https://www.jstor.org/stable/24102069">https://www.jstor.org/stable/24102069</a>.
+</div>
+<div id="ref-torresgil2023c" class="csl-entry" role="listitem">
+Torres Gil, Leydy K., David Valdelamar Martínez, and Manuel Saba. 2023. <span>“The Widespread Use of Remote Sensing in Asbestos, Vegetation, Oil and Gas, and Geology Applications.”</span> <em>Atmosphere</em> 14 (1): 172. <a href="https://doi.org/10.3390/atmos14010172">https://doi.org/10.3390/atmos14010172</a>.
+</div>
+<div id="ref-zhou2023a" class="csl-entry" role="listitem">
+Zhou, Jianming. 2023. <span>“Application of Remote Sensing Technology in Urban Environment Monitoring.”</span> In. CRC Press.
+</div>
+<div id="ref-zhou2023" class="csl-entry" role="listitem">
+Zhou, Qifeng. 2023. <span>“Application of Remote Sensing Technologies in Environmental Monitoring and Geological Surveys.”</span> <em>Applied and Computational Engineering</em> 3 (May): 178–85. <a href="https://doi.org/10.54254/2755-2721/3/20230403">https://doi.org/10.54254/2755-2721/3/20230403</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
