@@ -1,0 +1,104 @@
+---
+title: "Week_6"
+---
+
+## **Knowledge gain From the Lecture**
+
+Google Earth Engine是Google提供的对大量全球尺度地球科学资料（尤其是卫星数据）进行在线可视化计算和分析处理的云平台。它的特点是允许大规模的地理空间分析，运行速度很快，有在客户端运行的代码，并且将数据储存在的服务器上
+
+GEE 中的栅格数据和矢量数据:
+
+1.  栅格数据称为"Image"，具有波段（bands）。
+2.  矢量数据称为"Feature"，具有几何形状和属性（dictionary of properties）。
+
+GEE 中的图像缩放:
+
+1.  指图像的分辨率，即每个像素代表的实际地面距离。
+2.  GEE 会根据分析需求自动选择合适的缩放级别。
+
+GEE中的投影:
+
+GEE 支持多种投影，包括 Mercator 投影、Albers 投影、等距圆柱投影等。用户可以选择合适的投影进行分析。
+
+如何使用GEE
+
+```{r  echo=FALSE, out.width='110%', fig.align='center', fig.cap='How to use GEE, Source: <a href="https://earthengine.google.com/platform/">Google Earth Engine</a>'}
+knitr::include_graphics('Figure/Week_6/ How to use GEE.png')
+```
+
+GEE中可以进行的操作：
+
+1.  几何操作：例如空间操作，连接（Joins），区域统计（比如邻域的平均温度），图像或特定值的筛选。
+2.  机器学习，包括监督学习和非监督学习，使用TensorFlow进行深度学习，探索变量之间的关系。
+3.  应用/输出：在线图表，可扩展的使用GEE数据的地理空间应用
+
+GEE中的Reduce the Image :
+
+Reducing the image by region 和 reducing the image by neighbor 都是用于对图像进行区域化或邻域化操作的函数。它们的主要区别在于：
+
+1.  Reducing the image by region 是根据指定的区域对图像进行操作。每个区域可以是任意形状，可以重叠。该函数会对每个区域内的所有像素进行指定的计算，并返回一个包含区域统计结果的新图像。
+2.  Reducing the image by neighbor 是根据指定的邻域对图像进行操作。每个像素的邻域是指其周围一定范围内的像素。该函数会对每个像素及其邻域内的所有像素进行指定的计算，并返回一个包含像素新值的图像。
+
+GEE中的Linear Regression & Join (暂时写不出来)
+
+## **Practical**
+
+### Compare with RGB & NDVI
+
+```{r, echo=FALSE}
+htmltools::tags$iframe(style = "height:600px; width:100%", src = "https://ee-liulzy1999.projects.earthengine.app/view/rgb--ndvi-roller-shutter")
+```
+
+[Compare with RGB & NDVI](https://ee-liulzy1999.projects.earthengine.app/view/rgb--ndvi-roller-shutter)
+
+### PCA Analysis
+
+选取个区域，首先标准化图像波段，计算协方差矩阵，提取特征值和特征向量，然后将图像数据投影到主成分空间。最后，它将PCA结果的第一主成分展示在地图上。
+
+```{r  echo=FALSE, out.width='110%', fig.align='center', fig.cap='PCA Analysis'}
+knitr::include_graphics('Figure/Week_6/PCA Analysis.png')
+```
+
+## **Applications**
+
+### General Applications
+
+GEE一直是遥感大数据处理的关注焦点。GEE是一个基于云的平台，可使用Google的云在全球范围内并行处理地理空间数据。GEE是一个免费的云平台，承载着超过40年的PB规模的遥感数据，例如Landsat，MODIS，美国国家海洋和大气管理局高级超高分辨率辐射计（NOAA AVHRR），Sentinel 1、2、3和5- P; 和高级陆地观测卫星（ALOS）数据[@aghamiri]。 GEE还包括气候-天气和地球物理数据集。还提供其他现成的产品，例如增强植被指数（EVI）和归一化植被指数（NDVI）。除了可以使用大量原始遥感图像存储库之外，用户还可以访问GEE数据目录中的预处理图像，云去除图像和镶嵌图像 [@ritika]。
+
+```{r  echo=FALSE, out.width='110%', fig.align='center', fig.cap='A summary of the algorithms and capabilities available in code editor-Google Earth Engine, Author: <a href="https://www.researchgate.net/publication/341228837_Google_Earth_Engine_for_geo-big_data_applications_A_meta-analysis_and_systematic_review">[@tamiminia2020]</a>'}
+knitr::include_graphics('Figure/Week_6/A summary of the algorithms and capabilities available in code editor-Google Earth Engine.png')
+```
+
+GEE还提供了其他与用户交互的方式。资源管理器是一个简单的Web应用程序，用于数据目录浏览，可视化和基本分析，允许用户运行简单的分析。下面是一些实际上的应用。
+
+```{r  echo=FALSE, out.width='110%', fig.align='center', fig.cap='GEE in Different Applications, Author: <a href="https://www.researchgate.net/publication/341228837_Google_Earth_Engine_for_geo-big_data_applications_A_meta-analysis_and_systematic_review">[@tamiminia2020]</a>'}
+knitr::include_graphics('Figure/Week_6/GEE in Different Applications.png')
+```
+
+### GEE和数据类型
+
+在学术界对于GEE的使用中，大部分都是采用了光学图，其原因很大程度上要归功于Landsat影像的40年免费存档，光学遥感数据仍然是最常用的数据源。GEE数据目录提供了1972年至今的光学卫星图像，使研究人员能够进行地球监测研究[@pham-duc2023]。此外，GEE用户的广泛应用表明，光学图像对于非远程传感专家来说更易于处理和解释。这就是为什么GEE在广泛的科学领域中遍及全球的原因之一。同时，SAR和光学卫星数据的结合能够帮助研究人员解决云层遮挡等问题。特别是在热带地区，由于云层的持续覆盖以及森林火灾等情况，光学图像的效能会受到极大影响。因此，结合光学和SAR数据可以提高分类的准确性，并提供更多信息来监测地表变化[@lea2023].
+
+### GEE和传感器类型
+
+Landsat被认为是GEE中重要的遥感数据源，因为它提供了地球表面的连续图像。Landsat 9卫星将于2020年发射，目的是继续执行Landsat计划在监测地球资源方面的关键作用。可以在区域和全球范围内进行长期的土地覆盖变化研究[@pham-duc2023]。
+
+Sentinel-1是卫星图像的另一个流行来源，并且取得了非常准确的分类结果。Sentinel-1由两颗卫星组成，分别由2014年和2016年发射的Sentinel-1A和Sentinel 1-B组成，空间分辨率为10 m，重访时间为6天[@ariascuenca2023]。它配备了双极化C波段SAR传感器，可以在全天候，白天和夜晚的情况下提供数据。Sentinel-2任务包括两颗卫星组成的星座，即Sentinel-2A（于2015年发射）和Sentinel-2B（于2017年发射），它们提供空间分辨率为10 m，20 m和60 m的光学图像，以及大约5天的时间分辨率[@xu2022; @lechner2022]
+
+中分辨率成像光谱仪（MODIS）于1999年在Terra卫星上发射，并在2002年在Aqua卫星上发射。研究人员可以在1天的重访时间访问36个光谱带和三种变化的空间分辨率（250 m，500 m和1 km）的GEE中的MODIS数据。即使MODIS的空间分辨率很低，它的高时间分辨率也使研究人员可以监视短期和长期的全球环境变化（动力学）[@wu2020]。
+
+### 遥感数据分析
+
+#### 机器学习技术
+
+机器学习是人工智能的一个子集，它处理算法设计以训练模型以做出决策或预测。机器学习方法可分为两大类：参数化和非参数化。参数化机器学习算法使用固定数量的参数或假设。机器学习方法已被有效地用于遥感数据处理。分类，聚类，回归和降维是机器学习算法的四个主要分析类别[@shaveta2023]。 回归是一种监督式机器学习方法，旨在基于一组协变量来估计或预测输出变量。线性回归的另一个积极方面是它的快速计算速度，这是地理大数据分析中的重要因素[@googlee]。同时MLR模型在预测过程中会处理因变量和自变量之间的非线性关系。
+
+#### 其他GEE图像处理功能
+
+GEE提供了多种图像处理工具，适用于遥感数据的分析。这些工具涵盖了时间序列分析、特征提取、图像的彩色合成以及图像预处理等方面，主要针对卫星图像，而不是基于机器学习的方法[@googlee]。随着地球表面快速变化，卫星图像的时间序列分析变得至关重要，它帮助追踪趋势、监测变化并发展预测模型。GEE因其能处理高分辨率或大量数据而在多项研究中被用于此类分析，特别是在监测地表变化方面表现出色。特征提取技术，通过分析图像的光谱和几何属性，帮助识别图像中的区域关系，这对于资源节约和信息保留非常关键[@pham-duc2023]。另外，GEE的视觉解释工具在土地监测研究中广泛应用，通过色彩合成图像提取关键信息。此外，GEE的图像预处理功能支持图像镶嵌、云层处理和错误检测，尽管云覆盖是处理光学数据时的主要挑战，但GEE提供了有效的工具和算法以支持这些工作[@lea2023]。
+
+## **Reflection**
+
+GEE已经成为最受欢迎的地理空间和大数据分析平台之一。尽管如此，仍然有扩展的空间。特别是，GEE为地理空间处理提供了一个易于使用且免费的平台，但是用户无法控制可能导致某些计算问题的并行处理环境的细节。这意味着GEE管理着计算的各个方面，例如源分配，并行性，数据分发和重试，而用户无法影响自己动手（DIY）并行化（Gorelick et al.，2017）。通常，GEE限制可分为三大类：计算，数据集和算法。 值得注意的是，GEE具有一些计算限制，包括时间，内存和存储。关于时限问题，GEE中有两种计算模式：按需和批处理。前者处理的运行次数有限，而后者可以在代码运行时运行。因此，将批处理用于大量计算是合理的，因为任务以按需模式运行。此外，在某些情况下，对大量数据集执行处理时，GEE可能会遇到内存问题。尽管脚本可能是没有逻辑错误的有效JavaScript，但是有时用户在并行化和执行计算时会遇到内部错误，例如内部服务错误，计算超时，超出用户内存限制以及过多的并发聚合。这些错误称为缩放错误，当输出太大，数量太多或计算时间很长时，可能会发生。关于存储，用户可以将结果保存在Google云端硬盘，Google云和GEE资产中。但是，应考虑将有限的250 GB容量用于在GEE资产中保存数据。GEE表资产的大小和形状也有一些限制。 尽管GEE包含大量的图像档案，但是对于许多研究而言，历史和高分辨率数据的价值有限。具体而言，在GEE中有13％的研究专注于灾难测绘，尤其是干旱监测。GEE还可以提供可靠的信息来监视其他灾难，例如地震和洪水图。此外，GEE当前提供高分辨率图像，包括RGB和多光谱集合中的国家农业图像计划（NAIP）和Planet Skysat。美国NAIP提供1 m分辨率的航拍图像数据。自2003-2018年以来，这些图像在GEE中可用，周期为3年和5年。从2014年到2016年，GEE还提供RGB和多光谱/平移集合的Planet Skysat影像。RGB影像以0.8 m分辨率（离地面最低图像1 m）提供，而R，G，B，近红外波段具有约2 m的分辨率，泛波段具有0.8分辨率（离最低点为1 m）。因此，需要高空间和时间分辨率的图像。 到目前为止，Sentinel-1图像是GEE中唯一可用的SAR数据；然而，通过增加从ALOS PALSAR收集的L波段数据来满足多种应用的需求，需要更长的波长，例如作物制图，开辟了新的途径。与具有中等渗透能力并主要与树冠上部相互作用的C波段相比，L波段具有更深的渗透能力并且可以与茎和枝相互作用，因此使其在多种应用中具有优势。 在GEE中，新算法的实现可能具有挑战性。在过去的几年中，由于深度学习方法与传统的机器学习工具相比具有优越性，因此在遥感领域受到了广泛的关注（Mahdianpari et al.，2018b ; Mohammadimanesh et al.，2019b ; Nogueira et al.， 2017，Rezaee et al.，2018，Sun & Wang，2018，Zhang et al.，2018，Zhu et al.，2017）。特别是深度神经网络已广泛用于图像分类任务，并且在分类精度方面显示出令人鼓舞的结果（Maggiori et al.，2016）。但是，GEE尚不直接支持深度学习算法。在深度学习方面，选择开源框架至关重要。TensorFlow是开源深度学习框架中最受欢迎的框架，例如Caffe，Microsoft CNTK，MXNet，Facebook Torch，Deeplearning4j and Theano（Zhu et al.，2017）。尽管尚不直接支持深度学习分类器，但GEE最近已与TensorFlow链接（自2019年9月起）。尤其是，用户现在可以访问软件包，从而允许他们与TensorFlow保存在Google AI平台上的模型格式进行交互（DeLancey et al.，2020）。GEE API提供了以TFRecord格式导入/导出图像，训练和测试数据集的机会。TFRecord格式可以处理大量数据，它允许用户以批量处理方式运行分类器，而无需存储所有数据。因此，此功能无疑可以应对大数据分析中的挑战。 根据GEE在基于像素的分类中的最佳性能，结果表明大多数研究已使用基于像素的方法完成。然而，这将引起在大面积上寻找高质量参考数据的问题。此外，如果成功实施了复杂的无监督分类算法，则GEE可能更具说服力。例如，目前GEE代码编辑器仅支持K-means，X-means，LVQ和Cobweb。由于遥感图像的固有特性（例如非正态分布数据）和混合像素的存在，实现复杂的算法（例如ISODATA，模糊K均值，概率K均值和基于内核的聚类方法）至关重要。 总体而言，与基于矢量的处理相比，GEE被证明更适合图像分析。此外，由于使用多个CPU进行处理，因此难以完成基于像素的像素空间关系的分析。此外，图像分割和水文建模选项受到限制。因此，近年来建议对基于对象的图像分析，重型矢量运算以及提供高分辨率卫星图像进行改进。
+
+## Reference

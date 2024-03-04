@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>CASA0023 Remote sensing learning Diary - 5&nbsp; Week_6</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./references.html" rel="next">
+<link href="./Week_4.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Week_6.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Week_6</span></a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">CASA0023 Remote sensing learning Diary</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Week_1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Week_1</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Week_2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week_2</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Week_3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week_3</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Week_4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Week_4</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Week_6.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Week_6</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Bibliography</strong></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#knowledge-gain-from-the-lecture" id="toc-knowledge-gain-from-the-lecture" class="nav-link active" data-scroll-target="#knowledge-gain-from-the-lecture"><span class="header-section-number">5.1</span> <strong>Knowledge gain From the Lecture</strong></a></li>
+  <li><a href="#practical" id="toc-practical" class="nav-link" data-scroll-target="#practical"><span class="header-section-number">5.2</span> Practical</a>
+  <ul class="collapse">
+  <li><a href="#compare-with-rgb-ndvi" id="toc-compare-with-rgb-ndvi" class="nav-link" data-scroll-target="#compare-with-rgb-ndvi"><span class="header-section-number">5.2.1</span> Compare with RGB &amp; NDVI</a></li>
+  <li><a href="#pca-analysis" id="toc-pca-analysis" class="nav-link" data-scroll-target="#pca-analysis"><span class="header-section-number">5.2.2</span> PCA Analysis</a></li>
+  </ul></li>
+  <li><a href="#applications" id="toc-applications" class="nav-link" data-scroll-target="#applications"><span class="header-section-number">5.3</span> Applications</a>
+  <ul class="collapse">
+  <li><a href="#general-applications" id="toc-general-applications" class="nav-link" data-scroll-target="#general-applications"><span class="header-section-number">5.3.1</span> General Applications</a></li>
+  <li><a href="#gee和数据类型" id="toc-gee和数据类型" class="nav-link" data-scroll-target="#gee和数据类型"><span class="header-section-number">5.3.2</span> GEE和数据类型</a></li>
+  <li><a href="#gee和传感器类型" id="toc-gee和传感器类型" class="nav-link" data-scroll-target="#gee和传感器类型"><span class="header-section-number">5.3.3</span> GEE和传感器类型</a></li>
+  <li><a href="#遥感数据分析" id="toc-遥感数据分析" class="nav-link" data-scroll-target="#遥感数据分析"><span class="header-section-number">5.3.4</span> 遥感数据分析</a></li>
+  </ul></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">5.4</span> Reflection</a></li>
+  <li><a href="#reference" id="toc-reference" class="nav-link" data-scroll-target="#reference"><span class="header-section-number">5.5</span> Reference</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Week_6</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="knowledge-gain-from-the-lecture" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="knowledge-gain-from-the-lecture"><span class="header-section-number">5.1</span> <strong>Knowledge gain From the Lecture</strong></h2>
+<p>Google Earth Engine是Google提供的对大量全球尺度地球科学资料（尤其是卫星数据）进行在线可视化计算和分析处理的云平台。它的特点是允许大规模的地理空间分析，运行速度很快，有在客户端运行的代码，并且将数据储存在的服务器上</p>
+<p>GEE 中的栅格数据和矢量数据:</p>
+<ol type="1">
+<li>栅格数据称为”Image”，具有波段（bands）。</li>
+<li>矢量数据称为”Feature”，具有几何形状和属性（dictionary of properties）。</li>
+</ol>
+<p>GEE 中的图像缩放:</p>
+<ol type="1">
+<li>指图像的分辨率，即每个像素代表的实际地面距离。</li>
+<li>GEE 会根据分析需求自动选择合适的缩放级别。</li>
+</ol>
+<p>GEE中的投影:</p>
+<p>GEE 支持多种投影，包括 Mercator 投影、Albers 投影、等距圆柱投影等。用户可以选择合适的投影进行分析。</p>
+<p>如何使用GEE</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Figure/Week_6/ How to use GEE.png" class="img-fluid figure-img" style="width:110.0%"></p>
+<figcaption class="figure-caption">How to use GEE, Source: <a href="https://earthengine.google.com/platform/">Google Earth Engine</a></figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>GEE中可以进行的操作：</p>
+<ol type="1">
+<li>几何操作：例如空间操作，连接（Joins），区域统计（比如邻域的平均温度），图像或特定值的筛选。</li>
+<li>机器学习，包括监督学习和非监督学习，使用TensorFlow进行深度学习，探索变量之间的关系。</li>
+<li>应用/输出：在线图表，可扩展的使用GEE数据的地理空间应用</li>
+</ol>
+<p>GEE中的Reduce the Image :</p>
+<p>Reducing the image by region 和 reducing the image by neighbor 都是用于对图像进行区域化或邻域化操作的函数。它们的主要区别在于：</p>
+<ol type="1">
+<li>Reducing the image by region 是根据指定的区域对图像进行操作。每个区域可以是任意形状，可以重叠。该函数会对每个区域内的所有像素进行指定的计算，并返回一个包含区域统计结果的新图像。</li>
+<li>Reducing the image by neighbor 是根据指定的邻域对图像进行操作。每个像素的邻域是指其周围一定范围内的像素。该函数会对每个像素及其邻域内的所有像素进行指定的计算，并返回一个包含像素新值的图像。</li>
+</ol>
+<p>GEE中的Linear Regression &amp; Join (暂时写不出来)</p>
+</section>
+<section id="practical" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="practical"><span class="header-section-number">5.2</span> Practical</h2>
+<section id="compare-with-rgb-ndvi" class="level3" data-number="5.2.1">
+<h3 data-number="5.2.1" class="anchored" data-anchor-id="compare-with-rgb-ndvi"><span class="header-section-number">5.2.1</span> Compare with RGB &amp; NDVI</h3>
+<div class="cell">
+<div class="cell-output-display">
+<iframe style="height:600px; width:100%" src="https://ee-liulzy1999.projects.earthengine.app/view/rgb--ndvi-roller-shutter"></iframe>
+</div>
+</div>
+<p><a href="https://ee-liulzy1999.projects.earthengine.app/view/rgb--ndvi-roller-shutter">Compare with RGB &amp; NDVI</a></p>
+</section>
+<section id="pca-analysis" class="level3" data-number="5.2.2">
+<h3 data-number="5.2.2" class="anchored" data-anchor-id="pca-analysis"><span class="header-section-number">5.2.2</span> PCA Analysis</h3>
+<p>选取个区域，首先标准化图像波段，计算协方差矩阵，提取特征值和特征向量，然后将图像数据投影到主成分空间。最后，它将PCA结果的第一主成分展示在地图上。</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Figure/Week_6/PCA Analysis.png" class="img-fluid figure-img" style="width:110.0%"></p>
+<figcaption class="figure-caption">PCA Analysis</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="applications" class="level2" data-number="5.3">
+<h2 data-number="5.3" class="anchored" data-anchor-id="applications"><span class="header-section-number">5.3</span> Applications</h2>
+<section id="general-applications" class="level3" data-number="5.3.1">
+<h3 data-number="5.3.1" class="anchored" data-anchor-id="general-applications"><span class="header-section-number">5.3.1</span> General Applications</h3>
+<p>GEE一直是遥感大数据处理的关注焦点。GEE是一个基于云的平台，可使用Google的云在全球范围内并行处理地理空间数据。GEE是一个免费的云平台，承载着超过40年的PB规模的遥感数据，例如Landsat，MODIS，美国国家海洋和大气管理局高级超高分辨率辐射计（NOAA AVHRR），Sentinel 1、2、3和5- P; 和高级陆地观测卫星（ALOS）数据<span class="citation" data-cites="aghamiri">(<a href="#ref-aghamiri" role="doc-biblioref">Aghamiri et al., n.d.</a>)</span>。 GEE还包括气候-天气和地球物理数据集。还提供其他现成的产品，例如增强植被指数（EVI）和归一化植被指数（NDVI）。除了可以使用大量原始遥感图像存储库之外，用户还可以访问GEE数据目录中的预处理图像，云去除图像和镶嵌图像 <span class="citation" data-cites="ritika">(<a href="#ref-ritika" role="doc-biblioref">Ritika, n.d.</a>)</span>。</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Figure/Week_6/A summary of the algorithms and capabilities available in code editor-Google Earth Engine.png" class="img-fluid figure-img" style="width:110.0%"></p>
+<figcaption class="figure-caption">A summary of the algorithms and capabilities available in code editor-Google Earth Engine, Author: <a href="https://www.researchgate.net/publication/341228837_Google_Earth_Engine_for_geo-big_data_applications_A_meta-analysis_and_systematic_review"><span class="citation" data-cites="tamiminia2020">(</span></a><a href="#ref-tamiminia2020" role="doc-biblioref">Tamiminia et al. 2020</a>)</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>GEE还提供了其他与用户交互的方式。资源管理器是一个简单的Web应用程序，用于数据目录浏览，可视化和基本分析，允许用户运行简单的分析。下面是一些实际上的应用。</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Figure/Week_6/GEE in Different Applications.png" class="img-fluid figure-img" style="width:110.0%"></p>
+<figcaption class="figure-caption">GEE in Different Applications, Author: <a href="https://www.researchgate.net/publication/341228837_Google_Earth_Engine_for_geo-big_data_applications_A_meta-analysis_and_systematic_review"><span class="citation" data-cites="tamiminia2020">(</span></a><a href="#ref-tamiminia2020" role="doc-biblioref">Tamiminia et al. 2020</a>)</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="gee和数据类型" class="level3" data-number="5.3.2">
+<h3 data-number="5.3.2" class="anchored" data-anchor-id="gee和数据类型"><span class="header-section-number">5.3.2</span> GEE和数据类型</h3>
+<p>在学术界对于GEE的使用中，大部分都是采用了光学图，其原因很大程度上要归功于Landsat影像的40年免费存档，光学遥感数据仍然是最常用的数据源。GEE数据目录提供了1972年至今的光学卫星图像，使研究人员能够进行地球监测研究<span class="citation" data-cites="pham-duc2023">(<a href="#ref-pham-duc2023" role="doc-biblioref">Pham-Duc et al. 2023</a>)</span>。此外，GEE用户的广泛应用表明，光学图像对于非远程传感专家来说更易于处理和解释。这就是为什么GEE在广泛的科学领域中遍及全球的原因之一。同时，SAR和光学卫星数据的结合能够帮助研究人员解决云层遮挡等问题。特别是在热带地区，由于云层的持续覆盖以及森林火灾等情况，光学图像的效能会受到极大影响。因此，结合光学和SAR数据可以提高分类的准确性，并提供更多信息来监测地表变化<span class="citation" data-cites="lea2023">(<a href="#ref-lea2023" role="doc-biblioref">Lea et al. 2023</a>)</span>.</p>
+</section>
+<section id="gee和传感器类型" class="level3" data-number="5.3.3">
+<h3 data-number="5.3.3" class="anchored" data-anchor-id="gee和传感器类型"><span class="header-section-number">5.3.3</span> GEE和传感器类型</h3>
+<p>Landsat被认为是GEE中重要的遥感数据源，因为它提供了地球表面的连续图像。Landsat 9卫星将于2020年发射，目的是继续执行Landsat计划在监测地球资源方面的关键作用。可以在区域和全球范围内进行长期的土地覆盖变化研究<span class="citation" data-cites="pham-duc2023">(<a href="#ref-pham-duc2023" role="doc-biblioref">Pham-Duc et al. 2023</a>)</span>。</p>
+<p>Sentinel-1是卫星图像的另一个流行来源，并且取得了非常准确的分类结果。Sentinel-1由两颗卫星组成，分别由2014年和2016年发射的Sentinel-1A和Sentinel 1-B组成，空间分辨率为10 m，重访时间为6天<span class="citation" data-cites="ariascuenca2023">(<a href="#ref-ariascuenca2023" role="doc-biblioref">Arias Cuenca 2023</a>)</span>。它配备了双极化C波段SAR传感器，可以在全天候，白天和夜晚的情况下提供数据。Sentinel-2任务包括两颗卫星组成的星座，即Sentinel-2A（于2015年发射）和Sentinel-2B（于2017年发射），它们提供空间分辨率为10 m，20 m和60 m的光学图像，以及大约5天的时间分辨率<span class="citation" data-cites="xu2022 lechner2022">(<a href="#ref-xu2022" role="doc-biblioref">Xu, Heremans, and Somers 2022</a>; <a href="#ref-lechner2022" role="doc-biblioref">Lechner et al. 2022</a>)</span></p>
+<p>中分辨率成像光谱仪（MODIS）于1999年在Terra卫星上发射，并在2002年在Aqua卫星上发射。研究人员可以在1天的重访时间访问36个光谱带和三种变化的空间分辨率（250 m，500 m和1 km）的GEE中的MODIS数据。即使MODIS的空间分辨率很低，它的高时间分辨率也使研究人员可以监视短期和长期的全球环境变化（动力学）<span class="citation" data-cites="wu2020">(<a href="#ref-wu2020" role="doc-biblioref">Wu and Xiong 2020</a>)</span>。</p>
+</section>
+<section id="遥感数据分析" class="level3" data-number="5.3.4">
+<h3 data-number="5.3.4" class="anchored" data-anchor-id="遥感数据分析"><span class="header-section-number">5.3.4</span> 遥感数据分析</h3>
+<section id="机器学习技术" class="level4" data-number="5.3.4.1">
+<h4 data-number="5.3.4.1" class="anchored" data-anchor-id="机器学习技术"><span class="header-section-number">5.3.4.1</span> 机器学习技术</h4>
+<p>机器学习是人工智能的一个子集，它处理算法设计以训练模型以做出决策或预测。机器学习方法可分为两大类：参数化和非参数化。参数化机器学习算法使用固定数量的参数或假设。机器学习方法已被有效地用于遥感数据处理。分类，聚类，回归和降维是机器学习算法的四个主要分析类别<span class="citation" data-cites="shaveta2023">(<a href="#ref-shaveta2023" role="doc-biblioref">Shaveta 2023</a>)</span>。 回归是一种监督式机器学习方法，旨在基于一组协变量来估计或预测输出变量。线性回归的另一个积极方面是它的快速计算速度，这是地理大数据分析中的重要因素<span class="citation" data-cites="googlee">(<a href="#ref-googlee" role="doc-biblioref"><span>“Google Earth Engine and Machine Learning for Earth Monitoring,”</span> n.d.</a>)</span>。同时MLR模型在预测过程中会处理因变量和自变量之间的非线性关系。</p>
+</section>
+<section id="其他gee图像处理功能" class="level4" data-number="5.3.4.2">
+<h4 data-number="5.3.4.2" class="anchored" data-anchor-id="其他gee图像处理功能"><span class="header-section-number">5.3.4.2</span> 其他GEE图像处理功能</h4>
+<p>GEE提供了多种图像处理工具，适用于遥感数据的分析。这些工具涵盖了时间序列分析、特征提取、图像的彩色合成以及图像预处理等方面，主要针对卫星图像，而不是基于机器学习的方法<span class="citation" data-cites="googlee">(<a href="#ref-googlee" role="doc-biblioref"><span>“Google Earth Engine and Machine Learning for Earth Monitoring,”</span> n.d.</a>)</span>。随着地球表面快速变化，卫星图像的时间序列分析变得至关重要，它帮助追踪趋势、监测变化并发展预测模型。GEE因其能处理高分辨率或大量数据而在多项研究中被用于此类分析，特别是在监测地表变化方面表现出色。特征提取技术，通过分析图像的光谱和几何属性，帮助识别图像中的区域关系，这对于资源节约和信息保留非常关键<span class="citation" data-cites="pham-duc2023">(<a href="#ref-pham-duc2023" role="doc-biblioref">Pham-Duc et al. 2023</a>)</span>。另外，GEE的视觉解释工具在土地监测研究中广泛应用，通过色彩合成图像提取关键信息。此外，GEE的图像预处理功能支持图像镶嵌、云层处理和错误检测，尽管云覆盖是处理光学数据时的主要挑战，但GEE提供了有效的工具和算法以支持这些工作<span class="citation" data-cites="lea2023">(<a href="#ref-lea2023" role="doc-biblioref">Lea et al. 2023</a>)</span>。</p>
+</section>
+</section>
+</section>
+<section id="reflection" class="level2" data-number="5.4">
+<h2 data-number="5.4" class="anchored" data-anchor-id="reflection"><span class="header-section-number">5.4</span> Reflection</h2>
+<p>GEE已经成为最受欢迎的地理空间和大数据分析平台之一。尽管如此，仍然有扩展的空间。特别是，GEE为地理空间处理提供了一个易于使用且免费的平台，但是用户无法控制可能导致某些计算问题的并行处理环境的细节。这意味着GEE管理着计算的各个方面，例如源分配，并行性，数据分发和重试，而用户无法影响自己动手（DIY）并行化（Gorelick et al.，2017）。通常，GEE限制可分为三大类：计算，数据集和算法。 值得注意的是，GEE具有一些计算限制，包括时间，内存和存储。关于时限问题，GEE中有两种计算模式：按需和批处理。前者处理的运行次数有限，而后者可以在代码运行时运行。因此，将批处理用于大量计算是合理的，因为任务以按需模式运行。此外，在某些情况下，对大量数据集执行处理时，GEE可能会遇到内存问题。尽管脚本可能是没有逻辑错误的有效JavaScript，但是有时用户在并行化和执行计算时会遇到内部错误，例如内部服务错误，计算超时，超出用户内存限制以及过多的并发聚合。这些错误称为缩放错误，当输出太大，数量太多或计算时间很长时，可能会发生。关于存储，用户可以将结果保存在Google云端硬盘，Google云和GEE资产中。但是，应考虑将有限的250 GB容量用于在GEE资产中保存数据。GEE表资产的大小和形状也有一些限制。 尽管GEE包含大量的图像档案，但是对于许多研究而言，历史和高分辨率数据的价值有限。具体而言，在GEE中有13％的研究专注于灾难测绘，尤其是干旱监测。GEE还可以提供可靠的信息来监视其他灾难，例如地震和洪水图。此外，GEE当前提供高分辨率图像，包括RGB和多光谱集合中的国家农业图像计划（NAIP）和Planet Skysat。美国NAIP提供1 m分辨率的航拍图像数据。自2003-2018年以来，这些图像在GEE中可用，周期为3年和5年。从2014年到2016年，GEE还提供RGB和多光谱/平移集合的Planet Skysat影像。RGB影像以0.8 m分辨率（离地面最低图像1 m）提供，而R，G，B，近红外波段具有约2 m的分辨率，泛波段具有0.8分辨率（离最低点为1 m）。因此，需要高空间和时间分辨率的图像。 到目前为止，Sentinel-1图像是GEE中唯一可用的SAR数据；然而，通过增加从ALOS PALSAR收集的L波段数据来满足多种应用的需求，需要更长的波长，例如作物制图，开辟了新的途径。与具有中等渗透能力并主要与树冠上部相互作用的C波段相比，L波段具有更深的渗透能力并且可以与茎和枝相互作用，因此使其在多种应用中具有优势。 在GEE中，新算法的实现可能具有挑战性。在过去的几年中，由于深度学习方法与传统的机器学习工具相比具有优越性，因此在遥感领域受到了广泛的关注（Mahdianpari et al.，2018b ; Mohammadimanesh et al.，2019b ; Nogueira et al.， 2017，Rezaee et al.，2018，Sun &amp; Wang，2018，Zhang et al.，2018，Zhu et al.，2017）。特别是深度神经网络已广泛用于图像分类任务，并且在分类精度方面显示出令人鼓舞的结果（Maggiori et al.，2016）。但是，GEE尚不直接支持深度学习算法。在深度学习方面，选择开源框架至关重要。TensorFlow是开源深度学习框架中最受欢迎的框架，例如Caffe，Microsoft CNTK，MXNet，Facebook Torch，Deeplearning4j and Theano（Zhu et al.，2017）。尽管尚不直接支持深度学习分类器，但GEE最近已与TensorFlow链接（自2019年9月起）。尤其是，用户现在可以访问软件包，从而允许他们与TensorFlow保存在Google AI平台上的模型格式进行交互（DeLancey et al.，2020）。GEE API提供了以TFRecord格式导入/导出图像，训练和测试数据集的机会。TFRecord格式可以处理大量数据，它允许用户以批量处理方式运行分类器，而无需存储所有数据。因此，此功能无疑可以应对大数据分析中的挑战。 根据GEE在基于像素的分类中的最佳性能，结果表明大多数研究已使用基于像素的方法完成。然而，这将引起在大面积上寻找高质量参考数据的问题。此外，如果成功实施了复杂的无监督分类算法，则GEE可能更具说服力。例如，目前GEE代码编辑器仅支持K-means，X-means，LVQ和Cobweb。由于遥感图像的固有特性（例如非正态分布数据）和混合像素的存在，实现复杂的算法（例如ISODATA，模糊K均值，概率K均值和基于内核的聚类方法）至关重要。 总体而言，与基于矢量的处理相比，GEE被证明更适合图像分析。此外，由于使用多个CPU进行处理，因此难以完成基于像素的像素空间关系的分析。此外，图像分割和水文建模选项受到限制。因此，近年来建议对基于对象的图像分析，重型矢量运算以及提供高分辨率卫星图像进行改进。</p>
+</section>
+<section id="reference" class="level2" data-number="5.5">
+<h2 data-number="5.5" class="anchored" data-anchor-id="reference"><span class="header-section-number">5.5</span> Reference</h2>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-aghamiri" class="csl-entry" role="listitem">
+Aghamiri, Mahtab, Amineh Ghorbani, Jolien Ubacht, Igor Nikolic, and Paulein Herder. n.d. <span>“Enabling Citizen Participation in Sustainable Collec- Tive Action In Smart Cities: The Case Of Buiksloter- Ham.”</span>
+</div>
+<div id="ref-ariascuenca2023" class="csl-entry" role="listitem">
+Arias Cuenca, María. 2023. <span>“Sentinel-1 time series applications over agricultural fields: proposal, evaluation and comparison of different methodologies.”</span> <a href="https://doi.org/10.48035/Tesis/2454/45156">https://doi.org/10.48035/Tesis/2454/45156</a>.
+</div>
+<div id="ref-googlee" class="csl-entry" role="listitem">
+<span>“Google Earth Engine and Machine Learning for Earth Monitoring.”</span> n.d. <a href="https://pos.sissa.it/429/021">https://pos.sissa.it/429/021</a>.
+</div>
+<div id="ref-lea2023" class="csl-entry" role="listitem">
+Lea, James, Robert Fitt, Stephen Brough, Georgia Carr, Jonathan Dick, Natasha Jones, Eli Saetnan, and Richard Webster. 2023. <span>“Google Earth Engine Climate Tool (GEEClimT): Enabling Rapid, Easy Access to Global Climate Reanalysis Data.”</span> <a href="https://doi.org/10.5194/egusphere-egu23-7760">https://doi.org/10.5194/egusphere-egu23-7760</a>.
+</div>
+<div id="ref-lechner2022" class="csl-entry" role="listitem">
+Lechner, Michael, Alena Dostálová, Markus Hollaus, Clement Atzberger, and Markus Immitzer. 2022. <span>“Combination of Sentinel-1 and Sentinel-2 Data for Tree Species Classification in a Central European Biosphere Reserve.”</span> <em>Remote Sensing</em> 14 (11): 2687. <a href="https://doi.org/10.3390/rs14112687">https://doi.org/10.3390/rs14112687</a>.
+</div>
+<div id="ref-pham-duc2023" class="csl-entry" role="listitem">
+Pham-Duc, Binh, Ho Nguyen, Hien Phan, and Quan Tran-Anh. 2023. <span>“Trends and Applications of Google Earth Engine in Remote Sensing and Earth Science Research: A Bibliometric Analysis Using Scopus Database.”</span> <em>Earth Science Informatics</em> 16 (3): 2355–71. <a href="https://doi.org/10.1007/s12145-023-01035-2">https://doi.org/10.1007/s12145-023-01035-2</a>.
+</div>
+<div id="ref-ritika" class="csl-entry" role="listitem">
+Ritika, Prasai. n.d. <span>“Earth Engine Application to Retrieve Long-Term Terrestrial and Aquatic Time Series of Satellite Reflectance Data.”</span> <em>International Journal of Multidisciplinary Research and Growth Evaluation</em>.
+</div>
+<div id="ref-shaveta2023" class="csl-entry" role="listitem">
+Shaveta. 2023. <span>“A Review on Machine Learning.”</span> <em>International Journal of Science and Research Archive</em> 9 (1): 281–85. <a href="https://doi.org/10.30574/ijsra.2023.9.1.0410">https://doi.org/10.30574/ijsra.2023.9.1.0410</a>.
+</div>
+<div id="ref-tamiminia2020" class="csl-entry" role="listitem">
+Tamiminia, Haifa, Bahram Salehi, Masoud Mahdianpari, Lindi Quackenbush, Sarina Adeli, and B. Brisco. 2020. <span>“Google Earth Engine for Geo-Big Data Applications: A Meta-Analysis and Systematic Review.”</span> <em>ISPRS Journal of Photogrammetry and Remote Sensing</em>, May. <a href="https://doi.org/10.1016/j.isprsjprs.2020.04.001">https://doi.org/10.1016/j.isprsjprs.2020.04.001</a>.
+</div>
+<div id="ref-wu2020" class="csl-entry" role="listitem">
+Wu, A., and X. Xiong. 2020. <span>“Sensors, Systems, and Next-Generation Satellites XXIV.”</span> In, 11530:267–77. SPIE. <a href="https://doi.org/10.1117/12.2573018">https://doi.org/10.1117/12.2573018</a>.
+</div>
+<div id="ref-xu2022" class="csl-entry" role="listitem">
+Xu, Fei, Stien Heremans, and Ben Somers. 2022. <span>“Urban Land Cover Mapping with Sentinel-2: A Spectro-Spatio-Temporal Analysis.”</span> <em>Urban Informatics</em> 1 (1): 8. <a href="https://doi.org/10.1007/s44212-022-00008-y">https://doi.org/10.1007/s44212-022-00008-y</a>.
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./Week_4.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Week_4</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./references.html" class="pagination-link">
+        <span class="nav-page-text"><strong>Bibliography</strong></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>

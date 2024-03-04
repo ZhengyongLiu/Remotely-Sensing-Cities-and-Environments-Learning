@@ -97,7 +97,7 @@ Schemes should ensure compliance with EU Directives relevant to flood risk manag
 The following table presents general data
 
 | Satellites         | Sensors         | Spectral Measurements            | Parameter                      |
-|------------------|------------------|------------------|-------------------|
+|--------------------|-----------------|----------------------------------|--------------------------------|
 | Landsat 5, 7, 8    | ETM+, OLI       | Visible, Near IR, Middle IR,     | Reflectance/True Color Image,  |
 |                    |                 | Thermal IR                       | Land Cover, Surface Inundation |
 | TRMM & GPM         | Microwave       | TMI: 10-85 Ghz; GMI: 10-183 GHZ; | Precipitation                  |

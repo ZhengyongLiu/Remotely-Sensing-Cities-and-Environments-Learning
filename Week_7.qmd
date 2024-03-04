@@ -1,0 +1,16 @@
+---
+title: "Week_7"
+bibliography: references.bib
+---
+
+## **Knowledge gain From the Lecture**
+
+**Classification and regression trees (CART)**
+
+classification 分类树用于将数据分类到两个或更多的离散类别 回归树处理线性回归不适用的情况 -\> 通过将数据分割成小块来改进模型的预测能力 在创建决策树时，最终的叶子节点可能是类别的混合（不纯），并使用基尼不纯度来量化这种不纯度。选择最低不纯度的属性作为树的顶部来开始决策过程。 计算基尼不纯度，并用它来评估在构建决策树时分割数据的质量，其值越小表示数据越纯净。
+
+Regression trees 回归树预测连续值，例如污染量，而分类树预测离散值，例如土地覆盖类型。 当线性回归不能很好地拟合数据时，建议使用回归树作为替代方案。在回归树中，数据根据阈值或节点划分为多个部分。计算这些部分的残差平方和（SSR），并且具有最低SSR的阈值成为树的起点或根。可以重复该过程以进一步分割数据，并且可以设置最小观察次数以防止过度拟合。
+
+```{r  echo=FALSE, out.width='110%', fig.align='center', fig.cap='tree classification procedure in Google Earth Engine, Source: <a href="https://www.researchgate.net/publication/334404370_Trends_in_the_Seaward_Extent_of_Saltmarshes_across_Europe_from_Long-Term_Satellite_Data">[@laengner2019]</a>'}
+knitr::include_graphics('Figure/Week_7/Unsupervised-decision-tree-classification-procedure-in-Google-Earth-Engine-performed-for.ppm')
+```
