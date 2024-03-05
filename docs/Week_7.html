@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>CASA0023 Remote sensing learning Diary - 6&nbsp; Week_7</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./references.html" rel="next">
+<link href="./Week_6.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Week_7.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Week_7</span></a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">CASA0023 Remote sensing learning Diary</a> 
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Preface</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Week_1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Week_1</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Week_2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week_2</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Week_3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week_3</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Week_4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Week_4</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Week_6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Week_6</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Week_7.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Week_7</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><strong>Bibliography</strong></span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#knowledge-gain-from-the-lecture" id="toc-knowledge-gain-from-the-lecture" class="nav-link active" data-scroll-target="#knowledge-gain-from-the-lecture"><span class="header-section-number">6.1</span> <strong>Knowledge gain From the Lecture</strong></a></li>
+  <li><a href="#practical" id="toc-practical" class="nav-link" data-scroll-target="#practical"><span class="header-section-number">6.2</span> <strong>Practical</strong></a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Week_7</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="knowledge-gain-from-the-lecture" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="knowledge-gain-from-the-lecture"><span class="header-section-number">6.1</span> <strong>Knowledge gain From the Lecture</strong></h2>
+<p><strong>Classification and regression trees (CART)</strong></p>
+<p>classification</p>
+<p>分类树用于将数据分类到两个或更多的离散类别 回归树处理线性回归不适用的情况 通过将数据分割成小块来改进模型的预测能力 在创建决策树时，最终的叶子节点可能是类别的混合（不纯），并使用基尼不纯度来量化这种不纯度。选择最低不纯度的属性作为树的顶部来开始决策过程。 计算基尼不纯度，并用它来评估在构建决策树时分割数据的质量，其值越小表示数据越纯净。</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Figure/Week_7/Land Cover Classification in GEE.png" class="img-fluid figure-img" style="width:110.0%"></p>
+<figcaption class="figure-caption">Land Cover Classification using Google Earth Engine and Random Forest Classifier—The Role of Image Composition, Source: <a href="https://www.mdpi.com/2072-4292/12/15/2411"><span class="citation" data-cites="phan2020">(</span></a><a href="#ref-phan2020" role="doc-biblioref">Phan, Kuch, and Lehnert 2020</a>)</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Regression trees</p>
+<p>回归树预测连续值，例如污染量，而分类树预测离散值，例如土地覆盖类型。 当线性回归不能很好地拟合数据时，建议使用回归树作为替代方案。在回归树中，数据根据阈值或节点划分为多个部分。计算这些部分的残差平方和（SSR），并且具有最低SSR的阈值成为树的起点或根。可以重复该过程以进一步分割数据，并且可以设置最小观察次数以防止过度拟合。</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Figure/Week_7/Unsupervised-decision-tree-classification-procedure-in-Google-Earth-Engine-performed-for.ppm" class="img-fluid figure-img" style="width:110.0%"></p>
+<figcaption class="figure-caption">Tree classification procedure in Google Earth Engine, Source: <a href="https://www.researchgate.net/publication/334404370_Trends_in_the_Seaward_Extent_of_Saltmarshes_across_Europe_from_Long-Term_Satellite_Data"><span class="citation" data-cites="laengner2019">(</span></a><a href="#ref-laengner2019" role="doc-biblioref">Laengner, Siteur, and Wal 2019</a>)</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Overfitting</strong></p>
+<p>如果一个叶节点只包含一个人或一个像素值，就可能出现过拟合。最好的模型具有低偏差和低变异性，能够在不同数据集（如训练集和测试集）之间做出一致的预测。为了防止决策树过度生长的方法，其方法包括限制树的生长（例如，一个叶子至少包含20个像素），以及最弱连接剪枝（基于树得分的剪枝）。</p>
+<p>每棵树的叶子数量和调整α值（正则化参数）来减少过拟合。从α=0开始，逐渐增加α值直到剪枝可以降低树得分，然后保存这些α值。树得分是残差平方和（SSR）加上树的惩罚（α乘以叶子数T）。不同的α值会产生不同的子树和树得分。使用不同的α值来训练数据，并在测试数据上计算SSR，以选择得分最小的树。用交叉验证（10次交叉验证）来重复上述过程，从而找到平均而言在测试数据上SSR最低的α值。然后选择这个α值对应的、使用全部数据训练的树。对于分类树，SSR将被不纯度度量（如基尼不纯度）所替代。</p>
+<p><strong>Random Tress</strong></p>
+<p>随机森林由许多分类决策树组成，通过对数据进行自助采样（bootstrap samples），并从随机选择的变量中构建决策树。在节点上，算法会再次从变量的随机子集中选择。这个过程会不断重复，最终得到多棵树，即一个”森林”。当有新数据通过这些树时，每棵树都会给出一个预测结果，最终选择票数最多的选项作为最终预测。</p>
+<p>随机森林中的”bagging”技术，即通过替换数据进行自助采样。每棵树大约使用70%的训练数据进行训练，剩下30%的数据被称为袋外数据（OOB）。袋外数据被用来测试森林，以评估模型的性能，最后选择得票最多的分类结果。袋外数据分类错误的比例被称为OOB错误。</p>
+<p>随机森林中不进行剪枝，树可以尽可能地生长。袋外错误是通过计算没有使用某些值（例如数据中的行）的所有树的平均预测错误来得出的。验证数据与袋外数据不同，它从未被包含在决策树的构建中。</p>
+<p><strong>How to apply to the imagery</strong></p>
+<p>图像分类的两种主要方法：监督学习和无监督学习。监督学习通过机器学习模式识别从数据中学习并对新数据打标签，而无监督学习则通过聚类分析未预先定义的数据，然后对这些聚类进行标签。</p>
+<p>监督学习：</p>
+<ol type="1">
+<li>监督学习的通用基本上都遵循流程包括：类别定义、预处理、训练、像素分配和准确性评估。</li>
+</ol>
+<p>无监督学习:</p>
+<ol type="1">
+<li>DBSCAN算法，它通过设定一个半径（Epsilon）和最小点数来形成聚类，并可通过迭代和PCA进行优化。</li>
+<li>ISODATA算法，k-means的一个变体，它增加了合并过近的聚类或分割过长的聚类的功能，并根据聚类中的像素数、迭代次数等条件来控制聚类过程.</li>
+<li>“Cluster busting”的方法，它通过掩盖和重新分类那些难以打标签或标签不正确的聚类来提高分类精度.</li>
+</ol>
+<p><strong>Maximum likelihood</strong></p>
+<p>Maximum likelihood &amp; Support Vector Machine 最大似然估计（Maximum Likelihood Estimation，MLE）是一种统计方法，用于估计概率模型中的参数。该方法的基本思想是：从所有可能的参数值中，选择最能解释观察到的数据的参数值。例如在遥感中，它使用概率来将图像中的每个像素分配给最可能的土地覆盖类型，并可以设置概率阈值来决定是否进行分类。</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Figure/Week_7/Maximum likelihood classifier.pbm" class="img-fluid figure-img" style="width:110.0%"></p>
+<figcaption class="figure-caption">Maximum likelihood classifier, Source: <a href="https://www.researchgate.net/figure/Maximum-likelihood-classifier-Source-adapted-from-59_fig2_331160604"><span class="citation" data-cites="núñez2019">(</span></a><a href="#ref-núñez2019" role="doc-biblioref">Núñez et al. 2019</a>)</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p><strong>Support Vector Machine</strong></p>
+<p>支持向量机（SVM）是一种监督学习模型，用于分类和回归分析。假设我们有一个训练数据集，其中每个数据点都属于两个类别中的一个。SVM 的目标是找到一个超平面，使得该超平面能够将两类数据点尽可能分开。</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Figure/Week_7/SVM example of linearly separable data.png" class="img-fluid figure-img" style="width:110.0%"></p>
+<figcaption class="figure-caption">SVM example of linearly separable data, Source: <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9206124"><span class="citation" data-cites="sheykhmousa2020">(</span></a><a href="#ref-sheykhmousa2020" role="doc-biblioref">Sheykhmousa and Mahdianpari 2020</a>)</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="practical" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="practical"><span class="header-section-number">6.2</span> <strong>Practical</strong></h2>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-laengner2019" class="csl-entry" role="listitem">
+Laengner, Marieke, Koen Siteur, and Daphne Wal. 2019. <span>“Trends in the Seaward Extent of Saltmarshes Across Europe from Long-Term Satellite Data.”</span> <em>Remote Sensing</em> 11 (July): 1653. <a href="https://doi.org/10.3390/rs11141653">https://doi.org/10.3390/rs11141653</a>.
+</div>
+<div id="ref-núñez2019" class="csl-entry" role="listitem">
+Núñez, Juan Manuel, Sandra Medina-Fernández, F. Gerardo Ávila, and Jorge Montejano. 2019. <span>“High-Resolution Satellite Imagery Classification for Urban Form Detection.”</span> In, 1–9. <a href="https://doi.org/10.5772/intechopen.82729">https://doi.org/10.5772/intechopen.82729</a>.
+</div>
+<div id="ref-phan2020" class="csl-entry" role="listitem">
+Phan, Thanh Noi, Verena Kuch, and Lukas W. Lehnert. 2020. <span>“Land Cover Classification Using Google Earth Engine and Random Forest Classifier<span></span>The Role of Image Composition.”</span> <em>Remote Sensing</em> 12 (15): 2411. <a href="https://doi.org/10.3390/rs12152411">https://doi.org/10.3390/rs12152411</a>.
+</div>
+<div id="ref-sheykhmousa2020" class="csl-entry" role="listitem">
+Sheykhmousa, Reza M, and Masoud Mahdianpari. 2020. <span>“Support Vector Machine Vs. Random Forest for Remote Sensing Image Classification: A Meta-Analysis and Systematic Review.”</span> <em>IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing</em>, October. <a href="https://doi.org/10.1109/JSTARS.2020.3026724">https://doi.org/10.1109/JSTARS.2020.3026724</a>.
+</div>
+</div>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./Week_6.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Week_6</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./references.html" class="pagination-link">
+        <span class="nav-page-text"><strong>Bibliography</strong></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>

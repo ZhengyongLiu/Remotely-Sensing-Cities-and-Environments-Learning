@@ -1,16 +1,99 @@
 ---
 title: "Week_7"
-bibliography: references.bib
 ---
 
 ## **Knowledge gain From the Lecture**
 
 **Classification and regression trees (CART)**
 
-classification 分类树用于将数据分类到两个或更多的离散类别 回归树处理线性回归不适用的情况 -\> 通过将数据分割成小块来改进模型的预测能力 在创建决策树时，最终的叶子节点可能是类别的混合（不纯），并使用基尼不纯度来量化这种不纯度。选择最低不纯度的属性作为树的顶部来开始决策过程。 计算基尼不纯度，并用它来评估在构建决策树时分割数据的质量，其值越小表示数据越纯净。
+classification
 
-Regression trees 回归树预测连续值，例如污染量，而分类树预测离散值，例如土地覆盖类型。 当线性回归不能很好地拟合数据时，建议使用回归树作为替代方案。在回归树中，数据根据阈值或节点划分为多个部分。计算这些部分的残差平方和（SSR），并且具有最低SSR的阈值成为树的起点或根。可以重复该过程以进一步分割数据，并且可以设置最小观察次数以防止过度拟合。
+分类树用于将数据分类到两个或更多的离散类别 回归树处理线性回归不适用的情况 通过将数据分割成小块来改进模型的预测能力 在创建决策树时，最终的叶子节点可能是类别的混合（不纯），并使用基尼不纯度来量化这种不纯度。选择最低不纯度的属性作为树的顶部来开始决策过程。 计算基尼不纯度，并用它来评估在构建决策树时分割数据的质量，其值越小表示数据越纯净。
 
-```{r  echo=FALSE, out.width='110%', fig.align='center', fig.cap='tree classification procedure in Google Earth Engine, Source: <a href="https://www.researchgate.net/publication/334404370_Trends_in_the_Seaward_Extent_of_Saltmarshes_across_Europe_from_Long-Term_Satellite_Data">[@laengner2019]</a>'}
+```{r  echo=FALSE, out.width='110%', fig.align='center', fig.cap='Land Cover Classification using Google Earth Engine and Random Forest Classifier—The Role of Image Composition, Source: <a href="https://www.mdpi.com/2072-4292/12/15/2411">[@phan2020]</a>'}
+knitr::include_graphics('Figure/Week_7/Land Cover Classification in GEE.png')
+```
+
+Regression trees
+
+回归树预测连续值，例如污染量，而分类树预测离散值，例如土地覆盖类型。 当线性回归不能很好地拟合数据时，建议使用回归树作为替代方案。在回归树中，数据根据阈值或节点划分为多个部分。计算这些部分的残差平方和（SSR），并且具有最低SSR的阈值成为树的起点或根。可以重复该过程以进一步分割数据，并且可以设置最小观察次数以防止过度拟合。
+
+```{r  echo=FALSE, out.width='110%', fig.align='center', fig.cap='Tree classification procedure in Google Earth Engine, Source: <a href="https://www.researchgate.net/publication/334404370_Trends_in_the_Seaward_Extent_of_Saltmarshes_across_Europe_from_Long-Term_Satellite_Data">[@laengner2019]</a>'}
 knitr::include_graphics('Figure/Week_7/Unsupervised-decision-tree-classification-procedure-in-Google-Earth-Engine-performed-for.ppm')
 ```
+
+**Overfitting**
+
+如果一个叶节点只包含一个人或一个像素值，就可能出现过拟合。最好的模型具有低偏差和低变异性，能够在不同数据集（如训练集和测试集）之间做出一致的预测。为了防止决策树过度生长的方法，其方法包括限制树的生长（例如，一个叶子至少包含20个像素），以及最弱连接剪枝（基于树得分的剪枝）。
+
+每棵树的叶子数量和调整α值（正则化参数）来减少过拟合。从α=0开始，逐渐增加α值直到剪枝可以降低树得分，然后保存这些α值。树得分是残差平方和（SSR）加上树的惩罚（α乘以叶子数T）。不同的α值会产生不同的子树和树得分。使用不同的α值来训练数据，并在测试数据上计算SSR，以选择得分最小的树。用交叉验证（10次交叉验证）来重复上述过程，从而找到平均而言在测试数据上SSR最低的α值。然后选择这个α值对应的、使用全部数据训练的树。对于分类树，SSR将被不纯度度量（如基尼不纯度）所替代。
+
+**Random Tress**
+
+随机森林由许多分类决策树组成，通过对数据进行自助采样（bootstrap samples），并从随机选择的变量中构建决策树。在节点上，算法会再次从变量的随机子集中选择。这个过程会不断重复，最终得到多棵树，即一个"森林"。当有新数据通过这些树时，每棵树都会给出一个预测结果，最终选择票数最多的选项作为最终预测。
+
+随机森林中的"bagging"技术，即通过替换数据进行自助采样。每棵树大约使用70%的训练数据进行训练，剩下30%的数据被称为袋外数据（OOB）。袋外数据被用来测试森林，以评估模型的性能，最后选择得票最多的分类结果。袋外数据分类错误的比例被称为OOB错误。
+
+随机森林中不进行剪枝，树可以尽可能地生长。袋外错误是通过计算没有使用某些值（例如数据中的行）的所有树的平均预测错误来得出的。验证数据与袋外数据不同，它从未被包含在决策树的构建中。
+
+**How to apply to the imagery**
+
+图像分类的两种主要方法：监督学习和无监督学习。监督学习通过机器学习模式识别从数据中学习并对新数据打标签，而无监督学习则通过聚类分析未预先定义的数据，然后对这些聚类进行标签。
+
+监督学习：
+
+1.  监督学习的通用基本上都遵循流程包括：类别定义、预处理、训练、像素分配和准确性评估。
+
+无监督学习:
+
+1.  DBSCAN算法，它通过设定一个半径（Epsilon）和最小点数来形成聚类，并可通过迭代和PCA进行优化。
+2.  ISODATA算法，k-means的一个变体，它增加了合并过近的聚类或分割过长的聚类的功能，并根据聚类中的像素数、迭代次数等条件来控制聚类过程.
+3.  "Cluster busting"的方法，它通过掩盖和重新分类那些难以打标签或标签不正确的聚类来提高分类精度.
+
+**Maximum likelihood**
+
+Maximum likelihood & Support Vector Machine 最大似然估计（Maximum Likelihood Estimation，MLE）是一种统计方法，用于估计概率模型中的参数。该方法的基本思想是：从所有可能的参数值中，选择最能解释观察到的数据的参数值。例如在遥感中，它使用概率来将图像中的每个像素分配给最可能的土地覆盖类型，并可以设置概率阈值来决定是否进行分类。
+
+```{r  echo=FALSE, out.width='110%', fig.align='center', fig.cap=' Maximum likelihood classifier, Source: <a href="https://www.researchgate.net/figure/Maximum-likelihood-classifier-Source-adapted-from-59_fig2_331160604">[@núñez2019]</a>'}
+knitr::include_graphics('Figure/Week_7/Maximum likelihood classifier.pbm')
+```
+
+**Support Vector Machine**
+
+支持向量机（SVM）是一种监督学习模型，用于分类和回归分析。假设我们有一个训练数据集，其中每个数据点都属于两个类别中的一个。SVM 的目标是找到一个超平面，使得该超平面能够将两类数据点尽可能分开。
+
+```{r  echo=FALSE, out.width='110%', fig.align='center', fig.cap=' SVM example of linearly separable data, Source: <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9206124">[@sheykhmousa2020]</a>'}
+knitr::include_graphics('Figure/Week_7/SVM example of linearly separable data.png')
+```
+## **Practical**
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
