@@ -1,0 +1,78 @@
+---
+title: "Week_8"
+output: html_document
+bibliography: references.bib
+---
+
+## **Knowledge gain From the Lecture**
+
+**Object based image analysis (OBIA)**
+
+这是一种考虑地面物体如何在栅格单元上表示的分析方法。 Simple Linear Iterative Clustering算法是生成超像素的最常用方法。它将图像分割成具有相似颜色和空间位置的区域，称为超像素。超像素分割可以用于图像降噪、边缘检测、纹理分析等任务。SLIC算法的基本思想是迭代地更新每个像素点的聚类标签。在每个迭代步骤中，算法会计算每个像素点与其相邻像素点的距离，并将其分配给距离最近的聚类中心。
+
+可能这个概念有些的抽象对于非初学者来说，我把它细致化的解释一下 想象一下，你有一张由许多像素点组成的图像。你想将这些像素点分成若干个组，使得每个组中的像素点具有相似的颜色和空间位置。
+
+SLIC算法就像是一个将像素点分组的"游戏"。游戏的规则如下：
+
+首先，你需要在图像中随机选择一些点作为"聚类中心"。 然后，你需要计算每个像素点与所有聚类中心的距离。 每个像素点将被分配给距离它最近的聚类中心。 接下来，你需要更新每个聚类中心的坐标，使其位于该聚类中所有像素点的平均位置。 重复步骤2到4，直到所有像素点都被分配给某个聚类中心。 游戏结束后，你将得到一组具有相似颜色和空间位置的像素点，即超像素。
+
+```{r  echo=FALSE, out.width='110%', fig.align='center', fig.cap='Comparison of Simple Linear Iterative Clustering (SLIC) and SLICO superpixel adherence to natural image boundaries derived using initial clustering of 10 × 10 pixels., Source: <a href="https://www.researchgate.net/publication/314492084_Fast_Segmentation_and_Classification_of_Very_High_Resolution_Remote_Sensing_Data_Using_SLIC_Superpixels">[@csillik2017]</a>'}
+knitr::include_graphics('Figure/Week_8/Comparison of Simple Linear Iterative Clustering (SLIC) and SLICO superpixel adherence to natural image boundaries derived using initial clustering of 10 × 10 pixels..png')
+```
+
+**Sub pixel analysis**
+
+亚像素分析是指在图像的像素之间进行分析的技术。传统图像处理方法只关注每个像素的灰度值，而亚像素分析则可以利用像素之间灰度的细微差别来获取更精确的信息。其应用范围很广，包括：图像增强，边缘检测，纹理分析，目标识别
+
+**评估遥感数据分类准确度**
+
+讲述了生产遥感数据后如何进行准确度评估，这是机器学习工作流程的一部分。其中的三个重要指标是：制图者准确率（Producer's Accuracy）、用户准确率（User's Accuracy）和总体准确率（Overall Accuracy），以及如何利用混淆矩阵（Confusion Matrix）来计算这些指标。
+
+模型预测结果正确时： 真阳性（TP）是模型正确预测阳性类别； 真阴性（TN）是模型正确预测阴性类别。 模型预测结果错误时： 假阳性（FP）是模型错误地预测为阳性，但实际为阴性； 假阴性（FN）是模型错误地预测为阴性，但实际为阳性。
+
+计算上面的指标是如下表
+
+| Accuracy Metric     | Formula                           | Short Definition                                            |
+|-------------------|---------------------------|--------------------------|
+| Producer's Accuracy | `TP / (TP + FN)`                  | Correct classification proportion compared to ground truth. |
+| User's Accuracy     | `TP / (TP + FP)`                  | Correct classification proportion out of all classified.    |
+| Overall Accuracy    | `(TP + TN) / (TP + FP + FN + TN)` | Proportion of all correctly classified pixels.              |
+
+在此基础上可以使用凯帕系数来进行有效评估分类模型的性能，确保分类结果的可靠性和准确性。凯帕系数的值范围从-1（完全不一致）到1（完全一致）。值为0表示一致性与随机机会相同，而值接近1表示非常高的一致性。其计算方法是（实际一致性 - 随机一致性）/（1 - 随机一致性）。
+
+```{r  echo=FALSE, out.width='110%', fig.align='center', fig.cap='Example of Accuracies and kappa coefficient of land use:land cover (LULC) classifications in the SMA, Source: <a href="https://www.researchgate.net/figure/Accuracies-and-kappa-coefficient-of-land-use-land-cover-LULC-classifications-in-the_tbl2_335755723">[@priyankara2019]</a>'}
+knitr::include_graphics('Figure/Week_8/Accuracies and kappa coefficient of land use:land cover (LULC) classifications in the SMA.png')
+```
+
+**F1 Score** 
+
+当你的数据集中的类别是不平衡的，即一个类的样本数量远多于另一个类，卡帕系数将不使用，但是F1 Score特别有用。在这种情况下，单纯使用准确率可能不足以反映模型的性能，因为模型可能只是在预测主导类别方面表现良好，而忽视了少数类。F1 Score通过平衡精确率（预测为正类别中实际为正类别的比例）和召回率（实际为正类别中预测为正类别的比例），提供了一个更全面的性能度量。如果你的任务中同样重视精确率和召回率，即你希望减少假阳性和假阴性的数量，那么F1 Score是一个合适的选择。它确保了你不会因为提高另一个而牺牲了其中一个指标。尽管F1 Score可以扩展到多类分类问题，但它主要适用于二分类问题，尤其是当正负样本的重要性基本相等时。在研究二分类问题时候可以引用ROC曲线，其提供了一种在不同类别分布或不同的代价/权重条件下比较多个分类器的方法。即使在数据集随时间变化或在不同数据集上，ROC曲线和AUC值也能为模型的比较提供一致的评估标准。
+
+**Spatial cross validation**
+
+在传统的machine Learning交叉验证方法中，数据集被随机分成训练集和测试集。模型在训练集上进行训练，并在测试集上进行评估。然而，这种随机划分的方法忽略了遥感数据中一个关键特性------空间自相关，即相邻区域之间往往具有相似的属性。
+
+举一个例子现在有一张包含多种地形的大型遥感图像，比如森林、湖泊和城市区域。任务目标是创建一个计算机模型，这个模型可以查看这张图像的任何部分，并准确地告诉你那里是森林、湖泊还是城市。为了训练这个模型，你需要从图像中选取一些样本（即图像的一小部分），告诉模型这些样本分别属于哪种地形。然后，模型会学习这些样本，尝试理解不同地形的外观。
+
+但这里有个问题：如果你随机选择样本，那么靠得很近的样本可能会同时出现在训练数据（模型用来学习的数据）和测试数据（用来检验模型准确性的数据）中。这就像是在考试前就已经知道了部分考题，这可能会让模型看起来表现得很好，但实际上它可能并没有真正学到如何区分不同的地形，而只是记住了那些特定的样本。
+
+空间交叉验证就是为了解决这个问题。我们不是随机选择样本，而是将整个图像分成几个大块区域。我们可以确保某些区域仅用于训练模型，而其他区域则用于测试模型。这样，我们就可以确信，模型在评估时遇到的数据是它之前从未见过的，这有助于我们更准确地判断模型的实际性能。
+
+举个例子，假设你有一张包含城市、森林和湖泊的大地图。你将地图分成了东、西两部分。你用东半部分的数据训练你的模型，这意味着模型将看到并学习这一区域的城市、森林和湖泊是什么样的。然后，你用西半部分的数据测试模型，看看它是否能准确识别出它从未"见过"的地区的不同地形。通过这种方式，你可以更好地评估模型在处理新、未知区域时的实际表现能力。
+
+```{r  echo=FALSE, out.width='110%', fig.align='center', fig.cap='Importance of spatial predictor variable selection in machine learning applications -- Moving from data reproduction to spatial prediction, Source: <a href="https://www.researchgate.net/figure/Concept-of-random-and-spatial-cross-validation-CV-A-total-dataset-here-9-different_fig3_335318909">[@meyer2019]</a>'}
+knitr::include_graphics('Figure/Week_8/Concept of random and spatial cross-validation.png')
+```
+
+## Practical
+
+
+
+## Application
+
+
+## Reflection
+
+
+
+## Reference
