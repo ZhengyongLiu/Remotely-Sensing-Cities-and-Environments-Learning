@@ -182,7 +182,7 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#knowledge-gain-from-the-lecture" id="toc-knowledge-gain-from-the-lecture" class="nav-link active" data-scroll-target="#knowledge-gain-from-the-lecture"><span class="header-section-number">6.1</span> Knowledge gain From the Lecture</a></li>
+  <li><a href="#knowledge-from-the-lecture" id="toc-knowledge-from-the-lecture" class="nav-link active" data-scroll-target="#knowledge-from-the-lecture"><span class="header-section-number">6.1</span> Knowledge From the Lecture</a></li>
   <li><a href="#practical" id="toc-practical" class="nav-link" data-scroll-target="#practical"><span class="header-section-number">6.2</span> Practical</a></li>
   <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="header-section-number">6.3</span> Application</a></li>
   <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">6.4</span> Reflection</a></li>
@@ -210,8 +210,8 @@ div.csl-indent {
 
 </header>
 
-<section id="knowledge-gain-from-the-lecture" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="knowledge-gain-from-the-lecture"><span class="header-section-number">6.1</span> Knowledge gain From the Lecture</h2>
+<section id="knowledge-from-the-lecture" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="knowledge-from-the-lecture"><span class="header-section-number">6.1</span> Knowledge From the Lecture</h2>
 <p><strong>Classification and regression trees (CART)</strong></p>
 <ol type="1">
 <li>Classification</li>
@@ -290,17 +290,45 @@ div.csl-indent {
 </section>
 <section id="application" class="level2" data-number="6.3">
 <h2 data-number="6.3" class="anchored" data-anchor-id="application"><span class="header-section-number">6.3</span> Application</h2>
+<p>遥感机器学习的根源可以追溯到上世纪90年代。它最初被引入作为一种自动化知识基础建设的远程感知的方法。此后它不断发展并在各个领域找到了应用，包括遥感和地球科学<span class="citation" data-cites="challa2022">(<a href="#ref-challa2022" role="doc-biblioref">Challa, Sridhar, and Shyam Mohan 2022</a>)</span>。深度学习等机器学习算法因其能够分析大量数据并实现高精度而在遥感领域广受欢迎<span class="citation" data-cites="jeon2023">(<a href="#ref-jeon2023" role="doc-biblioref">Jeon 2023</a>)</span>。这些算法已用于图像分类、场景理解和材料识别等任务<span class="citation" data-cites="rewhel2023">(<a href="#ref-rewhel2023" role="doc-biblioref">Rewhel et al. 2023</a>)</span>。具有特定领域属性的数据集的可用性进一步促进了机器学习技术在遥感中的应用。</p>
+<p>机器学习算法有三大类。一是监督机器学习，二是无监督机器学习，三是加强学习。监督和非监督的区别在于使用监督算法,有一个数据集包含的输出列而在使用无监督算法,一个只有一个巨大的数据集,它的职责是集群算法基于关系数据集到各种不同的类之间已经确定不同的记录[<span class="citation" data-cites="ling2023">Ling (<a href="#ref-ling2023" role="doc-biblioref">2023</a>)</span>]<span class="citation" data-cites="raju2023">(<a href="#ref-raju2023" role="doc-biblioref">Raju et al. 2023</a>)</span>。</p>
+<p>由于其分类的准确性，随机森林算法在遥感社区越来越受欢迎。这些是集成分类器，基本上意味着他们利用下面的多个决策树。RF分类器受欢迎的一个主要原因是它们有助于缓解高维问题<span class="citation" data-cites="bahrami2018">(<a href="#ref-bahrami2018" role="doc-biblioref">Bahrami, Hassani, and Maghsoudi 2018</a>)</span>。它们提供了一个可变的重要性(VI)，可以减少高光谱数据的维数。变量的重要性本质上是衡量一个特定输入的变化对输出的影响<span class="citation" data-cites="solorio-ramírez2023 rina2023">(<a href="#ref-solorio-ramírez2023" role="doc-biblioref">Solorio-Ramírez et al. 2023</a>; <a href="#ref-rina2023" role="doc-biblioref">Rina et al. 2023</a>)</span>。</p>
+<p>SVMs是监督学习模型，可用于回归和分类问题。它们主要用于分类问题。他们的工作方式是在一个n维空间(特征)中绘制的点(特征)，然后用一个超平面来划分这些点。从森林分类到多光谱遥感图像分割，在遥感中几乎所有类型的分类问题都使用SVMs<span class="citation" data-cites="feizi2022">(<a href="#ref-feizi2022" role="doc-biblioref">Feizi and Nazemi 2022</a>)</span>。就像其他算法一样，他们的成功取决于问题的性质，一个人必须分别测试每个算法，然后根据每个算法的性能做出决定<span class="citation" data-cites="hazra2021">(<a href="#ref-hazra2021" role="doc-biblioref">Hazra et al. 2021</a>)</span>。</p>
+<p>过度拟合模型通常需要建立一个过于复杂的模型来解释研究数据中的特性和异常值。这意味着,如果你使用相同类型的数据(它的数据类型已经训练)评估模型,你会得到一个非常高的预测、分类精度<span class="citation" data-cites="schmidt">(<a href="#ref-schmidt" role="doc-biblioref">Schmidt, n.d.</a>)</span>。然而,如果你只是修改一些输入，(这模型没有见过)，那么，预测、分类精度就会下降。你可以通过使用更大的数据集来修复过度拟合，并适当地分割数据集。此外，减少模型定义的复杂性是有益的，这样就不会对所有极端的边界情况进行分类<span class="citation" data-cites="rezaei">(<a href="#ref-rezaei" role="doc-biblioref">Rezaei and Sabokrou, n.d.</a>)</span>。</p>
 </section>
 <section id="reflection" class="level2" data-number="6.4">
 <h2 data-number="6.4" class="anchored" data-anchor-id="reflection"><span class="header-section-number">6.4</span> Reflection</h2>
+<p>这节课主要学习了一些机器学习的技术在遥感中的应用，讲述了使用机器学习来解决什么样的问题。在上面所陈述的方法里面，哪个才是最适用的呢？这个问题的答案取决于一个人想要解决的问题。在某些情况下，当您有多个维度但记录有限时，SVM可能会更好地工作。如果你有很多的记录，但很少的维度(特性),神经网络(NN)可能产生更好的预测/分类精度。人们经常需要在你的数据集上测试多种算法，然后选择最有效的算法。通常，需要为不同的算法调整各种参数(i)。对射频、隐藏层数、神经网络神经元的数量以及对SVMs的”决策函数形状”等进行了研究。很多时候，将多个算法组合在一起可以获得更好的准确性，这就是所谓的合奏。还可以将SVM和神经网络、SVM和RF(可能性无穷)组合起来，以提高预测精度。再次，须测试多个合奏以选择最好的合奏。</p>
+<p>同样重要的是要注意,预测精度可能会改变根据特定功能试图使用分类、预测的目的而改变。例如，Shang和Chisholm(2014)讨论了如何将澳大利亚本土森林物种分类，他们决定使用最先进的遥感算法。在树叶、树冠和社区层面对树木进行分类。他们测试了各种算法(SVM、AdaBoost和Random Forest)，并发现每种算法在不同级别上都优于其他算法。在叶级，随机森林获得了最佳分类精度(94.7%)，支持向量机在冠层(84.5%)和社区水平(75.5%)的表现优于其他算法。</p>
+<p>另一个影响算法选择的因素是数据是否线性可分。例如，线性分类算法期望数据可以被线性空间中的直线分割。假设数据是线性可分的，可能适用于大多数情况，但在某些场景下是正确的,并会降低预测/分类精度。因此，我们需要确保使用的算法能够处理可用的数据。</p>
+<p>不可能只看一种算法，从理论上决定它是否会为你的数据集产生最好的结果，因为很多机器学习算法都是黑盒算法。这意味着很难看出算法是如何达到特定的结果的。因此，首先根据问题的类型来缩小算法选择的范围，然后在数据集的一部分应用缩小算法，看看哪一种性能最好。</p>
+<p>机器学习有着光明的未来，因为越来越多的人正在学习机器学习的基本知识，并将其应用于日常工作和研究中。新的算法每隔一天就会出现，分类的准确率也随之提高。这些问题在遥感(测绘地皮)中似乎很困难，有时甚至是不可能的，但每天都被新出现的算法解决。在不久的将来，世界上大多数的分析工作将由机器学习算法完成。</p>
 </section>
 <section id="reference" class="level2" data-number="6.5">
 <h2 data-number="6.5" class="anchored" data-anchor-id="reference"><span class="header-section-number">6.5</span> Reference</h2>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-bahrami2018" class="csl-entry" role="listitem">
+Bahrami, Yousef, Hossein Hassani, and Abbas Maghsoudi. 2018. <span>“Investigating the Capabilities of Multispectral Remote Sensors Data to Map Alteration Zones in the Abhar Area, NW Iran.”</span> <em>Geosystem Engineering</em> 24 (December): 1–13. <a href="https://doi.org/10.1080/12269328.2018.1557083">https://doi.org/10.1080/12269328.2018.1557083</a>.
+</div>
+<div id="ref-challa2022" class="csl-entry" role="listitem">
+Challa, Nagendra Panini, Parupally Sridhar, and J. S. Shyam Mohan. 2022. <span>“A Machine Learning Perspective for Remote Sensing.”</span> In, edited by Pala Gireesh Kumar, Kolluru V. L. Subramaniam, S. Moses Santhakumar, and Neelima Satyam D., 553–59. Lecture Notes in Civil Engineering. Singapore: Springer Nature. <a href="https://doi.org/10.1007/978-981-19-0189-8_45">https://doi.org/10.1007/978-981-19-0189-8_45</a>.
+</div>
+<div id="ref-feizi2022" class="csl-entry" role="listitem">
+Feizi, Amir, and Alireza Nazemi. 2022. <span>“Classifying Random Variables Based on Support Vector Machine and a Neural Network Scheme.”</span> <em>Journal of Experimental &amp; Theoretical Artificial Intelligence</em> 0 (0): 1–24. <a href="https://doi.org/10.1080/0952813X.2022.2104385">https://doi.org/10.1080/0952813X.2022.2104385</a>.
+</div>
+<div id="ref-hazra2021" class="csl-entry" role="listitem">
+Hazra, Simanta, Shreyasee Ghosh, Shibsankar Bala, and Debasis Chakraborty. 2021. <span>“2021 2nd International Conference for Emerging Technology (INCET).”</span> In, 1–6. <a href="https://doi.org/10.1109/INCET51464.2021.9456237">https://doi.org/10.1109/INCET51464.2021.9456237</a>.
+</div>
+<div id="ref-jeon2023" class="csl-entry" role="listitem">
+Jeon, Gwanggil. 2023. <span>“Advanced Machine Learning and Deep Learning Approaches for Remote Sensing.”</span> <em>Remote Sensing</em> 15 (11): 2876. <a href="https://doi.org/10.3390/rs15112876">https://doi.org/10.3390/rs15112876</a>.
+</div>
 <div id="ref-laengner2019" class="csl-entry" role="listitem">
 Laengner, Marieke, Koen Siteur, and Daphne Wal. 2019. <span>“Trends in the Seaward Extent of Saltmarshes Across Europe from Long-Term Satellite Data.”</span> <em>Remote Sensing</em> 11 (July): 1653. <a href="https://doi.org/10.3390/rs11141653">https://doi.org/10.3390/rs11141653</a>.
+</div>
+<div id="ref-ling2023" class="csl-entry" role="listitem">
+Ling, Qingyang. 2023. <span>“Machine Learning Algorithms Review.”</span> <em>Applied and Computational Engineering</em> 4 (May): 91–98. <a href="https://doi.org/10.54254/2755-2721/4/20230355">https://doi.org/10.54254/2755-2721/4/20230355</a>.
 </div>
 <div id="ref-núñez2019" class="csl-entry" role="listitem">
 Núñez, Juan Manuel, Sandra Medina-Fernández, F. Gerardo Ávila, and Jorge Montejano. 2019. <span>“High-Resolution Satellite Imagery Classification for Urban Form Detection.”</span> In, 1–9. <a href="https://doi.org/10.5772/intechopen.82729">https://doi.org/10.5772/intechopen.82729</a>.
@@ -308,8 +336,26 @@ Núñez, Juan Manuel, Sandra Medina-Fernández, F. Gerardo Ávila, and Jorge Mon
 <div id="ref-phan2020" class="csl-entry" role="listitem">
 Phan, Thanh Noi, Verena Kuch, and Lukas W. Lehnert. 2020. <span>“Land Cover Classification Using Google Earth Engine and Random Forest Classifier<span></span>The Role of Image Composition.”</span> <em>Remote Sensing</em> 12 (15): 2411. <a href="https://doi.org/10.3390/rs12152411">https://doi.org/10.3390/rs12152411</a>.
 </div>
+<div id="ref-raju2023" class="csl-entry" role="listitem">
+Raju, G. S Bapi, Chintala Manasa, Nandikatti Durga Bhavani, Jadi Amulya, and Dangatla Shirisha. 2023. <span>“2023 7th International Conference on Intelligent Computing and Control Systems (ICICCS).”</span> In, 104–9. <a href="https://doi.org/10.1109/ICICCS56967.2023.10142906">https://doi.org/10.1109/ICICCS56967.2023.10142906</a>.
+</div>
+<div id="ref-rewhel2023" class="csl-entry" role="listitem">
+Rewhel, Ekram M., Jianqiang Li, Amal A. Hamed, Hatem M. Keshk, Amira S. Mahmoud, Sayed A. Sayed, Ehab Samir, et al. 2023. <span>“Deep Learning Methods Used in Remote Sensing Images: A Review.”</span> <em>Journal of Environmental &amp; Earth Sciences</em> 5 (1): 33–64. <a href="https://doi.org/10.30564/jees.v5i1.5232">https://doi.org/10.30564/jees.v5i1.5232</a>.
+</div>
+<div id="ref-rezaei" class="csl-entry" role="listitem">
+Rezaei, Hossein, and Mohammad Sabokrou. n.d. <span>“Quantifying Overfitting: Evaluating Neural Network Performance Through Analysis of Null Space.”</span> <a href="https://doi.org/10.48550/arXiv.2305.19424">https://doi.org/10.48550/arXiv.2305.19424</a>.
+</div>
+<div id="ref-rina2023" class="csl-entry" role="listitem">
+Rina, Su, Hong Ying, Yu Shan, Wala Du, Yang Liu, Rong Li, and Dingzhu Deng. 2023. <span>“Application of Machine Learning to Tree Species Classification Using Active and Passive Remote Sensing: A Case Study of the Duraer Forestry Zone.”</span> <em>Remote Sensing</em> 15 (10): 2596. <a href="https://doi.org/10.3390/rs15102596">https://doi.org/10.3390/rs15102596</a>.
+</div>
+<div id="ref-schmidt" class="csl-entry" role="listitem">
+Schmidt, James. n.d. <span>“Testing for Overfitting.”</span> <a href="https://doi.org/10.48550/arXiv.2305.05792">https://doi.org/10.48550/arXiv.2305.05792</a>.
+</div>
 <div id="ref-sheykhmousa2020" class="csl-entry" role="listitem">
 Sheykhmousa, Reza M, and Masoud Mahdianpari. 2020. <span>“Support Vector Machine Vs. Random Forest for Remote Sensing Image Classification: A Meta-Analysis and Systematic Review.”</span> <em>IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing</em>, October. <a href="https://doi.org/10.1109/JSTARS.2020.3026724">https://doi.org/10.1109/JSTARS.2020.3026724</a>.
+</div>
+<div id="ref-solorio-ramírez2023" class="csl-entry" role="listitem">
+Solorio-Ramírez, José-Luis, Raúl Jiménez-Cruz, Yenny Villuendas-Rey, and Cornelio Yáñez-Márquez. 2023. <span>“Random Forest Algorithm for the Classification of Spectral Data of Astronomical Objects.”</span> <em>Algorithms</em> 16 (6): 293. <a href="https://doi.org/10.3390/a16060293">https://doi.org/10.3390/a16060293</a>.
 </div>
 </div>
 </section>

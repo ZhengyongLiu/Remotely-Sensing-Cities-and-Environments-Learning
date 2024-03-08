@@ -3,7 +3,7 @@ title: "Week_1"
 bibliography: references.bib
 ---
 
-## **Knowledge gain From the Lecture**
+## **Knowledge From the Lecture**
 
 ::: {style="text-align: justify;"}
 This week's learning journey into the realm of remote sensing, unveiling the intricate world of electromagnetic waves and their interactions with Earth's surface. Remote sensing, as I've learned, involves acquiring information about objects or areas from a distance, typically from aircraft or satellites, and is a vital tool in understanding our planet.

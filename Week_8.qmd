@@ -1,10 +1,8 @@
 ---
 title: "Week_8"
-output: html_document
-bibliography: references.bib
 ---
 
-## **Knowledge gain From the Lecture**
+## **Knowledge From the Lecture**
 
 **Object based image analysis (OBIA)**
 
@@ -22,7 +20,11 @@ knitr::include_graphics('Figure/Week_8/Comparison of Simple Linear Iterative Clu
 
 **Sub pixel analysis**
 
-亚像素分析是指在图像的像素之间进行分析的技术。传统图像处理方法只关注每个像素的灰度值，而亚像素分析则可以利用像素之间灰度的细微差别来获取更精确的信息。其应用范围很广，包括：图像增强，边缘检测，纹理分析，目标识别
+亚像素分析是指在图像的像素之间进行分析的技术。传统图像处理方法只关注每个像素的灰度值，而亚像素分析则可以利用像素之间灰度的细微差别来获取更精确的信息。其应用范围很广，包括：图像增强，边缘检测，纹理分析，目标识别.
+
+```{r  echo=FALSE, out.width='110%', fig.align='center', fig.cap='Superpixel Generation Algorithm'}
+knitr::include_graphics('Figure/Week_8/Superpixel Generation Algorithm.png')
+```
 
 **评估遥感数据分类准确度**
 
@@ -44,7 +46,7 @@ knitr::include_graphics('Figure/Week_8/Comparison of Simple Linear Iterative Clu
 knitr::include_graphics('Figure/Week_8/Accuracies and kappa coefficient of land use:land cover (LULC) classifications in the SMA.png')
 ```
 
-**F1 Score** 
+**F1 Score**
 
 当你的数据集中的类别是不平衡的，即一个类的样本数量远多于另一个类，卡帕系数将不使用，但是F1 Score特别有用。在这种情况下，单纯使用准确率可能不足以反映模型的性能，因为模型可能只是在预测主导类别方面表现良好，而忽视了少数类。F1 Score通过平衡精确率（预测为正类别中实际为正类别的比例）和召回率（实际为正类别中预测为正类别的比例），提供了一个更全面的性能度量。如果你的任务中同样重视精确率和召回率，即你希望减少假阳性和假阴性的数量，那么F1 Score是一个合适的选择。它确保了你不会因为提高另一个而牺牲了其中一个指标。尽管F1 Score可以扩展到多类分类问题，但它主要适用于二分类问题，尤其是当正负样本的重要性基本相等时。在研究二分类问题时候可以引用ROC曲线，其提供了一种在不同类别分布或不同的代价/权重条件下比较多个分类器的方法。即使在数据集随时间变化或在不同数据集上，ROC曲线和AUC值也能为模型的比较提供一致的评估标准。
 
@@ -66,13 +68,14 @@ knitr::include_graphics('Figure/Week_8/Concept of random and spatial cross-valid
 
 ## Practical
 
-
-
 ## Application
 
+基于对象的图像分析（OBIA）已广泛应用于遥感应用。OBIA 方法通过考虑分割对象之间的空间关系并结合先验知识，已应用于提高高分辨率（HR）遥感图像的分类精度。例如，一项研究提出了一种新颖的HR遥感图像分类方案，该方案利用知识图（KG）来保留空间关系并提高分类精度[@gun2023]。另一项研究评估了用于山体滑坡检测的基于规则的 OBIA 方法，该方法将深度学习模型的概率与图像分割和基于规则的分类相结合，以提高准确性[@ghorbanzadeh2023]。OBIA 还被用于定量遥感，例如用于纳米卫星的微型多光谱地球观测成像仪的设计和分析[@kivastik2022]。此外，OBIA 已与分类器集成策略相集成，以使用超高分辨率 (VHR) 卫星数据改进复杂城市地区的土地覆盖分类[@han2020]。
+
+F1 分数用于遥感的各种应用。在面向对象的遥感图像分类实验中，F1分数用于评估不同特征选择方法的性能。Fisher Score-mRMR（Fm）方法结合了Fisher Score和最小冗余最大相关性（mRMR）特征选择方法来提高遥感图像分类的效率和准确性[@lv2022]。在穿墙雷达成像（TWRI）中，F1分数用于评估压缩感知（CS）算法的性能。它用于评估算法在考虑不同水平的信噪比 (SNR) 和压缩率的情况下重建具有正确检测到的目标的图像的能力[@john2018]。在城市数据分类的背景下，F1分数用于评估特征缩减技术在提高城市结构分类精度方面的有效性[@zemmoudj2014]。
+
+空间交叉验证是遥感分类中的一项重要技术。它有助于解释遥感数据中存在的空间自相关性，并确保预测误差的无偏估计[@xudong2022]。几项研究强调了空间交叉验证在准确评估分类性能方面的重要性。例如，卡拉西亚克等人。证明空间留一交叉验证提供了预测误差的无偏估计，并且与结果地图的真实质量一致[@karasiak2022]。类似地，Stock 和 Subramaniam 提出了一种称为 iSLOOCV 的方法，该方法迭代并集成一系列间隔距离上的误差估计，以解释海洋遥感数据中的空间自相关性[@andy2022]。研究发现，考虑空间依赖性的基于分层统计的抽样方法与其他样本选择方法相比，可以产生更高的分类精度[@routh2018]。这些研究强调了空间交叉验证在准确评估分类性能和提高遥感分类结果可靠性方面的重要性。
 
 ## Reflection
-
-
 
 ## Reference

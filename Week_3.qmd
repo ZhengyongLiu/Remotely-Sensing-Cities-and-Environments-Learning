@@ -2,7 +2,7 @@
 title: "Week_3"
 ---
 
-## **Knowledge gain From the Lecture**
+## **Knowledge From the Lecture**
 
 ::: {style="text-align: justify;"}
 This week's study focuses on remote sensing image processing, with the main areas of interest being geometric corrections, atmospheric corrections, orthometric corrections, radiometric corrections and various image enhancement techniques.
