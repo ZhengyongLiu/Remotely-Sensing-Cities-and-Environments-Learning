@@ -69,7 +69,7 @@ GEE一直是遥感大数据处理的关注焦点。GEE是一个基于云的平�
 knitr::include_graphics('Figure/Week_6/A summary of the algorithms and capabilities available in code editor-Google Earth Engine.png')
 ```
 
-GEE还提供了其他与用户交互的方式。资源管理器是一个简单的Web应用程序，用于数据目录浏览，可视化和基本分析，允许用户运行简单的分析。下面是一些实际上的应用。
+下面是一些GEE在实际上的应用。
 
 ```{r  echo=FALSE, out.width='110%', fig.align='center', fig.cap='GEE in Different Applications, Author: <a href="https://www.researchgate.net/publication/341228837_Google_Earth_Engine_for_geo-big_data_applications_A_meta-analysis_and_systematic_review">[@tamiminia2020]</a>'}
 knitr::include_graphics('Figure/Week_6/GEE in Different Applications.png')

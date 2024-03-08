@@ -68,6 +68,17 @@ knitr::include_graphics('Figure/Week_8/Concept of random and spatial cross-valid
 
 ## Practical
 
+#### Accuracy Assessment Result & Hyperparameter Tuning
+引入一个米兰的参考数据集，定义了一系列预测波段，将数据集分为训练集和测试集，80%用于训练，20%用于测试。训练随机森林分类器，用于根据输入的波段数据预测目标类别。使用测试集评估了模型的准确性，并生成了一个混淆矩阵来详细了解模型的性能(以下是结果)。
+
+```{r  echo=FALSE, out.width='110%', fig.align='center', fig.cap='Accuracy Assessment Result'}
+knitr::include_graphics('Figure/Week_8/Accuracy Assessment Result.png')
+```
+整体精度为83.33%，表示模型正确分类的样本比例。模型对每个预测类别的可信度较高，Kappa值为0.773意味着有较好的一致性。
+
+
+
+
 ## Application
 
 基于对象的图像分析（OBIA）已广泛应用于遥感应用。OBIA 方法通过考虑分割对象之间的空间关系并结合先验知识，已应用于提高高分辨率（HR）遥感图像的分类精度。例如，一项研究提出了一种新颖的HR遥感图像分类方案，该方案利用知识图（KG）来保留空间关系并提高分类精度[@gun2023]。另一项研究评估了用于山体滑坡检测的基于规则的 OBIA 方法，该方法将深度学习模型的概率与图像分割和基于规则的分类相结合，以提高准确性[@ghorbanzadeh2023]。OBIA 还被用于定量遥感，例如用于纳米卫星的微型多光谱地球观测成像仪的设计和分析[@kivastik2022]。此外，OBIA 已与分类器集成策略相集成，以使用超高分辨率 (VHR) 卫星数据改进复杂城市地区的土地覆盖分类[@han2020]。
@@ -78,4 +89,8 @@ F1 分数用于遥感的各种应用。在面向对象的遥感图像分类实�
 
 ## Reflection
 
+
+
 ## Reference
+
+

@@ -306,6 +306,21 @@ div.csl-indent {
 </section>
 <section id="practical" class="level2" data-number="7.2">
 <h2 data-number="7.2" class="anchored" data-anchor-id="practical"><span class="header-section-number">7.2</span> Practical</h2>
+<section id="accuracy-assessment-result-hyperparameter-tuning" class="level4" data-number="7.2.0.1">
+<h4 data-number="7.2.0.1" class="anchored" data-anchor-id="accuracy-assessment-result-hyperparameter-tuning"><span class="header-section-number">7.2.0.1</span> Accuracy Assessment Result &amp; Hyperparameter Tuning</h4>
+<p>引入一个米兰的参考数据集，定义了一系列预测波段，将数据集分为训练集和测试集，80%用于训练，20%用于测试。训练随机森林分类器，用于根据输入的波段数据预测目标类别。使用测试集评估了模型的准确性，并生成了一个混淆矩阵来详细了解模型的性能(以下是结果)。</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Figure/Week_8/Accuracy Assessment Result.png" class="img-fluid figure-img" style="width:110.0%"></p>
+<figcaption class="figure-caption">Accuracy Assessment Result</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>整体精度为83.33%，表示模型正确分类的样本比例。模型对每个预测类别的可信度较高，Kappa值为0.773意味着有较好的一致性。</p>
+</section>
 </section>
 <section id="application" class="level2" data-number="7.3">
 <h2 data-number="7.3" class="anchored" data-anchor-id="application"><span class="header-section-number">7.3</span> Application</h2>

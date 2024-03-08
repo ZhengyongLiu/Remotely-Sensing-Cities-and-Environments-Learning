@@ -69,17 +69,35 @@ knitr::include_graphics('Figure/Week_7/SVM example of linearly separable data.pn
 
 ## Practical
 
+### 监督分类
+选择一个Study Area，在地图上选择training feature collections，在下图的选择了forest, water,developed,herbaceous作为collect feature.使用ee.Classifier.smileCart) 并对其进行训练。但是结果的呈现效果不是很好的，可能是初始的数据集的选择上不是很好。
+
+```{r  echo=FALSE, out.width='110%', fig.align='center', fig.cap='Supervised trained Classification Result'}
+knitr::include_graphics('Figure/Week_7/Supervised trained Classification .png')
+```
+
+### 监督分类
+Same result of Unsupervised trained Classification 
+```{r  echo=FALSE, out.width='110%', fig.align='center', fig.cap='Unsupervised trained Classification Result'}
+knitr::include_graphics('Figure/Week_7/Unsupervised trained Classification .png')
+```
+
+
 ## Application
 
 遥感机器学习的根源可以追溯到上世纪90年代。它最初被引入作为一种自动化知识基础建设的远程感知的方法。此后它不断发展并在各个领域找到了应用，包括遥感和地球科学[@challa2022]。深度学习等机器学习算法因其能够分析大量数据并实现高精度而在遥感领域广受欢迎[@jeon2023]。这些算法已用于图像分类、场景理解和材料识别等任务[@rewhel2023]。具有特定领域属性的数据集的可用性进一步促进了机器学习技术在遥感中的应用。
 
 机器学习算法有三大类。一是监督机器学习，二是无监督机器学习，三是加强学习。监督和非监督的区别在于使用监督算法,有一个数据集包含的输出列而在使用无监督算法,一个只有一个巨大的数据集,它的职责是集群算法基于关系数据集到各种不同的类之间已经确定不同的记录[@ling2023][@raju2023]。
 
-由于其分类的准确性，随机森林算法在遥感社区越来越受欢迎。这些是集成分类器，基本上意味着他们利用下面的多个决策树。RF分类器受欢迎的一个主要原因是它们有助于缓解高维问题[@bahrami2018]。它们提供了一个可变的重要性(VI)，可以减少高光谱数据的维数。变量的重要性本质上是衡量一个特定输入的变化对输出的影响[@solorio-ramírez2023;@rina2023]。
+由于其分类的准确性，随机森林算法在遥感社区越来越受欢迎。这些是集成分类器，基本上意味着他们利用下面的多个决策树。RF分类器受欢迎的一个主要原因是它们有助于缓解高维问题[@bahrami2018]。它们提供了一个可变的重要性(VI)，可以减少高光谱数据的维数。变量的重要性本质上是衡量一个特定输入的变化对输出的影响[@solorio-ramírez2023][@rina2023]。
 
 SVMs是监督学习模型，可用于回归和分类问题。它们主要用于分类问题。他们的工作方式是在一个n维空间(特征)中绘制的点(特征)，然后用一个超平面来划分这些点。从森林分类到多光谱遥感图像分割，在遥感中几乎所有类型的分类问题都使用SVMs[@feizi2022]。就像其他算法一样，他们的成功取决于问题的性质，一个人必须分别测试每个算法，然后根据每个算法的性能做出决定[@hazra2021]。
 
 过度拟合模型通常需要建立一个过于复杂的模型来解释研究数据中的特性和异常值。这意味着,如果你使用相同类型的数据(它的数据类型已经训练)评估模型,你会得到一个非常高的预测、分类精度[@schmidt]。然而,如果你只是修改一些输入，(这模型没有见过)，那么，预测、分类精度就会下降。你可以通过使用更大的数据集来修复过度拟合，并适当地分割数据集。此外，减少模型定义的复杂性是有益的，这样就不会对所有极端的边界情况进行分类[@rezaei]。
+
+加一个
+
+
 
 ## Reflection
 
