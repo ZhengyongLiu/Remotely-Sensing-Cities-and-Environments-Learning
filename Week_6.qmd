@@ -81,7 +81,7 @@ knitr::include_graphics('Figure/Week_6/GEE in Different Applications.png')
 
 Much of the academic use of GEE has been optical, thanks in large part to the 40-year free archive of Landsat imagery, and optical remote sensing data is still the most commonly used data source.The GEE data catalogue provides optical satellite imagery from 1972 to the present day, allowing researchers to conduct Earth monitoring studies[@pham-duc2023]. In addition, the wide range of applications by GEE users shows that optical images are easier to process and interpret for non-remote sensing experts. This is one of the reasons why GEE has a global reach in a wide range of scientific fields. At the same time, the combination of SAR and optical satellite data can help researchers to solve problems such as cloud cover. Especially in the tropics, the efficacy of optical images can be greatly affected due to continuous cloud cover and situations such as forest fires. Therefore, combining optical and SAR data can improve the accuracy of classification and provide more information to monitor surface changes.[@lea2023].
 
-### GEE和传感器类型
+### GEE and sensor type
 
 Landsat is considered an important source of remote sensing data in the GEE, as it provides a continuous image of the Earth's surface.The Landsat 9 satellite will be launched in 2020 with the aim of continuing the Landsat programme's key role in monitoring the Earth's resources. Long-term land cover change studies can be carried out on a regional and global scale[@pham-duc2023].
 
