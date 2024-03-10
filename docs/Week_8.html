@@ -182,10 +182,10 @@ div.csl-indent {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#knowledge-from-the-lecture" id="toc-knowledge-from-the-lecture" class="nav-link active" data-scroll-target="#knowledge-from-the-lecture"><span class="header-section-number">7.1</span> <strong>Knowledge From the Lecture</strong></a></li>
-  <li><a href="#practical" id="toc-practical" class="nav-link" data-scroll-target="#practical"><span class="header-section-number">7.2</span> Practical</a></li>
-  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><span class="header-section-number">7.3</span> Application</a></li>
-  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><span class="header-section-number">7.4</span> Reflection</a></li>
+  <li><a href="#knowledge-from-the-lecture" id="toc-knowledge-from-the-lecture" class="nav-link active" data-scroll-target="#knowledge-from-the-lecture"><span class="header-section-number">7.1</span> <strong>Knowledge From the Lecture</strong></a>
+  <ul class="collapse">
+  <li><a href="#object-based-image-analysis-obia" id="toc-object-based-image-analysis-obia" class="nav-link" data-scroll-target="#object-based-image-analysis-obia"><span class="header-section-number">7.1.1</span> Object based image analysis (OBIA)</a></li>
+  </ul></li>
   <li><a href="#reference" id="toc-reference" class="nav-link" data-scroll-target="#reference"><span class="header-section-number">7.5</span> Reference</a></li>
   </ul>
 </nav>
@@ -212,11 +212,19 @@ div.csl-indent {
 
 <section id="knowledge-from-the-lecture" class="level2" data-number="7.1">
 <h2 data-number="7.1" class="anchored" data-anchor-id="knowledge-from-the-lecture"><span class="header-section-number">7.1</span> <strong>Knowledge From the Lecture</strong></h2>
-<p><strong>Object based image analysis (OBIA)</strong></p>
-<p>这是一种考虑地面物体如何在栅格单元上表示的分析方法。 Simple Linear Iterative Clustering算法是生成超像素的最常用方法。它将图像分割成具有相似颜色和空间位置的区域，称为超像素。超像素分割可以用于图像降噪、边缘检测、纹理分析等任务。SLIC算法的基本思想是迭代地更新每个像素点的聚类标签。在每个迭代步骤中，算法会计算每个像素点与其相邻像素点的距离，并将其分配给距离最近的聚类中心。</p>
-<p>可能这个概念有些的抽象对于非初学者来说，我把它细致化的解释一下 想象一下，你有一张由许多像素点组成的图像。你想将这些像素点分成若干个组，使得每个组中的像素点具有相似的颜色和空间位置。</p>
-<p>SLIC算法就像是一个将像素点分组的”游戏”。游戏的规则如下：</p>
-<p>首先，你需要在图像中随机选择一些点作为”聚类中心”。 然后，你需要计算每个像素点与所有聚类中心的距离。 每个像素点将被分配给距离它最近的聚类中心。 接下来，你需要更新每个聚类中心的坐标，使其位于该聚类中所有像素点的平均位置。 重复步骤2到4，直到所有像素点都被分配给某个聚类中心。 游戏结束后，你将得到一组具有相似颜色和空间位置的像素点，即超像素。</p>
+<section id="object-based-image-analysis-obia" class="level3" data-number="7.1.1">
+<h3 data-number="7.1.1" class="anchored"><span class="header-section-number">7.1.1</span> Object based image analysis (OBIA)</h3>
+<div style="text-align: justify;">
+<p>This is an analytical method that considers how ground objects are represented on raster cells. The Simple Linear Iterative Clustering algorithm is the most common method for generating hyperpixels. It segments the image into regions with similar colours and spatial locations called hyperpixels. Hyperpixel segmentation can be used for tasks such as image noise reduction, edge detection, texture analysis etc.The basic idea of SLIC algorithm is to iteratively update the clustering labels for each pixel point. In each iterative step, the algorithm calculates the distance of each pixel point from its neighbouring pixel points and assigns it to the closest cluster centre.</p>
+<p>Maybe this concept is a bit abstract for non-beginners, so I’ll explain it in more detail. Imagine you have an image that consists of many pixels. You want to divide these pixels into groups so that the pixels in each group have similar colours and spatial locations.</p>
+<p>The SLIC algorithm is like a “game” of grouping pixels. The rules of the game are as follows:</p>
+<ul>
+<li><p>First, need to randomly select some points in the image as “cluster centres”. Then, you need to calculate the distance of each pixel from all the cluster centres.</p></li>
+<li><p>Each pixel will be assigned to the cluster centre closest to it.</p></li>
+<li><p>Next, the coordinates of each cluster centre need to be updated so that they are located at the average position of all pixels in the cluster.</p></li>
+<li><p>Repeat the above steps until all pixel points are assigned to a cluster centre.</p></li>
+<li><p>Tour At the end of the game, a set of pixel points with similar colours and spatial locations, i.e., hyperpixels, will be obtained.</p></li>
+</ul>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -227,8 +235,9 @@ div.csl-indent {
 </div>
 </div>
 </div>
-<p><strong>Sub pixel analysis</strong></p>
-<p>亚像素分析是指在图像的像素之间进行分析的技术。传统图像处理方法只关注每个像素的灰度值，而亚像素分析则可以利用像素之间灰度的细微差别来获取更精确的信息。其应用范围很广，包括：图像增强，边缘检测，纹理分析，目标识别.</p>
+<section id="sub-pixel-analysis" class="level3" data-number="7.1.2">
+<h3 data-number="7.1.2" class="anchored" data-anchor-id="sub-pixel-analysis"><span class="header-section-number">7.1.2</span> Sub pixel analysis</h3>
+<p>Subpixel analysis is a technique that analyses an image between its pixels. While traditional image processing methods focus only on the grey value of each pixel, subpixel analysis can take advantage of the subtle differences in grey scale between pixels to obtain more precise information. It has a wide range of applications, including: image enhancement, edge detection, texture analysis, target recognition.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -239,10 +248,41 @@ div.csl-indent {
 </div>
 </div>
 </div>
-<p><strong>评估遥感数据分类准确度</strong></p>
-<p>讲述了生产遥感数据后如何进行准确度评估，这是机器学习工作流程的一部分。其中的三个重要指标是：制图者准确率（Producer’s Accuracy）、用户准确率（User’s Accuracy）和总体准确率（Overall Accuracy），以及如何利用混淆矩阵（Confusion Matrix）来计算这些指标。</p>
-<p>模型预测结果正确时： 真阳性（TP）是模型正确预测阳性类别； 真阴性（TN）是模型正确预测阴性类别。 模型预测结果错误时： 假阳性（FP）是模型错误地预测为阳性，但实际为阴性； 假阴性（FN）是模型错误地预测为阴性，但实际为阳性。</p>
-<p>计算上面的指标是如下表</p>
+</section>
+<section id="assessment-of-the-accuracy-of-classification-of-remotely-sensed-data" class="level3" data-number="7.1.3">
+<h3 data-number="7.1.3" class="anchored" data-anchor-id="assessment-of-the-accuracy-of-classification-of-remotely-sensed-data"><span class="header-section-number">7.1.3</span> Assessment of the accuracy of classification of remotely sensed data</h3>
+<p>Describes how accuracy assessment is performed after producing remote sensing data as part of the machine learning workflow. Three of the key metrics are Producer’s Accuracy, User’s Accuracy, and Overall Accuracy, and how these metrics can be calculated using the Confusion Matrix.</p>
+<table class="table">
+<colgroup>
+<col style="width: 27%">
+<col style="width: 72%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Term</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>True Positive (TP)</td>
+<td>The model correctly predicts the positive class.</td>
+</tr>
+<tr class="even">
+<td>True Negative (TN)</td>
+<td>The model correctly predicts the negative class.</td>
+</tr>
+<tr class="odd">
+<td>False Positive (FP)</td>
+<td>The model incorrectly predicts positive, but the actual class is negative.</td>
+</tr>
+<tr class="even">
+<td>False Negative (FN)</td>
+<td>The model incorrectly predicts negative, but the actual class is positive.</td>
+</tr>
+</tbody>
+</table>
+<p>Calculation of the above indicators is in the following table</p>
 <table class="table">
 <colgroup>
 <col style="width: 26%">
@@ -274,7 +314,7 @@ div.csl-indent {
 </tr>
 </tbody>
 </table>
-<p>在此基础上可以使用凯帕系数来进行有效评估分类模型的性能，确保分类结果的可靠性和准确性。凯帕系数的值范围从-1（完全不一致）到1（完全一致）。值为0表示一致性与随机机会相同，而值接近1表示非常高的一致性。其计算方法是（实际一致性 - 随机一致性）/（1 - 随机一致性）。</p>
+<p>On this basis the Kappa coefficient can be used to carry out an effective assessment of the performance of the classification model to ensure the reliability and accuracy of the classification results. The value of the Kappa coefficient ranges from -1 (complete inconsistency) to 1 (complete agreement). A value of 0 indicates that the consistency is the same as random chance, while a value close to 1 indicates very high consistency. It is calculated as (actual consistency - random consistency)/(1 - random consistency).</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -285,14 +325,18 @@ div.csl-indent {
 </div>
 </div>
 </div>
-<p><strong>F1 Score</strong></p>
-<p>当你的数据集中的类别是不平衡的，即一个类的样本数量远多于另一个类，卡帕系数将不使用，但是F1 Score特别有用。在这种情况下，单纯使用准确率可能不足以反映模型的性能，因为模型可能只是在预测主导类别方面表现良好，而忽视了少数类。F1 Score通过平衡精确率（预测为正类别中实际为正类别的比例）和召回率（实际为正类别中预测为正类别的比例），提供了一个更全面的性能度量。如果你的任务中同样重视精确率和召回率，即你希望减少假阳性和假阴性的数量，那么F1 Score是一个合适的选择。它确保了你不会因为提高另一个而牺牲了其中一个指标。尽管F1 Score可以扩展到多类分类问题，但它主要适用于二分类问题，尤其是当正负样本的重要性基本相等时。在研究二分类问题时候可以引用ROC曲线，其提供了一种在不同类别分布或不同的代价/权重条件下比较多个分类器的方法。即使在数据集随时间变化或在不同数据集上，ROC曲线和AUC值也能为模型的比较提供一致的评估标准。</p>
-<p><strong>Spatial cross validation</strong></p>
-<p>在传统的machine Learning交叉验证方法中，数据集被随机分成训练集和测试集。模型在训练集上进行训练，并在测试集上进行评估。然而，这种随机划分的方法忽略了遥感数据中一个关键特性——空间自相关，即相邻区域之间往往具有相似的属性。</p>
-<p>举一个例子现在有一张包含多种地形的大型遥感图像，比如森林、湖泊和城市区域。任务目标是创建一个计算机模型，这个模型可以查看这张图像的任何部分，并准确地告诉你那里是森林、湖泊还是城市。为了训练这个模型，你需要从图像中选取一些样本（即图像的一小部分），告诉模型这些样本分别属于哪种地形。然后，模型会学习这些样本，尝试理解不同地形的外观。</p>
-<p>但这里有个问题：如果你随机选择样本，那么靠得很近的样本可能会同时出现在训练数据（模型用来学习的数据）和测试数据（用来检验模型准确性的数据）中。这就像是在考试前就已经知道了部分考题，这可能会让模型看起来表现得很好，但实际上它可能并没有真正学到如何区分不同的地形，而只是记住了那些特定的样本。</p>
-<p>空间交叉验证就是为了解决这个问题。我们不是随机选择样本，而是将整个图像分成几个大块区域。我们可以确保某些区域仅用于训练模型，而其他区域则用于测试模型。这样，我们就可以确信，模型在评估时遇到的数据是它之前从未见过的，这有助于我们更准确地判断模型的实际性能。</p>
-<p>举个例子，假设你有一张包含城市、森林和湖泊的大地图。你将地图分成了东、西两部分。你用东半部分的数据训练你的模型，这意味着模型将看到并学习这一区域的城市、森林和湖泊是什么样的。然后，你用西半部分的数据测试模型，看看它是否能准确识别出它从未”见过”的地区的不同地形。通过这种方式，你可以更好地评估模型在处理新、未知区域时的实际表现能力。</p>
+</section>
+<section id="f1-score" class="level3" data-number="7.1.4">
+<h3 data-number="7.1.4" class="anchored" data-anchor-id="f1-score"><span class="header-section-number">7.1.4</span> F1 Score</h3>
+<p>When the classes in your dataset are unbalanced, i.e.&nbsp;one class has far more samples than another, the kappa coefficient will not be used, but the F1 Score is particularly useful. In this case, using precision alone may not be sufficient to reflect the model’s performance, as the model may only perform well in predicting the dominant class while ignoring a few.The F1 Score provides a more comprehensive performance metric by balancing precision (the proportion of predicted-positive classes that are actually positive) and recall (the proportion of actual-positive classes that are predicted-positive). If precision and recall are equally valued in your task, i.e.&nbsp;you want to reduce the number of false positives and false negatives, then F1 Score is an appropriate choice. It ensures that you don’t sacrifice one of the metrics by improving the other. Although the F1 Score can be extended to multi-class classification problems, it is mainly suitable for binary classification problems, especially when the importance of positive and negative samples is essentially equal. The ROC curve can be invoked when studying binary classification problems, which provides a way to compare multiple classifiers under different class distributions or different cost/weight conditions. ROC curves and AUC values provide a consistent evaluation criterion for model comparisons, even when the data sets vary over time or across data sets.</p>
+</section>
+<section id="spatial-cross-validation" class="level3" data-number="7.1.5">
+<h3 data-number="7.1.5" class="anchored" data-anchor-id="spatial-cross-validation"><span class="header-section-number">7.1.5</span> Spatial cross validation</h3>
+<p>In the traditional machine Learning cross-validation approach, the dataset is randomly divided into a training set and a test set. Models are trained on the training set and evaluated on the test set. However, this random division approach ignores a key property —— spatial autocorrelation in remotely sensed data, i.e., neighbouring regions often have similar attributes to each other.</p>
+<p>As an example now there is a large remote sensing image that contains a variety of terrain such as forests, lakes and urban areas. The goal of the task is to create a computer model that can look at any part of this image and tell you exactly whether it is a forest, lake or city. To train this model, you need to select some samples from the image (i.e., a small part of the image) and tell the model which terrain each of these samples belongs to. The model then learns these samples and tries to understand the appearance of the different terrains.</p>
+<p>But here’s the catch: if you randomly select samples, then samples that are very close together may appear in both the training data (the data the model uses to learn) and the test data (the data used to check the model’s accuracy). This is like knowing part of the test questions before you take the test, which may make the model seem to perform well, but in reality it may not have actually learnt how to differentiate between different terrains, but only remembered those particular samples.</p>
+<p>Spatial cross-validation is designed to solve this problem. Instead of randomly selecting samples, we divide the entire image into several large regions. We can make sure that certain regions are only used to train the model, while others are used to test the model. This way, we can be sure that the model is evaluated with data it has never seen before, which helps us to judge the actual performance of the model more accurately.</p>
+<p>For example, suppose you have a large map containing cities, forests, and lakes. You divide the map into two parts, east and west. You train your model with the data from the eastern half, which means that the model will see and learn what the cities, forests, and lakes in this area look like. Then you test the model on the western half of the map to see if it can accurately recognise different terrain in areas it has never “seen” before. In this way, you can better assess how well the model actually performs when dealing with new and unknown areas.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -305,10 +349,10 @@ div.csl-indent {
 </div>
 </section>
 <section id="practical" class="level2" data-number="7.2">
-<h2 data-number="7.2" class="anchored" data-anchor-id="practical"><span class="header-section-number">7.2</span> Practical</h2>
+<h2 data-number="7.2" class="anchored" data-anchor-id="practical"><span class="header-section-number">7.2</span> <strong>Practical</strong></h2>
 <section id="accuracy-assessment-result-hyperparameter-tuning" class="level4" data-number="7.2.0.1">
 <h4 data-number="7.2.0.1" class="anchored" data-anchor-id="accuracy-assessment-result-hyperparameter-tuning"><span class="header-section-number">7.2.0.1</span> Accuracy Assessment Result &amp; Hyperparameter Tuning</h4>
-<p>引入一个米兰的参考数据集，定义了一系列预测波段，将数据集分为训练集和测试集，80%用于训练，20%用于测试。训练随机森林分类器，用于根据输入的波段数据预测目标类别。使用测试集评估了模型的准确性，并生成了一个混淆矩阵来详细了解模型的性能(以下是结果)。</p>
+<p>A reference dataset of Milan was introduced, defining a series of prediction bands, and the dataset was divided into a training and a test set, with 80% used for training and 20% for testing. A Random Forest classifier was trained for predicting the target category based on the input band data. The accuracy of the model was evaluated using the test set and a confusion matrix was generated to detail the performance of the model (results below).</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -319,17 +363,25 @@ div.csl-indent {
 </div>
 </div>
 </div>
-<p>整体精度为83.33%，表示模型正确分类的样本比例。模型对每个预测类别的可信度较高，Kappa值为0.773意味着有较好的一致性。</p>
+<p>The overall accuracy of 83.33% indicates the proportion of samples correctly classified by the model. The model has high confidence for each predicted category with a Kappa value of 0.773 implying good agreement.</p>
 </section>
 </section>
 <section id="application" class="level2" data-number="7.3">
-<h2 data-number="7.3" class="anchored" data-anchor-id="application"><span class="header-section-number">7.3</span> Application</h2>
-<p>基于对象的图像分析（OBIA）已广泛应用于遥感应用。OBIA 方法通过考虑分割对象之间的空间关系并结合先验知识，已应用于提高高分辨率（HR）遥感图像的分类精度。例如，一项研究提出了一种新颖的HR遥感图像分类方案，该方案利用知识图（KG）来保留空间关系并提高分类精度<span class="citation" data-cites="gun2023">(<a href="#ref-gun2023" role="doc-biblioref">Gun and Chen 2023</a>)</span>。另一项研究评估了用于山体滑坡检测的基于规则的 OBIA 方法，该方法将深度学习模型的概率与图像分割和基于规则的分类相结合，以提高准确性<span class="citation" data-cites="ghorbanzadeh2023">(<a href="#ref-ghorbanzadeh2023" role="doc-biblioref">Ghorbanzadeh, Gholamnia, and Ghamisi 2023</a>)</span>。OBIA 还被用于定量遥感，例如用于纳米卫星的微型多光谱地球观测成像仪的设计和分析<span class="citation" data-cites="kivastik2022">(<a href="#ref-kivastik2022" role="doc-biblioref">Kivastik et al. 2022</a>)</span>。此外，OBIA 已与分类器集成策略相集成，以使用超高分辨率 (VHR) 卫星数据改进复杂城市地区的土地覆盖分类<span class="citation" data-cites="han2020">(<a href="#ref-han2020" role="doc-biblioref">Han et al. 2020</a>)</span>。</p>
-<p>F1 分数用于遥感的各种应用。在面向对象的遥感图像分类实验中，F1分数用于评估不同特征选择方法的性能。Fisher Score-mRMR（Fm）方法结合了Fisher Score和最小冗余最大相关性（mRMR）特征选择方法来提高遥感图像分类的效率和准确性<span class="citation" data-cites="lv2022">(<a href="#ref-lv2022" role="doc-biblioref">Lv et al. 2022</a>)</span>。在穿墙雷达成像（TWRI）中，F1分数用于评估压缩感知（CS）算法的性能。它用于评估算法在考虑不同水平的信噪比 (SNR) 和压缩率的情况下重建具有正确检测到的目标的图像的能力<span class="citation" data-cites="john2018">(<a href="#ref-john2018" role="doc-biblioref">John and Brad 2018</a>)</span>。在城市数据分类的背景下，F1分数用于评估特征缩减技术在提高城市结构分类精度方面的有效性<span class="citation" data-cites="zemmoudj2014">(<a href="#ref-zemmoudj2014" role="doc-biblioref">Zemmoudj, Kemmouche, and Chibani 2014</a>)</span>。</p>
-<p>空间交叉验证是遥感分类中的一项重要技术。它有助于解释遥感数据中存在的空间自相关性，并确保预测误差的无偏估计<span class="citation" data-cites="xudong2022">(<a href="#ref-xudong2022" role="doc-biblioref">Xudong et al. 2022</a>)</span>。几项研究强调了空间交叉验证在准确评估分类性能方面的重要性。例如，卡拉西亚克等人。证明空间留一交叉验证提供了预测误差的无偏估计，并且与结果地图的真实质量一致<span class="citation" data-cites="karasiak2022">(<a href="#ref-karasiak2022" role="doc-biblioref">Karasiak et al. 2022</a>)</span>。类似地，Stock 和 Subramaniam 提出了一种称为 iSLOOCV 的方法，该方法迭代并集成一系列间隔距离上的误差估计，以解释海洋遥感数据中的空间自相关性<span class="citation" data-cites="andy2022">(<a href="#ref-andy2022" role="doc-biblioref">Andy and Ajit 2022</a>)</span>。研究发现，考虑空间依赖性的基于分层统计的抽样方法与其他样本选择方法相比，可以产生更高的分类精度<span class="citation" data-cites="routh2018">(<a href="#ref-routh2018" role="doc-biblioref">Routh et al. 2018</a>)</span>。这些研究强调了空间交叉验证在准确评估分类性能和提高遥感分类结果可靠性方面的重要性。</p>
+<h2 data-number="7.3" class="anchored" data-anchor-id="application"><span class="header-section-number">7.3</span> <strong>Application</strong></h2>
+<p>Object-based image analysis (OBIA) has been widely used in remote sensing applications.OBIA methods have been applied to improve the classification accuracy of high-resolution (HR) remote sensing images by taking into account the spatial relationships between segmented objects and incorporating a priori knowledge. For example, one study proposed a novel classification scheme for HR remote sensing images that uses a knowledge graph (KG) to preserve spatial relationships and improve classification accuracy<span class="citation" data-cites="gun2023">(<a href="#ref-gun2023" role="doc-biblioref">Gun and Chen 2023</a>)</span>. Another study evaluated a rule-based OBIA approach for landslide detection that combines probabilistic deep learning models with image segmentation and rule-based classification to improve accuracy<span class="citation" data-cites="ghorbanzadeh2023">(<a href="#ref-ghorbanzadeh2023" role="doc-biblioref">Ghorbanzadeh, Gholamnia, and Ghamisi 2023</a>)</span>. OBIA has also been used for quantitative remote sensing, such as the design and analysis of the Miniature Multispectral Earth Observation Imager for Nanosatellites (PMEO)<span class="citation" data-cites="kivastik2022">(<a href="#ref-kivastik2022" role="doc-biblioref">Kivastik et al. 2022</a>)</span>. In addition, OBIA has been integrated with a classifier integration strategy to improve land cover classification in complex urban areas using Very High Resolution (VHR) satellite data<span class="citation" data-cites="han2020">(<a href="#ref-han2020" role="doc-biblioref">Han et al. 2020</a>)</span>.</p>
+<p>F1 scores are used in various applications of remote sensing. The F1 score is used to evaluate the performance of different feature selection methods in object-oriented remote sensing image classification experiments.The Fisher Score-mRMR (Fm) method combines the Fisher Score and the Minimum Redundancy Maximum Relevance (mRMR) feature selection method to improve the efficiency and accuracy of remote sensing image classification<span class="citation" data-cites="lv2022">(<a href="#ref-lv2022" role="doc-biblioref">Lv et al. 2022</a>)</span>. In Through-the-Wall Radar Imaging (TWRI), the F1 score is used to evaluate the performance of the Compression Sensing (CS) algorithm. It is used to evaluate the algorithm’s ability to reconstruct images with correctly detected targets considering different levels of signal-to-noise ratio (SNR) and compression rate<span class="citation" data-cites="john2018">(<a href="#ref-john2018" role="doc-biblioref">John and Brad 2018</a>)</span>. In the context of urban data classification, F1 scores are used to assess the effectiveness of feature reduction techniques in improving the accuracy of urban structure classification<span class="citation" data-cites="zemmoudj2014">(<a href="#ref-zemmoudj2014" role="doc-biblioref">Zemmoudj, Kemmouche, and Chibani 2014</a>)</span>.</p>
+<p>Spatial cross-validation is an important technique in remote sensing classification. It helps to account for the presence of spatial autocorrelation in remotely sensed data and ensures unbiased estimation of prediction errors<span class="citation" data-cites="xudong2022">(<a href="#ref-xudong2022" role="doc-biblioref">Xudong et al. 2022</a>)</span>. Several studies have highlighted the importance of spatial cross-validation in accurately assessing classification performance. For example, Karasiak et al.&nbsp;demonstrated that spatial leave-one-out cross-validation provides unbiased estimates of prediction error and is consistent with the true quality of the resulting maps<span class="citation" data-cites="karasiak2022">(<a href="#ref-karasiak2022" role="doc-biblioref">Karasiak et al. 2022</a>)</span>. Similarly, Stock and Subramaniam proposed a method called iSLOOCV, which iterates and integrates a series of error estimates over a range of interval distances to account for spatial autocorrelation in ocean remote sensing data<span class="citation" data-cites="andy2022">(<a href="#ref-andy2022" role="doc-biblioref">Andy and Ajit 2022</a>)</span>. It was found that stratified statistics-based sampling methods that take into account spatial dependence produce higher classification accuracy compared to other sample selection methods<span class="citation" data-cites="routh2018">(<a href="#ref-routh2018" role="doc-biblioref">Routh et al. 2018</a>)</span>. These studies emphasise the importance of spatial cross-validation in accurately assessing classification performance and improving the reliability of remote sensing classification results.</p>
 </section>
 <section id="reflection" class="level2" data-number="7.4">
-<h2 data-number="7.4" class="anchored" data-anchor-id="reflection"><span class="header-section-number">7.4</span> Reflection</h2>
+<h2 data-number="7.4" class="anchored" data-anchor-id="reflection"><span class="header-section-number">7.4</span> <strong>Reflection</strong></h2>
+<p>The remote sensing learning journey is always exciting, not only because of the complexity of the technology itself and its applications in solving real-world problems, but also because of the opportunities for growth and awareness it gives us as students. Over the past week, I have delved into advanced remote sensing techniques such as Object-Based Image Analysis (OBIA), subpixel analysis, and hyperpixel generation algorithms, and practiced accuracy assessment methods, which has given me a deeper understanding of the potential and challenges of remote sensing.</p>
+<p>Learning the OBIA technique was a special experience that emphasised the importance of objects in image analysis rather than just individual pixels. This approach changed the way I interpret remote sensing data and made me realise that viewing images as a collection of interconnected objects rather than just pixel dots can greatly improve the accuracy and efficiency of analysis. Through specific case studies, such as how to incorporate deep learning models for landslide detection, I gained a more intuitive understanding of innovative applications in this field.</p>
+<p>In particular, accuracy assessment through the use of random forest classifiers was extremely enlightening for me. Working with the data myself, tuning the model, and interpreting the confusion matrix all gave me a deep appreciation for the challenge and satisfaction of translating theoretical knowledge into practical application. It’s not just about running algorithms, it’s more about understanding the stories behind the data and how we can use these tools to reveal those stories.</p>
+<p>The section discussing spatial cross-validation made me realise the importance of considering spatial autocorrelation when working with remotely sensed data. This is essential to improve the ability to generalise models and ensure the reliability of assessment results. Through this concept, I learnt how to validate models more effectively to ensure that they perform well on unknown data, not just on data that I have already been exposed to.</p>
+<p>From this learning experience, I gained valuable knowledge and a deeper love for the remote sensing discipline. I began to understand data more fully, analyse problems in more detail, and explore new solutions with greater confidence. This process is not just about the mastery of techniques, but also about how these techniques can be applied in the real world to make a positive impact. I look forward to applying what I have learnt to future projects, not only to solve specific problems, but also to further explore the potential of remote sensing technology.</p>
+</section>
+</div>
+</section>
 </section>
 <section id="reference" class="level2" data-number="7.5">
 <h2 data-number="7.5" class="anchored" data-anchor-id="reference"><span class="header-section-number">7.5</span> Reference</h2>

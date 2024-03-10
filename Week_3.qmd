@@ -94,7 +94,8 @@ Below is an example of a texture treatment for the Cape Town area.
 ```{r  echo=FALSE, out.width='110%', fig.align='center', fig.cap='After of Texture Process'}
 knitr::include_graphics('Figure/Week_3/Texture.png')
 ```
-## Application in Literature
+
+## **Application**
 
 ::: {style="text-align: justify;"}
 Image correction is a critical step in remote sensing to ensure the accuracy and usability of data obtained from satellite or aerial imagery. Radiometric correction involves adjusting digital image data to correct for sensor noise, sensor response variations and atmospheric conditions. Various methods have been proposed for radiometric correction of remote sensing images. Duan[-@duan2014] proposed a radiation correction method that replaces artificial targets with standard ground objects, resulting in accurate and precise correction. Tarasenkov[-@tarasenkov2019] developed a program complex for atmospheric correction of satellite images that considers radiation polarization.
@@ -106,7 +107,7 @@ Atmospheric correction is necessary for various remote sensing applications to i
 Image enhancement technology aims to improve the quality and visual effect of remote sensing images. Various methods have been proposed to enhance these images, including histogram modification, transform domain methods, and hybrid approaches. Histogram modification methods focus on modifying the histogram of the input image to achieve a more uniform distribution, resulting in better contrast improvement. Transform domain methods apply specific transforms to enhance the image in the transform domain, leading to better edge enhancement and color preservation[@wang2023]. Hybrid methods, which combine histogram modification and transform domain methods, have shown higher potential in enhancing remote sensing images[@deng2023]. These enhancement techniques are crucial for image interpretation, improving image segmentation accuracy, and facilitating downstream tasks.
 :::
 
-## Personal Reflection
+## **Reflection**
 
 ::: {style="text-align: justify;"}
 As a student diving deep into remote sensing image correction technologies, it truly broadened my knowledge and also deepened my understanding of its complexities and challenges. I realized that although these technologies are crucial for enhancing the quality of image data, implementing them is not as straightforward as it might seem. For instance, radiometric correction sounds advanced, but if we lack precise ground objects for reference, the accuracy of the whole process becomes questionable. This got me thinking about whether we need to develop more adaptive correction methods that can adjust to varying conditions.
@@ -120,4 +121,4 @@ Regarding image enhancement technologies, while they can make images appear clea
 Overall, delving into remote sensing image correction technologies not only taught me about the importance of these techniques but also exposed the various challenges that need to be overcome in practical applications. It made me more aware that alongside technological innovation, a careful evaluation and improvement of existing methods are necessary to ensure we can enhance data quality while maintaining operational feasibility and data authenticity.
 :::
 
-## Reference
+## **Reference**

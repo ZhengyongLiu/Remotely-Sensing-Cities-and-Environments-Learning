@@ -1,59 +1,53 @@
 ---
 title: "Week_7"
-bibliography: references.bib
 ---
 
-## Knowledge From the Lecture
+## **Knowledge From the Lecture**
 
-**Classification and regression trees (CART)**
+::: {style="text-align: justify;"}
+### Classification and regression trees (CART)
 
-1.  Classification
+#### Classification
 
-分类树用于将数据分类到两个或更多的离散类别 回归树处理线性回归不适用的情况 通过将数据分割成小块来改进模型的预测能力 在创建决策树时，最终的叶子节点可能是类别的混合（不纯），并使用基尼不纯度来量化这种不纯度。选择最低不纯度的属性作为树的顶部来开始决策过程。 计算基尼不纯度，并用它来评估在构建决策树时分割数据的质量，其值越小表示数据越纯净。
+Classification trees are used to categorise data into two or more discrete categories Regression trees deal with situations where linear regression does not apply Improve the predictive power of the model by splitting the data into smaller chunks When creating a decision tree, the final leaf nodes may be a mixture of categories (impurity) and the Gini impurity is used to quantify this impurity. Select the attribute with the lowest impurity as the top of the tree to begin the decision process. Calculate the Gini impurity and use it to assess the quality of the data segmented when constructing the decision tree, with smaller values indicating purer data
 
 ```{r  echo=FALSE, out.width='110%', fig.align='center', fig.cap='Land Cover Classification using Google Earth Engine and Random Forest Classifier—The Role of Image Composition, Source: <a href="https://www.mdpi.com/2072-4292/12/15/2411">[@phan2020]</a>'}
 knitr::include_graphics('Figure/Week_7/Land Cover Classification in GEE.png')
 ```
 
-2.  Regression trees
+#### Regression trees
 
-回归树预测连续值，例如污染量，而分类树预测离散值，例如土地覆盖类型。 当线性回归不能很好地拟合数据时，建议使用回归树作为替代方案。在回归树中，数据根据阈值或节点划分为多个部分。计算这些部分的残差平方和（SSR），并且具有最低SSR的阈值成为树的起点或根。可以重复该过程以进一步分割数据，并且可以设置最小观察次数以防止过度拟合。
+Regression trees predict continuous values, such as the amount of pollution, while classification trees predict discrete values, such as land cover type. When linear regression does not fit the data well, regression trees are recommended as an alternative. In a regression tree, the data is divided into multiple parts based on thresholds or nodes. The sum of squared residuals (SSR) of these parts is calculated and the threshold with the lowest SSR becomes the starting point or root of the tree. The process can be repeated to further segment the data, and a minimum number of observations can be set to prevent overfitting.
 
 ```{r  echo=FALSE, out.width='110%', fig.align='center', fig.cap='Tree classification procedure in Google Earth Engine, Source: <a href="https://www.researchgate.net/publication/334404370_Trends_in_the_Seaward_Extent_of_Saltmarshes_across_Europe_from_Long-Term_Satellite_Data">[@laengner2019]</a>'}
 knitr::include_graphics('Figure/Week_7/Unsupervised-decision-tree-classification-procedure-in-Google-Earth-Engine-performed-for.ppm')
 ```
 
-**Overfitting**
+### Overfitting
 
-如果一个叶节点只包含一个人或一个像素值，就可能出现过拟合。最好的模型具有低偏差和低变异性，能够在不同数据集（如训练集和测试集）之间做出一致的预测。为了防止决策树过度生长的方法，其方法包括限制树的生长（例如，一个叶子至少包含20个像素），以及最弱连接剪枝（基于树得分的剪枝）。
+If a leaf node contains only one person or one pixel value, overfitting may occur. The best models have low bias and low variability and are able to make consistent predictions across different datasets (e.g., training and test sets). To prevent overgrowth of the decision tree, its methods include limiting the growth of the tree (e.g., a leaf contains at least 20 pixels), and weakest link pruning (pruning based on the tree score). The number of leaves per tree and the value of α (regularisation parameter) were adjusted to reduce overfitting. Starting from α = 0, the α values were gradually increased until the pruning could reduce the tree score, and then these α values were saved. The tree score is the sum of squared residuals (SSR) plus the tree penalty (α multiplied by the number of leaves T). Different α values produce different subtrees and tree scores. Use different values of α to train the data and calculate the SSR on the test data to select the tree with the smallest score. Repeat the above process with cross-validation (10 cross validations) so as to find the α value that on average has the lowest SSR on the test data. The tree corresponding to this α-value, trained using all the data, is then selected. For classification trees, the SSR will be replaced by an impurity metric (e.g., Gini impurity).
 
-每棵树的叶子数量和调整α值（正则化参数）来减少过拟合。从α=0开始，逐渐增加α值直到剪枝可以降低树得分，然后保存这些α值。树得分是残差平方和（SSR）加上树的惩罚（α乘以叶子数T）。不同的α值会产生不同的子树和树得分。使用不同的α值来训练数据，并在测试数据上计算SSR，以选择得分最小的树。用交叉验证（10次交叉验证）来重复上述过程，从而找到平均而言在测试数据上SSR最低的α值。然后选择这个α值对应的、使用全部数据训练的树。对于分类树，SSR将被不纯度度量（如基尼不纯度）所替代。
+### Random Tress
 
-**Random Tress**
+A random forest consists of a number of categorical decision trees that are constructed by self-sampling the data (bootstrap samples) and constructing decision trees from randomly selected variables. At the nodes, the algorithm again selects from a random subset of variables. This process is repeated over and over again, resulting in multiple trees, or a "forest". As new data passes through these trees, each tree gives a prediction, and the one with the most votes is chosen as the final prediction. The "bagging" technique in Random Forest is self-sampling by replacing data. Each tree is trained using approximately 70% of the training data, and the remaining 30% is called out-of-bag (OOB) data. The out-of-bag data is used to test the forest to evaluate the performance of the model and finally the classification result with the most votes is selected. The percentage of classification errors for out-of-bag data is known as OOB error. No pruning is done in a random forest and the tree can grow as much as possible. The out-of-bag error is derived by calculating the average prediction error for all trees that do not use certain values (e.g., rows in the data). Validation data, unlike out-of-bag data, is never included in the construction of the decision tree.
 
-随机森林由许多分类决策树组成，通过对数据进行自助采样（bootstrap samples），并从随机选择的变量中构建决策树。在节点上，算法会再次从变量的随机子集中选择。这个过程会不断重复，最终得到多棵树，即一个"森林"。当有新数据通过这些树时，每棵树都会给出一个预测结果，最终选择票数最多的选项作为最终预测。
+### How to apply to the imagery
 
-随机森林中的"bagging"技术，即通过替换数据进行自助采样。每棵树大约使用70%的训练数据进行训练，剩下30%的数据被称为袋外数据（OOB）。袋外数据被用来测试森林，以评估模型的性能，最后选择得票最多的分类结果。袋外数据分类错误的比例被称为OOB错误。
+Two main approaches to image classification: supervised learning and unsupervised learning. Supervised learning learns from data and labels new data through machine learning pattern recognition, while unsupervised learning analyses undefined data through clustering and then labels these clusters.
 
-随机森林中不进行剪枝，树可以尽可能地生长。袋外错误是通过计算没有使用某些值（例如数据中的行）的所有树的平均预测错误来得出的。验证数据与袋外数据不同，它从未被包含在决策树的构建中。
+Supervised Learning:
 
-**How to apply to the imagery**
+1.  Generic of supervised learning basically follows the process includes: category definition, preprocessing, training, pixel assignment and accuracy assessment.
 
-图像分类的两种主要方法：监督学习和无监督学习。监督学习通过机器学习模式识别从数据中学习并对新数据打标签，而无监督学习则通过聚类分析未预先定义的数据，然后对这些聚类进行标签。
+Unsupervised Learning:
 
-监督学习：
-
-1.  监督学习的通用基本上都遵循流程包括：类别定义、预处理、训练、像素分配和准确性评估。
-
-无监督学习:
-
-1.  DBSCAN算法，它通过设定一个半径（Epsilon）和最小点数来形成聚类，并可通过迭代和PCA进行优化。
-2.  ISODATA算法，k-means的一个变体，它增加了合并过近的聚类或分割过长的聚类的功能，并根据聚类中的像素数、迭代次数等条件来控制聚类过程.
-3.  "Cluster busting"的方法，它通过掩盖和重新分类那些难以打标签或标签不正确的聚类来提高分类精度.
+1.  The DBSCAN algorithm, which forms clusters by setting a radius (Epsilon) and a minimum number of points, and can be optimised by iteration and PCA.
+2.  The ISODATA algorithm, a variant of k-means, which adds the ability to merge clusters that are too close together or to split clusters that are too long, and controls the clustering process according to the number of pixels in the cluster, the number of iterations, etc. 3. the "Cluster busting" algorithm, which forms clusters by setting a radius (Epsilon) and a minimum number of points.
+3.  The "Cluster busting" method, which improves classification accuracy by masking and reclassifying clusters that are difficult to label or incorrectly labelled.
 
 **Maximum likelihood**
 
-Maximum likelihood & Support Vector Machine 最大似然估计（Maximum Likelihood Estimation，MLE）是一种统计方法，用于估计概率模型中的参数。该方法的基本思想是：从所有可能的参数值中，选择最能解释观察到的数据的参数值。例如在遥感中，它使用概率来将图像中的每个像素分配给最可能的土地覆盖类型，并可以设置概率阈值来决定是否进行分类。
+Maximum likelihood & Support Vector Machine Maximum Likelihood Estimation (MLE) is a statistical method for estimating parameters in probabilistic models. The basic idea of the method is to select the parameter value that best explains the observed data from all possible parameter values. In remote sensing, for example, it uses probabilities to assign each pixel in an image to the most likely land cover type, and probability thresholds can be set to determine whether or not to classify it.
 
 ```{r  echo=FALSE, out.width='110%', fig.align='center', fig.cap=' Maximum likelihood classifier, Source: <a href="https://www.researchgate.net/figure/Maximum-likelihood-classifier-Source-adapted-from-59_fig2_331160604">[@núñez2019]</a>'}
 knitr::include_graphics('Figure/Week_7/Maximum likelihood classifier.pbm')
@@ -61,45 +55,43 @@ knitr::include_graphics('Figure/Week_7/Maximum likelihood classifier.pbm')
 
 **Support Vector Machine**
 
-支持向量机（SVM）是一种监督学习模型，用于分类和回归分析。假设我们有一个训练数据集，其中每个数据点都属于两个类别中的一个。SVM 的目标是找到一个超平面，使得该超平面能够将两类数据点尽可能分开。
+Support Vector Machine (SVM) is a supervised learning model used for classification and regression analysis. Suppose we have a training dataset in which each data point belongs to one of two classes.The goal of the SVM is to find a hyperplane such that the hyperplane separates the two classes of data points as much as possible.
 
 ```{r  echo=FALSE, out.width='110%', fig.align='center', fig.cap=' SVM example of linearly separable data, Source: <a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9206124">[@sheykhmousa2020]</a>'}
 knitr::include_graphics('Figure/Week_7/SVM example of linearly separable data.png')
 ```
 
-## Practical
+## **Practical**
 
-### 监督分类
-选择一个Study Area，在地图上选择training feature collections，在下图的选择了forest, water,developed,herbaceous作为collect feature.使用ee.Classifier.smileCart) 并对其进行训练。但是结果的呈现效果不是很好的，可能是初始的数据集的选择上不是很好。
+### Supervised Classification
+
+Select a Study Area, select the training feature collections on the map, in the following figure selected forest, water,developed,herbaceous as the collect feature.Use ee.Classifier.smileCart) and train it. But the result is not very good, maybe the initial data set selection is not very good.
 
 ```{r  echo=FALSE, out.width='110%', fig.align='center', fig.cap='Supervised trained Classification Result'}
 knitr::include_graphics('Figure/Week_7/Supervised trained Classification .png')
 ```
 
-### 监督分类
-Same result of Unsupervised trained Classification 
+### Unsupervised Classification
+
+Same result of Unsupervised trained Classification
+
 ```{r  echo=FALSE, out.width='110%', fig.align='center', fig.cap='Unsupervised trained Classification Result'}
 knitr::include_graphics('Figure/Week_7/Unsupervised trained Classification .png')
 ```
 
+## **Application**
 
-## Application
+The roots of remote sensing machine learning can be traced back to the 1990s. It was initially introduced as an approach to remote sensing for automated knowledge infrastructure building. Since then it has evolved and found applications in a variety of fields, including remote sensing and geoscience[@challa2022]. Machine learning algorithms such as deep learning are popular in remote sensing due to their ability to analyse large amounts of data and achieve high accuracy[@jeon2023]. These algorithms have been used for tasks such as image classification, scene understanding and material recognition[@rewhel2023]. The availability of datasets with domain-specific attributes further facilitates the application of machine learning techniques in remote sensing.
 
-遥感机器学习的根源可以追溯到上世纪90年代。它最初被引入作为一种自动化知识基础建设的远程感知的方法。此后它不断发展并在各个领域找到了应用，包括遥感和地球科学[@challa2022]。深度学习等机器学习算法因其能够分析大量数据并实现高精度而在遥感领域广受欢迎[@jeon2023]。这些算法已用于图像分类、场景理解和材料识别等任务[@rewhel2023]。具有特定领域属性的数据集的可用性进一步促进了机器学习技术在遥感中的应用。
+There are three main categories of machine learning algorithms. One is supervised machine learning, second is unsupervised machine learning and third is reinforcement learning. The difference between supervised and unsupervised is that using supervised algorithms, there is a dataset containing output columns whereas in using unsupervised algorithms, there is only a huge dataset and its duty is to cluster the algorithms based on the relationship of the dataset to a variety of different classes between the different records that have been identified[@ling2023][@raju2023].
 
-机器学习算法有三大类。一是监督机器学习，二是无监督机器学习，三是加强学习。监督和非监督的区别在于使用监督算法,有一个数据集包含的输出列而在使用无监督算法,一个只有一个巨大的数据集,它的职责是集群算法基于关系数据集到各种不同的类之间已经确定不同的记录[@ling2023][@raju2023]。
+Random Forest algorithms are becoming increasingly popular in the remote sensing community due to their classification accuracy. These are integrated classifiers, which basically means that they utilise multiple decision trees underneath.One of the main reasons for the popularity of RF classifiers is that they help to mitigate high-dimensional problems[@bahrami2018].They provide a variable importance (VI) that can reduce the dimensionality of hyperspectral data. Variable importance is essentially a measure of how a change in a particular input affects the output[@solorio-ramírez2023][@rina2023].
 
-由于其分类的准确性，随机森林算法在遥感社区越来越受欢迎。这些是集成分类器，基本上意味着他们利用下面的多个决策树。RF分类器受欢迎的一个主要原因是它们有助于缓解高维问题[@bahrami2018]。它们提供了一个可变的重要性(VI)，可以减少高光谱数据的维数。变量的重要性本质上是衡量一个特定输入的变化对输出的影响[@solorio-ramírez2023][@rina2023]。
+SVMs are supervised learning models that can be used for regression and classification problems. They are mainly used for classification problems. They work by plotting points (features) in an n-dimensional space (features) and then dividing these points with a hyperplane. SVMs are used for almost all types of classification problems in remote sensing from forest classification to multispectral remote sensing image segmentation[@feizi2022]. Like other algorithms, their success depends on the nature of the problem, and one must test each algorithm separately and then make a decision based on each algorithm's performance[@hazra2021].
 
-SVMs是监督学习模型，可用于回归和分类问题。它们主要用于分类问题。他们的工作方式是在一个n维空间(特征)中绘制的点(特征)，然后用一个超平面来划分这些点。从森林分类到多光谱遥感图像分割，在遥感中几乎所有类型的分类问题都使用SVMs[@feizi2022]。就像其他算法一样，他们的成功取决于问题的性质，一个人必须分别测试每个算法，然后根据每个算法的性能做出决定[@hazra2021]。
+Overfitting a model usually requires building an overly complex model to account for characteristics and outliers in the study data. This means that if you evaluate the model with the same type of data (the type of data it has been trained on), you will get a very high prediction, classification, and classification accuracy[@schmidt]. However, if you just modify some inputs, (which the model hasn't seen before), then the prediction, classification accuracy will drop. You can fix the overfitting by using a larger dataset and splitting the dataset appropriately. Also, it is useful to reduce the complexity of the model definition so that all extreme boundary cases are not classified[@rezaei].
 
-过度拟合模型通常需要建立一个过于复杂的模型来解释研究数据中的特性和异常值。这意味着,如果你使用相同类型的数据(它的数据类型已经训练)评估模型,你会得到一个非常高的预测、分类精度[@schmidt]。然而,如果你只是修改一些输入，(这模型没有见过)，那么，预测、分类精度就会下降。你可以通过使用更大的数据集来修复过度拟合，并适当地分割数据集。此外，减少模型定义的复杂性是有益的，这样就不会对所有极端的边界情况进行分类[@rezaei]。
-
-加一个
-
-
-
-## Reflection
+## **Reflection**
 
 这节课主要学习了一些机器学习的技术在遥感中的应用，讲述了使用机器学习来解决什么样的问题。在上面所陈述的方法里面，哪个才是最适用的呢？这个问题的答案取决于一个人想要解决的问题。在某些情况下，当您有多个维度但记录有限时，SVM可能会更好地工作。如果你有很多的记录，但很少的维度(特性),神经网络(NN)可能产生更好的预测/分类精度。人们经常需要在你的数据集上测试多种算法，然后选择最有效的算法。通常，需要为不同的算法调整各种参数(i)。对射频、隐藏层数、神经网络神经元的数量以及对SVMs的"决策函数形状"等进行了研究。很多时候，将多个算法组合在一起可以获得更好的准确性，这就是所谓的合奏。还可以将SVM和神经网络、SVM和RF(可能性无穷)组合起来，以提高预测精度。再次，须测试多个合奏以选择最好的合奏。
 
@@ -110,5 +102,6 @@ SVMs是监督学习模型，可用于回归和分类问题。它们主要用于�
 不可能只看一种算法，从理论上决定它是否会为你的数据集产生最好的结果，因为很多机器学习算法都是黑盒算法。这意味着很难看出算法是如何达到特定的结果的。因此，首先根据问题的类型来缩小算法选择的范围，然后在数据集的一部分应用缩小算法，看看哪一种性能最好。
 
 机器学习有着光明的未来，因为越来越多的人正在学习机器学习的基本知识，并将其应用于日常工作和研究中。新的算法每隔一天就会出现，分类的准确率也随之提高。这些问题在遥感(测绘地皮)中似乎很困难，有时甚至是不可能的，但每天都被新出现的算法解决。在不久的将来，世界上大多数的分析工作将由机器学习算法完成。
+:::
 
-## Reference
+## **Reference**

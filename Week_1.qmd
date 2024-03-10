@@ -9,7 +9,7 @@ bibliography: references.bib
 This week's learning journey into the realm of remote sensing, unveiling the intricate world of electromagnetic waves and their interactions with Earth's surface. Remote sensing, as I've learned, involves acquiring information about objects or areas from a distance, typically from aircraft or satellites, and is a vital tool in understanding our planet.
 :::
 
-### **Foundational Concepts of Remote Sensing**
+### Foundational Concepts of Remote Sensing
 
 ::: {style="text-align: justify;"}
 One of the foundational concepts we explored was the difference between passive and active remote sensing. Passive remote sensing relies on natural energy, usually from the sun, whereas active remote sensing systems emit their own energy to illuminate objects. This distinction is crucial for understanding the varied applications of remote sensing technologies like LiDAR, radar, and satellite imagery in observing earth's landscapes, urban areas, and atmospheric conditions.
@@ -19,7 +19,7 @@ knitr::include_graphics('Figure/Week_1/Passive_and_Active_RemoteSensing.png')
 ```
 :::
 
-### **Electromagnetic Waves: Core of Remote Sensing**
+### Electromagnetic Waves: Core of Remote Sensing
 
 ::: {style="text-align: justify;"}
 Much of our learning knowledge focused on electromagnetic waves, the heart of remote sensing. These waves, a form of energy that propagates through electric and magnetic fields, are the backbone of how remote sensors collect data. Remote sensing is based on this principle to detect the reflection of electromagnetic waves by surface objects and their emission of electromagnetic waves, so as to extract information about these objects and complete the identification of objects at a distance.
@@ -29,7 +29,7 @@ Much of our learning knowledge focused on electromagnetic waves, the heart of re
 knitr::include_graphics('Figure/Week_1/electromagneticspectrum.jpeg')
 ```
 
-### **Interactions with Earth's Surface**
+### Interactions with Earth's Surface
 
 ::: {style="text-align: justify;"}
 We have looked at the complexities of how electromagnetic radiation (EMR) interacts with the Earth's surface. EMR can be absorbed, transmitted or scattered by the surface and atmosphere. Scattering, in particular, explains phenomena such as the blue colour of the sky or the blackness of the lunar sky due to the absence of an atmosphere.
@@ -39,7 +39,7 @@ We have looked at the complexities of how electromagnetic radiation (EMR) intera
 knitr::include_graphics('Figure/Week_1/EMR with Earth Surface.jpeg')
 ```
 
-### **Synthetic Aperture Radar (SAR) and its Applications**
+### Synthetic Aperture Radar (SAR) and its Applications
 
 ::: {style="text-align: justify;"}
 The Synthetic Aperture Radar (SAR) was another fascinating topic. SAR's ability to 'see through clouds' using longer wavelengths is revolutionary, offering a consistent observation capability irrespective of weather conditions. This technology's potential in areas like topography, vegetation analysis, and urban planning is immense, showcasing how advanced remote sensing techniques can overcome environmental challenges
@@ -47,7 +47,7 @@ The Synthetic Aperture Radar (SAR) was another fascinating topic. SAR's ability 
 The study of SAR data also introduced us to the concept of polarization, a property of electromagnetic waves that describes their oscillation direction. This property is crucial for understanding how radar signals interact with different surface properties and is instrumental in enhancing the efficiency and bandwidth of communications.
 :::
 
-### **Technical Insights and Data Formats in Remote Sensing**
+### Technical Insights and Data Formats in Remote Sensing
 
 ::: {style="text-align: justify;"}
 On the technical side, we learned about the different data formats used in remote sensing, such as GeoTIFF, and the importance of resolutions - spatial, spectral, temporal and radiometric. These resolutions define the quality and type of data acquired, and influence how effectively we can interpret and use the data for various applications such as land cover mapping and environmental monitoring.
@@ -55,7 +55,7 @@ On the technical side, we learned about the different data formats used in remot
 In the literature, these concepts are used to analyse environmental change, urban development and geological features. Understanding remote sensing data and their interpretation is essential for researchers and policy makers to make informed decisions.
 :::
 
-## Application
+## **Application**
 ::: {style="text-align: justify;"}
 Throughout the week, remote sensing technology is a method of observing and analysing the Earth and its atmosphere from a distance using radio waves or other forms of electromagnetic waves. This technology enables imaging and analysis of distant targets in a non-contact manner by collecting and processing electromagnetic wave information from the Earth's surface and atmosphere. With the development of technology, remote sensing has become an important tool in the field of geographic information science and is widely used in a number of research and practical applications[@zhou2023]. In the field of urban environmental monitoring, remote sensing technology provides an efficient means of monitoring air quality, water quality and land use. Urban sprawl, traffic flow and pollution from industrial activities can be observed and analysed from the air through remote sensing technology, which helps in decision-making for urban planning and environmental protection[@zhou2023a].In the area of vegetation monitoring, remote sensing can be used to analyse the health, growth dynamics and coverage of plants, and by analysing reflected and absorbed electromagnetic waves of specific wavelengths, scientists are able to assess important parameters such as the biomass, water content and chlorophyll concentration of vegetation. This information is important for the optimisation of agricultural production, forestry management and ecological conservation[@adhikary2022a].Geological research has also benefited from the application of remote sensing technology, and by analysing the electromagnetic wave reflection characteristics of the earth's surface, scientists have been able to identify different rock types, the distribution of mineral deposits and changes in topography and geomorphology. This is of great value for the exploration of mineral resources, the early warning of geological disasters and the monitoring of environmental changes[@torresgil2023c].Agriculture is one of the areas in which remote sensing technology is most widely used. In addition to being used for assessing plant health and yield estimation, remote sensing is used to monitor irrigation needs, detect weeds and pests and make weather forecasts. This makes agricultural production more precise and efficient, helping to increase crop yields and reduce resource wastage[@adhikary2022b].
 
@@ -64,7 +64,7 @@ In addition, synthetic aperture radar (SAR) technology, as an advanced remote se
 SAR systems work by transmitting and receiving microwave signals, using the returned signals to calculate the position, shape and other characteristics of objects on the ground. A key advantage of this active sensing technology is its sensitivity to the type of ground material and moisture content, allowing it to play an important role in monitoring vegetation-covered areas, urban environments and bodies of water, where SAR imagery is unique in analysing surface changes, assessing the impacts of disasters and carrying out environmental monitoring, owing to its unique imaging properties[@navalgund2007].
 ::: 
 
-## Reflection
+## **Reflection**
 
 ::: {style="text-align: justify;"}
 Reflecting on the week's learning, the profound impact of remote sensing on our understanding of the world is truly remarkable. This technology, with its ability to observe and analyse our planet from afar, offers a unique perspective that ground-based observations simply cannot match. It's like having a bird's-eye view of the world, which opens up a whole new dimension in comprehending large-scale environmental patterns, urban sprawl, and the intricate dynamics of climate change.
@@ -74,4 +74,4 @@ What strikes me the most is how remote sensing serves as a bridge across various
 The rapid advancement in remote sensing technologies is nothing short of astonishing. Innovations such as high-resolution imagery and the capability for real-time data analysis are broadening the horizons of its applications at an unprecedented pace. These advancements are not only improving our current capabilities but are also paving the way for new possibilities in monitoring and managing the Earth's resources more effectively. This week's exploration into the world of remote sensing has deepened my appreciation for this powerful tool and its potential to contribute to a more sustainable and informed future.
 :::
 
-## Reference
+## **Reference**
