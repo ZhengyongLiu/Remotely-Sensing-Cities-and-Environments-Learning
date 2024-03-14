@@ -82,7 +82,7 @@ knitr::include_graphics('Figure/Week_8/Concept of random and spatial cross-valid
 
 ## **Practical**
 
-#### Accuracy Assessment Result & Hyperparameter Tuning
+### Accuracy Assessment Result & Hyperparameter Tuning
 
 A reference dataset of Milan was introduced, defining a series of prediction bands, and the dataset was divided into a training and a test set, with 80% used for training and 20% for testing. A Random Forest classifier was trained for predicting the target category based on the input band data. The accuracy of the model was evaluated using the test set and a confusion matrix was generated to detail the performance of the model (results below).
 

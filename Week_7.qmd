@@ -92,16 +92,16 @@ SVMs are supervised learning models that can be used for regression and classifi
 Overfitting a model usually requires building an overly complex model to account for characteristics and outliers in the study data. This means that if you evaluate the model with the same type of data (the type of data it has been trained on), you will get a very high prediction, classification, and classification accuracy[@schmidt]. However, if you just modify some inputs, (which the model hasn't seen before), then the prediction, classification accuracy will drop. You can fix the overfitting by using a larger dataset and splitting the dataset appropriately. Also, it is useful to reduce the complexity of the model definition so that all extreme boundary cases are not classified[@rezaei].
 
 ## **Reflection**
+Reviewing this week's learning diary on remote sensing, I found the exploration of classification trees and regression trees (CART) particularly enlightening. The distinction between classification trees, which categorize data into discrete sets, and regression trees, which predict continuous values, is a fundamental concept that resonates with me. The application of the Gini impurity measure in the improved classification tree decision process highlights the importance of data purity and precision in environmental analysis, which I had not fully appreciated before.
 
-这节课主要学习了一些机器学习的技术在遥感中的应用，讲述了使用机器学习来解决什么样的问题。在上面所陈述的方法里面，哪个才是最适用的呢？这个问题的答案取决于一个人想要解决的问题。在某些情况下，当您有多个维度但记录有限时，SVM可能会更好地工作。如果你有很多的记录，但很少的维度(特性),神经网络(NN)可能产生更好的预测/分类精度。人们经常需要在你的数据集上测试多种算法，然后选择最有效的算法。通常，需要为不同的算法调整各种参数(i)。对射频、隐藏层数、神经网络神经元的数量以及对SVMs的"决策函数形状"等进行了研究。很多时候，将多个算法组合在一起可以获得更好的准确性，这就是所谓的合奏。还可以将SVM和神经网络、SVM和RF(可能性无穷)组合起来，以提高预测精度。再次，须测试多个合奏以选择最好的合奏。
+The discussion of overfitting is equally crucial, illustrating the delicate balance needed to avoid creating overly complex models. The strategies mentioned, such as limiting tree growth or applying the weakest link pruning, are practical solutions that I could envision applying in future projects to improve model reliability.
 
-同样重要的是要注意,预测精度可能会改变根据特定功能试图使用分类、预测的目的而改变。例如，Shang和Chisholm(2014)讨论了如何将澳大利亚本土森林物种分类，他们决定使用最先进的遥感算法。在树叶、树冠和社区层面对树木进行分类。他们测试了各种算法(SVM、AdaBoost和Random Forest)，并发现每种算法在不同级别上都优于其他算法。在叶级，随机森林获得了最佳分类精度(94.7%)，支持向量机在冠层(84.5%)和社区水平(75.5%)的表现优于其他算法。
+The introduction of random forests expanded my understanding of set learning techniques. This approach combines multiple decision trees, improves prediction accuracy and controls overfitting, and demonstrates the power of collective intelligence over a single predictive model, which is fascinating.
 
-另一个影响算法选择的因素是数据是否线性可分。例如，线性分类算法期望数据可以被线性空间中的直线分割。假设数据是线性可分的，可能适用于大多数情况，但在某些场景下是正确的,并会降低预测/分类精度。因此，我们需要确保使用的算法能够处理可用的数据。
+Applying these concepts to images, especially through supervised and unsupervised learning, is the most fascinating part. Practical examples, such as the use of random forest classifiers in Google Earth Engine, give us a first-hand sense of the potential of remote sensing in environmental analysis. It's curious to think about the wide range of applications these methods have, from land cover classification to pollution monitoring.
 
-不可能只看一种算法，从理论上决定它是否会为你的数据集产生最好的结果，因为很多机器学习算法都是黑盒算法。这意味着很难看出算法是如何达到特定的结果的。因此，首先根据问题的类型来缩小算法选择的范围，然后在数据集的一部分应用缩小算法，看看哪一种性能最好。
+This week's diary reveals the multifaceted nature of remote sensing and machine learning, giving me a greater appreciation of their role in understanding and protecting the environment. The evolving nature of these technologies, and their potential to have a profound impact on real-world issues, is incredibly motivating.
 
-机器学习有着光明的未来，因为越来越多的人正在学习机器学习的基本知识，并将其应用于日常工作和研究中。新的算法每隔一天就会出现，分类的准确率也随之提高。这些问题在遥感(测绘地皮)中似乎很困难，有时甚至是不可能的，但每天都被新出现的算法解决。在不久的将来，世界上大多数的分析工作将由机器学习算法完成。
 :::
 
 ## **Reference**
