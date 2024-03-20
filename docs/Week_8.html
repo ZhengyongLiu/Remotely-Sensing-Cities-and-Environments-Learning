@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>CASA0023 Remote sensing learning Diary - 7&nbsp; Week_8</title>
+<title>CASA0023 Remote sensing learning Diary - 7&nbsp; Week_8 Classification II</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -49,7 +49,7 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./references.html" rel="next">
+<link href="./Week_9.html" rel="next">
 <link href="./Week_7.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -93,7 +93,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Week_8.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Week_8</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Week_8.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Week_8 Classification II</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -127,43 +127,49 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Week_1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Week_1 Intro To Remote Sensing</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Week_1 Intro to Remote Sensing</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Week_2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week_2</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week_2 Presentation of Snetinel-5p</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Week_3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week_3</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week_3 Corrections</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Week_4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Week_4</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Week_4 Flooding Issues In Dublin</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Week_6.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Week_6</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Week_6 Intro to GEE</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Week_7.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Week_7</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Week_7 Classification I</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Week_8.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Week_8</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Week_8 Classification II</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Week_9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Week_9 SAR</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -195,7 +201,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Week_8</span></h1>
+<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Week_8 Classification II</span></h1>
 </div>
 
 
@@ -216,7 +222,6 @@ div.csl-indent {
 <h3 data-number="7.1.1" class="anchored"><span class="header-section-number">7.1.1</span> Object based image analysis (OBIA)</h3>
 <div style="text-align: justify;">
 <p>This is an analytical method that considers how ground objects are represented on raster cells. The Simple Linear Iterative Clustering algorithm is the most common method for generating hyperpixels. It segments the image into regions with similar colours and spatial locations called hyperpixels. Hyperpixel segmentation can be used for tasks such as image noise reduction, edge detection, texture analysis etc.The basic idea of SLIC algorithm is to iteratively update the clustering labels for each pixel point. In each iterative step, the algorithm calculates the distance of each pixel point from its neighbouring pixel points and assigns it to the closest cluster centre.</p>
-<p>Maybe this concept is a bit abstract for non-beginners, so I’ll explain it in more detail. Imagine you have an image that consists of many pixels. You want to divide these pixels into groups so that the pixels in each group have similar colours and spatial locations.</p>
 <p>The SLIC algorithm is like a “game” of grouping pixels. The rules of the game are as follows:</p>
 <ul>
 <li><p>First, need to randomly select some points in the image as “cluster centres”. Then, you need to calculate the distance of each pixel from all the cluster centres.</p></li>
@@ -282,38 +287,6 @@ div.csl-indent {
 </tr>
 </tbody>
 </table>
-<p>Calculation of the above indicators is in the following table</p>
-<table class="table">
-<colgroup>
-<col style="width: 26%">
-<col style="width: 37%">
-<col style="width: 36%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Accuracy Metric</th>
-<th>Formula</th>
-<th>Short Definition</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Producer’s Accuracy</td>
-<td><code>TP / (TP + FN)</code></td>
-<td>Correct classification proportion compared to ground truth.</td>
-</tr>
-<tr class="even">
-<td>User’s Accuracy</td>
-<td><code>TP / (TP + FP)</code></td>
-<td>Correct classification proportion out of all classified.</td>
-</tr>
-<tr class="odd">
-<td>Overall Accuracy</td>
-<td><code>(TP + TN) / (TP + FP + FN + TN)</code></td>
-<td>Proportion of all correctly classified pixels.</td>
-</tr>
-</tbody>
-</table>
 <p>On this basis the Kappa coefficient can be used to carry out an effective assessment of the performance of the classification model to ensure the reliability and accuracy of the classification results. The value of the Kappa coefficient ranges from -1 (complete inconsistency) to 1 (complete agreement). A value of 0 indicates that the consistency is the same as random chance, while a value close to 1 indicates very high consistency. It is calculated as (actual consistency - random consistency)/(1 - random consistency).</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
@@ -368,17 +341,14 @@ div.csl-indent {
 </section>
 <section id="application" class="level2" data-number="7.3">
 <h2 data-number="7.3" class="anchored" data-anchor-id="application"><span class="header-section-number">7.3</span> <strong>Application</strong></h2>
-<p>Object-based image analysis (OBIA) has been widely used in remote sensing applications.OBIA methods have been applied to improve the classification accuracy of high-resolution (HR) remote sensing images by taking into account the spatial relationships between segmented objects and incorporating a priori knowledge. For example, one study proposed a novel classification scheme for HR remote sensing images that uses a knowledge graph (KG) to preserve spatial relationships and improve classification accuracy<span class="citation" data-cites="gun2023">(<a href="#ref-gun2023" role="doc-biblioref">Gun and Chen 2023</a>)</span>. Another study evaluated a rule-based OBIA approach for landslide detection that combines probabilistic deep learning models with image segmentation and rule-based classification to improve accuracy<span class="citation" data-cites="ghorbanzadeh2023">(<a href="#ref-ghorbanzadeh2023" role="doc-biblioref">Ghorbanzadeh, Gholamnia, and Ghamisi 2023</a>)</span>. OBIA has also been used for quantitative remote sensing, such as the design and analysis of the Miniature Multispectral Earth Observation Imager for Nanosatellites (PMEO)<span class="citation" data-cites="kivastik2022">(<a href="#ref-kivastik2022" role="doc-biblioref">Kivastik et al. 2022</a>)</span>. In addition, OBIA has been integrated with a classifier integration strategy to improve land cover classification in complex urban areas using Very High Resolution (VHR) satellite data<span class="citation" data-cites="han2020">(<a href="#ref-han2020" role="doc-biblioref">Han et al. 2020</a>)</span>.</p>
-<p>F1 scores are used in various applications of remote sensing. The F1 score is used to evaluate the performance of different feature selection methods in object-oriented remote sensing image classification experiments.The Fisher Score-mRMR (Fm) method combines the Fisher Score and the Minimum Redundancy Maximum Relevance (mRMR) feature selection method to improve the efficiency and accuracy of remote sensing image classification<span class="citation" data-cites="lv2022">(<a href="#ref-lv2022" role="doc-biblioref">Lv et al. 2022</a>)</span>. In Through-the-Wall Radar Imaging (TWRI), the F1 score is used to evaluate the performance of the Compression Sensing (CS) algorithm. It is used to evaluate the algorithm’s ability to reconstruct images with correctly detected targets considering different levels of signal-to-noise ratio (SNR) and compression rate<span class="citation" data-cites="john2018">(<a href="#ref-john2018" role="doc-biblioref">John and Brad 2018</a>)</span>. In the context of urban data classification, F1 scores are used to assess the effectiveness of feature reduction techniques in improving the accuracy of urban structure classification<span class="citation" data-cites="zemmoudj2014">(<a href="#ref-zemmoudj2014" role="doc-biblioref">Zemmoudj, Kemmouche, and Chibani 2014</a>)</span>.</p>
-<p>Spatial cross-validation is an important technique in remote sensing classification. It helps to account for the presence of spatial autocorrelation in remotely sensed data and ensures unbiased estimation of prediction errors<span class="citation" data-cites="xudong2022">(<a href="#ref-xudong2022" role="doc-biblioref">Xudong et al. 2022</a>)</span>. Several studies have highlighted the importance of spatial cross-validation in accurately assessing classification performance. For example, Karasiak et al.&nbsp;demonstrated that spatial leave-one-out cross-validation provides unbiased estimates of prediction error and is consistent with the true quality of the resulting maps<span class="citation" data-cites="karasiak2022">(<a href="#ref-karasiak2022" role="doc-biblioref">Karasiak et al. 2022</a>)</span>. Similarly, Stock and Subramaniam proposed a method called iSLOOCV, which iterates and integrates a series of error estimates over a range of interval distances to account for spatial autocorrelation in ocean remote sensing data<span class="citation" data-cites="andy2022">(<a href="#ref-andy2022" role="doc-biblioref">Andy and Ajit 2022</a>)</span>. It was found that stratified statistics-based sampling methods that take into account spatial dependence produce higher classification accuracy compared to other sample selection methods<span class="citation" data-cites="routh2018">(<a href="#ref-routh2018" role="doc-biblioref">Routh et al. 2018</a>)</span>. These studies emphasise the importance of spatial cross-validation in accurately assessing classification performance and improving the reliability of remote sensing classification results.</p>
+<p>Object-based image analysis (OBIA) techniques have been widely used in remote sensing, especially in improving the accuracy of high-resolution (HR) remote sensing image classification. By considering the spatial relationship between segmented objects and integrating the a priori knowledge, the OBIA method not only improves the classification accuracy, but also enhances the recognition of complex surface features. For example, Gun and Chen <span class="citation" data-cites="gun2023">(<a href="#ref-gun2023" role="doc-biblioref">2023</a>)</span> proposed a novel classification scheme for HR remotely sensed images, which maintains spatial relationships and significantly improves classification accuracy by utilising a knowledge graph (KG). In addition, Ghorbanzadeh, Gholamnia, and Ghamisi <span class="citation" data-cites="ghorbanzadeh2023">(<a href="#ref-ghorbanzadeh2023" role="doc-biblioref">2023</a>)</span> evaluated a rule-based OBIA landslide detection method that combines a probabilistic deep learning model with image segmentation and rule-based classification to effectively improve the detection accuracy.</p>
+<p>The application of F1 score in remote sensing image analysis shows that it is an important tool for evaluating the performance of different feature selection methods in object-oriented remote sensing image classification experiments.The F1 score provides a balanced and reliable performance evaluation metric in remote sensing by combining precision and recall.Lv et al. <span class="citation" data-cites="lv2022">(<a href="#ref-lv2022" role="doc-biblioref">2022</a>)</span> provide a balanced and reliable performance evaluation metric in remote sensing by combining the Fisher Score and the minimum redundancy maximum relevance (mRMR) feature selection method, showing how the F1 score can be used to improve the efficiency and accuracy of remote sensing image classification. Meanwhile, in the Through-the-Wall Radar Imaging (TWRI) technique, the F1 score is used to evaluate the ability of compression-aware (CS) algorithms to reconstruct images at different signal-to-noise ratios (SNR) and compression rates, as studied by John and Brad<span class="citation" data-cites="john2018">(<a href="#ref-john2018" role="doc-biblioref">2018</a>)</span>.</p>
+<p>The importance of spatial cross-validation as an important technique in remote sensing data classification is that it provides an unbiased estimate of the prediction error and ensures the reliability of remote sensing data analysis. This approach pays special attention to the spatial autocorrelation of the data and ensures the generalisation ability of the classification model through spatial leave-one-out cross-validation or similar techniques.Karasiak et al. <span class="citation" data-cites="karasiak2022">(<a href="#ref-karasiak2022" role="doc-biblioref">2022</a>)</span> showed how spatial leave-one-out cross-validation can provide unbiased estimation of the prediction error and ensures the fidelity of the resultant maps. Similarly, Routh et al. <span class="citation" data-cites="routh2018">(<a href="#ref-routh2018" role="doc-biblioref">2018</a>)</span> showed through the iSLOOCV method how spatial autocorrelation can be taken into account in marine remote sensing data to improve classification accuracy through the integration of iterative error estimation over an interval range.</p>
 </section>
 <section id="reflection" class="level2" data-number="7.4">
 <h2 data-number="7.4" class="anchored" data-anchor-id="reflection"><span class="header-section-number">7.4</span> <strong>Reflection</strong></h2>
-<p>The remote sensing learning journey is always exciting, not only because of the complexity of the technology itself and its applications in solving real-world problems, but also because of the opportunities for growth and awareness it gives us as students. Over the past week, I have delved into advanced remote sensing techniques such as Object-Based Image Analysis (OBIA), subpixel analysis, and hyperpixel generation algorithms, and practiced accuracy assessment methods, which has given me a deeper understanding of the potential and challenges of remote sensing.</p>
-<p>Learning the OBIA technique was a special experience that emphasised the importance of objects in image analysis rather than just individual pixels. This approach changed the way I interpret remote sensing data and made me realise that viewing images as a collection of interconnected objects rather than just pixel dots can greatly improve the accuracy and efficiency of analysis. Through specific case studies, such as how to incorporate deep learning models for landslide detection, I gained a more intuitive understanding of innovative applications in this field.</p>
-<p>In particular, accuracy assessment through the use of random forest classifiers was extremely enlightening for me. Working with the data myself, tuning the model, and interpreting the confusion matrix all gave me a deep appreciation for the challenge and satisfaction of translating theoretical knowledge into practical application. It’s not just about running algorithms, it’s more about understanding the stories behind the data and how we can use these tools to reveal those stories.</p>
-<p>The section discussing spatial cross-validation made me realise the importance of considering spatial autocorrelation when working with remotely sensed data. This is essential to improve the ability to generalise models and ensure the reliability of assessment results. Through this concept, I learnt how to validate models more effectively to ensure that they perform well on unknown data, not just on data that I have already been exposed to.</p>
-<p>From this learning experience, I gained valuable knowledge and a deeper love for the remote sensing discipline. I began to understand data more fully, analyse problems in more detail, and explore new solutions with greater confidence. This process is not just about the mastery of techniques, but also about how these techniques can be applied in the real world to make a positive impact. I look forward to applying what I have learnt to future projects, not only to solve specific problems, but also to further explore the potential of remote sensing technology.</p>
+<p>The journey through remote sensing is exhilarating, merging complex technology with real-world applications and personal development. My recent deep dive into advanced techniques like Object-Based Image Analysis (OBIA), subpixel analysis, and hyperpixel algorithms, along with accuracy assessment practices, has profoundly expanded my understanding of remote sensing’s potential and challenges. The transformative learning of OBIA, which emphasizes the significance of object-oriented analysis over mere pixel examination, has revolutionized my approach to data interpretation, particularly through hands-on applications in areas like landslide detection with deep learning, thereby enriching my practical understanding of the field’s innovative frontiers.</p>
+<p>The hands-on engagement with accuracy assessment methodologies, especially through random forest classifiers, offered deep insights into the practical application of theoretical knowledge, emphasizing the storytelling aspect of data and the power of analytical tools to uncover it. Additionally, delving into spatial cross-validation illuminated the importance of acknowledging spatial autocorrelation to enhance the generalizability and reliability of models, a crucial step in ensuring their effectiveness on unseen data. This educational journey not only bolstered my knowledge and analytical prowess but also stoked a deeper passion for remote sensing, inspiring confidence to navigate new challenges and apply these techniques to make meaningful real-world impacts.</p>
 </section>
 </div>
 </section>
@@ -388,9 +358,6 @@ div.csl-indent {
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="list">
-<div id="ref-andy2022" class="csl-entry" role="listitem">
-Andy, Stock, and Subramaniam Ajit. 2022. <span>“Iterative Spatial Leave-One-Out Cross-Validation and Gap-Filling Based Data Augmentation for Supervised Learning Applications in Marine Remote Sensing.”</span> <a href="https://www.tandfonline.com/doi/full/10.1080/15481603.2022.2107113">https://www.tandfonline.com/doi/full/10.1080/15481603.2022.2107113</a>.
-</div>
 <div id="ref-csillik2017" class="csl-entry" role="listitem">
 Csillik, Ovidiu. 2017. <span>“Fast Segmentation and Classification of Very High Resolution Remote Sensing Data Using SLIC Superpixels.”</span> <em>Remote Sensing</em> 9 (March): 243. <a href="https://doi.org/10.3390/rs9030243">https://doi.org/10.3390/rs9030243</a>.
 </div>
@@ -400,17 +367,11 @@ Ghorbanzadeh, Omid, Khalil Gholamnia, and Pedram Ghamisi. 2023. <span>“The App
 <div id="ref-gun2023" class="csl-entry" role="listitem">
 Gun, Zhao, and Jianyu Chen. 2023. <span>“Novel Knowledge Graph- and Knowledge Reasoning-Based Classification Prototype for OBIA Using High Resolution Remote Sensing Imagery.”</span> <em>Remote Sensing</em> 15 (2): 321. <a href="https://doi.org/10.3390/rs15020321">https://doi.org/10.3390/rs15020321</a>.
 </div>
-<div id="ref-han2020" class="csl-entry" role="listitem">
-Han, Ruimei, Pei Liu, Guangyan Wang, Hanwei Zhang, and Xilong Wu. 2020. <span>“Advantage of Combining OBIA and Classifier Ensemble Method for Very High-Resolution Satellite Imagery Classification.”</span> <em>Journal of Sensors</em> 2020 (November): e8855509. <a href="https://doi.org/10.1155/2020/8855509">https://doi.org/10.1155/2020/8855509</a>.
-</div>
 <div id="ref-john2018" class="csl-entry" role="listitem">
 John, F. Silny, and A. Flanders Brad. 2018. <span>“Imaging Spectrometer f-Number Optimization for Remote Sensing of Gases.”</span> <a href="https://www.spiedigitallibrary.org/conference-proceedings-of-spie/10768/2323616/Imaging-spectrometer-F-number-optimization-for-remote-sensing-of-gases/10.1117/12.2323616.full#_=_">https://www.spiedigitallibrary.org/conference-proceedings-of-spie/10768/2323616/Imaging-spectrometer-F-number-optimization-for-remote-sensing-of-gases/10.1117/12.2323616.full#_=_</a>.
 </div>
 <div id="ref-karasiak2022" class="csl-entry" role="listitem">
 Karasiak, N., J.-F. Dejoux, C. Monteil, and D. Sheeren. 2022. <span>“Spatial Dependence Between Training and Test Sets: Another Pitfall of Classification Accuracy Assessment in Remote Sensing.”</span> <em>Machine Learning</em> 111 (7): 2715–40. <a href="https://doi.org/10.1007/s10994-021-05972-1">https://doi.org/10.1007/s10994-021-05972-1</a>.
-</div>
-<div id="ref-kivastik2022" class="csl-entry" role="listitem">
-Kivastik, Joosep, Hans Hubert Sams, Silvar Muru, Hendrik Ehrpais, Tõnis Eenmäe, Joel Kuusk, Andris Slavinskis, and Mihkel Pajusalu. 2022. <span>“Optical Design and Analysis of Theia: A Scientific-Grade Multispectral Imager for Nanosatellites.”</span> <em>IEEE Journal on Miniaturization for Air and Space Systems</em> 3 (4): 242–48. <a href="https://doi.org/10.1109/JMASS.2022.3210661">https://doi.org/10.1109/JMASS.2022.3210661</a>.
 </div>
 <div id="ref-lv2022" class="csl-entry" role="listitem">
 Lv, Chengzhe, Yuefeng Lu, Miao Lu, Xinyi Feng, Huadan Fan, Changqing Xu, and Lei Xu. 2022. <span>“A Classification Feature Optimization Method for Remote Sensing Imagery Based on Fisher Score and mRMR.”</span> <em>Applied Sciences</em> 12 (September): 8845. <a href="https://doi.org/10.3390/app12178845">https://doi.org/10.3390/app12178845</a>.
@@ -423,12 +384,6 @@ Priyankara, Prabath, Manjula Ranagalage, Dr Dissanayake, Takehiro Morimoto, and 
 </div>
 <div id="ref-routh2018" class="csl-entry" role="listitem">
 Routh, Devin, Lindsi Seegmiller, Charlie Bettigole, Catherine Kuhn, Chadwick Oliver, and Henry Glick. 2018. <span>“Improving the Reliability of Mixture Tuned Matched Filtering Remote Sensing Classification Results Using Supervised Learning Algorithms and Cross-Validation.”</span> <em>Remote Sensing</em> 10 (October): 1675. <a href="https://doi.org/10.3390/rs10111675">https://doi.org/10.3390/rs10111675</a>.
-</div>
-<div id="ref-xudong2022" class="csl-entry" role="listitem">
-Xudong, Zhao, Zhang Mengmeng, Ran Tao Ran, Li Wei, and Philips Wilfried. 2022. <span>“Cross-Domain Classification of Multisource Remote Sensing Data Using Fractional Fusion and Spatial-Spectral Domain Adaptation.”</span> <a href="https://ieeexplore.ieee.org/document/9829269">https://ieeexplore.ieee.org/document/9829269</a>.
-</div>
-<div id="ref-zemmoudj2014" class="csl-entry" role="listitem">
-Zemmoudj, Salah, Akila Kemmouche, and Youeef Chibani. 2014. <span>“2014 6th International Conference of Soft Computing and Pattern Recognition (SoCPaR).”</span> In, 371–75. <a href="https://doi.org/10.1109/SOCPAR.2014.7008035">https://doi.org/10.1109/SOCPAR.2014.7008035</a>.
 </div>
 </div>
 </section>
@@ -670,12 +625,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./Week_7.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Week_7</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Week_7 Classification I</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./references.html" class="pagination-link">
-        <span class="nav-page-text"><strong>Bibliography</strong></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./Week_9.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Week_9 SAR</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

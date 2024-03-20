@@ -25,19 +25,11 @@ knitr::include_graphics('Figure/Week_1/Passive_and_Active_RemoteSensing.png')
 Much of our learning knowledge focused on electromagnetic waves, the heart of remote sensing. These waves, a form of energy that propagates through electric and magnetic fields, are the backbone of how remote sensors collect data. Remote sensing is based on this principle to detect the reflection of electromagnetic waves by surface objects and their emission of electromagnetic waves, so as to extract information about these objects and complete the identification of objects at a distance.
 :::
 
-```{r  echo=FALSE, out.width='110%', fig.align='center', fig.cap='The Electromagnetic Spectrum, Source: <a href="https://iamchaitanya.wordpress.com/2015/07/12/the-electromagnetic-spectrum">Cssonawala</a>'}
-knitr::include_graphics('Figure/Week_1/electromagneticspectrum.jpeg')
-```
-
 ### Interactions with Earth's Surface
 
 ::: {style="text-align: justify;"}
 We have looked at the complexities of how electromagnetic radiation (EMR) interacts with the Earth's surface. EMR can be absorbed, transmitted or scattered by the surface and atmosphere. Scattering, in particular, explains phenomena such as the blue colour of the sky or the blackness of the lunar sky due to the absence of an atmosphere.
 :::
-
-```{r  echo=FALSE, out.width='110%', fig.align='center', fig.cap='Interaction of EMR with Earth’s Surface, Source: <a href="https://geographicbook.com/emr-interaction-with-atmosphere-and-earth-surface">Geographicbook</a>'}
-knitr::include_graphics('Figure/Week_1/EMR with Earth Surface.jpeg')
-```
 
 ### Synthetic Aperture Radar (SAR) and its Applications
 

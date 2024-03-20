@@ -1,5 +1,5 @@
 ---
-title: "Week_3"
+title: "Week_3 Corrections"
 ---
 
 ## **Knowledge From the Lecture**
@@ -70,39 +70,26 @@ An area may need more than one satellite image to be spliced, using mosaic in th
 #### Ratio
 
 ::: {style="text-align: justify;"}
-The ratio is the difference between two spectral bands with a specific spectral response, using CampTown's data for NDVI (The Normalised Difference Vegetation Index) The Normalised Difference Vegetation Index is based on the fact that healthy and green vegetation reflects more in the near infrared but absorbs in the red wavelengths. Therefore, the red wavelength band is used for the operation in the formula below.
+The ratio is the difference between two spectral bands with a specific spectral response, using CampTown's data for NDVI (The Normalised Difference Vegetation Index) The Normalised Difference Vegetation Index is based on the fact that healthy and green vegetation reflects more in the near infrared but absorbs in the red wavelengths. 
 
-$$
-NDVI = \frac{NIR - Red}{NIR + Red}
-$$
-
-The following figure shows the image after manipulation for NDVI (a. After NDVI Formula, b. Extraction only if NDVI is equal to or greater than 0.2)
-:::
-
-```{r  echo=FALSE, out.width='110%', fig.align='center', fig.cap='Process of Radiometric Calibration'}
-knitr::include_graphics('Figure/Week_3/NDVI.png')
-```
 This case above can be applied to other index calculations such as NDWI (Normalised Difference Water Index) and NDDI (Normalised Difference Drought Index). These are calculated using the reflectance of different objects in different light waves.
+:::
 
 #### Texture
 
 ::: {style="text-align: justify;"}
 The extraction method of texture features is relatively simple, it is to use an active window to slide continuously on the image, calculate the variance, mean, maximum, minimum and the difference between the two and the information entropy in the window, etc., respectively, to form the corresponding texture image, when the spectral characteristics of the target are relatively close to each other, the texture features can play a positive role in distinguishing the target. When the spectral characteristics of the target are close, the texture features can play a positive role in distinguishing the target. After selecting the appropriate dynamic range of the data and extracting the texture features, the texture features of the image can be highlighted, which is conducive to the extraction of constructive information.
-Below is an example of a texture treatment for the Cape Town area.
 :::
-
-```{r  echo=FALSE, out.width='110%', fig.align='center', fig.cap='After of Texture Process'}
-knitr::include_graphics('Figure/Week_3/Texture.png')
-```
 
 ## **Application**
 
 ::: {style="text-align: justify;"}
-Image correction is a critical step in remote sensing to ensure the accuracy and usability of data obtained from satellite or aerial imagery. Radiometric correction involves adjusting digital image data to correct for sensor noise, sensor response variations and atmospheric conditions. Various methods have been proposed for radiometric correction of remote sensing images. Duan[-@duan2014] proposed a radiation correction method that replaces artificial targets with standard ground objects, resulting in accurate and precise correction. Tarasenkov[-@tarasenkov2019] developed a program complex for atmospheric correction of satellite images that considers radiation polarization.
 
-Geometric correction corrects the image so that the proportions are uniform throughout the image. This correction is essential for accurate mapping and measurement tasks. Geometric correction is useful for removing spatial distortion, aligning images of the same sample, and stitching overlapping images together.[@yan2023]. Various methods and devices have been developed for geometric correction, including those based on orthographic images and homonymous point matching. These techniques improve the accuracy and stability of the geometric information in the corrected image[@özcihan2023b].
+Image correction is a key component of remote sensing technology, ensuring that the data we acquire from satellite or aerial imagery is both accurate and useful. As a student, I believe that understanding this process is critical to professional development. Radiometric correction is the first step, which adjusts image data to correct for errors due to sensor noise, response variations, or atmospheric conditions. For example, the method proposed by Duan[-@duan2014] utilises standard ground objects to achieve accurate correction without relying on artificial targets. On the other hand, the method developed by Tarasenkov[-@tarasenkov2019] enhances the accuracy of atmospheric correction by taking into account the effects of radiative polarisation.
 
-Atmospheric correction is necessary for various remote sensing applications to improve the accuracy and reliability of derived information. Different algorithms, such as 6S, FLAASH, DOS, LaSRC, and Sen2Cor, have been evaluated for their performance in atmospheric correction[@muchsin2023]. Atmospheric corrections are essential for a variety of applications such as aircraft navigation, astronomical observations and accurate estimation of cloud heights[@shah2022]. It ensures that satellite images provide reliable and accurate results by taking into account atmospheric disturbance[@jonah].
+Geometric correction, on the other hand, is another key technique that ensures consistent image scale, which is essential for accurate map production and measurement. This correction helps to remove spatial distortions, align images, and even stitch multiple images into a complete view. For example, Yan et al. [-@yan2023] emphasised its importance in accurate mapping, while Özciğan et al. [-@özcihan2023b] demonstrated advances based on orthogonal images and homonymous point matching techniques, which have greatly improved the geometric accuracy of images.
+
+Atmospheric correction is essential to ensure the accuracy and reliability of remote sensing applications by optimising the image data by correcting the effects of atmospheric disturbances. Various algorithms have been developed and evaluated to improve the performance of this correction process, such as 6S, FLAASH, DOS, etc. These techniques are not only critical for remote sensing analysis, but also have a wide range of applications in areas such as aircraft navigation and astronomical observation.
 
 Image enhancement technology aims to improve the quality and visual effect of remote sensing images. Various methods have been proposed to enhance these images, including histogram modification, transform domain methods, and hybrid approaches. Histogram modification methods focus on modifying the histogram of the input image to achieve a more uniform distribution, resulting in better contrast improvement. Transform domain methods apply specific transforms to enhance the image in the transform domain, leading to better edge enhancement and color preservation[@wang2023]. Hybrid methods, which combine histogram modification and transform domain methods, have shown higher potential in enhancing remote sensing images[@deng2023]. These enhancement techniques are crucial for image interpretation, improving image segmentation accuracy, and facilitating downstream tasks.
 :::

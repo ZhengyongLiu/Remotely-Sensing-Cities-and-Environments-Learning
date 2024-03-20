@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>CASA0023 Remote sensing learning Diary - 2&nbsp; Week_2 Presentation of Snetinel-5p</title>
+<title>CASA0023 Remote sensing learning Diary - 8&nbsp; Week_9 SAR</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,7 +20,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -30,8 +49,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./Week_3.html" rel="next">
-<link href="./Week_1.html" rel="prev">
+<link href="./references.html" rel="next">
+<link href="./Week_8.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -61,7 +80,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script src="site_libs/fitvids-2.1.1/fitvids.min.js"></script>
 
 
 </head>
@@ -75,7 +93,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Week_2.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week_2 Presentation of Snetinel-5p</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Week_9.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Week_9 SAR</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -114,7 +132,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Week_2.html" class="sidebar-item-text sidebar-link active">
+  <a href="./Week_2.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week_2 Presentation of Snetinel-5p</span></span></a>
   </div>
 </li>
@@ -150,7 +168,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Week_9.html" class="sidebar-item-text sidebar-link">
+  <a href="./Week_9.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Week_9 SAR</span></span></a>
   </div>
 </li>
@@ -166,14 +184,21 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#knowledge-from-the-lecture" id="toc-knowledge-from-the-lecture" class="nav-link active" data-scroll-target="#knowledge-from-the-lecture"><span class="header-section-number">8.1</span> <strong>Knowledge From the Lecture</strong></a></li>
+  <li><a href="#reference" id="toc-reference" class="nav-link" data-scroll-target="#reference"><span class="header-section-number">8.4</span> <strong>Reference</strong></a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week_2 Presentation of Snetinel-5p</span></h1>
+<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Week_9 SAR</span></h1>
 </div>
 
 
@@ -188,16 +213,59 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<div class="cell">
+<section id="knowledge-from-the-lecture" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="knowledge-from-the-lecture"><span class="header-section-number">8.1</span> <strong>Knowledge From the Lecture</strong></h2>
+<div style="text-align: justify;">
+<p>As the basic part of SAR was covered in the first week, this diary is going to cover the details of SAR.</p>
+<section id="sar-data" class="level3" data-number="8.1.1">
+<h3 data-number="8.1.1" class="anchored" data-anchor-id="sar-data"><span class="header-section-number">8.1.1</span> SAR Data</h3>
+<p>SAR data are usually available in three scales: the power scale (raw data) is suitable for statistical analysis but not for visualisation because bright areas are easily affected and not easily distinguishable; the amplitude scale improves visualisation by taking the square root of the power scale value but reduces the dynamic range; and the decibel (dB) scale emphasises the differences in dark pixels (e.g., bodies of water) but can lead to over-brightening of the image and is not suitable for statistical analysis. In selecting an appropriate scale for SAR data processing, consideration needs to be given to the detection target (e.g., surface roughness or volume of material), the purpose of data processing (analysis or visualisation), and the type of surface being observed (e.g., extent of water).</p>
+</section>
+<section id="identifying-change" class="level3" data-number="8.1.2">
+<h3 data-number="8.1.2" class="anchored" data-anchor-id="identifying-change"><span class="header-section-number">8.1.2</span> Identifying Change</h3>
+<p>While direct subtraction of SAR images is not recommended for change detection due to the high variance in bright regions and sensitivity to calibration errors, alternative methods such as ratio and log-ratio techniques may be more effective. Improved methods such as improved ratios and improved log ratios can better distinguish changing pixels by normalising the variance, which makes them more robust to the challenges inherent in SAR change detection.</p>
+</section>
+<section id="methods-and-evaluation-of-image-change-detection" class="level3" data-number="8.1.3">
+<h3 data-number="8.1.3" class="anchored" data-anchor-id="methods-and-evaluation-of-image-change-detection"><span class="header-section-number">8.1.3</span> Methods and Evaluation of Image Change Detection</h3>
+<p>When performing change detection in SAR images, traditional statistical methods such as t-tests may be challenged by the distributional characteristics of the data, especially when the data do not follow a normal distribution. Nevertheless, changes in a collection of images can be effectively identified by varying the evaluation method and applying algorithms designed specifically for SAR imagery, such as the continuous change detection algorithm proposed by Canty.The ROC curve is an important tool for evaluating the performance of different change detection methods, especially in terms of their ability to identify true changes (true positives) versus mislabelled changes (false positives). Historically, this concept was used to differentiate between aircraft and noise (e.g.&nbsp;clouds) in radar signals.The ROC curve can be used to vary the true positive rate by changing the threshold of the classifier to optimise the accuracy of the model predictions. The goal is to maximise true positives (correctly identified aircraft) whilst minimising false positives (incorrectly identified clouds).</p>
+</section>
+<section id="practical" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="practical"><span class="header-section-number">8.2</span> <strong>Practical</strong></h2>
+</section>
+<section id="application" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="application"><span class="header-section-number">8.3</span> <strong>Application</strong></h2>
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="shareagain" style="min-width:300px;margin:1em auto;" data-exeternal="1">
-<iframe src="https://zhengyongliu.github.io/Sentinel-5P_Presentation/Sentinel-5P.html#1" width="1600" height="900" style="border:2px solid currentColor;" loading="lazy" allowfullscreen=""></iframe>
-<script>fitvids('.shareagain', {players: 'iframe'});</script>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Figure/Week_9/Applications.jpeg" class="img-fluid figure-img" style="width:110.0%"></p>
+<figcaption class="figure-caption">Disaster Monitoring Solutions, Source: <a href="https://www.nec.com/en/global/solutions/space/remote_sensing/index.html"><span class="citation" data-cites="NEC">(</span></a><a href="#ref-NEC" role="doc-biblioref"><strong>NEC?</strong></a>)</figcaption>
+</figure>
 </div>
 </div>
 </div>
+<p>SAR technology is extremely widely used in the field of agriculture, which provides strong technical support for crop identification and classification by taking advantage of the unique representation of the canopy structure, geometric properties and dielectric properties of different crops in SAR images. This technique can reveal the subtle changes of crops in different growth stages, which is of great significance for precise agricultural management and optimisation of agricultural production. The accuracy of crop classification can be significantly improved by the combined use of SAR data, optical remote sensing data and ground monitoring data<span class="citation" data-cites="dave2023">(<a href="#ref-dave2023" role="doc-biblioref">Dave et al. 2023</a>)</span>, For example, the backscattering characteristics of SAR data can be used to accurately distinguish rice under different growing conditions, which provides a scientific basis for crop planting planning and seasonal management.</p>
+<p>SAR data has also demonstrated its unique advantages in monitoring crop development. It can provide detailed information on important agricultural parameters such as biomass, plant height and density, which are essential for assessing crop growth, predicting yields and planning harvests<span class="citation" data-cites="aloshree">(<a href="#ref-aloshree" role="doc-biblioref">Aloshree, Vazeer, and K. H. V. Durga, n.d.</a>)</span>.In addition, SAR techniques are very effective in assessing soil moisture and vegetation water content, which are important applications for developing irrigation strategies, monitoring drought conditions and improving crop water management.</p>
+<p>In land cover change monitoring and feature classification, the use of multi-frequency, multi-polarisation SAR data allows for the preservation of geometric features of features in combination with spectral features, texture information and polarisation attributes, which reduces noise interference to a certain extent and improves the accuracy of feature classification<span class="citation" data-cites="huang2023">(<a href="#ref-huang2023" role="doc-biblioref">Huang et al. 2023</a>)</span>.The use of multi-temporal SAR data allows for the acquisition of more detailed and accurate information on land cover change, which is of great contribution to environmental monitoring, resource management and sustainable development planning. In the field of geological exploration, SAR technology has demonstrated its unique advantages in wide-area and high-precision detection. It can effectively analyse geomorphological features, tectonic phenomena and lithology of rock bodies, which is of great value for geological disaster prevention, resource exploration and environmental assessment, etc. SAR data are particularly suitable for extracting fracture information, analysing regional tectonics, and researching topography and geomorphology, thus providing high-precision data support for geological research and resource development.</p>
+</section>
+</div>
+</section>
+<section id="reference" class="level2" data-number="8.4">
+<h2 data-number="8.4" class="anchored" data-anchor-id="reference"><span class="header-section-number">8.4</span> <strong>Reference</strong></h2>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-aloshree" class="csl-entry" role="listitem">
+Aloshree, Choudhury, Mahammood Vazeer, and Rao K. H. V. Durga. n.d. <span>“Rice Mapping and Various Stages of Rice Growth Using Sentinel-1 SAR Data-a Case Study of Mahabubnagar District, Telangana.”</span> <a href="https://www.ijrte.org/portfolio-item/c72590911322/">https://www.ijrte.org/portfolio-item/c72590911322/</a>.
+</div>
+<div id="ref-dave2023" class="csl-entry" role="listitem">
+Dave, Rucha B., Koushik Saha, Amit Kushwaha, Manisha Vithalpura, Nidhin P, and Abishek Murugesan. 2023. <span>“Analysing the Potential of Polarimetric Decomposition Parameters of Sentinel<span></span>1 Dual-Pol SAR Data for Estimation of Rice Crop Biophysical Parameters.”</span> <em>Journal of Agrometeorology</em> 25 (1): 105–12. <a href="https://doi.org/10.54386/jam.v25i1.2039">https://doi.org/10.54386/jam.v25i1.2039</a>.
+</div>
+<div id="ref-huang2023" class="csl-entry" role="listitem">
+Huang, Yabo, Mengmeng Meng, Zhuoyan Hou, Lin Wu, Zhengwei Guo, Xiajiong Shen, Wenkui Zheng, and Ning Li. 2023. <span>“Land Cover Classification of SAR Based on 1DCNN-MRF Model Using Improved Dual-Polarization Radar Vegetation Index.”</span> <em>Remote Sensing</em> 15 (13): 3221. <a href="https://doi.org/10.3390/rs15133221">https://doi.org/10.3390/rs15133221</a>.
+</div>
+</div>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -435,13 +503,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./Week_1.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Week_1 Intro to Remote Sensing</span></span>
+      <a href="./Week_8.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Week_8 Classification II</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./Week_3.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week_3 Corrections</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./references.html" class="pagination-link">
+        <span class="nav-page-text"><strong>Bibliography</strong></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

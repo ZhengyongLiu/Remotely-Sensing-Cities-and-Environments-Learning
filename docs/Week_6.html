@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>CASA0023 Remote sensing learning Diary - 5&nbsp; Week_6</title>
+<title>CASA0023 Remote sensing learning Diary - 5&nbsp; Week_6 Intro to GEE</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -93,7 +93,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Week_6.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Week_6</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Week_6.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Week_6 Intro to GEE</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -127,43 +127,49 @@ div.csl-indent {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Week_1.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Week_1 Intro To Remote Sensing</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Week_1 Intro to Remote Sensing</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Week_2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week_2</span></span></a>
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Week_2 Presentation of Snetinel-5p</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Week_3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week_3</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Week_3 Corrections</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Week_4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Week_4</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Week_4 Flooding Issues In Dublin</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Week_6.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Week_6</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Week_6 Intro to GEE</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Week_7.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Week_7</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Week_7 Classification I</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Week_8.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Week_8</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Week_8 Classification II</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Week_9.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Week_9 SAR</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -192,7 +198,7 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Week_6</span></h1>
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Week_6 Intro to GEE</span></h1>
 </div>
 
 
@@ -254,12 +260,9 @@ div.csl-indent {
 <h3 data-number="5.1.6" class="anchored" data-anchor-id="reduce-the-image-in-gee"><span class="header-section-number">5.1.6</span> Reduce the Image in GEE</h3>
 <p>Reducing the image by region and reducing the image by neighbour are both functions that are used to regionalise or neighbourhoodise an image. The main difference between them is:</p>
 <ol type="1">
-<li><p>Reducing the image by region operates on the image according to a specified region. Each region can be any shape and can overlap. The function performs the specified computation on all pixels within each region and returns a new image containing the statistics of the region.</p></li>
-<li><p>Reducing the image by neighbour is to operate on the image according to the specified neighbourhood. The neighbourhood of each pixel is the pixels within a certain range around it. This function performs the specified computation on each pixel and all pixels within its neighbourhood, and returns an image containing the pixel’s new value.</p></li>
+<li><p>Reducing the image by region operates on the image according to a specified region. Each region can be any shape and can overlap.</p></li>
+<li><p>Reducing the image by neighbour is to operate on the image according to the specified neighbourhood. The neighbourhood of each pixel is the pixels within a certain range around it.</p></li>
 </ol>
-</section>
-<section id="linear-regression-join-in-gee-暂时写不出来" class="level3" data-number="5.1.7">
-<h3 data-number="5.1.7" class="anchored" data-anchor-id="linear-regression-join-in-gee-暂时写不出来"><span class="header-section-number">5.1.7</span> Linear Regression &amp; Join in GEE (暂时写不出来)</h3>
 </section>
 <section id="practical" class="level2" data-number="5.2">
 <h2 data-number="5.2" class="anchored" data-anchor-id="practical"><span class="header-section-number">5.2</span> <strong>Practical</strong></h2>
@@ -267,7 +270,7 @@ div.csl-indent {
 <h3 data-number="5.2.1" class="anchored" data-anchor-id="compare-with-rgb-ndvi"><span class="header-section-number">5.2.1</span> Compare with RGB &amp; NDVI</h3>
 <div class="cell">
 <div class="cell-output-display">
-<iframe style="height:600px; width:100%" src="https://ee-liulzy1999.projects.earthengine.app/view/rgb--ndvi-roller-shutter"></iframe>
+<iframe style="height:400px; width:100%" src="https://ee-liulzy1999.projects.earthengine.app/view/rgb--ndvi-roller-shutter"></iframe>
 </div>
 </div>
 <p><a href="https://ee-liulzy1999.projects.earthengine.app/view/rgb--ndvi-roller-shutter">Compare with RGB &amp; NDVI</a> Slide the slider to see the changes in RGB and NDVI.</p>
@@ -289,61 +292,18 @@ div.csl-indent {
 </section>
 <section id="applications" class="level2" data-number="5.3">
 <h2 data-number="5.3" class="anchored" data-anchor-id="applications"><span class="header-section-number">5.3</span> <strong>Applications</strong></h2>
-<section id="general-applications" class="level3" data-number="5.3.1">
-<h3 data-number="5.3.1" class="anchored" data-anchor-id="general-applications"><span class="header-section-number">5.3.1</span> General Applications</h3>
-<p>GEE has been the focus of attention in remote sensing big data processing.GEE is a cloud-based platform for parallel processing of geospatial data globally using Google’s cloud.GEE is a free cloud-based platform hosting more than 40 years of petabyte-sized remote sensing data, such as Landsat, MODIS, National Oceanic and Atmospheric Administration’s Advanced Ultra-High Resolution Radiometer (NOAA AVHRR), Sentinel 1, 2, 3, and 5-P; and Advanced Land Observing Satellite (ALOS) data<span class="citation" data-cites="aghamiri">(<a href="#ref-aghamiri" role="doc-biblioref">Aghamiri et al., n.d.</a>)</span>. GEE also includes climate-weather and geophysical datasets. Other off-the-shelf products such as the Enhanced Vegetation Index (EVI) and the Normalised Vegetation Index (NDVI) are also available. In addition to having access to a large repository of raw remote sensing imagery, users can access pre-processed imagery, cloud removal imagery and mosaics in the GEE data catalogue<span class="citation" data-cites="ritika">(<a href="#ref-ritika" role="doc-biblioref">Ritika, n.d.</a>)</span>.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="Figure/Week_6/A summary of the algorithms and capabilities available in code editor-Google Earth Engine.png" class="img-fluid figure-img" style="width:110.0%"></p>
-<figcaption class="figure-caption">A summary of the algorithms and capabilities available in code editor-Google Earth Engine, Author: <a href="https://www.researchgate.net/publication/341228837_Google_Earth_Engine_for_geo-big_data_applications_A_meta-analysis_and_systematic_review"><span class="citation" data-cites="tamiminia2020">(</span></a><a href="#ref-tamiminia2020" role="doc-biblioref">Tamiminia et al. 2020</a>)</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<p>Here are some applications of GEE in practice.</p>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="Figure/Week_6/GEE in Different Applications.png" class="img-fluid figure-img" style="width:110.0%"></p>
-<figcaption class="figure-caption">GEE in Different Applications, Author: <a href="https://www.researchgate.net/publication/341228837_Google_Earth_Engine_for_geo-big_data_applications_A_meta-analysis_and_systematic_review"><span class="citation" data-cites="tamiminia2020">(</span></a><a href="#ref-tamiminia2020" role="doc-biblioref">Tamiminia et al. 2020</a>)</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="gee-and-data-types" class="level3" data-number="5.3.2">
-<h3 data-number="5.3.2" class="anchored" data-anchor-id="gee-and-data-types"><span class="header-section-number">5.3.2</span> GEE and data types</h3>
-<p>Much of the academic use of GEE has been optical, thanks in large part to the 40-year free archive of Landsat imagery, and optical remote sensing data is still the most commonly used data source.The GEE data catalogue provides optical satellite imagery from 1972 to the present day, allowing researchers to conduct Earth monitoring studies<span class="citation" data-cites="pham-duc2023">(<a href="#ref-pham-duc2023" role="doc-biblioref">Pham-Duc et al. 2023</a>)</span>. In addition, the wide range of applications by GEE users shows that optical images are easier to process and interpret for non-remote sensing experts. This is one of the reasons why GEE has a global reach in a wide range of scientific fields. At the same time, the combination of SAR and optical satellite data can help researchers to solve problems such as cloud cover. Especially in the tropics, the efficacy of optical images can be greatly affected due to continuous cloud cover and situations such as forest fires. Therefore, combining optical and SAR data can improve the accuracy of classification and provide more information to monitor surface changes.<span class="citation" data-cites="lea2023">(<a href="#ref-lea2023" role="doc-biblioref">Lea et al. 2023</a>)</span>.</p>
-</section>
-<section id="gee-and-sensor-type" class="level3" data-number="5.3.3">
-<h3 data-number="5.3.3" class="anchored" data-anchor-id="gee-and-sensor-type"><span class="header-section-number">5.3.3</span> GEE and sensor type</h3>
+<p>GEE has been the focus of attention in remote sensing big data processing.GEE is a cloud-based platform for parallel processing of geospatial data globally using Google’s cloud.GEE is a free cloud-based platform hosting more than 40 years of data<span class="citation" data-cites="aghamiri">(<a href="#ref-aghamiri" role="doc-biblioref">Aghamiri et al., n.d.</a>)</span>. GEE also includes climate-weather and geophysical datasets. Other off-the-shelf products such as the Enhanced Vegetation Index (EVI) and the Normalised Vegetation Index (NDVI) are also available. In addition to having access to a large repository of raw remote sensing imagery, users can access pre-processed imagery, cloud removal imagery and mosaics in the GEE data catalogue<span class="citation" data-cites="ritika">(<a href="#ref-ritika" role="doc-biblioref">Ritika, n.d.</a>)</span>.</p>
+<p>The wide range of applications by GEE users shows that optical images are easier to process and interpret for non-remote sensing experts. This is one of the reasons why GEE has a global reach in a wide range of scientific fields. At the same time, the combination of SAR and optical satellite data can help researchers to solve problems such as cloud cover. Especially in the tropics, the efficacy of optical images can be greatly affected due to continuous cloud cover and situations such as forest fires. Therefore, combining optical and SAR data can improve the accuracy of classification and provide more information to monitor surface changes.<span class="citation" data-cites="lea2023">(<a href="#ref-lea2023" role="doc-biblioref">Lea et al. 2023</a>)</span>.</p>
 <p>Landsat is considered an important source of remote sensing data in the GEE, as it provides a continuous image of the Earth’s surface.The Landsat 9 satellite will be launched in 2020 with the aim of continuing the Landsat programme’s key role in monitoring the Earth’s resources. Long-term land cover change studies can be carried out on a regional and global scale<span class="citation" data-cites="pham-duc2023">(<a href="#ref-pham-duc2023" role="doc-biblioref">Pham-Duc et al. 2023</a>)</span>.</p>
-<p>Sentinel-1 is another popular source of satellite imagery and has achieved very accurate classification results.Sentinel-1 consists of two satellites, Sentinel-1A and Sentinel 1-B, which were launched in 2014 and 2016, respectively, with a spatial resolution of 10 m and a revisit time of 6 days<span class="citation" data-cites="ariascuenca2023">(<a href="#ref-ariascuenca2023" role="doc-biblioref">Arias Cuenca 2023</a>)</span>. It is equipped with a dual-polarised C-band SAR sensor that provides data in all-weather, day and night conditions.The Sentinel-2 mission consists of a constellation of two satellites, Sentinel-2A (launched in 2015) and Sentinel-2B (launched in 2017), which provide spatially resolved 10 m, 20 m and 60 m optical images, and temporal resolution of about 5 days<span class="citation" data-cites="xu2022 lechner2022">(<a href="#ref-xu2022" role="doc-biblioref">Xu, Heremans, and Somers 2022</a>; <a href="#ref-lechner2022" role="doc-biblioref">Lechner et al. 2022</a>)</span>.</p>
-<p>The Moderate Resolution Imaging Spectroradiometer (MODIS) was launched on the Terra satellite in 1999 and on the Aqua satellite in 2002. Researchers can access MODIS data in GEE in 36 spectral bands and at three varying spatial resolutions (250 m, 500 m, and 1 km) at 1-day revisit times. Even though MODIS has a low spatial resolution, its high temporal resolution allows researchers to monitor short- and long-term global environmental change (dynamics)<span class="citation" data-cites="wu2020">(<a href="#ref-wu2020" role="doc-biblioref">Wu and Xiong 2020</a>)</span>.</p>
-</section>
-<section id="remote-sensing-data-analysis" class="level3" data-number="5.3.4">
-<h3 data-number="5.3.4" class="anchored" data-anchor-id="remote-sensing-data-analysis"><span class="header-section-number">5.3.4</span> Remote sensing data analysis</h3>
-<section id="machine-learning-techniques" class="level4" data-number="5.3.4.1">
-<h4 data-number="5.3.4.1" class="anchored" data-anchor-id="machine-learning-techniques"><span class="header-section-number">5.3.4.1</span> Machine learning techniques</h4>
-<p>Machine learning is a subset of artificial intelligence that deals with the design of algorithms to train models to make decisions or predictions. Machine learning methods can be divided into two broad categories: parametric and non-parametric. Parametric machine learning algorithms use a fixed number of parameters or assumptions. Machine learning methods have been effectively used for remote sensing data processing. Classification, clustering, regression and dimensionality reduction are the four main categories of analysis for machine learning algorithms<span class="citation" data-cites="shaveta2023">(<a href="#ref-shaveta2023" role="doc-biblioref">Shaveta 2023</a>)</span>. Regression is a supervised machine learning method designed to estimate or predict output variables based on a set of covariates. Another positive aspect of linear regression is its fast computational speed, which is an important factor in geographic big data analysis<span class="citation" data-cites="googlee">(<a href="#ref-googlee" role="doc-biblioref"><span>“Google Earth Engine and Machine Learning for Earth Monitoring,”</span> n.d.</a>)</span>. Also the MLR model deals with the non-linear relationship between the dependent and independent variables in the prediction process.</p>
-</section>
-<section id="other-gee-image-processing-functions" class="level4" data-number="5.3.4.2">
-<h4 data-number="5.3.4.2" class="anchored" data-anchor-id="other-gee-image-processing-functions"><span class="header-section-number">5.3.4.2</span> Other GEE image processing functions</h4>
+<p>Sentinel-1 is another popular source of satellite imagery and has achieved very accurate classification results.Sentinel-1 consists of two satellites, Sentinel-1A and Sentinel 1-B, which were launched in 2014 and 2016, respectively, with a spatial resolution of 10 m and a revisit time of 6 days<span class="citation" data-cites="ariascuenca2023">(<a href="#ref-ariascuenca2023" role="doc-biblioref">Arias Cuenca 2023</a>)</span>. It is equipped with a dual-polarised C-band SAR sensor that provides data in all-weather, day and night conditions. Sentinel-2A (launched in 2015) and Sentinel-2B (launched in 2017), which provide spatially resolved 10 m, 20 m and 60 m optical images, and temporal resolution of about 5 days<span class="citation" data-cites="xu2022 lechner2022">(<a href="#ref-xu2022" role="doc-biblioref">Xu, Heremans, and Somers 2022</a>; <a href="#ref-lechner2022" role="doc-biblioref">Lechner et al. 2022</a>)</span>.</p>
+<p>The Moderate Resolution Imaging Spectroradiometer (MODIS) was launched on the Terra satellite in 1999 and on the Aqua satellite in 2002. Researchers can access MODIS data in GEE in 36 spectral bands and at three varying spatial resolutions (250 m, 500 m, and 1 km) at 1-day revisit times<span class="citation" data-cites="wu2020">(<a href="#ref-wu2020" role="doc-biblioref">Wu and Xiong 2020</a>)</span>.</p>
 <p>GEE provides a wide range of image processing tools suitable for the analysis of remotely sensed data. These tools cover time series analysis, feature extraction, colour compositing of images and image preprocessing, mainly for satellite images, rather than machine learning-based methods<span class="citation" data-cites="googlee">(<a href="#ref-googlee" role="doc-biblioref"><span>“Google Earth Engine and Machine Learning for Earth Monitoring,”</span> n.d.</a>)</span>. With the rapid changes in the Earth’s surface, time-series analysis of satellite imagery has become critical, helping to track trends, monitor changes and develop predictive models.GEE has been used for such analyses in a number of studies because of its ability to handle high resolution or large amounts of data, and is particularly good at monitoring changes in the land surface. Feature extraction techniques, by analysing spectral and geometric attributes of images, help to identify regional relationships in images, which is critical for resource conservation and information retention<span class="citation" data-cites="pham-duc2023">(<a href="#ref-pham-duc2023" role="doc-biblioref">Pham-Duc et al. 2023</a>)</span>. In addition, GEE’s visual interpretation tools are widely used in land monitoring studies to extract key information from colour composite images. In addition, GEE’s image pre-processing capabilities support image mosaicing, cloud processing and error detection, and although cloud coverage is a major challenge when working with optical data, GEE provides effective tools and algorithms to support these tasks<span class="citation" data-cites="lea2023">(<a href="#ref-lea2023" role="doc-biblioref">Lea et al. 2023</a>)</span>.</p>
-<p>On the algorithmic side, there are challenges in implementing new algorithms, especially deep learning models. Although GEE has recently established a connection to TensorFlow, enabling users to interact with models stored on the Google AI platform, it does not directly support deep learning classifiers. Most research has used pixel-based classification methods and there is a need for better support for complex unsupervised classification algorithms as well as improvements in object-based image analysis, heavy vector manipulation, and the availability of high-resolution satellite imagery<span class="citation" data-cites="nia">(<a href="#ref-nia" role="doc-biblioref">Nia et al., n.d.</a>)</span>.</p>
-</section>
-</section>
 </section>
 <section id="reflection" class="level2" data-number="5.4">
 <h2 data-number="5.4" class="anchored" data-anchor-id="reflection"><span class="header-section-number">5.4</span> <strong>Reflection</strong></h2>
-<p>Reflecting on the comprehensive insights gained from the past week’s deep dive into Google Earth Engine (GEE), my intellectual journey through the realm of remote sensing has been both illuminating and transformative. The exploration extended beyond the fundamental technicalities of GEE’s raster and vector data handling; it ventured into the practical applications and profound implications of this powerful tool in understanding and interacting with our planet.</p>
-<p>The nuanced understanding of image reduction techniques—distinguishing between region-based and neighbor-based reductions—was particularly revelatory. It highlighted GEE’s nuanced capacity to distill vast amounts of geospatial data into actionable insights. This aspect of GEE not only enhances its analytical precision but also expands its utility across various research and operational contexts, enabling a more targeted and efficient analysis of environmental phenomena.</p>
-<p>The enlightening exploration of GEE’s vast capabilities has significantly broadened my perspective, revealing the interdisciplinary potential of remote sensing technology. It’s fascinating to see how the integration of various data types—from climate variables to topographical features—can offer a more comprehensive understanding of environmental dynamics. This integrative approach not only enhances the accuracy of environmental assessments but also fosters a more holistic understanding of our planet’s intricate systems.</p>
-<p>The reflective journey through this week has been a blend of learning, discovery, and inspiration. It has fortified my appreciation for the critical role of remote sensing in environmental science and its potential to inform and inspire sustainable interventions. The insights gained are not merely academic; they resonate with the pressing need for innovative solutions to global environmental challenges. As I look forward to the continuation of this academic journey, I am motivated by the potential to contribute meaningfully to our collective understanding and stewardship of the Earth, leveraging the powerful capabilities of GEE to illuminate the path toward a sustainable future.</p>
-<p>This experiential learning has not only enriched my technical proficiency but also deepened my commitment to leveraging technology in pursuit of environmental sustainability. The profound capabilities of GEE—to process, analyze, and visualize complex geospatial datasets—offer a compelling glimpse into the future of environmental monitoring and analysis. Embracing this technology’s potential can revolutionize our approach to confronting and mitigating the pressing environmental challenges of our time.</p>
+<p>Reflecting on the past week’s immersion in Google Earth Engine (GEE), I’ve traversed a transformative path in remote sensing, gaining invaluable insights into both the tool’s technical nuances and its broad environmental applications. My exploration delved into GEE’s adept handling of geospatial data, particularly the enlightening nuances of image reduction techniques. Understanding the distinctions between region-based and neighbor-based reductions was a revelation, showcasing GEE’s ability to transform complex data into insightful, actionable knowledge.</p>
+<p>This intellectual journey illuminated the vast interdisciplinary potential of remote sensing, emphasizing how integrating diverse data types can lead to a more nuanced understanding of our planet’s environmental systems. Such comprehensive analysis not only improves environmental evaluations but also contributes to a holistic grasp of Earth’s complexities, underpinning sustainable solutions to ecological challenges.</p>
+<p>The week was a fusion of learning, discovery, and enhanced appreciation for remote sensing’s pivotal role in environmental science. It reinforced my resolve to utilize technology for sustainable environmental stewardship, recognizing GEE’s profound capabilities to analyze and visualize intricate geospatial datasets. This experience has deepened my commitment to using innovative tools like GEE for advanced environmental monitoring, highlighting the importance of technological engagement in addressing today’s ecological issues.</p>
 </section>
 </div>
 </section>
@@ -367,20 +327,11 @@ Lea, James, Robert Fitt, Stephen Brough, Georgia Carr, Jonathan Dick, Natasha Jo
 <div id="ref-lechner2022" class="csl-entry" role="listitem">
 Lechner, Michael, Alena Dostálová, Markus Hollaus, Clement Atzberger, and Markus Immitzer. 2022. <span>“Combination of Sentinel-1 and Sentinel-2 Data for Tree Species Classification in a Central European Biosphere Reserve.”</span> <em>Remote Sensing</em> 14 (11): 2687. <a href="https://doi.org/10.3390/rs14112687">https://doi.org/10.3390/rs14112687</a>.
 </div>
-<div id="ref-nia" class="csl-entry" role="listitem">
-Nia, Vahid Partovi, Guojun Zhang, Ivan Kobyzev, Michael R. Metel, Xinlin Li, Ke Sun, Sobhan Hemati, et al. n.d. <span>“Mathematical Challenges in Deep Learning.”</span> <a href="https://doi.org/10.48550/arXiv.2303.15464">https://doi.org/10.48550/arXiv.2303.15464</a>.
-</div>
 <div id="ref-pham-duc2023" class="csl-entry" role="listitem">
 Pham-Duc, Binh, Ho Nguyen, Hien Phan, and Quan Tran-Anh. 2023. <span>“Trends and Applications of Google Earth Engine in Remote Sensing and Earth Science Research: A Bibliometric Analysis Using Scopus Database.”</span> <em>Earth Science Informatics</em> 16 (3): 2355–71. <a href="https://doi.org/10.1007/s12145-023-01035-2">https://doi.org/10.1007/s12145-023-01035-2</a>.
 </div>
 <div id="ref-ritika" class="csl-entry" role="listitem">
 Ritika, Prasai. n.d. <span>“Earth Engine Application to Retrieve Long-Term Terrestrial and Aquatic Time Series of Satellite Reflectance Data.”</span> <em>International Journal of Multidisciplinary Research and Growth Evaluation</em>.
-</div>
-<div id="ref-shaveta2023" class="csl-entry" role="listitem">
-Shaveta. 2023. <span>“A Review on Machine Learning.”</span> <em>International Journal of Science and Research Archive</em> 9 (1): 281–85. <a href="https://doi.org/10.30574/ijsra.2023.9.1.0410">https://doi.org/10.30574/ijsra.2023.9.1.0410</a>.
-</div>
-<div id="ref-tamiminia2020" class="csl-entry" role="listitem">
-Tamiminia, Haifa, Bahram Salehi, Masoud Mahdianpari, Lindi Quackenbush, Sarina Adeli, and B. Brisco. 2020. <span>“Google Earth Engine for Geo-Big Data Applications: A Meta-Analysis and Systematic Review.”</span> <em>ISPRS Journal of Photogrammetry and Remote Sensing</em>, May. <a href="https://doi.org/10.1016/j.isprsjprs.2020.04.001">https://doi.org/10.1016/j.isprsjprs.2020.04.001</a>.
 </div>
 <div id="ref-wu2020" class="csl-entry" role="listitem">
 Wu, A., and X. Xiong. 2020. <span>“Sensors, Systems, and Next-Generation Satellites XXIV.”</span> In, 11530:267–77. SPIE. <a href="https://doi.org/10.1117/12.2573018">https://doi.org/10.1117/12.2573018</a>.
@@ -628,12 +579,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="./Week_4.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Week_4</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Week_4 Flooding Issues In Dublin</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./Week_7.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Week_7</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Week_7 Classification I</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
