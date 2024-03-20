@@ -1,9 +1,14 @@
 # About Me
 
-Hi, this is Zhengyong Liu Speaking, and I hail from Beijing, China. With a background in Urban Planning & Policy, I have been deeply engaged in the field, particularly focusing on urban future analysis. This led me to my current role at UCL's Centre for Advanced Spatial Analysis (CASA), where I've been exploring the intricacies of urban big data and its potential to reshape our cities.
+```{r  echo=FALSE, out.width='110%', fig.align='center'}
+knitr::include_graphics('Figure/Others/Snap.jpg')
+```
+::: {style="text-align: justify;"}
+Hi, this is Zhengyong Liu Speaking, and I am from Beijing, China. With a background in Urban Planning & Policy, I have been deeply engaged in the field, particularly focusing on urban future analysis. This led me to my current role at UCL's Centre for Advanced Spatial Analysis (CASA), where I've been exploring the intricacies of urban big data and its potential to reshape our cities.
 
 My professional journey took a significant turn during my tenure in Ireland, where I delved into urban future scenarios. The experience was transformative, kindling a strong passion for big data analytics in urban settings. It was this interest that propelled me to further my studies at UCL, seeking to harness data to envision and influence urban futures.
 
 At CASA, I expanded my expertise beyond mere remote sensing. I immersed myself in various dimensions of urban analysis, including Geographic Information Systems (GIS), spatial data analytics, and urban simulation. These areas have profoundly enriched my skill set, enabling me to tackle complex urban planning challenges with a data-driven approach.
 
 The site you're visiting is my learning diary from my time at CASA. It's a reflective space where I've chronicled my journey through the evolving landscape of urban analysis, sharing insights and reflections that have shaped my understanding of this dynamic field. My goal is to inspire others with a keen interest in urban planning and big data, fostering a collaborative effort towards crafting sustainable urban futures.
+:::
