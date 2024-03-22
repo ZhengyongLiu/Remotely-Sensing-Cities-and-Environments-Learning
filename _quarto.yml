@@ -18,7 +18,7 @@ book:
     - Week_9.qmd
     - references.qmd
 
-bibliography: references.bib
+#bibliography: references.bib
 
 format:
   html:

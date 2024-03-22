@@ -20,26 +20,7 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
+</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -344,10 +325,10 @@ div.csl-indent {
 <section id="application" class="level2" data-number="4.2">
 <h2 data-number="4.2" class="anchored" data-anchor-id="application"><span class="header-section-number">4.2</span> <strong>Application</strong></h2>
 <div style="text-align: justify;">
-<p>Image correction is a key component of remote sensing technology, ensuring that the data we acquire from satellite or aerial imagery is both accurate and useful. As a student, I believe that understanding this process is critical to professional development. Radiometric correction is the first step, which adjusts image data to correct for errors due to sensor noise, response variations, or atmospheric conditions. For example, the method proposed by Duan<span class="citation" data-cites="duan2014">(<a href="#ref-duan2014" role="doc-biblioref">2014</a>)</span> utilises standard ground objects to achieve accurate correction without relying on artificial targets. On the other hand, the method developed by Tarasenkov<span class="citation" data-cites="tarasenkov2019">(<a href="#ref-tarasenkov2019" role="doc-biblioref">2019</a>)</span> enhances the accuracy of atmospheric correction by taking into account the effects of radiative polarisation.</p>
-<p>Geometric correction, on the other hand, is another key technique that ensures consistent image scale, which is essential for accurate map production and measurement. This correction helps to remove spatial distortions, align images, and even stitch multiple images into a complete view. For example, Yan et al. <span class="citation" data-cites="yan2023">(<a href="#ref-yan2023" role="doc-biblioref">2023</a>)</span> emphasised its importance in accurate mapping, while Özciğan et al. <span class="citation" data-cites="özcihan2023b">(<a href="#ref-özcihan2023b" role="doc-biblioref">2023</a>)</span> demonstrated advances based on orthogonal images and homonymous point matching techniques, which have greatly improved the geometric accuracy of images.</p>
+<p>Image correction is a key component of remote sensing technology, ensuring that the data we acquire from satellite or aerial imagery is both accurate and useful. As a student, I believe that understanding this process is critical to professional development. Radiometric correction is the first step, which adjusts image data to correct for errors due to sensor noise, response variations, or atmospheric conditions. For example, the method proposed by Duan<span class="citation" data-cites="duan2014">[-@duan2014]</span> utilises standard ground objects to achieve accurate correction without relying on artificial targets. On the other hand, the method developed by Tarasenkov<span class="citation" data-cites="tarasenkov2019">[-@tarasenkov2019]</span> enhances the accuracy of atmospheric correction by taking into account the effects of radiative polarisation.</p>
+<p>Geometric correction, on the other hand, is another key technique that ensures consistent image scale, which is essential for accurate map production and measurement. This correction helps to remove spatial distortions, align images, and even stitch multiple images into a complete view. For example, Yan et al. <span class="citation" data-cites="yan2023">[-@yan2023]</span> emphasised its importance in accurate mapping, while Özciğan et al. <span class="citation" data-cites="özcihan2023b">[-@özcihan2023b]</span> demonstrated advances based on orthogonal images and homonymous point matching techniques, which have greatly improved the geometric accuracy of images.</p>
 <p>Atmospheric correction is essential to ensure the accuracy and reliability of remote sensing applications by optimising the image data by correcting the effects of atmospheric disturbances. Various algorithms have been developed and evaluated to improve the performance of this correction process, such as 6S, FLAASH, DOS, etc. These techniques are not only critical for remote sensing analysis, but also have a wide range of applications in areas such as aircraft navigation and astronomical observation.</p>
-<p>Image enhancement technology aims to improve the quality and visual effect of remote sensing images. Various methods have been proposed to enhance these images, including histogram modification, transform domain methods, and hybrid approaches. Histogram modification methods focus on modifying the histogram of the input image to achieve a more uniform distribution, resulting in better contrast improvement. Transform domain methods apply specific transforms to enhance the image in the transform domain, leading to better edge enhancement and color preservation<span class="citation" data-cites="wang2023">(<a href="#ref-wang2023" role="doc-biblioref">Wang et al. 2023</a>)</span>. Hybrid methods, which combine histogram modification and transform domain methods, have shown higher potential in enhancing remote sensing images<span class="citation" data-cites="deng2023">(<a href="#ref-deng2023" role="doc-biblioref">Deng et al. 2023</a>)</span>. These enhancement techniques are crucial for image interpretation, improving image segmentation accuracy, and facilitating downstream tasks.</p>
+<p>Image enhancement technology aims to improve the quality and visual effect of remote sensing images. Various methods have been proposed to enhance these images, including histogram modification, transform domain methods, and hybrid approaches. Histogram modification methods focus on modifying the histogram of the input image to achieve a more uniform distribution, resulting in better contrast improvement. Transform domain methods apply specific transforms to enhance the image in the transform domain, leading to better edge enhancement and color preservation<span class="citation" data-cites="wang2023">[@wang2023]</span>. Hybrid methods, which combine histogram modification and transform domain methods, have shown higher potential in enhancing remote sensing images<span class="citation" data-cites="deng2023">[@deng2023]</span>. These enhancement techniques are crucial for image interpretation, improving image segmentation accuracy, and facilitating downstream tasks.</p>
 </div>
 </section>
 <section id="reflection" class="level2" data-number="4.3">
@@ -364,26 +345,6 @@ div.csl-indent {
 <h2 data-number="4.4" class="anchored" data-anchor-id="reference"><span class="header-section-number">4.4</span> <strong>Reference</strong></h2>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" role="list">
-<div id="ref-deng2023" class="csl-entry" role="listitem">
-Deng, Jiqiu, Wuzhou Dong, Yiwei Guo, Xiaoyan Chen, Renhao Zhou, and Wenyi Liu. 2023. <span>“A Novel Remote Sensing Image Enhancement Method, the Pseudo-Tasseled Cap Transformation: Taking Buildings and Roads in GF-2 as an Example.”</span> <em>Applied Sciences</em> 13 (11): 6585. <a href="https://doi.org/10.3390/app13116585">https://doi.org/10.3390/app13116585</a>.
-</div>
-<div id="ref-duan2014" class="csl-entry" role="listitem">
-Duan, YL, L. Zhang, L. Yan, Taixia Wu, Yan Liu, and Qiuping Tong. 2014. <span>“Relative Radiometric Correction Methods for Remote Sensing Images and Their Applicability Analysis.”</span> <em>Journal of Remote Sensing</em> 18 (January): 597–617. <a href="https://doi.org/10.11834/jrs.20143204">https://doi.org/10.11834/jrs.20143204</a>.
-</div>
-<div id="ref-özcihan2023b" class="csl-entry" role="listitem">
-Özciḣan, Buğrahan, Levent Doğukan Özlü, Mümin İlker Karakap, Halime Sürmeli̇, Ugur Alganci, and Elif Sertel. 2023. <span>“A Comprehensive Analysis of Different Geometric Correction Methods for the Pleiades -1A and Spot-6 Satellite Images.”</span> <em>International Journal of Engineering and Geosciences</em> 8 (2): 146–53. <a href="https://doi.org/10.26833/ijeg.1086861">https://doi.org/10.26833/ijeg.1086861</a>.
-</div>
-<div id="ref-tarasenkov2019" class="csl-entry" role="listitem">
-Tarasenkov, M. V., A. V. Zimovaya, V. V. Belov, and M. V. Engel. 2019. <span>“25th International Symposium on Atmospheric and Ocean Optics: Atmospheric Physics.”</span> In, 11208:197–202. SPIE. <a href="https://doi.org/10.1117/12.2539123">https://doi.org/10.1117/12.2539123</a>.
-</div>
-<div id="ref-wang2023" class="csl-entry" role="listitem">
-Wang, Yu, Zhenfeng Shao, Tao Lu, Changzhi Wu, and Jiaming Wang. 2023. <span>“Remote Sensing Image Super-Resolution via Multiscale Enhancement Network.”</span> <em>IEEE Geoscience and Remote Sensing Letters</em> 20: 1–5. <a href="https://doi.org/10.1109/LGRS.2023.3248069">https://doi.org/10.1109/LGRS.2023.3248069</a>.
-</div>
-<div id="ref-yan2023" class="csl-entry" role="listitem">
-Yan, Shi, Liuwei Sheng, Gu Chao, Liu Hui, Zhang Yang, and Huangchun Hao. 2023. <span>“Multi-Source Satellite Remote Sensing Image Processing and Processing Method Based on Geometric Correction Model.”</span> In, edited by Roumen Kountchev, Kazumi Nakamatsu, Wenfeng Wang, and Roumiana Kountcheva, 293–303. Smart Innovation, Systems and Technologies. Singapore: Springer Nature. <a href="https://doi.org/10.1007/978-981-19-7184-6_26">https://doi.org/10.1007/978-981-19-7184-6_26</a>.
-</div>
-</div>
 </section>
 
 </main> <!-- /main -->
